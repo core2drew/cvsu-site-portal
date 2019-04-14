@@ -25041,6 +25041,8 @@ var App = function App() {
       username: username,
       password: password
     }, function (res) {
+      console.log(res);
+
       if (res.id) {
         window.location.replace("/portal");
       }
@@ -25099,20 +25101,20 @@ var get = function get(url, params, callback) {
     },
     credentials: 'same-origin' //for session to work
 
-  }).then(function (response) {
-    if (!response.ok) {
-      throw Error(response.statusText);
+  }).then(function (res) {
+    if (!res.ok) {
+      throw Error(res.statusText);
     }
 
-    return response;
-  }).then(function (response) {
+    return res;
+  }).then(function (res) {
     callback();
-    return response.json();
+    return res.json();
   })["catch"](function (e) {
     console.log(e);
   });
 };
-var post = function post(url, body, callback) {
+var post = function post(url, body, success, error) {
   return fetch(url, {
     method: 'POST',
     headers: {
@@ -25124,15 +25126,16 @@ var post = function post(url, body, callback) {
     credentials: 'same-origin',
     //for session to work
     body: JSON.stringify(body)
-  }).then(function (response) {
-    if (!response.ok) {
-      throw Error(response.statusText);
+  }).then(function (res) {
+    if (!res.ok) {
+      throw Error(res.statusText);
     }
 
-    return response;
-  }).then(function (response) {
-    callback(response.json());
-    return response.json();
+    return res;
+  }).then(function (res) {
+    return res.json();
+  }).then(function (res) {
+    return success(res);
   })["catch"](function (e) {
     console.log(e);
   });

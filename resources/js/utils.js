@@ -1,6 +1,6 @@
 import queryString from 'querystring'
 
-export const get = (url, params, callback) => {
+export const get = (url, params, success, error) => {
   if (Object.keys(params).length > 0) {
     url += `?${queryString.stringify(params)}`
   }
@@ -10,18 +10,17 @@ export const get = (url, params, callback) => {
     },
     credentials: 'same-origin' //for session to work
   })
-    .then(response => {
-      if (!response.ok) {
-        throw Error(response.statusText)
+    .then(res => {
+      if (!res.ok) {
+        throw Error(res.statusText)
       }
-      return response
+      return res
     })
-    .then(response => {
-      callback()
-      return response.json()
-    })
+    .then(res => res.json())
+    .then(res => success())
     .catch(e => {
       console.log(e)
+      error()
     })
 }
 
@@ -37,17 +36,16 @@ export const post = (url, body, success, error) => {
     credentials: 'same-origin', //for session to work
     body: JSON.stringify(body)
   })
-    .then(response => {
-      if (!response.ok) {
-        throw Error(response.statusText)
+    .then(res => {
+      if (!res.ok) {
+        throw Error(res.statusText)
       }
-      return response
+      return res
     })
-    .then(response => {
-      success(response.json())
-      return response.json()
-    })
+    .then(res => res.json())
+    .then(res => success(res))
     .catch(e => {
       console.log(e)
+      error()
     })
 }

@@ -10,6 +10,7 @@ const App = () => {
     let username = userNameRef.current.value
     let password = passwordRef.current.value
     post('/ajax/login', {username, password}, function(res){
+      console.log(res)
       if(res.id) {
         window.location.replace("/portal")
       }
