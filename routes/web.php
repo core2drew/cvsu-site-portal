@@ -38,3 +38,14 @@ Route::group([
         "uses" => "LoginController@logout"
     ]);
 });
+
+
+Route::group([
+    "as" => "ajax",
+    "prefix" => "ajax"
+], function() {
+    Route::post("/login", [
+        "as" => "ajax.login",
+        "uses" => "AJAXLoginController@index"
+    ]);
+});

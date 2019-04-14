@@ -14,7 +14,7 @@ class CheckSession
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $userType)
+    public function handle($request, Closure $next)
     {
         if(!$request->session()->get('user')) {
             return redirect('/auth/login');

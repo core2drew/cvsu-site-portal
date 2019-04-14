@@ -361,7 +361,22 @@ template {
   -webkit-border-radius: 0.28571rem;
      -moz-border-radius: 0.28571rem;
           border-radius: 0.28571rem;
-  font-family: rubikmedium;
+  padding: 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.cvsu-input {
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #D5D7E3;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
 }
 
 html,
