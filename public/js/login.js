@@ -25090,7 +25090,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_0__);
 
-var get = function get(url, params, callback) {
+var get = function get(url, params, success, error) {
   if (Object.keys(params).length > 0) {
     url += "?".concat(querystring__WEBPACK_IMPORTED_MODULE_0___default.a.stringify(params));
   }
@@ -25108,10 +25108,12 @@ var get = function get(url, params, callback) {
 
     return res;
   }).then(function (res) {
-    callback();
     return res.json();
+  }).then(function (res) {
+    return success();
   })["catch"](function (e) {
     console.log(e);
+    error();
   });
 };
 var post = function post(url, body, success, error) {
@@ -25138,6 +25140,7 @@ var post = function post(url, body, success, error) {
     return success(res);
   })["catch"](function (e) {
     console.log(e);
+    error();
   });
 };
 
