@@ -1,0 +1,28 @@
+// Pages
+@import './site/home';
+
+// Components
+@import './site/components/top-nav';
+@import './site/components/main-nav';
+@import './site/components/heroheader';
+@import './site/components/footer';
+@import './site/components/dean-message';
+@import './site/components/announcements';
+@import './site/components/academic-calendar';
+
+#App {
+  position: relative;
+  padding-bottom: 2.85714rem;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &.grid {
+    display: grid;
+  }
+}

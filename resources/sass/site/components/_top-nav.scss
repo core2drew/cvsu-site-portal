@@ -1,0 +1,35 @@
+@import "../../variables";
+
+#TopNav {
+  background-color: $green-1;
+  color: #fff;
+  padding: 0.14285rem 0;
+  > .container {
+    display: flex;
+    align-items: center;
+
+    > .detail {
+      font-size: 0.85714rem;
+    }
+    > .detail > label {
+      margin-right: 5px;
+    }
+    > .breaker {
+      margin:0 0.85714rem;
+    }
+    > #Portal {
+      transition: background-color 0.2s;
+      font-size: 0.85714rem;
+      margin-right: 0;
+      margin-left: auto;
+      background-color: $yellow-1;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 0.35714rem 1.64285rem;
+      cursor: pointer;
+    }
+    > #Portal:hover {
+      background-color: $yellow-2;
+    }
+  }
+}

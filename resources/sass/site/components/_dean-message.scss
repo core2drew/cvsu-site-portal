@@ -1,0 +1,27 @@
+@import '../../variables';
+
+#DeanMessage {
+  > .message-container {
+    background-color: #fff;
+    padding: 17px 20px;
+    border: 1px solid $gray-1;
+    box-shadow: $global-box-shadow;
+  
+    > .header{
+
+      > p {
+        margin-top: 0;
+      }
+  
+      > .greet {
+        font-family: rubikmedium;
+        font-size: 16px;
+      }
+    }
+  
+    > .message {
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+  }
+}

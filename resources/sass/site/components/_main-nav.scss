@@ -1,0 +1,89 @@
+@import '../../variables';
+
+#MainNav {
+  background-color: #fff;
+  box-shadow: $global-box-shadow;
+  position: sticky;
+  top: 0;
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    > .sitename {
+      display: flex;
+      align-items: center;
+      padding: 0.42857rem 0;
+      > .schoolname {
+        margin-left: 0.85714rem;
+      }
+      > .schoolname > .name {
+        font-family: rubikmedium;
+        font-size: 1.57142rem;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      > .schoolname > .branch {
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+    }
+    > .menu {
+      padding: 0.42857rem 0;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      > .item {
+        transition: background-color 0.2s ease-out;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        text-transform: uppercase;
+        font-family: rubikmedium;
+        cursor: pointer;
+        position: relative;
+        padding: 0 15px;
+      }
+      > .item:hover {
+        background-color: $green-1;
+        color: #fff;
+      }
+    }
+  }
+}
+
+#MainNav > .container > .menu  {
+  > .item {
+    > .menu {
+      transition: all 0.2s ease-out;
+      opacity: 0;
+      visibility: hidden;
+      padding: 0;
+      position: absolute;
+      list-style: none;
+      background-color: $green-1;
+      width: 180px;
+      left: 0;
+      bottom: -102px;
+      box-shadow: $global-box-shadow;
+      > .item {
+        transition: background-color 0.2s ease-out;
+        color: #fff;
+        font-family: rubikregular;
+        padding: 8px 15px;
+        line-height: 35px;
+      }
+  
+      > .item:hover {
+        background-color: $green-2;
+      }
+    }
+  }
+
+  > .item:hover {
+    > .menu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

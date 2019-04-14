@@ -1,0 +1,26 @@
+#HeroHeader {
+  display: flex;
+  min-height: 39.285714rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    > .greet {
+      font-family: rubikmedium;
+      font-size: 4.21428rem;
+      max-width: 47.142857rem;
+      font-weight: normal;
+    }
+    > .tagline {
+      font-size: 2.14285rem;
+    }
+
+    > .greet,
+    > .tagline {
+      margin: 0;
+    }
+  }
+}

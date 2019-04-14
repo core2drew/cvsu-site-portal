@@ -1,0 +1,45 @@
+@import '../../variables';
+
+#AcademicCalendar {
+  > .calendar {
+    border-color: $gray-1;
+    .calendar-day.react-calendar__tile--active {
+      background-color: $green-1;
+    }
+  }
+  > .activities {
+    margin-top: 10px;
+    > .headers {
+      background-color: $green-2;
+      color: #fff;
+      > .date,
+      > .activity {
+        font-family: rubikmedium;
+      }
+    }
+
+    > .activity {
+      border: 1px solid $green-2;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      background-color: #fff;
+    }
+
+    > .activity:nth-child(even) {
+      background-color: $green-4;
+    }
+
+    > .headers,
+    > .activity {
+      display: flex;
+      padding: 10px;
+      > .date {
+        flex: 1
+      }
+      > .activity {
+        flex: 2
+      }
+    }
+  }
+}

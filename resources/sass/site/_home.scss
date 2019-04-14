@@ -1,0 +1,26 @@
+@import '../variables';
+
+#Home {
+  > .grid.container {
+    max-width: 1200px;
+    padding-top: 3.57142rem;
+    padding-bottom: 3.57142rem;
+    grid-template-columns: 53.62857rem auto;
+    grid-template-rows: 250px auto;
+    grid-column-gap: 100px;
+  }
+}
+
+#Home > .grid.container > .section {
+  > .header{
+    font-size: 20px;
+    font-family: rubikmedium;
+    text-transform: uppercase;
+  }
+}
+
+#Home > .grid.container > #AcademicCalendar {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 3;
+}

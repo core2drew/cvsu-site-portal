@@ -1,0 +1,29 @@
+// Variables
+@import 'variables';
+
+// Normalize
+@import '~normalize.css/normalize.css';
+
+// Components
+@import './components/button';
+
+
+html,body {
+  font-family: rubikregular, Helvetica, sans-serif;
+  font-size: 14px;
+  color: $black-1;
+  height: 100%;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: rubikregular;
+}
+
+body {
+  background-color: $green-3;
+}
