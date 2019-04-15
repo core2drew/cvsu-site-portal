@@ -16,11 +16,17 @@ const MainNav = () => (
           About
           <ul className="menu">
             <li className="item">Mission and Vision</li>
+            <li className="item">CvSU History</li>
             <li className="item">CvSU Hymn</li>
           </ul>
         </li>
         <li className="item">
           Admission
+          <ul className="menu">
+            <li className="item">Requirements</li>
+            <li className="item">Retention Policies</li>
+            <li className="item">Course Offered</li>
+          </ul>
         </li>
         <li className="item">
           Facilities

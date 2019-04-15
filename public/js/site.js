@@ -52153,9 +52153,19 @@ var MainNav = function MainNav() {
     className: "item"
   }, "Mission and Vision"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
+  }, "CvSU History"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "item"
   }, "CvSU Hymn"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
-  }, "Admission"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Admission", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "menu"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "item"
+  }, "Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "item"
+  }, "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "item"
+  }, "Course Offered"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
   }, "Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
