@@ -1,14 +1,15 @@
 @import '../../variables';
 
 #Footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: $green-2;
+  padding: 10px 0;
   > .container {
     > .reserved {
+      
       font-size: 0.85714rem;
       color: #fff;
+      margin: 0;
     }
   }
 }

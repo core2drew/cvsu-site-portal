@@ -5,6 +5,7 @@
   box-shadow: $global-box-shadow;
   position: sticky;
   top: 0;
+  z-index: 2;
   > .container {
     display: flex;
     justify-content: space-between;
@@ -54,7 +55,7 @@
 
 #MainNav > .container > .menu  {
   > .item {
-    > .menu {
+    > .sub-menu {
       transition: all 0.2s ease-out;
       opacity: 0;
       visibility: hidden;
@@ -66,12 +67,21 @@
       left: 0;
       bottom: -153px;
       box-shadow: $global-box-shadow;
+      z-index: 2;
       > .item {
         transition: background-color 0.2s ease-out;
         color: #fff;
         font-family: rubikregular;
         padding: 8px 15px;
         line-height: 35px;
+      }
+
+      > .item > a {
+        text-decoration: none;
+      }
+
+      > .item > a:visited {
+        color: inherit;
       }
   
       > .item:hover {
@@ -81,7 +91,7 @@
   }
 
   > .item:hover {
-    > .menu {
+    > .sub-menu {
       opacity: 1;
       visibility: visible;
     }

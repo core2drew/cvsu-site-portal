@@ -46960,7 +46960,7 @@ function polyfill(Component) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51892,6 +51892,100 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/about/history.js":
+/*!***************************************!*\
+  !*** ./resources/js/about/history.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var History = function History() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "History",
+    className: "grid-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "title"
+  }, "History of CvSU - Cavite City Campus"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Cvsu-CCC is located in Pulo II, Dalahican, Cavite City. The campus was established as a timely response of the Cavite provincial government to the needs of the people in lowland town of Cavite for a good quality education at affordable cost."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Through Resolution No.153 s. 2000 which was later amended by Resolution No. 540 s. 2000, the Sangguniang Panlalawigan authorized then provincial Governor Ramon Revilla to negotiate and enter into agreement with the Development Bank of the Philippines for loan application for the purpose of establishing the Cavite State University-Cavite City Campus."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Through loan granted, the former Columbia College was rehabilitated which paved the way for the operation of the present campus. The campus initially offered three courses namely: Bachelor of Science in Computer Science, Bachelor of Science in Business Management and Associate in Computer Education."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Its enrolment of 230 during of first semester of SY 2001-2002 was reduced to 203 during the second semester. Likewise, Bachelor of Elementary Education and Bachelor or Secondary Education majors in English and Mathematics were offered during the first semester of SY 2002-2003 with only 17 students."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "To date the population has increased 2400. Despite the number of lapses, difficulties and problem, the campus is going strong. This made possible through the kind assistance and supervision of the administration of the university, the Cavite provincial government, Cavite City local government unit and the present personnel of the campus."));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (History);
+
+/***/ }),
+
+/***/ "./resources/js/about/hymn.js":
+/*!************************************!*\
+  !*** ./resources/js/about/hymn.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Hymn = function Hymn() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Hymn",
+    className: "grid-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "title"
+  }, "CvSU Hymn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Lyrics"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
+    controls: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
+    src: "/mp3/CVSU-Hymn.mp3",
+    type: "audio/mpeg"
+  }), "Please update your browser to play this audio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Hail alma mater dear"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "CvSU all the way through Seat of hope that we dream of Under the sky so blue"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Verdant fields God's gift to you Open our lives a new Oh,our hearts, our hands And minds, too In your bossom thrive and grow"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Seeds of hope are now in bloom Vigilant sons to you have sworn To CvSU our faith goes on Cradle of hope and bright vision"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "These sturdy arms that care Are the nations builders Blessed with strength and power To our almighty we offer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Seeds of hope are now in bloom Vigilant sons to you have sworn To CvSU our faith goes on Cradle of hope and bright vision"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We pray for CvSU God's blessings be with you You're the master, we're the builders CvSU leads forever.")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Hymn);
+
+/***/ }),
+
+/***/ "./resources/js/about/mission-vision.js":
+/*!**********************************************!*\
+  !*** ./resources/js/about/mission-vision.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var MissionVision = function MissionVision() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "MissionVision"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Mission"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "title"
+  }, "Mission"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "content"
+  }, "Cavite State University shall provide excellent, equitable and relevant educational opportunities in the arts, sciences and technology through quality instruction and responsive research and development activities. It shall produce professional, skilled and morally upright individuals for global competitiveness.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Vision"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "title"
+  }, "Vision"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "content"
+  }, "The premier university in historic Cavite recognized for excellence in the development of globally competitive and morally upright individuals")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MissionVision);
+
+/***/ }),
+
 /***/ "./resources/js/components/academic-calendar.js":
 /*!******************************************************!*\
   !*** ./resources/js/components/academic-calendar.js ***!
@@ -52127,6 +52221,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo */ "./resources/js/components/logo.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
@@ -52148,17 +52244,19 @@ var MainNav = function MainNav() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
   }, "About", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "menu"
+    className: "sub-menu"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
-  }, "Mission and Vision"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/mission-vision"
+  }, "Mission and Vision")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
   }, "CvSU History"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
   }, "CvSU Hymn"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
   }, "Admission", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "menu"
+    className: "sub-menu"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
   }, "Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -52173,6 +52271,56 @@ var MainNav = function MainNav() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MainNav);
+
+/***/ }),
+
+/***/ "./resources/js/components/side-announcements.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/side-announcements.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var SideAnnouncements = function SideAnnouncements(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "side-announcements ".concat(props.variant)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "title"
+  }, "Quick Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Application for Admission Exam for 1st Semester SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Grade 11 Application for SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Grade 7 Application for SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Deadline of Submission of Requirements for Admission Exam")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SideAnnouncements);
+
+/***/ }),
+
+/***/ "./resources/js/components/side-quicklinks.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/side-quicklinks.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var SideQuickLinks = function SideQuickLinks(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "side-quick-links ".concat(props.variant)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "title"
+  }, "Quick Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "CvSU History"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "CvSU Hymn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Course Offered")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SideQuickLinks);
 
 /***/ }),
 
@@ -52215,6 +52363,49 @@ var TopNav = function TopNav(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TopNav);
+
+/***/ }),
+
+/***/ "./resources/js/routes/about.js":
+/*!**************************************!*\
+  !*** ./resources/js/routes/about.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/main-nav */ "./resources/js/components/main-nav.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/footer */ "./resources/js/components/footer.js");
+/* harmony import */ var _components_side_quicklinks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/side-quicklinks */ "./resources/js/components/side-quicklinks.js");
+/* harmony import */ var _components_side_announcements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/side-announcements */ "./resources/js/components/side-announcements.js");
+/* harmony import */ var _about_mission_vision__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../about/mission-vision */ "./resources/js/about/mission-vision.js");
+/* harmony import */ var _about_history__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../about/history */ "./resources/js/about/history.js");
+/* harmony import */ var _about_hymn__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../about/hymn */ "./resources/js/about/hymn.js");
+
+
+
+
+
+
+
+
+
+var About = function About() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "About"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_main_nav__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container grid"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_quicklinks__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    variant: 'grid-item'
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_announcements__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    variant: 'grid-item'
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_history__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_mission_vision__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_hymn__WEBPACK_IMPORTED_MODULE_7__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (About);
 
 /***/ }),
 
@@ -52272,6 +52463,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _routes_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes/home */ "./resources/js/routes/home.js");
+/* harmony import */ var _routes_about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes/about */ "./resources/js/routes/about.js");
+
 
 
 
@@ -52288,6 +52481,9 @@ var App = function App() {
     path: "/",
     exact: true,
     component: _routes_home__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/about",
+    component: _routes_about__WEBPACK_IMPORTED_MODULE_4__["default"]
   }));
 };
 

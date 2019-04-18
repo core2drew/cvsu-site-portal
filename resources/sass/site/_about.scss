@@ -1,0 +1,39 @@
+@import "./about/history";
+@import "./about/mission-vision";
+@import "./about/hymn";
+#About {
+  height: 100%;
+  > .grid.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-gap: 15px;
+
+    > .grid-item {
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    >.side-quick-links,
+    >.side-announcements {
+      grid-column: 5;
+    }
+
+    >.side-quick-links {
+      grid-row: 1;
+    }
+    >.side-announcements {
+      grid-row: 2 / 4;
+    }
+    > #History {
+      grid-column: 1 / 5;
+      grid-row: 1 / 4;
+    }
+    > #MissionVision {
+      grid-column: 1 / 5;
+      grid-row: 4;
+    }
+    > #Hymn {
+      grid-column: 1 / 5;
+    }
+  }
+}

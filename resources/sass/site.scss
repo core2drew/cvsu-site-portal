@@ -1,5 +1,3 @@
-// Pages
-@import './site/home';
 
 // Components
 @import './site/components/top-nav';
@@ -9,13 +7,21 @@
 @import './site/components/dean-message';
 @import './site/components/announcements';
 @import './site/components/academic-calendar';
+@import './site/components/side-announcements';
+@import './site/components/side-quick-links';
+
+// Pages
+@import './site/home';
+@import './site/about';
 
 #App {
   position: relative;
   padding-bottom: 2.85714rem;
+  height: 100%;
 }
 
 .container {
+  min-height: 100%;
   max-width: 960px;
   width: 100%;
   margin: auto;

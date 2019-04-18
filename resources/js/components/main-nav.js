@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from './logo'
+import { Link } from 'react-router-dom'
 
 const MainNav = () => (
   <div id="MainNav">
@@ -14,15 +15,19 @@ const MainNav = () => (
       <ul className="menu">
         <li className="item">
           About
-          <ul className="menu">
-            <li className="item">Mission and Vision</li>
+          <ul className="sub-menu">
+            <li className="item">
+              <Link to="/mission-vision">
+                Mission and Vision
+              </Link>
+            </li>
             <li className="item">CvSU History</li>
             <li className="item">CvSU Hymn</li>
           </ul>
         </li>
         <li className="item">
           Admission
-          <ul className="menu">
+          <ul className="sub-menu">
             <li className="item">Requirements</li>
             <li className="item">Retention Policies</li>
             <li className="item">Course Offered</li>
