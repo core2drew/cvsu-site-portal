@@ -559,7 +559,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".modal {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  top: 0;\n  left: 0;\n  z-index: 4;\n}", ""]);
 
 // exports
 
@@ -598,6 +598,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "#TopNav {\n  background-color: #329B58;\n  color: #fff;\n  padding: 0.14285rem 0;\n}\n#TopNav > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#TopNav > .container > .detail {\n  font-size: 0.85714rem;\n}\n#TopNav > .container > .detail > label {\n  margin-right: 5px;\n}\n#TopNav > .container > .breaker {\n  margin: 0 0.85714rem;\n}\n#TopNav > .container > #Portal {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  font-size: 0.85714rem;\n  margin-right: 0;\n  margin-left: auto;\n  background-color: #E6AC3E;\n  color: #fff;\n  text-transform: uppercase;\n  padding: 0.35714rem 1.64285rem;\n  font-family: rubikmedium;\n}\n#TopNav > .container > #Portal > i[class*=icon] {\n  margin-left: 10px;\n}\n#TopNav > .container > #Portal:hover {\n  background-color: #f1b94f;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/facilities/facility/style.scss":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/facilities/facility/style.scss ***!
+  \********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".facility {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n}\n.facility:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n.facility:hover > .hover {\n  opacity: 1;\n  visibility: visible;\n}\n.facility > .hover {\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  transition: all 0.2s;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: rgba(50, 155, 88, 0.9);\n  color: #fff;\n  font-size: 1.3em;\n  font-family: rubikmedium;\n  cursor: pointer;\n  visibility: hidden;\n  opacity: 0;\n}\n.facility > .feature-image {\n  min-width: 200px;\n  height: 160px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-position: center;\n}\n.facility > .details {\n  padding: 0 15px;\n}\n.facility > .details > .title {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n.facility > .details > .description {\n  font-size: 13px;\n  margin-top: 10px;\n}\n.facility > .details > .title,\n.facility > .details > .description {\n  margin-bottom: 0;\n  line-height: 1.4;\n}", ""]);
 
 // exports
 
@@ -53579,10 +53598,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/facilities/facility.js":
-/*!*********************************************!*\
-  !*** ./resources/js/facilities/facility.js ***!
-  \*********************************************/
+/***/ "./resources/js/facilities/facility/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/facilities/facility/index.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -53592,6 +53611,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lines-ellipsis */ "./node_modules/react-lines-ellipsis/lib/index.js");
 /* harmony import */ var react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components */ "./resources/js/components/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/facilities/facility/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 
@@ -53621,6 +53645,53 @@ var Facility = function Facility(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Facility);
+
+/***/ }),
+
+/***/ "./resources/js/facilities/facility/style.scss":
+/*!*****************************************************!*\
+  !*** ./resources/js/facilities/facility/style.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/facilities/facility/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/facilities/index.js":
+/*!******************************************!*\
+  !*** ./resources/js/facilities/index.js ***!
+  \******************************************/
+/*! exports provided: Facility */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _facility__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./facility */ "./resources/js/facilities/facility/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Facility", function() { return _facility__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
 
 /***/ }),
 
@@ -53698,7 +53769,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./resources/js/components/index.js");
-/* harmony import */ var _facilities_facility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../facilities/facility */ "./resources/js/facilities/facility.js");
+/* harmony import */ var _facilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../facilities */ "./resources/js/facilities/index.js");
 
 
 
@@ -53742,19 +53813,19 @@ var Facilities = function Facilities() {
     className: "grid-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "section header"
-  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities__WEBPACK_IMPORTED_MODULE_2__["Facility"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities__WEBPACK_IMPORTED_MODULE_2__["Facility"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities__WEBPACK_IMPORTED_MODULE_2__["Facility"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities__WEBPACK_IMPORTED_MODULE_2__["Facility"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
