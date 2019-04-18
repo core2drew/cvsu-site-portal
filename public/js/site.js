@@ -52268,11 +52268,12 @@ var MainNav = function MainNav() {
     className: "branch"
   }, "Cavite City Campus"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "menu"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
     className: "item",
     to: "/about"
-  }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "item"
+  }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    className: "item",
+    to: "/admission"
   }, "Admission", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "sub-menu"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {

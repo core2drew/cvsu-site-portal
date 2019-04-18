@@ -147,6 +147,7 @@
   padding: 0 15px;
 }
 
+#MainNav > .container > .menu > .item.active,
 #MainNav > .container > .menu > .item:hover {
   background-color: #329B58;
   color: #fff;

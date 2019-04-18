@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from './logo'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const MainNav = () => (
   <div id="MainNav">
@@ -13,17 +13,17 @@ const MainNav = () => (
         </span>
       </Link>
       <ul className="menu">
-        <Link className="item" to="/about">
+        <NavLink className="item" to="/about">
           About
-        </Link>
-        <li className="item">
+        </NavLink>
+        <NavLink className="item" to="/admission">
           Admission
           <ul className="sub-menu">
             <li className="item">Requirements</li>
             <li className="item">Retention Policies</li>
             <li className="item">Course Offered</li>
           </ul>
-        </li>
+        </NavLink>
         <li className="item">
           Facilities
         </li>
