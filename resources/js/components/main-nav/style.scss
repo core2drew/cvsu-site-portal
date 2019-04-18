@@ -12,17 +12,17 @@
     > .sitename {
       display: flex;
       align-items: center;
-      padding: 0.42857rem 0;
+      padding: 5px 0;
       text-decoration: none;
       &:visited {
         color: inherit;
       }
       > .schoolname {
-        margin-left: 0.85714rem;
+        margin-left: 12px;
       }
       > .schoolname > .name {
         font-family: rubikmedium;
-        font-size: 1.57142rem;
+        font-size: 18px;
         margin-top: 0;
         margin-bottom: 0;
       }

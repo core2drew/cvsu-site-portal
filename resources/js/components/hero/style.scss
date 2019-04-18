@@ -1,6 +1,6 @@
 #Hero {
   display: flex;
-  min-height: 39.285714rem;
+  min-height: 550px;
   background-size: cover;
   background-repeat: no-repeat;
   > .container {
@@ -10,12 +10,12 @@
     color: #fff;
     > .greet {
       font-family: rubikmedium;
-      font-size: 4.21428rem;
-      max-width: 47.142857rem;
+      font-size: 55px;
+      max-width: 660px;
       font-weight: normal;
     }
     > .tagline {
-      font-size: 2.14285rem;
+      font-size: 30px;
     }
 
     > .greet,

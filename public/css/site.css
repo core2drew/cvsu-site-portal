@@ -1,14 +1,14 @@
 #Home > .grid.container {
   max-width: 1200px;
-  padding-top: 3.57142rem;
-  padding-bottom: 3.57142rem;
-  grid-template-columns: 53.62857rem auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  grid-template-columns: 750px auto;
   grid-template-rows: 250px auto;
-  grid-column-gap: 100px;
+  grid-column-gap: 20px;
 }
 
 #Home > .grid.container > .section > .header {
-  font-size: 20px;
+  font-size: 16px;
   font-family: rubikmedium;
   text-transform: uppercase;
 }

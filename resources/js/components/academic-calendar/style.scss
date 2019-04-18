@@ -2,6 +2,7 @@
 
 #AcademicCalendar {
   > .calendar {
+    width: 100%;
     border-color: $gray-1;
     .calendar-day.react-calendar__tile--active {
       background-color: $green-1;

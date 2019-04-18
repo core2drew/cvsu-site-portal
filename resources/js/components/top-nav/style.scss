@@ -3,30 +3,30 @@
 #TopNav {
   background-color: $green-1;
   color: #fff;
-  padding: 0.14285rem 0;
+  padding: 5px 0;
   > .container {
     display: flex;
     align-items: center;
 
     > .detail {
-      font-size: 0.85714rem;
+      font-size: 12px
     }
     > .detail > label {
       margin-right: 5px;
     }
     > .breaker {
-      margin:0 0.85714rem;
+      margin:0 12px;
     }
     > #Portal {
       display: flex;
       transition: background-color 0.2s;
-      font-size: 0.85714rem;
+      font-size: 12px;
       margin-right: 0;
       margin-left: auto;
       background-color: $yellow-1;
       color: #fff;
       text-transform: uppercase;
-      padding: 0.35714rem 1.64285rem;
+      padding: 5px 20px;
       font-family: rubikmedium;
     }
     > #Portal > i[class*=icon] {
