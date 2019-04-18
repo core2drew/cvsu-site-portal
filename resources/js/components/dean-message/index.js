@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.scss'
 
 const DeanMessage = () => (
   <div id="DeanMessage" className="section">

@@ -395,6 +395,215 @@ module.exports = exports['default'];
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/academic-calendar/style.scss":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/academic-calendar/style.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#AcademicCalendar > .calendar {\n  border-color: #D5D7E3;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile--active {\n  background-color: #329B58;\n}\n#AcademicCalendar > .activities {\n  margin-top: 10px;\n}\n#AcademicCalendar > .activities > .headers {\n  background-color: #2D8548;\n  color: #fff;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .headers > .activity {\n  font-family: rubikmedium;\n}\n#AcademicCalendar > .activities > .activity {\n  border: 1px solid #2D8548;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  background-color: #fff;\n}\n#AcademicCalendar > .activities > .activity:nth-child(even) {\n  background-color: #dfffe9;\n}\n#AcademicCalendar > .activities > .headers,\n#AcademicCalendar > .activities > .activity {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 10px;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .activity > .date {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n#AcademicCalendar > .activities > .headers > .activity,\n#AcademicCalendar > .activities > .activity > .activity {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n     -moz-box-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/announcements/style.scss":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/announcements/style.scss ***!
+  \*************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#Announcements > .announcement {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#Announcements > .announcement > .header > .title {\n  font-family: rubikmedium;\n  font-size: 16px;\n  margin-bottom: 0;\n}\n#Announcements > .announcement > .header > .post-date {\n  margin-top: 5px;\n}\n#Announcements > .announcement > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}\n#Announcements > .announcement:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/button/style.scss":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/button/style.scss ***!
+  \******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".cvsu-btn {\n  border: 0;\n  background-color: #D5D7E3;\n  -webkit-border-radius: 0.28571rem;\n     -moz-border-radius: 0.28571rem;\n          border-radius: 0.28571rem;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/dean-message/style.scss":
+/*!************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/dean-message/style.scss ***!
+  \************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#DeanMessage > .message-container {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#DeanMessage > .message-container > .header > p {\n  margin-top: 0;\n}\n#DeanMessage > .message-container > .header > .greet {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n#DeanMessage > .message-container > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/footer/style.scss":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/footer/style.scss ***!
+  \******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#Footer {\n  width: 100%;\n  background-color: #2D8548;\n  padding: 10px 0;\n}\n#Footer > .container > .reserved {\n  font-size: 0.85714rem;\n  color: #fff;\n  margin: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/hero/style.scss":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/hero/style.scss ***!
+  \****************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#Hero {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  min-height: 39.285714rem;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-repeat: no-repeat;\n}\n#Hero > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color: #fff;\n}\n#Hero > .container > .greet {\n  font-family: rubikmedium;\n  font-size: 4.21428rem;\n  max-width: 47.142857rem;\n  font-weight: normal;\n}\n#Hero > .container > .tagline {\n  font-size: 2.14285rem;\n}\n#Hero > .container > .greet,\n#Hero > .container > .tagline {\n  margin: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/input/style.scss":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/input/style.scss ***!
+  \*****************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".cvsu-input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/main-nav/style.scss":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/main-nav/style.scss ***!
+  \********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#MainNav {\n  background-color: #fff;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 2;\n}\n#MainNav > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n#MainNav > .container > .sitename {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 0.42857rem 0;\n  text-decoration: none;\n}\n#MainNav > .container > .sitename:visited {\n  color: inherit;\n}\n#MainNav > .container > .sitename > .schoolname {\n  margin-left: 0.85714rem;\n}\n#MainNav > .container > .sitename > .schoolname > .name {\n  font-family: rubikmedium;\n  font-size: 1.57142rem;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#MainNav > .container > .sitename > .schoolname > .branch {\n  margin-top: 5px;\n  margin-bottom: 0;\n}\n#MainNav > .container > .menu {\n  padding: 0.42857rem 0;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 0;\n  margin: 0;\n  list-style-type: none;\n}\n#MainNav > .container > .menu > .item {\n  -webkit-transition: background-color 0.2s ease-out;\n  -o-transition: background-color 0.2s ease-out;\n  -moz-transition: background-color 0.2s ease-out;\n  transition: background-color 0.2s ease-out;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  height: 100%;\n  text-transform: uppercase;\n  font-family: rubikmedium;\n  cursor: pointer;\n  position: relative;\n  padding: 0 15px;\n}\n#MainNav > .container > .menu > .item.active,\n#MainNav > .container > .menu > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}\n#MainNav > .container > .menu > .item,\n#MainNav > .container > .menu > .item > a {\n  text-decoration: none;\n}\n#MainNav > .container > .menu > .item,\n#MainNav > .container > .menu > .item > a:visited {\n  color: inherit;\n}\n\n#MainNav > .container > .menu > .item > .sub-menu {\n  -webkit-transition: all 0.2s ease-out;\n  -o-transition: all 0.2s ease-out;\n  -moz-transition: all 0.2s ease-out;\n  transition: all 0.2s ease-out;\n  opacity: 0;\n  visibility: hidden;\n  padding: 0;\n  position: absolute;\n  list-style: none;\n  background-color: #329B58;\n  width: 180px;\n  left: 0;\n  bottom: -152px;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n  z-index: 2;\n}\n#MainNav > .container > .menu > .item > .sub-menu > .item {\n  -webkit-transition: background-color 0.2s ease-out;\n  -o-transition: background-color 0.2s ease-out;\n  -moz-transition: background-color 0.2s ease-out;\n  transition: background-color 0.2s ease-out;\n  color: #fff;\n  font-family: rubikregular;\n  padding: 8px 15px;\n  line-height: 35px;\n}\n#MainNav > .container > .menu > .item > .sub-menu > .item > a {\n  text-decoration: none;\n}\n#MainNav > .container > .menu > .item > .sub-menu > .item > a:visited {\n  color: inherit;\n}\n#MainNav > .container > .menu > .item > .sub-menu > .item:hover {\n  background-color: #2D8548;\n}\n#MainNav > .container > .menu > .item:hover > .sub-menu {\n  opacity: 1;\n  visibility: visible;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/modal/style.scss":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/modal/style.scss ***!
+  \*****************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/sidebar/style.scss":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/sidebar/style.scss ***!
+  \*******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".sidebar {\n  position: -webkit-sticky;\n  position: sticky;\n  background-color: #fff;\n  padding: 20px;\n}\n.sidebar > .links > .link {\n  text-decoration: none;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-bottom: 15px;\n}\n.sidebar > .links > .link:visited {\n  color: inherit;\n}\n.sidebar > .links > .link > i[class*=icon] {\n  font-size: 8px;\n  margin-right: 8px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/top-nav/style.scss":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/top-nav/style.scss ***!
+  \*******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#TopNav {\n  background-color: #329B58;\n  color: #fff;\n  padding: 0.14285rem 0;\n}\n#TopNav > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#TopNav > .container > .detail {\n  font-size: 0.85714rem;\n}\n#TopNav > .container > .detail > label {\n  margin-right: 5px;\n}\n#TopNav > .container > .breaker {\n  margin: 0 0.85714rem;\n}\n#TopNav > .container > #Portal {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  font-size: 0.85714rem;\n  margin-right: 0;\n  margin-left: auto;\n  background-color: #E6AC3E;\n  color: #fff;\n  text-transform: uppercase;\n  padding: 0.35714rem 1.64285rem;\n  font-family: rubikmedium;\n}\n#TopNav > .container > #Portal:hover {\n  background-color: #f1b94f;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/react-calendar/dist/Calendar.css":
 /*!***************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./node_modules/react-calendar/dist/Calendar.css ***!
@@ -47299,7 +47508,7 @@ module.exports = LinesEllipsis;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52117,6 +52326,126 @@ function warning(condition, message) {
 
 /***/ }),
 
+/***/ "./node_modules/uuid/lib/bytesToUuid.js":
+/*!**********************************************!*\
+  !*** ./node_modules/uuid/lib/bytesToUuid.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+var byteToHex = [];
+for (var i = 0; i < 256; ++i) {
+  byteToHex[i] = (i + 0x100).toString(16).substr(1);
+}
+
+function bytesToUuid(buf, offset) {
+  var i = offset || 0;
+  var bth = byteToHex;
+  // join used to fix memory issue caused by concatenation: https://bugs.chromium.org/p/v8/issues/detail?id=3175#c4
+  return ([bth[buf[i++]], bth[buf[i++]], 
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]],
+	bth[buf[i++]], bth[buf[i++]],
+	bth[buf[i++]], bth[buf[i++]]]).join('');
+}
+
+module.exports = bytesToUuid;
+
+
+/***/ }),
+
+/***/ "./node_modules/uuid/lib/rng-browser.js":
+/*!**********************************************!*\
+  !*** ./node_modules/uuid/lib/rng-browser.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Unique ID creation requires a high quality random # generator.  In the
+// browser this is a little complicated due to unknown quality of Math.random()
+// and inconsistent support for the `crypto` API.  We do the best we can via
+// feature-detection
+
+// getRandomValues needs to be invoked in a context where "this" is a Crypto
+// implementation. Also, find the complete implementation of crypto on IE11.
+var getRandomValues = (typeof(crypto) != 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto)) ||
+                      (typeof(msCrypto) != 'undefined' && typeof window.msCrypto.getRandomValues == 'function' && msCrypto.getRandomValues.bind(msCrypto));
+
+if (getRandomValues) {
+  // WHATWG crypto RNG - http://wiki.whatwg.org/wiki/Crypto
+  var rnds8 = new Uint8Array(16); // eslint-disable-line no-undef
+
+  module.exports = function whatwgRNG() {
+    getRandomValues(rnds8);
+    return rnds8;
+  };
+} else {
+  // Math.random()-based (RNG)
+  //
+  // If all else fails, use Math.random().  It's fast, but is of unspecified
+  // quality.
+  var rnds = new Array(16);
+
+  module.exports = function mathRNG() {
+    for (var i = 0, r; i < 16; i++) {
+      if ((i & 0x03) === 0) r = Math.random() * 0x100000000;
+      rnds[i] = r >>> ((i & 0x03) << 3) & 0xff;
+    }
+
+    return rnds;
+  };
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/uuid/v4.js":
+/*!*********************************!*\
+  !*** ./node_modules/uuid/v4.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var rng = __webpack_require__(/*! ./lib/rng */ "./node_modules/uuid/lib/rng-browser.js");
+var bytesToUuid = __webpack_require__(/*! ./lib/bytesToUuid */ "./node_modules/uuid/lib/bytesToUuid.js");
+
+function v4(options, buf, offset) {
+  var i = buf && offset || 0;
+
+  if (typeof(options) == 'string') {
+    buf = options === 'binary' ? new Array(16) : null;
+    options = null;
+  }
+  options = options || {};
+
+  var rnds = options.random || (options.rng || rng)();
+
+  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+  rnds[6] = (rnds[6] & 0x0f) | 0x40;
+  rnds[8] = (rnds[8] & 0x3f) | 0x80;
+
+  // Copy bytes to buffer, if provided
+  if (buf) {
+    for (var ii = 0; ii < 16; ++ii) {
+      buf[i + ii] = rnds[ii];
+    }
+  }
+
+  return buf || bytesToUuid(rnds);
+}
+
+module.exports = v4;
+
+
+/***/ }),
+
 /***/ "./node_modules/value-equal/index.js":
 /*!*******************************************!*\
   !*** ./node_modules/value-equal/index.js ***!
@@ -52252,7 +52581,8 @@ var History = function History() {
     className: "section header"
   }, "History of CvSU - Cavite City Campus"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "CVSUFront",
-    src: "/images/cvsu_orig.png"
+    src: "/images/cvsu_orig.png",
+    alt: "CvSU Front"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Cvsu-CCC is located in Pulo II, Dalahican, Cavite City. The campus was established as a timely response of the Cavite provincial government to the needs of the people in lowland town of Cavite for a good quality education at affordable cost."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Through Resolution No.153 s. 2000 which was later amended by Resolution No. 540 s. 2000, the Sangguniang Panlalawigan authorized then provincial Governor Ramon Revilla to negotiate and enter into agreement with the Development Bank of the Philippines for loan application for the purpose of establishing the Cavite State University-Cavite City Campus."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Through loan granted, the former Columbia College was rehabilitated which paved the way for the operation of the present campus. The campus initially offered three courses namely: Bachelor of Science in Computer Science, Bachelor of Science in Business Management and Associate in Computer Education."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Its enrolment of 230 during of first semester of SY 2001-2002 was reduced to 203 during the second semester. Likewise, Bachelor of Elementary Education and Bachelor or Secondary Education majors in English and Mathematics were offered during the first semester of SY 2002-2003 with only 17 students."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "To date the population has increased 2400. Despite the number of lapses, difficulties and problem, the campus is going strong. This made possible through the kind assistance and supervision of the administration of the university, the Cavite provincial government, Cavite City local government unit and the present personnel of the campus."));
 };
 
@@ -52328,10 +52658,10 @@ var MissionVision = function MissionVision() {
 
 /***/ }),
 
-/***/ "./resources/js/components/academic-calendar.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/academic-calendar.js ***!
-  \******************************************************/
+/***/ "./resources/js/components/academic-calendar/index.js":
+/*!************************************************************!*\
+  !*** ./resources/js/components/academic-calendar/index.js ***!
+  \************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52341,6 +52671,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-calendar */ "./node_modules/react-calendar/dist/entry.js");
 /* harmony import */ var react_calendar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_calendar__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/academic-calendar/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -52397,10 +52730,40 @@ var AcademicCalendar = function AcademicCalendar() {
 
 /***/ }),
 
-/***/ "./resources/js/components/announcements.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/announcements.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/academic-calendar/style.scss":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/academic-calendar/style.scss ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/academic-calendar/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/announcements/index.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/announcements/index.js ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52408,6 +52771,9 @@ var AcademicCalendar = function AcademicCalendar() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/announcements/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 var Announcements = function Announcements() {
@@ -52441,9 +52807,39 @@ var Announcements = function Announcements() {
 
 /***/ }),
 
-/***/ "./resources/js/components/dean-message.js":
+/***/ "./resources/js/components/announcements/style.scss":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/announcements/style.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/announcements/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/button/index.js":
 /*!*************************************************!*\
-  !*** ./resources/js/components/dean-message.js ***!
+  !*** ./resources/js/components/button/index.js ***!
   \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -52452,6 +52848,74 @@ var Announcements = function Announcements() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/button/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Button = function Button(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: props.id,
+    className: "cvsu-btn ".concat(props.variant),
+    onClick: props.onClick
+  }, props.text);
+};
+
+Button.defaultProps = {
+  id: '',
+  variant: '',
+  onClick: function onClick() {
+    return false;
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (Button);
+
+/***/ }),
+
+/***/ "./resources/js/components/button/style.scss":
+/*!***************************************************!*\
+  !*** ./resources/js/components/button/style.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/button/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/dean-message/index.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/dean-message/index.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/dean-message/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 var DeanMessage = function DeanMessage() {
@@ -52477,10 +52941,40 @@ var DeanMessage = function DeanMessage() {
 
 /***/ }),
 
-/***/ "./resources/js/components/footer.js":
-/*!*******************************************!*\
-  !*** ./resources/js/components/footer.js ***!
-  \*******************************************/
+/***/ "./resources/js/components/dean-message/style.scss":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/dean-message/style.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/dean-message/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/footer/index.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/footer/index.js ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52488,6 +52982,9 @@ var DeanMessage = function DeanMessage() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/footer/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 var Footer = function Footer() {
@@ -52504,10 +53001,40 @@ var Footer = function Footer() {
 
 /***/ }),
 
-/***/ "./resources/js/components/hero.js":
-/*!*****************************************!*\
-  !*** ./resources/js/components/hero.js ***!
-  \*****************************************/
+/***/ "./resources/js/components/footer/style.scss":
+/*!***************************************************!*\
+  !*** ./resources/js/components/footer/style.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/footer/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/hero/index.js":
+/*!***********************************************!*\
+  !*** ./resources/js/components/hero/index.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52515,11 +53042,14 @@ var Footer = function Footer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/hero/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var HeroHeader = function HeroHeader() {
+
+var Hero = function Hero() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "HeroHeader",
+    id: "Hero",
     style: {
       backgroundImage: "url('images/cvsu_front.png')"
     }
@@ -52532,14 +53062,44 @@ var HeroHeader = function HeroHeader() {
   }, "A University that helps you to build your future")));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (HeroHeader);
+/* harmony default export */ __webpack_exports__["default"] = (Hero);
 
 /***/ }),
 
-/***/ "./resources/js/components/icon.js":
-/*!*****************************************!*\
-  !*** ./resources/js/components/icon.js ***!
-  \*****************************************/
+/***/ "./resources/js/components/hero/style.scss":
+/*!*************************************************!*\
+  !*** ./resources/js/components/hero/style.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/hero/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/icon/index.js":
+/*!***********************************************!*\
+  !*** ./resources/js/components/icon/index.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52559,10 +53119,141 @@ var Icon = function Icon(props) {
 
 /***/ }),
 
-/***/ "./resources/js/components/logo.js":
-/*!*****************************************!*\
-  !*** ./resources/js/components/logo.js ***!
-  \*****************************************/
+/***/ "./resources/js/components/index.js":
+/*!******************************************!*\
+  !*** ./resources/js/components/index.js ***!
+  \******************************************/
+/*! exports provided: Button, Input, AcademicCalendar, Announcements, DeanMessage, Footer, Hero, Icon, Logo, MainNav, Modal, Sidebar, TopNav */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button */ "./resources/js/components/button/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return _button__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input */ "./resources/js/components/input/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return _input__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _academic_calendar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./academic-calendar */ "./resources/js/components/academic-calendar/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AcademicCalendar", function() { return _academic_calendar__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _announcements__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./announcements */ "./resources/js/components/announcements/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Announcements", function() { return _announcements__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _dean_message__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dean-message */ "./resources/js/components/dean-message/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DeanMessage", function() { return _dean_message__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./footer */ "./resources/js/components/footer/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return _footer__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+
+/* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./hero */ "./resources/js/components/hero/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Hero", function() { return _hero__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./icon */ "./resources/js/components/icon/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Icon", function() { return _icon__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+
+/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./logo */ "./resources/js/components/logo/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Logo", function() { return _logo__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+
+/* harmony import */ var _main_nav__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./main-nav */ "./resources/js/components/main-nav/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MainNav", function() { return _main_nav__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modal */ "./resources/js/components/modal/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return _modal__WEBPACK_IMPORTED_MODULE_10__["default"]; });
+
+/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sidebar */ "./resources/js/components/sidebar/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Sidebar", function() { return _sidebar__WEBPACK_IMPORTED_MODULE_11__["default"]; });
+
+/* harmony import */ var _top_nav__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./top-nav */ "./resources/js/components/top-nav/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TopNav", function() { return _top_nav__WEBPACK_IMPORTED_MODULE_12__["default"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/input/index.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/input/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/input/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Input = function Input(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: props.id,
+    className: "cvsu-input ".concat(variant),
+    ref: props.ref,
+    type: "text",
+    placeholder: props.placeholder
+  });
+};
+
+Input.defaultProps = {
+  id: '',
+  variant: '',
+  ref: null,
+  placeholder: ''
+};
+/* harmony default export */ __webpack_exports__["default"] = (Input);
+
+/***/ }),
+
+/***/ "./resources/js/components/input/style.scss":
+/*!**************************************************!*\
+  !*** ./resources/js/components/input/style.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/input/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/logo/index.js":
+/*!***********************************************!*\
+  !*** ./resources/js/components/logo/index.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52574,10 +53265,10 @@ var Logo=function Logo(){return react__WEBPACK_IMPORTED_MODULE_0___default.a.cre
 
 /***/ }),
 
-/***/ "./resources/js/components/main-nav.js":
-/*!*********************************************!*\
-  !*** ./resources/js/components/main-nav.js ***!
-  \*********************************************/
+/***/ "./resources/js/components/main-nav/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/main-nav/index.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52585,8 +53276,11 @@ var Logo=function Logo(){return react__WEBPACK_IMPORTED_MODULE_0___default.a.cre
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo */ "./resources/js/components/logo.js");
+/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo */ "./resources/js/components/logo/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/main-nav/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -52633,10 +53327,40 @@ var MainNav = function MainNav() {
 
 /***/ }),
 
-/***/ "./resources/js/components/side-announcements.js":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/side-announcements.js ***!
-  \*******************************************************/
+/***/ "./resources/js/components/main-nav/style.scss":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/main-nav/style.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/main-nav/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/modal/index.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/modal/index.js ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52644,104 +53368,141 @@ var MainNav = function MainNav() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon */ "./resources/js/components/icon.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/modal/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
-
-var SideAnnouncements = function SideAnnouncements(props) {
+var Modal = function Modal(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "SideAnnouncements",
-    className: "sidebar ".concat(props.variant)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "section header"
-  }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "links"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    className: "link",
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    icon: "caret-right"
-  }), "Application for Admission Exam for 1st Semester SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    className: "link",
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    icon: "caret-right"
-  }), "Grade 11 Application for SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    className: "link",
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    icon: "caret-right"
-  }), "Grade 7 Application for SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    className: "link",
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    icon: "caret-right"
-  }), "Deadline of Submission of Requirements for Admission Exam")));
+    className: "modal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content"
+  }, props.children));
 };
 
-SideAnnouncements.defaultProps = {
-  variant: ''
-};
-/* harmony default export */ __webpack_exports__["default"] = (SideAnnouncements);
+/* harmony default export */ __webpack_exports__["default"] = (Modal);
 
 /***/ }),
 
-/***/ "./resources/js/components/side-quicklinks.js":
+/***/ "./resources/js/components/modal/style.scss":
+/*!**************************************************!*\
+  !*** ./resources/js/components/modal/style.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/modal/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/sidebar/index.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/sidebar/index.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/sidebar/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+var Sidebar = function Sidebar(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: props.id,
+    className: "sidebar ".concat(props.variant)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "section header"
+  }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "links"
+  }, props.links.map(function (link) {
+    var to = link.to,
+        slug = link.slug;
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_2___default()(),
+      className: "link",
+      to: to
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      icon: "caret-right"
+    }), slug);
+  })));
+};
+
+Sidebar.defaultProps = {
+  id: '',
+  variant: '',
+  title: '',
+  links: []
+};
+/* harmony default export */ __webpack_exports__["default"] = (Sidebar);
+
+/***/ }),
+
+/***/ "./resources/js/components/sidebar/style.scss":
 /*!****************************************************!*\
-  !*** ./resources/js/components/side-quicklinks.js ***!
+  !*** ./resources/js/components/sidebar/style.scss ***!
   \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon */ "./resources/js/components/icon.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/sidebar/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
 
 
-var SideQuickLinks = function SideQuickLinks(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "SideQuickLinks",
-    className: "sidebar ".concat(props.variant)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "section header"
-  }, "Quick Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "links"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    className: "link",
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    icon: "caret-right"
-  }), "Admission Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    className: "link",
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    icon: "caret-right"
-  }), "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    className: "link",
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    icon: "caret-right"
-  }), "Course Offered")));
-};
 
-SideQuickLinks.defaultProps = {
-  variant: ''
-};
-/* harmony default export */ __webpack_exports__["default"] = (SideQuickLinks);
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/top-nav.js":
-/*!********************************************!*\
-  !*** ./resources/js/components/top-nav.js ***!
-  \********************************************/
+/***/ "./resources/js/components/top-nav/index.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/top-nav/index.js ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52751,6 +53512,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/top-nav/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -52777,6 +53541,36 @@ var TopNav = function TopNav(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TopNav);
+
+/***/ }),
+
+/***/ "./resources/js/components/top-nav/style.scss":
+/*!****************************************************!*\
+  !*** ./resources/js/components/top-nav/style.scss ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/top-nav/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -52836,18 +53630,10 @@ var Facility = function Facility(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_top_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/top-nav */ "./resources/js/components/top-nav.js");
-/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/main-nav */ "./resources/js/components/main-nav.js");
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/footer */ "./resources/js/components/footer.js");
-/* harmony import */ var _components_side_quicklinks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/side-quicklinks */ "./resources/js/components/side-quicklinks.js");
-/* harmony import */ var _components_side_announcements__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/side-announcements */ "./resources/js/components/side-announcements.js");
-/* harmony import */ var _about_mission_vision__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../about/mission-vision */ "./resources/js/about/mission-vision.js");
-/* harmony import */ var _about_history__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../about/history */ "./resources/js/about/history.js");
-/* harmony import */ var _about_hymn__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../about/hymn */ "./resources/js/about/hymn.js");
-
-
-
-
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./resources/js/components/index.js");
+/* harmony import */ var _about_mission_vision__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../about/mission-vision */ "./resources/js/about/mission-vision.js");
+/* harmony import */ var _about_history__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../about/history */ "./resources/js/about/history.js");
+/* harmony import */ var _about_hymn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../about/hymn */ "./resources/js/about/hymn.js");
 
 
 
@@ -52857,9 +53643,38 @@ __webpack_require__.r(__webpack_exports__);
 var About = function About() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "About"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_top_nav__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_main_nav__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["MainNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_quicklinks__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_announcements__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_history__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_mission_vision__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_hymn__WEBPACK_IMPORTED_MODULE_8__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+    id: "SideQuickLinks",
+    title: "Quick Links",
+    links: [{
+      to: '/',
+      slug: 'Admission Requirements'
+    }, {
+      to: '/',
+      slug: 'Retention Policies'
+    }, {
+      to: '/',
+      slug: 'Course Offered'
+    }]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+    id: "SideAnnouncements",
+    title: "Announcements",
+    links: [{
+      to: '/',
+      slug: 'Application for Admission Exam for 1st Semester SY 2019-2020'
+    }, {
+      to: '/',
+      slug: 'Grade 11 Application for SY 2019-2020'
+    }, {
+      to: '/',
+      slug: 'Grade 7 Application for SY 2019-2020'
+    }, {
+      to: '/',
+      slug: 'Deadline of Submission of Requirements for Admission Exam'
+    }]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_history__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_mission_vision__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_hymn__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Footer"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -52877,16 +53692,8 @@ var About = function About() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_top_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/top-nav */ "./resources/js/components/top-nav.js");
-/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/main-nav */ "./resources/js/components/main-nav.js");
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/footer */ "./resources/js/components/footer.js");
-/* harmony import */ var _components_side_quicklinks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/side-quicklinks */ "./resources/js/components/side-quicklinks.js");
-/* harmony import */ var _components_side_announcements__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/side-announcements */ "./resources/js/components/side-announcements.js");
-/* harmony import */ var _facilities_facility__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../facilities/facility */ "./resources/js/facilities/facility.js");
-
-
-
-
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./resources/js/components/index.js");
+/* harmony import */ var _facilities_facility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../facilities/facility */ "./resources/js/facilities/facility.js");
 
 
 
@@ -52894,30 +53701,59 @@ __webpack_require__.r(__webpack_exports__);
 var Facilities = function Facilities() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Facilities"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_top_nav__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_main_nav__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["MainNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_quicklinks__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_announcements__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+    id: "SideQuickLinks",
+    title: "Quick Links",
+    links: [{
+      to: '/',
+      slug: 'Admission Requirements'
+    }, {
+      to: '/',
+      slug: 'Retention Policies'
+    }, {
+      to: '/',
+      slug: 'Course Offered'
+    }]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+    id: "SideAnnouncements",
+    title: "Announcements",
+    links: [{
+      to: '/',
+      slug: 'Application for Admission Exam for 1st Semester SY 2019-2020'
+    }, {
+      to: '/',
+      slug: 'Grade 11 Application for SY 2019-2020'
+    }, {
+      to: '/',
+      slug: 'Grade 7 Application for SY 2019-2020'
+    }, {
+      to: '/',
+      slug: 'Deadline of Submission of Requirements for Admission Exam'
+    }]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "UniversityFacilities",
     className: "grid-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "section header"
-  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facilities_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Footer"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Facilities);
@@ -52935,28 +53771,16 @@ var Facilities = function Facilities() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_top_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/top-nav */ "./resources/js/components/top-nav.js");
-/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/main-nav */ "./resources/js/components/main-nav.js");
-/* harmony import */ var _components_hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/hero */ "./resources/js/components/hero.js");
-/* harmony import */ var _components_dean_message__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/dean-message */ "./resources/js/components/dean-message.js");
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/footer */ "./resources/js/components/footer.js");
-/* harmony import */ var _components_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/academic-calendar */ "./resources/js/components/academic-calendar.js");
-/* harmony import */ var _components_announcements__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/announcements */ "./resources/js/components/announcements.js");
-
-
-
-
-
-
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./resources/js/components/index.js");
 
 
 
 var Home = function Home() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Home"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_top_nav__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_main_nav__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_hero__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["MainNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Hero"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_dean_message__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_announcements__WEBPACK_IMPORTED_MODULE_7__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["DeanMessage"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["AcademicCalendar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Announcements"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Footer"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);

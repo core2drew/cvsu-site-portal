@@ -2,6 +2,11 @@
 @import "./about/history";
 @import "./about/mission-vision";
 @import "./about/hymn";
+
+// Components
+@import './site/components/side-announcements';
+@import './site/components/side-quicklinks';
+
 #About {
   > .grid.container {
     > #SideQuickLinks {

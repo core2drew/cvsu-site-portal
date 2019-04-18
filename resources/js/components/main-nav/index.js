@@ -1,6 +1,7 @@
 import React from 'react'
-import Logo from './logo'
+import Logo from '../logo'
 import { Link, NavLink } from 'react-router-dom'
+import './style.scss'
 
 const MainNav = () => (
   <div id="MainNav">

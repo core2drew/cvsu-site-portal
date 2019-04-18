@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import ReactDOM from 'react-dom';
 import { post } from './utils'
+import { Button, Input } from './components'
 
 const App = () => {
   const userNameRef = useRef()
@@ -10,7 +11,6 @@ const App = () => {
     let username = userNameRef.current.value
     let password = passwordRef.current.value
     post('/ajax/login', {username, password}, function(res){
-      console.log(res)
       if(res.id) {
         window.location.replace("/portal")
       }
@@ -20,9 +20,9 @@ const App = () => {
   return (
     <div id="Login">
       <h3 className="title">Log In</h3>
-      <input ref={userNameRef} className="cvsu-input" type="text" name="username" placeholder="Student ID / Username"/>
-      <input ref={passwordRef} className="cvsu-input" type="password" name="password" placeholder="Password"/>
-      <button type="submit" className="cvsu-btn" onClick={handleLogin}>Log In</button>
+      <Input ref={userNameRef}  placeholder="Student ID / Username" />
+      <Input ref={passwordRef}  placeholder="Password" />
+      <Button text={'Log In'} onClick={handleLogin} />
     </div>
   )
 }

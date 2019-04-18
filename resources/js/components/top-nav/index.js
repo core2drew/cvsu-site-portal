@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import './style.scss'
 
 const TopNav = props => (
   <div id="TopNav">

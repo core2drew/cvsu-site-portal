@@ -1,5 +1,6 @@
 import React from 'react'
 import Calendar from 'react-calendar'
+import './style.scss'
 
 const AcademicCalendar = () => {
   let date = new Date();

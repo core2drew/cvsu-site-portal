@@ -1,4 +1,9 @@
 @import "../variables";
+
+// Components
+@import './site/components/side-announcements';
+@import './site/components/side-quicklinks';
+
 #Facilities {
   > .grid.container {
     grid-template-columns: 650px auto;

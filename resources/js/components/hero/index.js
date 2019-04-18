@@ -1,7 +1,8 @@
 import React from 'react'
+import './style.scss'
 
-const HeroHeader = () => (
-  <div id="HeroHeader" style={{backgroundImage: "url('images/cvsu_front.png')"}}>
+const Hero = () => (
+  <div id="Hero" style={{backgroundImage: "url('images/cvsu_front.png')"}}>
     <div className="container">
       <h2 className="greet">Welcome To <br/> Cavite State University</h2>
       <p className="tagline">A University that helps you to build your future</p>
@@ -9,4 +10,4 @@ const HeroHeader = () => (
   </div>
 )
 
-export default HeroHeader
+export default Hero
