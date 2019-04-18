@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'cvsu-font-icon';
-  src:  url('fonts/cvsu-font-icon.eot?1fabn3');
-  src:  url('fonts/cvsu-font-icon.eot?1fabn3#iefix') format('embedded-opentype'),
-    url('fonts/cvsu-font-icon.ttf?1fabn3') format('truetype'),
-    url('fonts/cvsu-font-icon.woff?1fabn3') format('woff'),
-    url('fonts/cvsu-font-icon.svg?1fabn3#cvsu-font-icon') format('svg');
+  src:  url('fonts/cvsu-font-icon.eot?41yaq2');
+  src:  url('fonts/cvsu-font-icon.eot?41yaq2#iefix') format('embedded-opentype'),
+    url('fonts/cvsu-font-icon.ttf?41yaq2') format('truetype'),
+    url('fonts/cvsu-font-icon.woff?41yaq2') format('woff'),
+    url('fonts/cvsu-font-icon.svg?41yaq2#cvsu-font-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-clear:before {
+  content: "\e904";
+}
 .icon-chevron-down:before {
   content: "\e900";
 }

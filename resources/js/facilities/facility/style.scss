@@ -54,3 +54,14 @@
     }
   }
 }
+
+.modal > .content {
+  max-width: 500px;
+  padding: 20px;
+  > .close {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}

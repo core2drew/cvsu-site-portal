@@ -1,34 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LinesEllipsis from 'react-lines-ellipsis'
 import { Modal } from '../../components'
 import './style.scss'
 
-const Facility = props => (
-  <div className="facility">
-    {/* <Modal>
-      <div className="details">
-        <div className="slider"></div>
-        <p className="section title">{props.title}</p>
-        <p>{props.description}</p>
+const Facility = props => {
+  const [isModalActive, setIsModalActive] = useState(false)
+
+  const handleCloseModal = () => (
+    setIsModalActive(false)
+  )
+  
+  const handleOpenModal = () => (
+    setIsModalActive(true)
+  )
+
+  return (
+    <React.Fragment>
+      <Modal isActive={isModalActive} handleClose={handleCloseModal}>
+        <div className="details">
+          <div className="slider" style={{backgroundImage: `url(${props.backgroundImage})`}}></div>
+          <p className="section title">{props.title}</p>
+          <p>{props.description}</p>
+        </div>
+      </Modal>
+      <div className="facility">
+        <div className="hover" onClick={handleOpenModal}>
+          View
+        </div>
+        <div className="feature-image" style={{backgroundImage: `url(${props.backgroundImage})`}} />
+        <div className="details">
+          <p className="title">{props.title}</p>
+          <LinesEllipsis 
+            className="description"
+            text={props.description}
+            maxLine='4'
+            ellipsis='...'
+            trimRight
+            basedOn='letters'
+          />
+        </div>
       </div>
-    </Modal> */}
-    <div className="hover">
-      View
-    </div>
-    <div className="feature-image" style={{backgroundImage: `url(${props.backgroundImage})`}} />
-    <div className="details">
-      <p className="title">{props.title}</p>
-      <p className="description">
-        <LinesEllipsis 
-          text={props.description}
-          maxLine='4'
-          ellipsis='...'
-          trimRight
-          basedOn='letters'
-        />
-      </p>
-    </div>
-  </div>
-)
+    </React.Fragment>
+  )
+}
 
 export default Facility

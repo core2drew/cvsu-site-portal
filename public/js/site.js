@@ -161,6 +161,68 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 /***/ }),
 
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
 /***/ "./node_modules/create-react-context/lib/implementation.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/create-react-context/lib/implementation.js ***!
@@ -559,7 +621,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".modal {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  top: 0;\n  left: 0;\n  z-index: 4;\n}", ""]);
+exports.push([module.i, ".modal {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: none;\n  top: 0;\n  left: 0;\n  z-index: 4;\n}\n.modal.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.modal .content {\n  margin: auto;\n  background-color: #fff;\n  position: relative;\n}\n.modal .content > .close {\n  position: absolute;\n}", ""]);
 
 // exports
 
@@ -616,7 +678,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".facility {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n}\n.facility:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n.facility:hover > .hover {\n  opacity: 1;\n  visibility: visible;\n}\n.facility > .hover {\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  transition: all 0.2s;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: rgba(50, 155, 88, 0.9);\n  color: #fff;\n  font-size: 1.3em;\n  font-family: rubikmedium;\n  cursor: pointer;\n  visibility: hidden;\n  opacity: 0;\n}\n.facility > .feature-image {\n  min-width: 200px;\n  height: 160px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-position: center;\n}\n.facility > .details {\n  padding: 0 15px;\n}\n.facility > .details > .title {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n.facility > .details > .description {\n  font-size: 13px;\n  margin-top: 10px;\n}\n.facility > .details > .title,\n.facility > .details > .description {\n  margin-bottom: 0;\n  line-height: 1.4;\n}", ""]);
+exports.push([module.i, ".facility {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n}\n.facility:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n.facility:hover > .hover {\n  opacity: 1;\n  visibility: visible;\n}\n.facility > .hover {\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  transition: all 0.2s;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: rgba(50, 155, 88, 0.9);\n  color: #fff;\n  font-size: 1.3em;\n  font-family: rubikmedium;\n  cursor: pointer;\n  visibility: hidden;\n  opacity: 0;\n}\n.facility > .feature-image {\n  min-width: 200px;\n  height: 160px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-position: center;\n}\n.facility > .details {\n  padding: 0 15px;\n}\n.facility > .details > .title {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n.facility > .details > .description {\n  font-size: 13px;\n  margin-top: 10px;\n}\n.facility > .details > .title,\n.facility > .details > .description {\n  margin-bottom: 0;\n  line-height: 1.4;\n}\n\n.modal > .content {\n  max-width: 500px;\n  padding: 20px;\n}\n.modal > .content > .close {\n  cursor: pointer;\n  position: absolute;\n  right: 10px;\n  top: 10px;\n}", ""]);
 
 // exports
 
@@ -53130,10 +53192,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var Icon = function Icon(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "icon-".concat(props.icon)
+    onClick: props.onClick,
+    className: "icon-".concat(props.icon, " ").concat(props.variant)
   });
 };
 
+Icon.defaultProps = {
+  icon: '',
+  variant: '',
+  onClick: function onClick() {
+    return false;
+  }
+};
 /* harmony default export */ __webpack_exports__["default"] = (Icon);
 
 /***/ }),
@@ -53388,19 +53458,39 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/modal/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/modal/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 
 var Modal = function Modal(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal"
+    id: props.id,
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()("modal ".concat(props.variant), {
+      active: props.isActive
+    })
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content"
-  }, props.children));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    variant: 'close',
+    icon: 'clear',
+    onClick: props.handleClose
+  }), props.children));
 };
 
+Modal.defaultProps = {
+  id: '',
+  variant: '',
+  isActive: false,
+  handleClose: function handleClose() {
+    return false;
+  }
+};
 /* harmony default export */ __webpack_exports__["default"] = (Modal);
 
 /***/ }),
@@ -53614,16 +53704,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components */ "./resources/js/components/index.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/facilities/facility/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
 
 
 var Facility = function Facility(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isModalActive = _useState2[0],
+      setIsModalActive = _useState2[1];
+
+  var handleCloseModal = function handleCloseModal() {
+    return setIsModalActive(false);
+  };
+
+  var handleOpenModal = function handleOpenModal() {
+    return setIsModalActive(true);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Modal"], {
+    isActive: isModalActive,
+    handleClose: handleCloseModal
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "details"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slider",
+    style: {
+      backgroundImage: "url(".concat(props.backgroundImage, ")")
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section title"
+  }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.description))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "facility"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hover"
+    className: "hover",
+    onClick: handleOpenModal
   }, "View"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-image",
     style: {
@@ -53633,9 +53757,8 @@ var Facility = function Facility(props) {
     className: "details"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "title"
-  }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "description"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    className: "description",
     text: props.description,
     maxLine: "4",
     ellipsis: "...",
