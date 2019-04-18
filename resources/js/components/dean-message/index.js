@@ -3,7 +3,7 @@ import './style.scss'
 
 const DeanMessage = () => (
   <div id="DeanMessage" className="section">
-    <p className="header">Message from the Dean</p>
+    <p className="section header">Message from the Dean</p>
     <div className="message-container">
       <div className="header">
         <p className="post-date">Posted Date: March 09, 2019</p>

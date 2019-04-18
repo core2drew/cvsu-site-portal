@@ -52521,7 +52521,7 @@ var AcademicCalendar = function AcademicCalendar() {
     id: "AcademicCalendar",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "header"
+    className: "section header"
   }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_calendar__WEBPACK_IMPORTED_MODULE_1___default.a, {
     className: "calendar",
     minDetail: 'year',
@@ -52615,7 +52615,7 @@ var Announcements = function Announcements() {
     id: "Announcements",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "header"
+    className: "section header"
   }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "announcement"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -52757,7 +52757,7 @@ var DeanMessage = function DeanMessage() {
     id: "DeanMessage",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "header"
+    className: "section header"
   }, "Message from the Dean"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "message-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

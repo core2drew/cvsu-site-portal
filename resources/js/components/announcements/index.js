@@ -3,7 +3,7 @@ import './style.scss'
 
 const Announcements = () => (
   <div id="Announcements" className="section">
-    <p className="header">Announcements</p>
+    <p className="section header">Announcements</p>
     <div className="announcement">
       <div className="header">
         <p className="post-date">Posted Date: March 09, 2019</p>

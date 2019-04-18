@@ -149,16 +149,19 @@
   display: grid;
 }
 
+#Home,
 #About,
 #Facilities {
   height: 100%;
 }
 
+#Home .section.header,
 #About .section.header,
 #Facilities .section.header {
   font-size: 20px;
 }
 
+#Home .section.header:after,
 #About .section.header:after,
 #Facilities .section.header:after {
   display: block;
@@ -168,6 +171,7 @@
   margin-top: 8px;
 }
 
+#Home > .grid.container,
 #About > .grid.container,
 #Facilities > .grid.container {
   margin-top: 20px;
@@ -175,6 +179,7 @@
   grid-gap: 15px;
 }
 
+#Home > .grid.container > .grid-item,
 #About > .grid.container > .grid-item,
 #Facilities > .grid.container > .grid-item {
   background-color: #fff;

@@ -10,7 +10,7 @@ const AcademicCalendar = () => {
   maxDate = new Date(maxDate)
   return (
     <div id="AcademicCalendar" className="section">
-      <p className="header">Academic Calendar</p>
+      <p className="section header">Academic Calendar</p>
       <Calendar 
         className="calendar" 
         minDetail={'year'} 
