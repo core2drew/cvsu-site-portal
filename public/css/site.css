@@ -84,6 +84,11 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0.42857rem 0;
+  text-decoration: none;
+}
+
+#MainNav > .container > .sitename:visited {
+  color: inherit;
 }
 
 #MainNav > .container > .sitename > .schoolname {
@@ -147,10 +152,12 @@
   color: #fff;
 }
 
+#MainNav > .container > .menu > .item,
 #MainNav > .container > .menu > .item > a {
   text-decoration: none;
 }
 
+#MainNav > .container > .menu > .item,
 #MainNav > .container > .menu > .item > a:visited {
   color: inherit;
 }

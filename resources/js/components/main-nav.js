@@ -5,19 +5,17 @@ import { Link } from 'react-router-dom'
 const MainNav = () => (
   <div id="MainNav">
     <div className="container">
-      <div className="sitename">
+      <Link to="/" className="sitename">
         <Logo/>
         <span className="schoolname">
           <p className="name">Cavite State University</p>
           <p className="branch">Cavite City Campus</p>
         </span>
-      </div>
+      </Link>
       <ul className="menu">
-        <li className="item">
-          <Link to="/about">
-            About
-          </Link>
-        </li>
+        <Link className="item" to="/about">
+          About
+        </Link>
         <li className="item">
           Admission
           <ul className="sub-menu">

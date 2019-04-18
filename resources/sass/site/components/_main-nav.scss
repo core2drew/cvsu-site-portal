@@ -13,6 +13,10 @@
       display: flex;
       align-items: center;
       padding: 0.42857rem 0;
+      text-decoration: none;
+      &:visited {
+        color: inherit;
+      }
       > .schoolname {
         margin-left: 0.85714rem;
       }
@@ -45,13 +49,18 @@
         position: relative;
         padding: 0 15px;
       }
+      
       > .item:hover {
         background-color: $green-1;
         color: #fff;
       }
+
+      > .item ,
       > .item > a {
         text-decoration: none;
       }
+      
+      > .item,
       > .item > a:visited {
         color: inherit;
       }
