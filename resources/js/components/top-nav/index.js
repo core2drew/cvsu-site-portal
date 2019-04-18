@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import Icon from '../icon'
 import './style.scss'
 
 const TopNav = props => (
@@ -20,6 +21,7 @@ const TopNav = props => (
       </div>
       <a href="/portal" id="Portal" className="cvsu-btn">
         Portal
+        <Icon icon={'lock'} />
       </a>
     </div>
   </div>

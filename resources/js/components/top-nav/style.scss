@@ -18,6 +18,7 @@
       margin:0 0.85714rem;
     }
     > #Portal {
+      display: flex;
       transition: background-color 0.2s;
       font-size: 0.85714rem;
       margin-right: 0;
@@ -27,6 +28,9 @@
       text-transform: uppercase;
       padding: 0.35714rem 1.64285rem;
       font-family: rubikmedium;
+    }
+    > #Portal > i[class*=icon] {
+      margin-left: 10px;
     }
     > #Portal:hover {
       background-color: $yellow-2;

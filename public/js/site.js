@@ -597,7 +597,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#TopNav {\n  background-color: #329B58;\n  color: #fff;\n  padding: 0.14285rem 0;\n}\n#TopNav > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#TopNav > .container > .detail {\n  font-size: 0.85714rem;\n}\n#TopNav > .container > .detail > label {\n  margin-right: 5px;\n}\n#TopNav > .container > .breaker {\n  margin: 0 0.85714rem;\n}\n#TopNav > .container > #Portal {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  font-size: 0.85714rem;\n  margin-right: 0;\n  margin-left: auto;\n  background-color: #E6AC3E;\n  color: #fff;\n  text-transform: uppercase;\n  padding: 0.35714rem 1.64285rem;\n  font-family: rubikmedium;\n}\n#TopNav > .container > #Portal:hover {\n  background-color: #f1b94f;\n}", ""]);
+exports.push([module.i, "#TopNav {\n  background-color: #329B58;\n  color: #fff;\n  padding: 0.14285rem 0;\n}\n#TopNav > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#TopNav > .container > .detail {\n  font-size: 0.85714rem;\n}\n#TopNav > .container > .detail > label {\n  margin-right: 5px;\n}\n#TopNav > .container > .breaker {\n  margin: 0 0.85714rem;\n}\n#TopNav > .container > #Portal {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  font-size: 0.85714rem;\n  margin-right: 0;\n  margin-left: auto;\n  background-color: #E6AC3E;\n  color: #fff;\n  text-transform: uppercase;\n  padding: 0.35714rem 1.64285rem;\n  font-family: rubikmedium;\n}\n#TopNav > .container > #Portal > i[class*=icon] {\n  margin-left: 10px;\n}\n#TopNav > .container > #Portal:hover {\n  background-color: #f1b94f;\n}", ""]);
 
 // exports
 
@@ -53513,8 +53513,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/top-nav/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/top-nav/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -53538,7 +53540,9 @@ var TopNav = function TopNav(props) {
     href: "/portal",
     id: "Portal",
     className: "cvsu-btn"
-  }, "Portal")));
+  }, "Portal", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    icon: 'lock'
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TopNav);
