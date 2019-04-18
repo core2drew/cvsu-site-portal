@@ -1,28 +1,27 @@
-@import '../../variables';
+@import '../variables';
 
-#Announcements {
-  > .announcement {
+#DeanMessage {
+  > .message-container {
     background-color: #fff;
     padding: 17px 20px;
     border: 1px solid $gray-1;
     box-shadow: $global-box-shadow;
-    > .header {
-      > .title {
+  
+    > .header{
+
+      > p {
+        margin-top: 0;
+      }
+  
+      > .greet {
         font-family: rubikmedium;
         font-size: 16px;
-        margin-bottom: 0;
-      } 
-      > .post-date {
-        margin-top: 5px;
       }
     }
+  
     > .message {
       line-height: 1.5;
       margin-bottom: 0;
     }
-  }
-
-  > .announcement:nth-last-child(n + 2) {
-    margin-bottom: 10px;
   }
 }

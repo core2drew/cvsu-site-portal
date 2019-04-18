@@ -13,4 +13,8 @@ const SideQuickLinks = props => (
   </div>
 )
 
+SideQuickLinks.defaultProps = {
+  variant: ''
+}
+
 export default SideQuickLinks

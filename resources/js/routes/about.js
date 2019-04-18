@@ -13,8 +13,8 @@ const About = () => (
     <TopNav />
     <MainNav/>
       <div className="container grid">
-        <SideQuickLinks variant={'grid-item'} />
-        <SideAnnouncements variant={'grid-item'} />
+        <SideQuickLinks />
+        <SideAnnouncements />
         <History />
         <MissionVision />
         <Hymn />

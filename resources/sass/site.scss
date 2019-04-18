@@ -1,12 +1,13 @@
 
 // Components
+@import './components/dean-message';
+@import './components/footer';
+@import './components/announcements';
+@import './components/academic-calendar';
+
 @import './site/components/top-nav';
 @import './site/components/main-nav';
 @import './site/components/heroheader';
-@import './site/components/footer';
-@import './site/components/dean-message';
-@import './site/components/announcements';
-@import './site/components/academic-calendar';
 @import './site/components/sidebar';
 @import './site/components/side-announcements';
 @import './site/components/side-quicklinks';
@@ -14,6 +15,7 @@
 // Pages
 @import './site/home';
 @import './site/about';
+@import './site/facilities';
 
 #App {
   position: relative;
@@ -33,7 +35,8 @@
   }
 }
 
-#About {
+#About, #Facilities {
+  height: 100%;
   .section.header {
     font-size: 20px;
     &:after {
@@ -42,6 +45,16 @@
       border-bottom: solid 3px $green-1;
       width: 100px;
       margin-top: 8px;
+    }
+  }
+  > .grid.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-gap: 15px;
+
+    > .grid-item {
+      background-color: #fff;
+      padding: 20px;
     }
   }
 }

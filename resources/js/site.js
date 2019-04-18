@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './routes/home'
 import About from './routes/about'
+import Facilities from './routes/facilities'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -15,6 +16,7 @@ const App = () => (
   <Router>
     <Route path="/" exact component={Home} />
     <Route path="/about" component={About} />
+    <Route path="/facilities" component={Facilities} />
   </Router>
 )
 

@@ -14,4 +14,8 @@ const SideAnnouncements = props => (
   </div>
 )
 
+SideAnnouncements.defaultProps = {
+  variant: ''
+}
+
 export default SideAnnouncements

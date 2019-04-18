@@ -24,9 +24,9 @@ const MainNav = () => (
             <li className="item">Course Offered</li>
           </ul>
         </NavLink>
-        <li className="item">
+        <NavLink className="item" to="/facilities">
           Facilities
-        </li>
+        </NavLink>
         <li className="item">
           Contact
         </li>
