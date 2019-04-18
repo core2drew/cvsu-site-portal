@@ -49,6 +49,12 @@
         background-color: $green-1;
         color: #fff;
       }
+      > .item > a {
+        text-decoration: none;
+      }
+      > .item > a:visited {
+        color: inherit;
+      }
     }
   }
 }

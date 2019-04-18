@@ -52243,17 +52243,9 @@ var MainNav = function MainNav() {
     className: "menu"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
-  }, "About", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "sub-menu"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/mission-vision"
-  }, "Mission and Vision")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "item"
-  }, "CvSU History"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "item"
-  }, "CvSU Hymn"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    to: "/about"
+  }, "About")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
   }, "Admission", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "sub-menu"

@@ -147,6 +147,14 @@
   color: #fff;
 }
 
+#MainNav > .container > .menu > .item > a {
+  text-decoration: none;
+}
+
+#MainNav > .container > .menu > .item > a:visited {
+  color: inherit;
+}
+
 #MainNav > .container > .menu > .item > .sub-menu {
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;

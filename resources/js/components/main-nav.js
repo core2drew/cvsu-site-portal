@@ -14,16 +14,9 @@ const MainNav = () => (
       </div>
       <ul className="menu">
         <li className="item">
-          About
-          <ul className="sub-menu">
-            <li className="item">
-              <Link to="/mission-vision">
-                Mission and Vision
-              </Link>
-            </li>
-            <li className="item">CvSU History</li>
-            <li className="item">CvSU Hymn</li>
-          </ul>
+          <Link to="/about">
+            About
+          </Link>
         </li>
         <li className="item">
           Admission
