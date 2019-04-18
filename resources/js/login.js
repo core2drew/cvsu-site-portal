@@ -8,8 +8,8 @@ const App = () => {
   const passwordRef = useRef()
 
   const handleLogin = () => {
-    let username = userNameRef.current.value
-    let password = passwordRef.current.value
+    let username = userNameRef.current
+    let password = passwordRef.current
     post('/ajax/login', {username, password}, function(res){
       if(res.id) {
         window.location.replace("/portal")
@@ -20,8 +20,8 @@ const App = () => {
   return (
     <div id="Login">
       <h3 className="title">Log In</h3>
-      <Input ref={userNameRef}  placeholder="Student ID / Username" />
-      <Input ref={passwordRef}  placeholder="Password" />
+      <Input onChange={e => userNameRef.current = e.target.value} placeholder="Student ID / Username" />
+      <Input onChange={e => passwordRef.current = e.target.value} placeholder="Password" type={'password'} />
       <Button text={'Log In'} onClick={handleLogin} />
     </div>
   )

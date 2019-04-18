@@ -521,7 +521,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n}", ""]);
+exports.push([module.i, ".cvsu-input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -47508,7 +47508,7 @@ module.exports = LinesEllipsis;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53203,10 +53203,10 @@ __webpack_require__.r(__webpack_exports__);
 var Input = function Input(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     id: props.id,
-    className: "cvsu-input ".concat(variant),
-    ref: props.ref,
-    type: "text",
-    placeholder: props.placeholder
+    className: "cvsu-input ".concat(props.variant),
+    type: props.type,
+    placeholder: props.placeholder,
+    onChange: props.onChange
   });
 };
 
@@ -53214,7 +53214,8 @@ Input.defaultProps = {
   id: '',
   variant: '',
   ref: null,
-  placeholder: ''
+  placeholder: '',
+  type: 'text'
 };
 /* harmony default export */ __webpack_exports__["default"] = (Input);
 

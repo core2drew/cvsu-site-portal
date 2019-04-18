@@ -521,7 +521,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n}", ""]);
+exports.push([module.i, ".cvsu-input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -47378,7 +47378,7 @@ function polyfill(Component) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52975,10 +52975,10 @@ __webpack_require__.r(__webpack_exports__);
 var Input = function Input(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     id: props.id,
-    className: "cvsu-input ".concat(variant),
-    ref: props.ref,
-    type: "text",
-    placeholder: props.placeholder
+    className: "cvsu-input ".concat(props.variant),
+    type: props.type,
+    placeholder: props.placeholder,
+    onChange: props.onChange
   });
 };
 
@@ -52986,7 +52986,8 @@ Input.defaultProps = {
   id: '',
   variant: '',
   ref: null,
-  placeholder: ''
+  placeholder: '',
+  type: 'text'
 };
 /* harmony default export */ __webpack_exports__["default"] = (Input);
 
@@ -53371,8 +53372,8 @@ var App = function App() {
   var passwordRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
 
   var handleLogin = function handleLogin() {
-    var username = userNameRef.current.value;
-    var password = passwordRef.current.value;
+    var username = userNameRef.current;
+    var password = passwordRef.current;
     Object(_utils__WEBPACK_IMPORTED_MODULE_2__["post"])('/ajax/login', {
       username: username,
       password: password
@@ -53388,11 +53389,16 @@ var App = function App() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "title"
   }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Input"], {
-    ref: userNameRef,
+    onChange: function onChange(e) {
+      return userNameRef.current = e.target.value;
+    },
     placeholder: "Student ID / Username"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Input"], {
-    ref: passwordRef,
-    placeholder: "Password"
+    onChange: function onChange(e) {
+      return passwordRef.current = e.target.value;
+    },
+    placeholder: "Password",
+    type: 'password'
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
     text: 'Log In',
     onClick: handleLogin
