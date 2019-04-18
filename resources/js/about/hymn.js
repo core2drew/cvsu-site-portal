@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hymn = () => (
   <div id="Hymn" className="grid-item">
-    <h3 className="title">CvSU Hymn</h3>
+    <h3 className="section header">CvSU Hymn</h3>
     <div id="Lyrics">
       <audio controls>
         <source src="/mp3/CVSU-Hymn.mp3" type="audio/mpeg" />

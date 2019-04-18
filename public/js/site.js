@@ -51910,8 +51910,11 @@ var History = function History() {
     id: "History",
     className: "grid-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "title"
-  }, "History of CvSU - Cavite City Campus"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Cvsu-CCC is located in Pulo II, Dalahican, Cavite City. The campus was established as a timely response of the Cavite provincial government to the needs of the people in lowland town of Cavite for a good quality education at affordable cost."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Through Resolution No.153 s. 2000 which was later amended by Resolution No. 540 s. 2000, the Sangguniang Panlalawigan authorized then provincial Governor Ramon Revilla to negotiate and enter into agreement with the Development Bank of the Philippines for loan application for the purpose of establishing the Cavite State University-Cavite City Campus."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Through loan granted, the former Columbia College was rehabilitated which paved the way for the operation of the present campus. The campus initially offered three courses namely: Bachelor of Science in Computer Science, Bachelor of Science in Business Management and Associate in Computer Education."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Its enrolment of 230 during of first semester of SY 2001-2002 was reduced to 203 during the second semester. Likewise, Bachelor of Elementary Education and Bachelor or Secondary Education majors in English and Mathematics were offered during the first semester of SY 2002-2003 with only 17 students."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "To date the population has increased 2400. Despite the number of lapses, difficulties and problem, the campus is going strong. This made possible through the kind assistance and supervision of the administration of the university, the Cavite provincial government, Cavite City local government unit and the present personnel of the campus."));
+    className: "section header"
+  }, "History of CvSU - Cavite City Campus"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "CVSUFront",
+    src: "/images/cvsu_orig.png"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Cvsu-CCC is located in Pulo II, Dalahican, Cavite City. The campus was established as a timely response of the Cavite provincial government to the needs of the people in lowland town of Cavite for a good quality education at affordable cost."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Through Resolution No.153 s. 2000 which was later amended by Resolution No. 540 s. 2000, the Sangguniang Panlalawigan authorized then provincial Governor Ramon Revilla to negotiate and enter into agreement with the Development Bank of the Philippines for loan application for the purpose of establishing the Cavite State University-Cavite City Campus."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Through loan granted, the former Columbia College was rehabilitated which paved the way for the operation of the present campus. The campus initially offered three courses namely: Bachelor of Science in Computer Science, Bachelor of Science in Business Management and Associate in Computer Education."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Its enrolment of 230 during of first semester of SY 2001-2002 was reduced to 203 during the second semester. Likewise, Bachelor of Elementary Education and Bachelor or Secondary Education majors in English and Mathematics were offered during the first semester of SY 2002-2003 with only 17 students."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "To date the population has increased 2400. Despite the number of lapses, difficulties and problem, the campus is going strong. This made possible through the kind assistance and supervision of the administration of the university, the Cavite provincial government, Cavite City local government unit and the present personnel of the campus."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (History);
@@ -51936,7 +51939,7 @@ var Hymn = function Hymn() {
     id: "Hymn",
     className: "grid-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "title"
+    className: "section header"
   }, "CvSU Hymn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Lyrics"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
@@ -51970,13 +51973,13 @@ var MissionVision = function MissionVision() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Mission"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "title"
+    className: "section header"
   }, "Mission"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "content"
   }, "Cavite State University shall provide excellent, equitable and relevant educational opportunities in the arts, sciences and technology through quality instruction and responsive research and development activities. It shall produce professional, skilled and morally upright individuals for global competitiveness.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Vision"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "title"
+    className: "section header"
   }, "Vision"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "content"
   }, "The premier university in historic Cavite recognized for excellence in the development of globally competitive and morally upright individuals")));
@@ -52194,6 +52197,29 @@ var HeroHeader = function HeroHeader() {
 
 /***/ }),
 
+/***/ "./resources/js/components/icon.js":
+/*!*****************************************!*\
+  !*** ./resources/js/components/icon.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Icon = function Icon(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "icon-".concat(props.icon)
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Icon);
+
+/***/ }),
+
 /***/ "./resources/js/components/logo.js":
 /*!*****************************************!*\
   !*** ./resources/js/components/logo.js ***!
@@ -52277,14 +52303,41 @@ var MainNav = function MainNav() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon */ "./resources/js/components/icon.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
 
 
 var SideAnnouncements = function SideAnnouncements(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "side-announcements ".concat(props.variant)
+    id: "SideAnnouncements",
+    className: "sidebar ".concat(props.variant)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "title"
-  }, "Quick Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Application for Admission Exam for 1st Semester SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Grade 11 Application for SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Grade 7 Application for SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Deadline of Submission of Requirements for Admission Exam")));
+    className: "section header"
+  }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "links"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "link",
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: "caret-right"
+  }), "Application for Admission Exam for 1st Semester SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "link",
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: "caret-right"
+  }), "Grade 11 Application for SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "link",
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: "caret-right"
+  }), "Grade 7 Application for SY 2019-2020"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "link",
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: "caret-right"
+  }), "Deadline of Submission of Requirements for Admission Exam")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SideAnnouncements);
@@ -52302,14 +52355,36 @@ var SideAnnouncements = function SideAnnouncements(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon */ "./resources/js/components/icon.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
 
 
 var SideQuickLinks = function SideQuickLinks(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "side-quick-links ".concat(props.variant)
+    id: "SideQuickLinks",
+    className: "sidebar ".concat(props.variant)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "title"
-  }, "Quick Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "CvSU History"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "CvSU Hymn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Course Offered")));
+    className: "section header"
+  }, "Quick Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "links"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "link",
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: "caret-right"
+  }), "Admission Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "link",
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: "caret-right"
+  }), "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "link",
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: "caret-right"
+  }), "Course Offered")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SideQuickLinks);

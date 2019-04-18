@@ -7,8 +7,9 @@
 @import './site/components/dean-message';
 @import './site/components/announcements';
 @import './site/components/academic-calendar';
+@import './site/components/sidebar';
 @import './site/components/side-announcements';
-@import './site/components/side-quick-links';
+@import './site/components/side-quicklinks';
 
 // Pages
 @import './site/home';
@@ -16,8 +17,7 @@
 
 #App {
   position: relative;
-  padding-bottom: 2.85714rem;
-  height: 100%;
+  min-height: 100%;
 }
 
 .container {
@@ -30,5 +30,27 @@
 
   &.grid {
     display: grid;
+  }
+}
+
+#About {
+  .section.header {
+    font-size: 20px;
+    &:after {
+      display: block;
+      content: "";
+      border-bottom: solid 3px $green-1;
+      width: 100px;
+      margin-top: 8px;
+    }
+  }
+}
+
+
+#SideQuickLinks,
+#SideAnnouncements {
+  .section.header {
+    font-size: 17px;
+    margin-top: 0;
   }
 }

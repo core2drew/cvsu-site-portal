@@ -2,7 +2,8 @@ import React from 'react'
 
 const History = () => (
   <div id="History" className="grid-item">
-    <h3 className="title">History of CvSU - Cavite City Campus</h3>
+    <h3 className="section header">History of CvSU - Cavite City Campus</h3>
+    <img id="CVSUFront" src="/images/cvsu_orig.png" />
     <p>
       Cvsu-CCC is located in Pulo II, Dalahican, Cavite City. 
       The campus was established as a timely response of the Cavite 

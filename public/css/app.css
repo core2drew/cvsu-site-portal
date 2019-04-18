@@ -384,7 +384,7 @@ body {
   font-family: rubikregular, Helvetica, sans-serif;
   font-size: 14px;
   color: #2B2B2B;
-  height: 100%;
+  min-height: 100%;
   position: relative;
 }
 

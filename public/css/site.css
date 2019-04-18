@@ -168,7 +168,7 @@
   background-color: #329B58;
   width: 180px;
   left: 0;
-  bottom: -153px;
+  bottom: -152px;
   -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);
      -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);
           box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);
@@ -378,16 +378,42 @@
           flex: 2;
 }
 
-.side-announcements {
+.sidebar {
   position: -webkit-sticky;
   position: sticky;
-  top: 315px;
 }
 
-.side-quick-links {
-  position: -webkit-sticky;
-  position: sticky;
+.sidebar > .links > .link {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.sidebar > .links > .link:visited {
+  color: inherit;
+}
+
+.sidebar > .links > .link > i[class*=icon] {
+  font-size: 8px;
+  margin-right: 8px;
+}
+
+#SideAnnouncements {
+  top: 309px;
+}
+
+#SideQuickLinks {
   top: 117px;
+  max-height: 140px;
 }
 
 #Home > .grid.container {
@@ -409,6 +435,10 @@
   grid-row-start: 1;
   grid-column-start: 2;
   grid-row-end: 3;
+}
+
+#History #CVSUFront {
+  width: 100%;
 }
 
 #History > p {
@@ -474,17 +504,17 @@
   padding: 20px;
 }
 
-#About > .grid.container > .side-quick-links,
-#About > .grid.container > .side-announcements {
+#About > .grid.container > #SideQuickLinks,
+#About > .grid.container > #SideAnnouncements {
   grid-column: 5;
 }
 
-#About > .grid.container > .side-quick-links {
+#About > .grid.container > #SideQuickLinks {
   grid-row: 1;
 }
 
-#About > .grid.container > .side-announcements {
-  grid-row: 2/4;
+#About > .grid.container > #SideAnnouncements {
+  grid-row: 2;
 }
 
 #About > .grid.container > #History {
@@ -503,8 +533,7 @@
 
 #App {
   position: relative;
-  padding-bottom: 2.85714rem;
-  height: 100%;
+  min-height: 100%;
 }
 
 .container {
@@ -518,5 +547,23 @@
 
 .container.grid {
   display: grid;
+}
+
+#About .section.header {
+  font-size: 20px;
+}
+
+#About .section.header:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #329B58;
+  width: 100px;
+  margin-top: 8px;
+}
+
+#SideQuickLinks .section.header,
+#SideAnnouncements .section.header {
+  font-size: 17px;
+  margin-top: 0;
 }
 

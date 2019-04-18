@@ -3,7 +3,7 @@ import React from 'react'
 const MissionVision = () => (
   <div id="MissionVision">
     <div id="Mission">
-      <h3 className="title">Mission</h3>
+      <h3 className="section header">Mission</h3>
       <p className="content">
         Cavite State University shall provide excellent, equitable and relevant 
         educational opportunities in the arts, sciences and technology through 
@@ -14,7 +14,7 @@ const MissionVision = () => (
     </div>
 
     <div id="Vision">
-      <h3 className="title">Vision</h3>
+      <h3 className="section header">Vision</h3>
       <p className="content">
         The premier university in historic Cavite recognized 
         for excellence in the development of globally competitive and morally upright individuals
