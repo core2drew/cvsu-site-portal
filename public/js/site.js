@@ -52444,13 +52444,15 @@ var TopNav = function TopNav(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/main-nav */ "./resources/js/components/main-nav.js");
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/footer */ "./resources/js/components/footer.js");
-/* harmony import */ var _components_side_quicklinks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/side-quicklinks */ "./resources/js/components/side-quicklinks.js");
-/* harmony import */ var _components_side_announcements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/side-announcements */ "./resources/js/components/side-announcements.js");
-/* harmony import */ var _about_mission_vision__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../about/mission-vision */ "./resources/js/about/mission-vision.js");
-/* harmony import */ var _about_history__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../about/history */ "./resources/js/about/history.js");
-/* harmony import */ var _about_hymn__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../about/hymn */ "./resources/js/about/hymn.js");
+/* harmony import */ var _components_top_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/top-nav */ "./resources/js/components/top-nav.js");
+/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/main-nav */ "./resources/js/components/main-nav.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/footer */ "./resources/js/components/footer.js");
+/* harmony import */ var _components_side_quicklinks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/side-quicklinks */ "./resources/js/components/side-quicklinks.js");
+/* harmony import */ var _components_side_announcements__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/side-announcements */ "./resources/js/components/side-announcements.js");
+/* harmony import */ var _about_mission_vision__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../about/mission-vision */ "./resources/js/about/mission-vision.js");
+/* harmony import */ var _about_history__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../about/history */ "./resources/js/about/history.js");
+/* harmony import */ var _about_hymn__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../about/hymn */ "./resources/js/about/hymn.js");
+
 
 
 
@@ -52463,13 +52465,13 @@ __webpack_require__.r(__webpack_exports__);
 var About = function About() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "About"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_main_nav__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_top_nav__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_main_nav__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_quicklinks__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_quicklinks__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: 'grid-item'
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_announcements__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_side_announcements__WEBPACK_IMPORTED_MODULE_5__["default"], {
     variant: 'grid-item'
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_history__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_mission_vision__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_hymn__WEBPACK_IMPORTED_MODULE_7__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_history__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_mission_vision__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_hymn__WEBPACK_IMPORTED_MODULE_8__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);

@@ -1,4 +1,5 @@
 import React from 'react'
+import TopNav from '../components/top-nav'
 import MainNav from '../components/main-nav';
 import Footer from '../components/footer';
 import SideQuickLinks from '../components/side-quicklinks'
@@ -9,6 +10,7 @@ import Hymn from '../about/hymn'
 
 const About = () => (
   <div id="About">
+    <TopNav />
     <MainNav/>
       <div className="container grid">
         <SideQuickLinks variant={'grid-item'} />
