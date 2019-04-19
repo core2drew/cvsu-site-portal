@@ -19,59 +19,6 @@
   grid-row-end: 3;
 }
 
-#History #CVSUFront {
-  width: 100%;
-  min-height: 240px;
-}
-
-#History > p {
-  line-height: 1.4;
-}
-
-#MissionVision > #Mission,
-#MissionVision > #Vision {
-  background-color: #fff;
-  padding: 20px;
-}
-
-#MissionVision > #Mission > p,
-#MissionVision > #Vision > p {
-  line-height: 1.4;
-}
-
-#Hymn > #Lyrics {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  margin: auto;
-  max-width: 200px;
-}
-
-#Hymn > #Lyrics > audio {
-  margin-bottom: 10px;
-  height: 35px;
-}
-
-#Hymn > #Lyrics > p {
-  margin-bottom: 0;
-  line-height: 1.4;
-}
-
 #SideAnnouncements {
   top: 309px;
 }

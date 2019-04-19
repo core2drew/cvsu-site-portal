@@ -6,7 +6,6 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Cavite State University - Cavite City</title>
         @include("styles")
-        <link href="{{ asset('css/site.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="App"></div>

@@ -1,8 +1,6 @@
 import React from 'react'
 import { TopNav, MainNav, Footer, Sidebar } from '../components'
-import MissionVision from '../about/mission-vision';
-import History from '../about/history';
-import Hymn from '../about/hymn'
+import { MissionVision, History, Hymn } from '../site-components';
 
 const About = () => (
   <div id="About">
