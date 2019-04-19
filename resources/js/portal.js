@@ -7,16 +7,7 @@ import Announcements from './portal-routes/announcements'
 import AcademicCalendar from './portal-routes/academic-calendar'
 import Students from './portal-routes/students'
 import Users from './portal-routes/users'
-
-function NoMatch({ location }) {
-  return (
-    <div>
-      <h3>
-        No match for <code>{location.pathname}</code>
-      </h3>
-    </div>
-  );
-}
+import NoMatch from './portal-routes/nomatch'
 
 const App = () => (
   <Router>
