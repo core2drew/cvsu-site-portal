@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './site-routes/home'
 import About from './site-routes/about'
 import Facilities from './site-routes/facilities'
+import { TopNav, MainNav, Footer} from './components'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -13,11 +14,14 @@ import Facilities from './site-routes/facilities'
 
 
 const App = () => (
-  <Router>
-    <Route path="/" exact component={Home} />
-    <Route path="/about" component={About} />
-    <Route path="/facilities" component={Facilities} />
-  </Router>
+    <Router>
+      <TopNav />
+      <MainNav />
+      <Route path="/" exact component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/facilities" component={Facilities} />
+      <Footer />
+    </Router>
 )
 
 ReactDOM.render(<App />, document.getElementById('App'));

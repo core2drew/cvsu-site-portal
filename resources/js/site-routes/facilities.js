@@ -4,8 +4,6 @@ import { Facility } from '../site-components'
 
 const Facilities = () => (
   <div id="Facilities">
-    <TopNav />
-    <MainNav />
     <div className="container grid">
       <Sidebar 
         id="SideQuickLinks" 
@@ -103,7 +101,6 @@ const Facilities = () => (
         />
       </div>
     </div>
-    <Footer />
   </div>
 )
 

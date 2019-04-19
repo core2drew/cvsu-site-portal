@@ -54006,7 +54006,7 @@ __webpack_require__.r(__webpack_exports__);
 var About = function About() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "About"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["MainNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
     id: "SideQuickLinks",
@@ -54037,7 +54037,7 @@ var About = function About() {
       to: '/',
       slug: 'Deadline of Submission of Requirements for Admission Exam'
     }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["History"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["MissionVision"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["Hymn"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Footer"], null));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["History"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["MissionVision"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["Hymn"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -54064,7 +54064,7 @@ __webpack_require__.r(__webpack_exports__);
 var Facilities = function Facilities() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Facilities"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["MainNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
     id: "SideQuickLinks",
@@ -54116,7 +54116,7 @@ var Facilities = function Facilities() {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Footer"], null));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Facilities);
@@ -54141,9 +54141,9 @@ __webpack_require__.r(__webpack_exports__);
 var Home = function Home() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Home"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["MainNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Hero"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Hero"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["DeanMessage"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["AcademicCalendar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Announcements"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Footer"], null));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["DeanMessage"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["AcademicCalendar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Announcements"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -54167,6 +54167,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _site_routes_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./site-routes/home */ "./resources/js/site-routes/home.js");
 /* harmony import */ var _site_routes_about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./site-routes/about */ "./resources/js/site-routes/about.js");
 /* harmony import */ var _site_routes_facilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./site-routes/facilities */ "./resources/js/site-routes/facilities.js");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components */ "./resources/js/components/index.js");
+
 
 
 
@@ -54181,7 +54183,7 @@ __webpack_require__.r(__webpack_exports__);
 // require('./bootstrap');
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_6__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_6__["MainNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/",
     exact: true,
     component: _site_routes_home__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -54191,7 +54193,7 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/facilities",
     component: _site_routes_facilities__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_6__["Footer"], null));
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('App'));

@@ -1,2 +1,6 @@
-// Variables
 @import './variables';
+
+#App {
+  position: relative;
+  min-height: 100%;
+}
