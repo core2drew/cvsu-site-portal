@@ -29848,6 +29848,29 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/portal-routes/academic-calendar.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/portal-routes/academic-calendar.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var AcademicCalendar = function AcademicCalendar() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "AcademicCalendar"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Academic Calendar"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AcademicCalendar);
+
+/***/ }),
+
 /***/ "./resources/js/portal-routes/announcements.js":
 /*!*****************************************************!*\
   !*** ./resources/js/portal-routes/announcements.js ***!
@@ -29864,7 +29887,7 @@ __webpack_require__.r(__webpack_exports__);
 var Announcements = function Announcements() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Announcements"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Announcements"));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Announcements"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Announcements);
@@ -29887,10 +29910,56 @@ __webpack_require__.r(__webpack_exports__);
 var DeanMessage = function DeanMessage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "DeanMessage"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Dean Message"));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Dean Message"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DeanMessage);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/students.js":
+/*!************************************************!*\
+  !*** ./resources/js/portal-routes/students.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Students = function Students() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Students"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Students"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Students);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/users.js":
+/*!*********************************************!*\
+  !*** ./resources/js/portal-routes/users.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Users = function Users() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Users"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Users"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Users);
 
 /***/ }),
 
@@ -29911,17 +29980,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _portal_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./portal-components */ "./resources/js/portal-components/index.js");
 /* harmony import */ var _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portal-routes/dean-message */ "./resources/js/portal-routes/dean-message.js");
 /* harmony import */ var _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./portal-routes/announcements */ "./resources/js/portal-routes/announcements.js");
+/* harmony import */ var _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./portal-routes/academic-calendar */ "./resources/js/portal-routes/academic-calendar.js");
+/* harmony import */ var _portal_routes_students__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./portal-routes/students */ "./resources/js/portal-routes/students.js");
+/* harmony import */ var _portal_routes_users__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./portal-routes/users */ "./resources/js/portal-routes/users.js");
 
 
 
 
 
 
+
+
+
+
+function NoMatch(_ref) {
+  var location = _ref.location;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "No match for ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", null, location.pathname)));
+}
 
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components__WEBPACK_IMPORTED_MODULE_3__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components__WEBPACK_IMPORTED_MODULE_3__["Sidebar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal",
     exact: true,
     component: _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_4__["default"]
@@ -29929,7 +30009,21 @@ var App = function App() {
     path: "/portal/announcements",
     exact: true,
     component: _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_5__["default"]
-  })));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/portal/academic-calendar",
+    exact: true,
+    component: _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/portal/students",
+    exact: true,
+    component: _portal_routes_students__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/portal/users",
+    exact: true,
+    component: _portal_routes_users__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    component: NoMatch
+  }))));
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('App'));

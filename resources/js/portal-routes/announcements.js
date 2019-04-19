@@ -2,7 +2,7 @@ import React from 'react'
 
 const Announcements = () => (
   <div id="Announcements">
-    <h1>Announcements</h1>
+    <h2>Announcements</h2>
   </div>
 )
 

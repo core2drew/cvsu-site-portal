@@ -2,7 +2,7 @@ import React from 'react'
 
 const DeanMessage = () => (
   <div id="DeanMessage">
-    <h1>Dean Message</h1>
+    <h2>Dean Message</h2>
   </div>
 )
 
