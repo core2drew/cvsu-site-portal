@@ -1,0 +1,57 @@
+#TopNav {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  > .sitename {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    text-decoration: none;
+    &:visited {
+      color: inherit;
+    }
+    > .logo {
+      width: 50px;
+      height: 50px;
+    }
+    > .schoolname {
+      margin-left: 12px;
+    }
+    > .schoolname > .name {
+      font-family: rubikmedium;
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    > .schoolname > .branch {
+      margin-top: 3px;
+      margin-bottom: 0;
+      font-size: 12px
+    }
+  }
+
+  > .menu {
+    display: flex;
+    align-items: center;
+    > .profile-image {
+      margin-right: 10px;
+      width: 40px;
+      border-radius: 40px;
+    }
+    > .greet {
+      display: flex;
+      align-items: center;
+      font-family: rubikmedium;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    > .greet > i[class*=icon] {
+      font-size: 10px;
+      margin-left: 5px;
+    }
+  }
+}

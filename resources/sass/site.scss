@@ -2,6 +2,10 @@
 @import './site/about';
 @import './site/facilities';
 
+body {
+  background-color: $green-3;
+}
+
 #App {
   position: relative;
   min-height: 100%;

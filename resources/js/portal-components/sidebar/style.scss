@@ -1,0 +1,13 @@
+@import '../../../sass/variables';
+
+#Sidebar {
+  position: sticky;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  min-height: calc(100vh - 99px);
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}

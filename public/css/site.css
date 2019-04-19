@@ -78,6 +78,10 @@
   grid-row: 1/4;
 }
 
+body {
+  background-color: #F5FFF4;
+}
+
 #App {
   position: relative;
   min-height: 100%;
