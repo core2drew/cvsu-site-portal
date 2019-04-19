@@ -20,9 +20,9 @@ Route::group([
     "prefix" => "portal",
     "middleware" => "check.session"
 ], function() {
-    Route::get("/", [
+    Route::get("/{route?}", [
         "uses" => "PortalController@index",
-    ]);
+    ])->where('route', '(dean-message|announcements|academic-calendar|students|users)');;
 });
 
 Route::group([

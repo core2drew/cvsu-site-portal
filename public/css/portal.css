@@ -5,5 +5,19 @@ body {
 #App {
   position: relative;
   min-height: 100%;
+  display: grid;
+  grid-template-columns: 200px;
+}
+
+#Content {
+  overflow-y: auto;
+  max-height: -webkit-calc(100vh - 60px);
+  max-height: -moz-calc(100vh - 60px);
+  max-height: calc(100vh - 60px);
+}
+
+#DeanMessage,
+#Announcements {
+  padding: 20px;
 }
 

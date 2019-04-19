@@ -7,4 +7,15 @@ body {
 #App {
   position: relative;
   min-height: 100%;
+  display: grid;
+  grid-template-columns: 200px;
+}
+
+#Content {
+  overflow-y: auto;
+  max-height: calc(100vh - 60px);
+}
+
+#DeanMessage, #Announcements {
+  padding: 20px;
 }

@@ -407,7 +407,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#Sidebar {\n  position: -webkit-sticky;\n  position: sticky;\n  background-color: #fff;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  max-width: 200px;\n  min-height: -webkit-calc(100vh - 99px);\n  min-height: -moz-calc(100vh - 99px);\n  min-height: calc(100vh - 99px);\n  padding-top: 15px;\n  padding-left: 15px;\n  padding-right: 15px;\n}", ""]);
+exports.push([module.i, "#Sidebar {\n  position: -webkit-sticky;\n  position: sticky;\n  background-color: #fff;\n  top: 60px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  max-width: 200px;\n  min-height: -webkit-calc(100vh - 60px);\n  min-height: -moz-calc(100vh - 60px);\n  min-height: calc(100vh - 60px);\n}\n#Sidebar > .link {\n  padding: 15px;\n  text-decoration: none;\n  color: #2B2B2B;\n}\n#Sidebar > .link:visited {\n  color: inherit;\n}\n#Sidebar > .link.active {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
 
 // exports
 
@@ -426,7 +426,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#TopNav {\n  background-color: #fff;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  padding-left: 15px;\n  padding-right: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n#TopNav > .sitename {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 5px 0;\n  text-decoration: none;\n}\n#TopNav > .sitename:visited {\n  color: inherit;\n}\n#TopNav > .sitename > .logo {\n  width: 50px;\n  height: 50px;\n}\n#TopNav > .sitename > .schoolname {\n  margin-left: 12px;\n}\n#TopNav > .sitename > .schoolname > .name {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .sitename > .schoolname > .branch {\n  margin-top: 3px;\n  margin-bottom: 0;\n  font-size: 12px;\n}\n#TopNav > .menu {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#TopNav > .menu > .profile-image {\n  margin-right: 10px;\n  width: 40px;\n  -webkit-border-radius: 40px;\n     -moz-border-radius: 40px;\n          border-radius: 40px;\n}\n#TopNav > .menu > .greet {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-family: rubikmedium;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .menu > .greet > i[class*=icon] {\n  font-size: 10px;\n  margin-left: 5px;\n}", ""]);
+exports.push([module.i, "#TopNav {\n  background-color: #fff;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  padding-left: 15px;\n  padding-right: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  grid-column: 1/3;\n}\n#TopNav > .sitename {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 5px 0;\n  text-decoration: none;\n}\n#TopNav > .sitename:visited {\n  color: inherit;\n}\n#TopNav > .sitename > .logo {\n  width: 50px;\n  height: 50px;\n}\n#TopNav > .sitename > .schoolname {\n  margin-left: 12px;\n}\n#TopNav > .sitename > .schoolname > .name {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .sitename > .schoolname > .branch {\n  margin-top: 3px;\n  margin-bottom: 0;\n  font-size: 12px;\n}\n#TopNav > .menu {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n}\n#TopNav > .menu > .profile-image {\n  margin-right: 10px;\n  width: 40px;\n  -webkit-border-radius: 40px;\n     -moz-border-radius: 40px;\n          border-radius: 40px;\n}\n#TopNav > .menu > .greet {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-family: rubikmedium;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .menu > .greet > i[class*=icon] {\n  font-size: 10px;\n  margin-left: 5px;\n}", ""]);
 
 // exports
 
@@ -29609,15 +29609,25 @@ var Sidebar = function Sidebar(props) {
     id: "Sidebar",
     className: props.variant
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    to: "/"
+    exact: true,
+    to: "/portal",
+    className: "link"
   }, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    to: "/"
+    exact: true,
+    to: "/portal/announcements",
+    className: "link"
   }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    to: "/"
+    exact: true,
+    to: "/portal/academic-calendar",
+    className: "link"
   }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    to: "/"
+    exact: true,
+    to: "/portal/students",
+    className: "link"
   }, "Students"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    to: "/"
+    exact: true,
+    to: "/portal/users",
+    className: "link"
   }, "Users"));
 };
 
@@ -29732,6 +29742,52 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/portal-routes/announcements.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/portal-routes/announcements.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Announcements = function Announcements() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Announcements"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Announcements"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Announcements);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/dean-message.js":
+/*!****************************************************!*\
+  !*** ./resources/js/portal-routes/dean-message.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var DeanMessage = function DeanMessage() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "DeanMessage"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Dean Message"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DeanMessage);
+
+/***/ }),
+
 /***/ "./resources/js/portal.js":
 /*!********************************!*\
   !*** ./resources/js/portal.js ***!
@@ -29747,13 +29803,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _portal_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./portal-components */ "./resources/js/portal-components/index.js");
+/* harmony import */ var _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portal-routes/dean-message */ "./resources/js/portal-routes/dean-message.js");
+/* harmony import */ var _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./portal-routes/announcements */ "./resources/js/portal-routes/announcements.js");
+
+
 
 
 
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components__WEBPACK_IMPORTED_MODULE_3__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components__WEBPACK_IMPORTED_MODULE_3__["Sidebar"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components__WEBPACK_IMPORTED_MODULE_3__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components__WEBPACK_IMPORTED_MODULE_3__["Sidebar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/portal",
+    exact: true,
+    component: _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/portal/announcements",
+    exact: true,
+    component: _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_5__["default"]
+  })));
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('App'));
