@@ -1,15 +1,19 @@
-import React, {useRef} from 'react';
+import React, { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { post } from './utils'
-import { Button, Input } from './components'
+import Button from './components/button'
+import Input from './components/input'
+import Preloader from './components/preloader'
 
 const App = () => {
   const userNameRef = useRef()
   const passwordRef = useRef()
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleLogin = () => {
     let username = userNameRef.current
     let password = passwordRef.current
+    setIsLoading(true)
     post('/ajax/login', {username, password}, function(res){
       if(res.id) {
         window.location.replace("/portal")
@@ -19,6 +23,7 @@ const App = () => {
   
   return (
     <div id="Login">
+      <Preloader isActive={isLoading} variant={'fixed'}/>
       <h3 className="title">Log In</h3>
       <Input onChange={e => userNameRef.current = e.target.value} placeholder="Student ID / Username" />
       <Input onChange={e => passwordRef.current = e.target.value} placeholder="Password" type={'password'} />
