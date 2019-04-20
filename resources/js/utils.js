@@ -17,7 +17,7 @@ export const get = (url, params, success, error) => {
       return res
     })
     .then(res => res.json())
-    .then(res => success())
+    .then(res => success(res))
     .catch(e => {
       console.log(e)
       error()

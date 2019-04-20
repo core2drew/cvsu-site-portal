@@ -48,4 +48,16 @@ Route::group([
         "as" => "ajax.login",
         "uses" => "AJAXLoginController@index"
     ]);
+
+    // Portal
+    Route::group([
+        "as" => "ajax.portal",
+        "prefix" => "portal",
+        "middleware" => "check.session"
+    ], function() {
+        Route::get("/user", [
+            "as" => "ajax.portal.user",
+            "uses" => "AJAXPortalController@getPortalUser"
+        ]);
+    });
 });

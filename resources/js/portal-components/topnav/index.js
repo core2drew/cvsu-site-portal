@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import classnames from 'classnames'
 import Logo from '../../components/logo'
 import Icon from '../../components/icon'
 import { Link } from 'react-router-dom'
+import UserContext from '../../contexts/user-context'
 import './style.scss'
 
 const TopNav = () => {
   const [isMenuActive, setIsMenuActive] = useState(false)
-  
+  const userContext = useContext(UserContext)
+
   const handleMenu = e => {
     e.nativeEvent.stopImmediatePropagation()
     setIsMenuActive(!isMenuActive)
@@ -36,7 +38,7 @@ const TopNav = () => {
       <div className="menu" onClick={handleMenu}>
         <img className="profile-image" src="/images/profile/profile_image_placeholder.jpg" />
         <p className="greet">
-          Hi, Drew
+          Hi, {userContext ? userContext.username : ''}
           <Icon icon="chevron-down"/>
         </p>
         <div 

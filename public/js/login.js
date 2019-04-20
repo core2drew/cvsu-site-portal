@@ -53537,7 +53537,7 @@ var get = function get(url, params, success, error) {
   }).then(function (res) {
     return res.json();
   }).then(function (res) {
-    return success();
+    return success(res);
   })["catch"](function (e) {
     console.log(e);
     error();
