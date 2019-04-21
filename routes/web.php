@@ -65,10 +65,22 @@ Route::group([
             "as" => "ajax.portal.dean-message",
             "uses" => "AJAXPortalController@getDeanMessage"
         ]);
+        
         Route::post("/dean-message", [
             "as" => "ajax.portal.add.dean-message",
             "uses" => "AJAXPortalController@addDeanMessage",
-            "middleware" => "check.session"
+            "middleware" => ["check.isadmin", "check.session"]
+        ]);
+        
+        //Announcements
+        Route::get("/announcements", [
+            "as" => "ajax.portal.announcements",
+            "uses" => "AJAXPortalController@getAnnouncements"
+        ]);
+
+        Route::post("/announcements", [
+            "as" => "ajax.portal.add.announcements",
+            "uses" => "AJAXPortalController@addAnnouncements"
         ]);
     });
 });
