@@ -526,7 +526,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#DeanMessage > .message-container {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#DeanMessage > .message-container > .header > p {\n  margin-top: 0;\n}\n#DeanMessage > .message-container > .header > .greet {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n#DeanMessage > .message-container > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}\n#DeanMessage > .message-container > .message > p {\n  margin: 0;\n}", ""]);
+exports.push([module.i, "#DeanMessage > .message-container {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#DeanMessage > .message-container > .header > p {\n  margin-top: 0;\n}\n#DeanMessage > .message-container > .header > .greet {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n#DeanMessage > .message-container > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}\n#DeanMessage > .message-container > .message h1, #DeanMessage > .message-container > .message h2, #DeanMessage > .message-container > .message h3 {\n  margin-top: 0;\n  line-height: 1;\n}\n#DeanMessage > .message-container > .message > p {\n  margin: 0;\n}", ""]);
 
 // exports
 
@@ -53189,9 +53189,7 @@ var DeanMessage = function DeanMessage() {
     className: "header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "post-date"
-  }, "Posted Date: ", deanMessage && moment__WEBPACK_IMPORTED_MODULE_1___default()(deanMessage.created_at).format('MMMM DD, YYYY')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "greet"
-  }, "Dear Students")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Posted Date: ", deanMessage && moment__WEBPACK_IMPORTED_MODULE_1___default()(deanMessage.created_at).format('MMMM DD, YYYY'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "message",
     dangerouslySetInnerHTML: {
       __html: deanMessage && deanMessage.message

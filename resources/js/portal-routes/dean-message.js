@@ -25,9 +25,9 @@ const DeanMessage = () => {
 
   return (
     <div id="DeanMessage">
-      <h2>Dean Message</h2>
+      <h2 className="section header">Dean Message</h2>
       <CKEditor id="Editor" onChange={handleEditor} value={message} initialValue={initialMessage}/>
-      <Button text={'Save'} onClick={handleSave} />
+      <Button id="Save" text={'Save'} onClick={handleSave} />
     </div>
   )
 }

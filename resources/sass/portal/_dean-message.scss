@@ -1,0 +1,9 @@
+@import '../variables';
+
+#DeanMessage {
+  > #Save {
+    background-color: $green-1;
+    color: #fff;
+    margin-top: 10px;
+  }
+}

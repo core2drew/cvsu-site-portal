@@ -19,7 +19,6 @@ const DeanMessage = () => {
       <div className="message-container">
         <div className="header">
           <p className="post-date">Posted Date: {deanMessage && moment(deanMessage.created_at).format('MMMM DD, YYYY')}</p>
-          <p className="greet">Dear Students</p>
         </div>
         <p className="message" dangerouslySetInnerHTML={{
           __html: deanMessage && deanMessage.message

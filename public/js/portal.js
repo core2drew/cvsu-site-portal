@@ -30316,12 +30316,15 @@ var DeanMessage = function DeanMessage() {
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "DeanMessage"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section header"
+  }, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "Editor",
     onChange: handleEditor,
     value: message,
     initialValue: initialMessage
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    id: "Save",
     text: 'Save',
     onClick: handleSave
   }));
