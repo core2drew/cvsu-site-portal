@@ -53,11 +53,22 @@ Route::group([
     Route::group([
         "as" => "ajax.portal",
         "prefix" => "portal",
-        "middleware" => "check.session"
     ], function() {
         Route::get("/user", [
             "as" => "ajax.portal.user",
-            "uses" => "AJAXPortalController@getPortalUser"
+            "uses" => "AJAXPortalController@getPortalUser",
+            "middleware" => "check.session"
+        ]);
+
+        // Dean Message
+        Route::get("/dean-message", [
+            "as" => "ajax.portal.dean-message",
+            "uses" => "AJAXPortalController@getDeanMessage"
+        ]);
+        Route::post("/dean-message", [
+            "as" => "ajax.portal.add.dean-message",
+            "uses" => "AJAXPortalController@addDeanMessage",
+            "middleware" => "check.session"
         ]);
     });
 });

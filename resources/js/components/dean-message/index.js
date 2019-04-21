@@ -1,24 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import moment from 'moment'
+import { get } from '../../utils'
 import './style.scss'
 
-const DeanMessage = () => (
-  <div id="DeanMessage" className="section">
-    <p className="section header">Message from the Dean</p>
-    <div className="message-container">
-      <div className="header">
-        <p className="post-date">Posted Date: March 09, 2019</p>
-        <p className="greet">Dear Students</p>
+const DeanMessage = () => {
+  const [deanMessage, setDeanMessage] = useState(null)
+  useEffect(() => {
+    if(!deanMessage) {
+      get('/ajax/portal/dean-message', {}, res => {
+        setDeanMessage(res)
+      })
+    }
+  })
+
+  return (
+    <div id="DeanMessage" className="section">
+      <p className="section header">Message from the Dean</p>
+      <div className="message-container">
+        <div className="header">
+          <p className="post-date">Posted Date: {deanMessage && moment(deanMessage.created_at).format('MMMM DD, YYYY')}</p>
+          <p className="greet">Dear Students</p>
+        </div>
+        <p className="message" dangerouslySetInnerHTML={{
+          __html: deanMessage && deanMessage.message
+        }} />
       </div>
-      <p className="message">
-        As we all look forward to the University’s continued advancement, 
-        I believe this executive summary will effectively serve as an 
-        inspiration and at the same time motivation in our efforts to 
-        become a global-research university. Our record of accomplishment 
-        in 2018 includes: Sustaining academic excellence Maintained high 
-        percentage of board passers and topnotchers in different.
-      </p>
     </div>
-  </div>
-)
+  )
+}
 
 export default DeanMessage

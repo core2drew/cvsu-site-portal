@@ -457,6 +457,25 @@ module.exports = exports['default'];
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/button/style.scss":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/button/style.scss ***!
+  \******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  border: 0;\n  background-color: #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n}\n.cvsu-btn > i[class*=icon] {\n  margin-left: 10px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-components/sidebar/style.scss":
 /*!**************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-components/sidebar/style.scss ***!
@@ -24891,7 +24910,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29790,6 +29809,75 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./resources/js/components/button/index.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/button/index.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/button/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var Button = function Button(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: props.id,
+    className: "cvsu-btn ".concat(props.variant),
+    onClick: props.onClick
+  }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: props.icon
+  }));
+};
+
+Button.defaultProps = {
+  id: '',
+  variant: '',
+  onClick: function onClick() {
+    return false;
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (Button);
+
+/***/ }),
+
+/***/ "./resources/js/components/button/style.scss":
+/*!***************************************************!*\
+  !*** ./resources/js/components/button/style.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/button/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/ckeditor/index.js":
 /*!***************************************************!*\
   !*** ./resources/js/components/ckeditor/index.js ***!
@@ -29807,15 +29895,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var CKEditor = function CKEditor(props) {
+  var editorRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    window.CKEDITOR.replace(props.id);
+    editorRef.current = window.CKEDITOR.replace(props.id);
+    editorRef.current.on('change', function () {
+      props.onChange(editorRef.current.getData());
+    });
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    editorRef.current.setData(props.initialValue);
+  }, [props.initialValue]);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
     id: props.id,
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('editor', props.variant)
   });
 };
 
+CKEditor.defaultProps = {
+  onChange: function onChange() {
+    return false;
+  }
+};
 /* harmony default export */ __webpack_exports__["default"] = (CKEditor);
 
 /***/ }),
@@ -30165,15 +30265,65 @@ var Announcements = function Announcements() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_ckeditor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ckeditor */ "./resources/js/components/ckeditor/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./resources/js/utils.js");
+/* harmony import */ var _components_ckeditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ckeditor */ "./resources/js/components/ckeditor/index.js");
+/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/button */ "./resources/js/components/button/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
 
 
 
 var DeanMessage = function DeanMessage() {
+  var url = '/ajax/portal/dean-message';
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      initialMessage = _useState2[0],
+      setInitialMessage = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      message = _useState4[0],
+      setMessage = _useState4[1];
+
+  var handleEditor = function handleEditor(data) {
+    setMessage(data);
+  };
+
+  var handleSave = function handleSave() {
+    Object(_utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      message: message
+    }, function () {
+      return alert('Message Save');
+    }, function () {
+      return alert('Something went wrong');
+    });
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(_utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
+      setMessage(res.message);
+      setInitialMessage(res.message);
+    });
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "DeanMessage"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    id: "Editor"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    id: "Editor",
+    onChange: handleEditor,
+    value: message,
+    initialValue: initialMessage
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: 'Save',
+    onClick: handleSave
   }));
 };
 

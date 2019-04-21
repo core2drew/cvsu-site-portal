@@ -22,6 +22,9 @@
     > .message {
       line-height: 1.5;
       margin-bottom: 0;
+      > p {
+        margin: 0;
+      }
     }
   }
 }
