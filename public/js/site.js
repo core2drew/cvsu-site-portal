@@ -53174,11 +53174,13 @@ var DeanMessage = function DeanMessage() {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     if (!deanMessage) {
       Object(_utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/dean-message', {}, function (res) {
-        setDeanMessage(res);
+        if (res.id) {
+          setDeanMessage(res);
+        }
       });
     }
   });
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return deanMessage && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "DeanMessage",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {

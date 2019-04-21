@@ -8,21 +8,22 @@ const DeanMessage = () => {
   useEffect(() => {
     if(!deanMessage) {
       get('/ajax/portal/dean-message', {}, res => {
-        setDeanMessage(res)
+        if(res.id) {
+          setDeanMessage(res)
+        }
       })
     }
   })
 
   return (
+    deanMessage &&
     <div id="DeanMessage" className="section">
       <p className="section header">Message from the Dean</p>
       <div className="message-container">
         <div className="header">
           <p className="post-date">Posted Date: {deanMessage && moment(deanMessage.created_at).format('MMMM DD, YYYY')}</p>
         </div>
-        <p className="message" dangerouslySetInnerHTML={{
-          __html: deanMessage && deanMessage.message
-        }} />
+        <p className="message" dangerouslySetInnerHTML={{ __html: deanMessage && deanMessage.message}} />
       </div>
     </div>
   )
