@@ -29,6 +29,21 @@ class AJAXPortalController extends Controller
     }
 
     public function addAnnouncements(Request $request) {
+        $title = $request->get('title');
+        $content = $request->get('content');
+        $slug = $request->get('slug');
+        $created_at = now();
+        $updated_at = now();
 
+        $response = DB::table('announcements')
+        ->insert([
+            'title' => $title, 
+            'content' => $content, 
+            'slug' => $slug, 
+            'created_at' => $created_at, 
+            'updated_at' => $updated_at
+        ]);
+
+        return response()->json($response);
     }
 }
