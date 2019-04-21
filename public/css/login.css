@@ -46,13 +46,9 @@
 #Login > .cvsu-btn {
   padding-top: 14px;
   padding-bottom: 14px;
-  background-color: #329B58;
-  color: #fff;
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
-  font-family: rubikmedium;
-  text-transform: uppercase;
   margin-top: auto;
 }
 
