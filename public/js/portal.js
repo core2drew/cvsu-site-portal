@@ -30172,11 +30172,7 @@ __webpack_require__.r(__webpack_exports__);
 var DeanMessage = function DeanMessage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "DeanMessage"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "field"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "text"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_1__["default"], {
     id: "Editor"
   }));
 };

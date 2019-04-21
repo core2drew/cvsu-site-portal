@@ -4,9 +4,6 @@ import CKEditor from '../components/ckeditor'
 const DeanMessage = () => (
   <div id="DeanMessage">
     <h2>Dean Message</h2>
-    <div className="field">
-      <input type="text" />
-    </div>
     <CKEditor id="Editor"/>
   </div>
 )
