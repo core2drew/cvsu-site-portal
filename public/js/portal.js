@@ -29790,6 +29790,36 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./resources/js/components/ckeditor/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/ckeditor/index.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var CKEditor = function CKEditor(props) {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    window.CKEDITOR.replace(props.id);
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: props.id,
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('editor', props.variant)
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CKEditor);
+
+/***/ }),
+
 /***/ "./resources/js/components/icon/index.js":
 /*!***********************************************!*\
   !*** ./resources/js/components/icon/index.js ***!
@@ -30135,6 +30165,8 @@ var Announcements = function Announcements() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_ckeditor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ckeditor */ "./resources/js/components/ckeditor/index.js");
+
 
 
 var DeanMessage = function DeanMessage() {
@@ -30144,7 +30176,9 @@ var DeanMessage = function DeanMessage() {
     className: "field"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text"
-  })));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    id: "Editor"
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DeanMessage);

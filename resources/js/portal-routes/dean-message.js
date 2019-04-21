@@ -1,4 +1,5 @@
 import React from 'react'
+import CKEditor from '../components/ckeditor'
 
 const DeanMessage = () => (
   <div id="DeanMessage">
@@ -6,6 +7,7 @@ const DeanMessage = () => (
     <div className="field">
       <input type="text" />
     </div>
+    <CKEditor id="Editor"/>
   </div>
 )
 
