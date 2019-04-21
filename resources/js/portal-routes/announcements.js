@@ -6,7 +6,7 @@ import Button from '../components/button'
 import Modal from '../components/modal'
 import CKEditor from '../components/ckeditor'
 import Input from '../components/input'
-import Prelaoder from '../components/preloader'
+import Preloader from '../components/preloader'
 
 const Announcements = () => {
   const url = '/ajax/portal/announcements'
@@ -33,7 +33,10 @@ const Announcements = () => {
     get(url, {}, res => {
       setData(res.data)
       setIsLoading(false)
-    }, () => setIsLoading(false))
+    }, () => {
+      alert('Something went wrong. Please try again')
+      setIsLoading(false)
+    })
   },[])
 
   const TableBody = () => (
@@ -54,7 +57,7 @@ const Announcements = () => {
 
   return (
     <div id="Announcements">
-      <Prelaoder variant={'fixed'} isActive={isLoading}/>
+      <Preloader variant={'fixed'} isActive={isLoading}/>
       <Button text="Add New" onClick={handleOpenModal}/>
       <Table headers={tableHeaders} customTableBody={<TableBody />}/>
       <Modal isActive={isModalActive} handleClose={handleCloseModal}>

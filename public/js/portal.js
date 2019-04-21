@@ -526,7 +526,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".preloader {\n  display: none;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(50, 155, 88, 0.71);\n}\n.preloader.active {\n  display: block;\n}\n.preloader.fixed {\n  position: fixed;\n  top: 0;\n  left: 0;\n}\n\n.spinner {\n  -webkit-animation: rotate 2s linear infinite;\n     -moz-animation: rotate 2s linear infinite;\n       -o-animation: rotate 2s linear infinite;\n          animation: rotate 2s linear infinite;\n  z-index: 2;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin: -25px 0 0 -25px;\n  width: 50px;\n  height: 50px;\n}\n.spinner .path {\n  stroke: #fff;\n  stroke-linecap: round;\n  -webkit-animation: dash 1.5s ease-in-out infinite;\n     -moz-animation: dash 1.5s ease-in-out infinite;\n       -o-animation: dash 1.5s ease-in-out infinite;\n          animation: dash 1.5s ease-in-out infinite;\n}\n\n@-webkit-keyframes rotate {\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@-moz-keyframes rotate {\n  100% {\n    -moz-transform: rotate(360deg);\n         transform: rotate(360deg);\n  }\n}\n\n@-o-keyframes rotate {\n  100% {\n    -o-transform: rotate(360deg);\n       transform: rotate(360deg);\n  }\n}\n\n@keyframes rotate {\n  100% {\n    -webkit-transform: rotate(360deg);\n       -moz-transform: rotate(360deg);\n         -o-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n@-webkit-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}\n@-moz-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}\n@-o-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}\n@keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}", ""]);
+exports.push([module.i, ".preloader {\n  display: none;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(50, 155, 88, 0.71);\n  z-index: 10;\n}\n.preloader.active {\n  display: block;\n}\n.preloader.fixed {\n  position: fixed;\n  top: 0;\n  left: 0;\n}\n\n.spinner {\n  -webkit-animation: rotate 2s linear infinite;\n     -moz-animation: rotate 2s linear infinite;\n       -o-animation: rotate 2s linear infinite;\n          animation: rotate 2s linear infinite;\n  z-index: 2;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin: -25px 0 0 -25px;\n  width: 50px;\n  height: 50px;\n}\n.spinner .path {\n  stroke: #fff;\n  stroke-linecap: round;\n  -webkit-animation: dash 1.5s ease-in-out infinite;\n     -moz-animation: dash 1.5s ease-in-out infinite;\n       -o-animation: dash 1.5s ease-in-out infinite;\n          animation: dash 1.5s ease-in-out infinite;\n}\n\n@-webkit-keyframes rotate {\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@-moz-keyframes rotate {\n  100% {\n    -moz-transform: rotate(360deg);\n         transform: rotate(360deg);\n  }\n}\n\n@-o-keyframes rotate {\n  100% {\n    -o-transform: rotate(360deg);\n       transform: rotate(360deg);\n  }\n}\n\n@keyframes rotate {\n  100% {\n    -webkit-transform: rotate(360deg);\n       -moz-transform: rotate(360deg);\n         -o-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n@-webkit-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}\n@-moz-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}\n@-o-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}\n@keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}", ""]);
 
 // exports
 
@@ -30832,7 +30832,8 @@ var Announcements = function Announcements() {
       setData(res.data);
       setIsLoading(false);
     }, function () {
-      return setIsLoading(false);
+      alert('Something went wrong. Please try again');
+      setIsLoading(false);
     });
   }, []);
 
@@ -30903,6 +30904,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./resources/js/utils.js");
 /* harmony import */ var _components_ckeditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ckeditor */ "./resources/js/components/ckeditor/index.js");
 /* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/preloader */ "./resources/js/components/preloader/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -30916,18 +30918,24 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var DeanMessage = function DeanMessage() {
   var url = '/ajax/portal/dean-message';
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
       _useState2 = _slicedToArray(_useState, 2),
-      initialMessage = _useState2[0],
-      setInitialMessage = _useState2[1];
+      isLoading = _useState2[0],
+      setIsLoading = _useState2[1];
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState4 = _slicedToArray(_useState3, 2),
-      message = _useState4[0],
-      setMessage = _useState4[1];
+      initialMessage = _useState4[0],
+      setInitialMessage = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState6 = _slicedToArray(_useState5, 2),
+      message = _useState6[0],
+      setMessage = _useState6[1];
 
   var handleEditor = function handleEditor(data) {
     setMessage(data);
@@ -30947,11 +30955,18 @@ var DeanMessage = function DeanMessage() {
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
       setMessage(res.message);
       setInitialMessage(res.message);
+      setIsLoading(false);
+    }, function () {
+      alert('Something went wrong. Please try again');
+      setIsLoading(false);
     });
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "DeanMessage"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_preloader__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    variant: 'fixed',
+    isActive: isLoading
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "Editor",
     onChange: handleEditor,
     value: message,
