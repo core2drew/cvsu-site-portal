@@ -25,6 +25,7 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
+        "ckeditor": "^4.11.4",
         "classnames": "^2.2.6",
         "moment": "^2.24.0",
         "querystring": "^0.2.0",
