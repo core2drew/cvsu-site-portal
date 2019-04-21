@@ -3,6 +3,8 @@ import Uuid from 'uuid/v4'
 import Table from '../components/table'
 import Button from '../components/button'
 import Modal from '../components/modal'
+import CKEditor from '../components/ckeditor'
+import Input from '../components/input'
 
 const Announcements = () => {
   const [isModalActive, setIsModalActive] = useState(false)
@@ -28,8 +30,13 @@ const Announcements = () => {
     <div id="Announcements">
       <Button text="Add New" onClick={handleOpenModal}/>
       <Table headers={tableHeaders} />
+
       <Modal isActive={isModalActive} handleClose={handleCloseModal}>
-        <p>Test</p>
+        <h2 className="section header">New Announcement</h2>
+        <Input variant="title" placeholder="Title"/>
+        <Input variant="slug" placeholder="Slug"/>
+        <CKEditor id="Editor" />
+        <Button variant="save" text="Create" />
       </Modal>
     </div>
   )
