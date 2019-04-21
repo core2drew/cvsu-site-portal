@@ -13,13 +13,21 @@ class AJAXPortalController extends Controller
     }
 
     public function getDeanMessage(Request $request) {
-        $message = DB::table('dean_message')->latest()->first();
-        return response()->json($message);
+        $response = DB::table('dean_message')->latest()->first();
+        return response()->json($response);
     }
 
     public function addDeanMessage(Request $request) {
         $response = DB::table('dean_message')
         ->insert(['message' => $request->get('message'), 'created_at' => now()]);
         return response()->json($response);
+    }
+
+    public function getAnnouncements(Request $request) {
+        $response
+    }
+
+    public function addAnnouncements(Request $request) {
+
     }
 }
