@@ -24,7 +24,8 @@ class AJAXPortalController extends Controller
     }
 
     public function getAnnouncements(Request $request) {
-        $response
+        $response = DB::table('announcements')->paginate(15);
+        return response()->json($response);
     }
 
     public function addAnnouncements(Request $request) {

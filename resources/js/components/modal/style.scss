@@ -14,9 +14,13 @@
     margin: auto;
     background-color: #fff;
     position: relative;
-
+    padding: 20px;
+    min-width: 500px;
     > .close {
       position: absolute;
+      cursor: pointer;
+      right: 10px;
+      top: 10px;
     }
   }
 }
