@@ -24967,7 +24967,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30829,6 +30829,7 @@ var DeanMessage = function DeanMessage() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
+      console.log(res);
       setMessage(res.message);
       setInitialMessage(res.message);
     });
