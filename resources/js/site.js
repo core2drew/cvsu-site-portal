@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './site-routes/home'
 import About from './site-routes/about'
 import Facilities from './site-routes/facilities'
-import { TopNav, MainNav, Footer} from './components'
+import TopNav from './components/top-nav'
+import MainNav from './components/main-nav'
+import Footer from './components/footer'
 
 const App = () => (
     <Router>

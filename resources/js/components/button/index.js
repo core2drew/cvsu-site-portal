@@ -1,4 +1,5 @@
 import React from 'react'
+import Icon from '../icon'
 import './style.scss'
 
 const Button = props => (
@@ -8,6 +9,7 @@ const Button = props => (
     onClick={props.onClick}
   >
     {props.text}
+    {props.icon && <Icon icon={props.icon}/>}
   </button>
 )
 

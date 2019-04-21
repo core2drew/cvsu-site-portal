@@ -507,7 +507,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-btn {\n  border: 0;\n  background-color: #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  border: 0;\n  background-color: #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n}\n.cvsu-btn > i[class*=icon] {\n  margin-left: 10px;\n}", ""]);
 
 // exports
 
@@ -565,25 +565,6 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "#Hero {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  min-height: 550px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-repeat: no-repeat;\n}\n#Hero > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color: #fff;\n}\n#Hero > .container > .greet {\n  font-family: rubikmedium;\n  font-size: 55px;\n  max-width: 660px;\n  font-weight: normal;\n}\n#Hero > .container > .tagline {\n  font-size: 30px;\n}\n#Hero > .container > .greet,\n#Hero > .container > .tagline {\n  margin: 0;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/input/style.scss":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/input/style.scss ***!
-  \*****************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".cvsu-input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -659,7 +640,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#TopNav {\n  background-color: #329B58;\n  color: #fff;\n  padding: 5px 0;\n}\n#TopNav > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#TopNav > .container > .detail {\n  font-size: 12px;\n}\n#TopNav > .container > .detail > label {\n  margin-right: 5px;\n}\n#TopNav > .container > .breaker {\n  margin: 0 12px;\n}\n#TopNav > .container > #Portal {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  font-size: 12px;\n  margin-right: 0;\n  margin-left: auto;\n  background-color: #E6AC3E;\n  color: #fff;\n  text-transform: uppercase;\n  padding: 5px 20px;\n  font-family: rubikmedium;\n}\n#TopNav > .container > #Portal > i[class*=icon] {\n  margin-left: 10px;\n}\n#TopNav > .container > #Portal:hover {\n  background-color: #f1b94f;\n}", ""]);
+exports.push([module.i, "#TopNav {\n  background-color: #329B58;\n  color: #fff;\n  padding: 5px 0;\n}\n#TopNav > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#TopNav > .container > .detail {\n  font-size: 12px;\n}\n#TopNav > .container > .detail > label {\n  margin-right: 5px;\n}\n#TopNav > .container > .breaker {\n  margin: 0 12px;\n}\n#TopNav > .container > #Portal {\n  font-size: 12px;\n  margin-right: 0;\n  margin-left: auto;\n  background-color: #E6AC3E;\n  color: #fff;\n  padding: 5px 20px;\n  font-family: rubikmedium;\n}\n#TopNav > .container > #Portal:hover {\n  background-color: #f1b94f;\n}", ""]);
 
 // exports
 
@@ -47646,7 +47627,7 @@ module.exports = LinesEllipsis;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52888,8 +52869,10 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/button/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/button/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -52898,7 +52881,9 @@ var Button = function Button(props) {
     id: props.id,
     className: "cvsu-btn ".concat(props.variant),
     onClick: props.onClick
-  }, props.text);
+  }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: props.icon
+  }));
 };
 
 Button.defaultProps = {
@@ -53164,138 +53149,6 @@ Icon.defaultProps = {
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (Icon);
-
-/***/ }),
-
-/***/ "./resources/js/components/index.js":
-/*!******************************************!*\
-  !*** ./resources/js/components/index.js ***!
-  \******************************************/
-/*! exports provided: Button, Input, AcademicCalendar, Announcements, DeanMessage, Footer, Hero, Icon, Logo, MainNav, Modal, Sidebar, TopNav */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button */ "./resources/js/components/button/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return _button__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input */ "./resources/js/components/input/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return _input__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-/* harmony import */ var _academic_calendar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./academic-calendar */ "./resources/js/components/academic-calendar/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AcademicCalendar", function() { return _academic_calendar__WEBPACK_IMPORTED_MODULE_2__["default"]; });
-
-/* harmony import */ var _announcements__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./announcements */ "./resources/js/components/announcements/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Announcements", function() { return _announcements__WEBPACK_IMPORTED_MODULE_3__["default"]; });
-
-/* harmony import */ var _dean_message__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dean-message */ "./resources/js/components/dean-message/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DeanMessage", function() { return _dean_message__WEBPACK_IMPORTED_MODULE_4__["default"]; });
-
-/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./footer */ "./resources/js/components/footer/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return _footer__WEBPACK_IMPORTED_MODULE_5__["default"]; });
-
-/* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./hero */ "./resources/js/components/hero/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Hero", function() { return _hero__WEBPACK_IMPORTED_MODULE_6__["default"]; });
-
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./icon */ "./resources/js/components/icon/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Icon", function() { return _icon__WEBPACK_IMPORTED_MODULE_7__["default"]; });
-
-/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./logo */ "./resources/js/components/logo/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Logo", function() { return _logo__WEBPACK_IMPORTED_MODULE_8__["default"]; });
-
-/* harmony import */ var _main_nav__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./main-nav */ "./resources/js/components/main-nav/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MainNav", function() { return _main_nav__WEBPACK_IMPORTED_MODULE_9__["default"]; });
-
-/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modal */ "./resources/js/components/modal/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return _modal__WEBPACK_IMPORTED_MODULE_10__["default"]; });
-
-/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sidebar */ "./resources/js/components/sidebar/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Sidebar", function() { return _sidebar__WEBPACK_IMPORTED_MODULE_11__["default"]; });
-
-/* harmony import */ var _top_nav__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./top-nav */ "./resources/js/components/top-nav/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TopNav", function() { return _top_nav__WEBPACK_IMPORTED_MODULE_12__["default"]; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/input/index.js":
-/*!************************************************!*\
-  !*** ./resources/js/components/input/index.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/input/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-var Input = function Input(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    id: props.id,
-    className: "cvsu-input ".concat(props.variant),
-    type: props.type,
-    placeholder: props.placeholder,
-    onChange: props.onChange
-  });
-};
-
-Input.defaultProps = {
-  id: '',
-  variant: '',
-  ref: null,
-  placeholder: '',
-  type: 'text'
-};
-/* harmony default export */ __webpack_exports__["default"] = (Input);
-
-/***/ }),
-
-/***/ "./resources/js/components/input/style.scss":
-/*!**************************************************!*\
-  !*** ./resources/js/components/input/style.scss ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/input/style.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
 
 /***/ }),
 
@@ -53581,7 +53434,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../button */ "./resources/js/components/button/index.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/top-nav/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
 
@@ -53604,13 +53457,14 @@ var TopNav = function TopNav(props) {
     className: "breaker"
   }, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "detail"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "info@cvsu-cc.com")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/portal",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "info@cvsu-cc.com")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "Portal",
-    className: "cvsu-btn"
-  }, "Portal", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    icon: 'lock'
-  }))));
+    onClick: function onClick() {
+      return window.location.href = "/portal";
+    },
+    text: "Portal",
+    icon: "lock"
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TopNav);
@@ -53660,7 +53514,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lines-ellipsis */ "./node_modules/react-lines-ellipsis/lib/index.js");
 /* harmony import */ var react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components */ "./resources/js/components/index.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/facility/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
@@ -53690,7 +53544,7 @@ var Facility = function Facility(props) {
     return setIsModalActive(true);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Modal"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
     isActive: isModalActive,
     handleClose: handleCloseModal
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -53889,35 +53743,6 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/site-components/index.js":
-/*!***********************************************!*\
-  !*** ./resources/js/site-components/index.js ***!
-  \***********************************************/
-/*! exports provided: History, Hymn, MissionVision, Facility */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _history__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./history */ "./resources/js/site-components/history/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "History", function() { return _history__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _hymn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hymn */ "./resources/js/site-components/hymn/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Hymn", function() { return _hymn__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-/* harmony import */ var _mission_vision__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mission-vision */ "./resources/js/site-components/mission-vision/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MissionVision", function() { return _mission_vision__WEBPACK_IMPORTED_MODULE_2__["default"]; });
-
-/* harmony import */ var _facility__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./facility */ "./resources/js/site-components/facility/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Facility", function() { return _facility__WEBPACK_IMPORTED_MODULE_3__["default"]; });
-
-
-
-
-
-
-
-/***/ }),
-
 /***/ "./resources/js/site-components/mission-vision/index.js":
 /*!**************************************************************!*\
   !*** ./resources/js/site-components/mission-vision/index.js ***!
@@ -53997,8 +53822,12 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./resources/js/components/index.js");
-/* harmony import */ var _site_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../site-components */ "./resources/js/site-components/index.js");
+/* harmony import */ var _components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/sidebar */ "./resources/js/components/sidebar/index.js");
+/* harmony import */ var _site_components_history__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../site-components/history */ "./resources/js/site-components/history/index.js");
+/* harmony import */ var _site_components_mission_vision__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../site-components/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
+/* harmony import */ var _site_components_hymn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../site-components/hymn */ "./resources/js/site-components/hymn/index.js");
+
+
 
 
 
@@ -54008,7 +53837,7 @@ var About = function About() {
     id: "About"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     id: "SideQuickLinks",
     title: "Quick Links",
     links: [{
@@ -54021,7 +53850,7 @@ var About = function About() {
       to: '/',
       slug: 'Course Offered'
     }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     id: "SideAnnouncements",
     title: "Announcements",
     links: [{
@@ -54037,7 +53866,7 @@ var About = function About() {
       to: '/',
       slug: 'Deadline of Submission of Requirements for Admission Exam'
     }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["History"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["MissionVision"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["Hymn"], null)));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_history__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_mission_vision__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_hymn__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -54055,8 +53884,8 @@ var About = function About() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./resources/js/components/index.js");
-/* harmony import */ var _site_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../site-components */ "./resources/js/site-components/index.js");
+/* harmony import */ var _components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/sidebar */ "./resources/js/components/sidebar/index.js");
+/* harmony import */ var _site_components_facility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../site-components/facility */ "./resources/js/site-components/facility/index.js");
 
 
 
@@ -54066,7 +53895,7 @@ var Facilities = function Facilities() {
     id: "Facilities"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     id: "SideQuickLinks",
     title: "Quick Links",
     links: [{
@@ -54079,7 +53908,7 @@ var Facilities = function Facilities() {
       to: '/',
       slug: 'Course Offered'
     }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     id: "SideAnnouncements",
     title: "Announcements",
     links: [{
@@ -54100,19 +53929,19 @@ var Facilities = function Facilities() {
     className: "grid-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "section header"
-  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["Facility"], {
+  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["Facility"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["Facility"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components__WEBPACK_IMPORTED_MODULE_2__["Facility"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
@@ -54134,16 +53963,22 @@ var Facilities = function Facilities() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./resources/js/components/index.js");
+/* harmony import */ var _components_hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/hero */ "./resources/js/components/hero/index.js");
+/* harmony import */ var _components_dean_message__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/dean-message */ "./resources/js/components/dean-message/index.js");
+/* harmony import */ var _components_academic_calendar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/academic-calendar */ "./resources/js/components/academic-calendar/index.js");
+/* harmony import */ var _components_announcements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/announcements */ "./resources/js/components/announcements/index.js");
+
+
+
 
 
 
 var Home = function Home() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Home"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Hero"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_hero__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["DeanMessage"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["AcademicCalendar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Announcements"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_dean_message__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_academic_calendar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_announcements__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -54167,7 +54002,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _site_routes_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./site-routes/home */ "./resources/js/site-routes/home.js");
 /* harmony import */ var _site_routes_about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./site-routes/about */ "./resources/js/site-routes/about.js");
 /* harmony import */ var _site_routes_facilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./site-routes/facilities */ "./resources/js/site-routes/facilities.js");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components */ "./resources/js/components/index.js");
+/* harmony import */ var _components_top_nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/top-nav */ "./resources/js/components/top-nav/index.js");
+/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/main-nav */ "./resources/js/components/main-nav/index.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/footer */ "./resources/js/components/footer/index.js");
+
+
 
 
 
@@ -54177,7 +54016,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_6__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_6__["MainNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_top_nav__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_main_nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/",
     exact: true,
     component: _site_routes_home__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -54187,7 +54026,7 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/facilities",
     component: _site_routes_facilities__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_6__["Footer"], null));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_8__["default"], null));
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('App'));

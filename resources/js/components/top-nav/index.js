@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment'
-import Icon from '../icon'
+import Button from '../button'
 import './style.scss'
 
 const TopNav = props => (
@@ -19,10 +19,7 @@ const TopNav = props => (
         <label>Email:</label>
         <span>info@cvsu-cc.com</span>
       </div>
-      <a href="/portal" id="Portal" className="cvsu-btn">
-        Portal
-        <Icon icon={'lock'} />
-      </a>
+      <Button id="Portal" onClick={() => window.location.href="/portal"} text="Portal" icon="lock" />
     </div>
   </div>
 )

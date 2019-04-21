@@ -1,6 +1,6 @@
 import React from 'react'
-import { TopNav, MainNav, Footer, Sidebar} from '../components'
-import { Facility } from '../site-components'
+import Sidebar from '../components/sidebar'
+import Facility from '../site-components/facility'
 
 const Facilities = () => (
   <div id="Facilities">

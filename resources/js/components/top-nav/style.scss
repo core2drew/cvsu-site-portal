@@ -18,19 +18,13 @@
       margin:0 12px;
     }
     > #Portal {
-      display: flex;
-      transition: background-color 0.2s;
       font-size: 12px;
       margin-right: 0;
       margin-left: auto;
       background-color: $yellow-1;
       color: #fff;
-      text-transform: uppercase;
       padding: 5px 20px;
       font-family: rubikmedium;
-    }
-    > #Portal > i[class*=icon] {
-      margin-left: 10px;
     }
     > #Portal:hover {
       background-color: $yellow-2;

@@ -160,7 +160,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-btn {\n  border: 0;\n  background-color: #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  border: 0;\n  background-color: #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n}\n.cvsu-btn > i[class*=icon] {\n  margin-left: 10px;\n}", ""]);
 
 // exports
 
@@ -25738,8 +25738,10 @@ module.exports = g;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/button/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/button/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -25748,7 +25750,9 @@ var Button = function Button(props) {
     id: props.id,
     className: "cvsu-btn ".concat(props.variant),
     onClick: props.onClick
-  }, props.text);
+  }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: props.icon
+  }));
 };
 
 Button.defaultProps = {
@@ -25789,6 +25793,37 @@ var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/a
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/icon/index.js":
+/*!***********************************************!*\
+  !*** ./resources/js/components/icon/index.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Icon = function Icon(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    onClick: props.onClick,
+    className: "icon-".concat(props.icon, " ").concat(props.variant)
+  });
+};
+
+Icon.defaultProps = {
+  icon: '',
+  variant: '',
+  onClick: function onClick() {
+    return false;
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (Icon);
 
 /***/ }),
 

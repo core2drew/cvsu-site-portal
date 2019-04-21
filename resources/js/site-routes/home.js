@@ -1,10 +1,8 @@
 import React from 'react'
-import {
-  Hero, 
-  DeanMessage, 
-  AcademicCalendar, 
-  Announcements
-} from '../components'
+import Hero from '../components/hero'
+import DeanMessage from '../components/dean-message'
+import AcademicCalendar from '../components/academic-calendar'
+import Announcements from '../components/announcements'
 
 const Home = () => {
   return (
