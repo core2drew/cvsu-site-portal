@@ -26009,6 +26009,12 @@ var App = function App() {
   var handleLogin = function handleLogin() {
     var username = userNameRef.current;
     var password = passwordRef.current;
+
+    if (!username || !password) {
+      alert('Required Username and Password');
+      return;
+    }
+
     setIsLoading(true);
     Object(_utils__WEBPACK_IMPORTED_MODULE_2__["post"])('/ajax/login', {
       username: username,
@@ -26016,7 +26022,11 @@ var App = function App() {
     }, function (res) {
       if (res.id) {
         window.location.replace("/portal");
+        return;
       }
+
+      setIsLoading(false);
+      alert('Incorrect Username or Password');
     });
   };
 

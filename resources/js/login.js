@@ -10,14 +10,24 @@ const App = () => {
   const passwordRef = useRef()
   const [isLoading, setIsLoading] = useState(false)
 
+
   const handleLogin = () => {
     let username = userNameRef.current
     let password = passwordRef.current
+
+    if(!username || !password) {
+      alert('Required Username and Password')
+      return
+    }
+
     setIsLoading(true)
     post('/ajax/login', {username, password}, function(res){
       if(res.id) {
         window.location.replace("/portal")
-      }
+        return 
+      } 
+      setIsLoading(false)
+      alert('Incorrect Username or Password')
     })
   }
   
@@ -27,6 +37,7 @@ const App = () => {
       <h3 className="title">Log In</h3>
       <Input onChange={e => userNameRef.current = e.target.value} placeholder="Student ID / Username" />
       <Input onChange={e => passwordRef.current = e.target.value} placeholder="Password" type={'password'} />
+      
       <Button text={'Log In'} onClick={handleLogin} />
     </div>
   )
