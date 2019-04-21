@@ -6,9 +6,11 @@ import Button from '../components/button'
 import Modal from '../components/modal'
 import CKEditor from '../components/ckeditor'
 import Input from '../components/input'
+import Prelaoder from '../components/preloader'
 
 const Announcements = () => {
   const url = '/ajax/portal/announcements'
+  const [isLoading, setIsLoading] = useState(true)
   const [title, setTitle] = useState('')
   const [slug, setSlug] = useState('')
   const [isModalActive, setIsModalActive] = useState(false)
@@ -28,7 +30,10 @@ const Announcements = () => {
   }
 
   useEffect(() => {
-    get(url, {}, res => setData(res.data))
+    get(url, {}, res => {
+      setData(res.data)
+      setIsLoading(false)
+    }, () => setIsLoading(false))
   },[])
 
   const TableBody = () => (
@@ -49,6 +54,7 @@ const Announcements = () => {
 
   return (
     <div id="Announcements">
+      <Prelaoder variant={'fixed'} isActive={isLoading}/>
       <Button text="Add New" onClick={handleOpenModal}/>
       <Table headers={tableHeaders} customTableBody={<TableBody />}/>
       <Modal isActive={isModalActive} handleClose={handleCloseModal}>

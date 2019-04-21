@@ -514,6 +514,25 @@ exports.push([module.i, ".modal {\n  position: fixed;\n  width: 100%;\n  height:
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/preloader/style.scss":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/preloader/style.scss ***!
+  \*********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".preloader {\n  display: none;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(50, 155, 88, 0.71);\n}\n.preloader.active {\n  display: block;\n}\n.preloader.fixed {\n  position: fixed;\n  top: 0;\n  left: 0;\n}\n\n.spinner {\n  -webkit-animation: rotate 2s linear infinite;\n     -moz-animation: rotate 2s linear infinite;\n       -o-animation: rotate 2s linear infinite;\n          animation: rotate 2s linear infinite;\n  z-index: 2;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin: -25px 0 0 -25px;\n  width: 50px;\n  height: 50px;\n}\n.spinner .path {\n  stroke: #fff;\n  stroke-linecap: round;\n  -webkit-animation: dash 1.5s ease-in-out infinite;\n     -moz-animation: dash 1.5s ease-in-out infinite;\n       -o-animation: dash 1.5s ease-in-out infinite;\n          animation: dash 1.5s ease-in-out infinite;\n}\n\n@-webkit-keyframes rotate {\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@-moz-keyframes rotate {\n  100% {\n    -moz-transform: rotate(360deg);\n         transform: rotate(360deg);\n  }\n}\n\n@-o-keyframes rotate {\n  100% {\n    -o-transform: rotate(360deg);\n       transform: rotate(360deg);\n  }\n}\n\n@keyframes rotate {\n  100% {\n    -webkit-transform: rotate(360deg);\n       -moz-transform: rotate(360deg);\n         -o-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n@-webkit-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}\n@-moz-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}\n@-o-keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}\n@keyframes dash {\n  0% {\n    stroke-dasharray: 1, 150;\n    stroke-dashoffset: 0;\n  }\n  50% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -35;\n  }\n  100% {\n    stroke-dasharray: 90, 150;\n    stroke-dashoffset: -124;\n  }\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/table/style.scss":
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/table/style.scss ***!
@@ -24967,7 +24986,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30288,6 +30307,77 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/preloader/index.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/preloader/index.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/preloader/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var Preloader = function Preloader(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('preloader', props.variant, {
+      'active': props.isActive
+    })
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "spinner",
+    viewBox: "0 0 50 50"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
+    className: "path",
+    cx: "25",
+    cy: "25",
+    r: "20",
+    fill: "none",
+    strokeWidth: "5"
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Preloader);
+
+/***/ }),
+
+/***/ "./resources/js/components/preloader/style.scss":
+/*!******************************************************!*\
+  !*** ./resources/js/components/preloader/style.scss ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/preloader/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/table/index.js":
 /*!************************************************!*\
   !*** ./resources/js/components/table/index.js ***!
@@ -30671,6 +30761,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var _components_ckeditor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ckeditor */ "./resources/js/components/ckeditor/index.js");
 /* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/preloader */ "./resources/js/components/preloader/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -30688,28 +30779,34 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Announcements = function Announcements() {
   var url = '/ajax/portal/announcements';
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
       _useState2 = _slicedToArray(_useState, 2),
-      title = _useState2[0],
-      setTitle = _useState2[1];
+      isLoading = _useState2[0],
+      setIsLoading = _useState2[1];
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState4 = _slicedToArray(_useState3, 2),
-      slug = _useState4[0],
-      setSlug = _useState4[1];
+      title = _useState4[0],
+      setTitle = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState6 = _slicedToArray(_useState5, 2),
-      isModalActive = _useState6[0],
-      setIsModalActive = _useState6[1];
+      slug = _useState6[0],
+      setSlug = _useState6[1];
 
-  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState8 = _slicedToArray(_useState7, 2),
-      data = _useState8[0],
-      setData = _useState8[1];
+      isModalActive = _useState8[0],
+      setIsModalActive = _useState8[1];
+
+  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState10 = _slicedToArray(_useState9, 2),
+      data = _useState10[0],
+      setData = _useState10[1];
 
   var tableHeaders = ['Title', 'Slug', 'Author', 'Created At', 'Updated At', 'Actions'];
 
@@ -30732,7 +30829,10 @@ var Announcements = function Announcements() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
-      return setData(res.data);
+      setData(res.data);
+      setIsLoading(false);
+    }, function () {
+      return setIsLoading(false);
     });
   }, []);
 
@@ -30750,7 +30850,10 @@ var Announcements = function Announcements() {
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Announcements"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_preloader__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    variant: 'fixed',
+    isActive: isLoading
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     text: "Add New",
     onClick: handleOpenModal
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_table__WEBPACK_IMPORTED_MODULE_3__["default"], {
