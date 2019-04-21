@@ -469,7 +469,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  border: 0;\n  background-color: #329B58;\n  color: #fff;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: rubikmedium;\n}\n.cvsu-btn > i[class*=icon] {\n  margin-left: 10px;\n}", ""]);
+exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  border: 0;\n  background-color: #329B58;\n  color: #fff;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: rubikmedium;\n}\n.cvsu-btn > i[class*=icon] {\n  margin-left: 10px;\n}", ""]);
 
 // exports
 
@@ -24967,7 +24967,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30706,6 +30706,11 @@ var Announcements = function Announcements() {
       isModalActive = _useState6[0],
       setIsModalActive = _useState6[1];
 
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState8 = _slicedToArray(_useState7, 2),
+      data = _useState8[0],
+      setData = _useState8[1];
+
   var tableHeaders = ['Title', 'Slug', 'Author', 'Created At', 'Updated At', 'Actions'];
 
   var handleOpenModal = function handleOpenModal() {
@@ -30727,14 +30732,21 @@ var Announcements = function Announcements() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
-      return console.log(res);
+      return setData(res.data);
     });
-  }, []); // const tableBody = items => (
-  //   items.map((item) => (
-  //     <tr key={Uuid()}>
-  //     </tr>
-  //   ))
-  // )
+  }, []);
+
+  var TableBody = function TableBody() {
+    return data.map(function (d) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+        key: uuid_v4__WEBPACK_IMPORTED_MODULE_2___default()()
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.slug), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.user_id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        text: 'Edit'
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        text: 'Delete'
+      })));
+    });
+  };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Announcements"
@@ -30742,7 +30754,8 @@ var Announcements = function Announcements() {
     text: "Add New",
     onClick: handleOpenModal
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_table__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    headers: tableHeaders
+    headers: tableHeaders,
+    customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableBody, null)
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_modal__WEBPACK_IMPORTED_MODULE_5__["default"], {
     isActive: isModalActive,
     handleClose: handleCloseModal
@@ -30829,7 +30842,6 @@ var DeanMessage = function DeanMessage() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
-      console.log(res);
       setMessage(res.message);
       setInitialMessage(res.message);
     });

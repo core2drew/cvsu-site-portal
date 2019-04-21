@@ -12,6 +12,7 @@ const Announcements = () => {
   const [title, setTitle] = useState('')
   const [slug, setSlug] = useState('')
   const [isModalActive, setIsModalActive] = useState(false)
+  const [data, setData] = useState([])
   const tableHeaders = ['Title', 'Slug', 'Author', 'Created At', 'Updated At', 'Actions']
 
   const handleOpenModal = () => {
@@ -27,21 +28,29 @@ const Announcements = () => {
   }
 
   useEffect(() => {
-    get(url, {}, res => console.log(res))
+    get(url, {}, res => setData(res.data))
   },[])
 
-  // const tableBody = items => (
-  //   items.map((item) => (
-  //     <tr key={Uuid()}>
-        
-  //     </tr>
-  //   ))
-  // )
+  const TableBody = () => (
+    data.map(d => (
+      <tr key={Uuid()}>
+        <td>{d.title}</td>
+        <td>{d.slug}</td>
+        <td>{d.user_id}</td>
+        <td>{d.created_at}</td>
+        <td>{d.updated_at}</td>
+        <td>
+          <Button text={'Edit'}/>
+          <Button text={'Delete'}/>
+        </td>
+      </tr>
+    ))
+  )
 
   return (
     <div id="Announcements">
       <Button text="Add New" onClick={handleOpenModal}/>
-      <Table headers={tableHeaders} />
+      <Table headers={tableHeaders} customTableBody={<TableBody />}/>
       <Modal isActive={isModalActive} handleClose={handleCloseModal}>
         <h2 className="section header">New Announcement</h2>
         <Input variant="title" placeholder="Title" onChange={e => setTitle(e.target.value)}/>
