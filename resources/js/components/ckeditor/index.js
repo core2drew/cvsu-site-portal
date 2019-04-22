@@ -22,7 +22,8 @@ const CKEditor = props => {
 }
 
 CKEditor.defaultProps = {
-  onChange: () => false
+  onChange: () => false,
+  initialValue: ''
 }
 
 export default CKEditor
