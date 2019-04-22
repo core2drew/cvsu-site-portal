@@ -15,9 +15,9 @@ const TableBody = ({ data }) => (
         <td>{d.username}</td>
         <td>{created_at}</td>
         <td>{updated_at}</td>
-        <td>
-          <Button text={'Edit'}/>
-          <Button text={'Delete'}/>
+        <td className="actions">
+          <Button variant={'update'} text={'Edit'}/>
+          <Button variant={'delete danger'} text={'Delete'}/>
         </td>
       </tr>
     )

@@ -10,6 +10,34 @@
   margin-top: 10px;
 }
 
+#Announcements > .table-container > table > thead > tr > th:nth-child(1) {
+  width: 20%;
+}
+
+#Announcements > .table-container > table > thead > tr > th:nth-child(4),
+#Announcements > .table-container > table > thead > tr > th:nth-child(5) {
+  width: 14%;
+}
+
+#Announcements > .table-container > table > thead > tr > th:last-child {
+  text-align: center;
+}
+
+#Announcements > .table-container > table > tbody > tr > td.actions {
+  width: 15%;
+  text-align: center;
+}
+
+#Announcements > .table-container > table > tbody > tr > td.actions > .update {
+  margin-right: 10px;
+}
+
+#Announcements > .table-container > table > tbody > tr > td.actions > .update,
+#Announcements > .table-container > table > tbody > tr > td.actions > .delete {
+  font-size: 12px;
+  min-width: 70px;
+}
+
 body {
   background-color: #f5f5f5;
 }
