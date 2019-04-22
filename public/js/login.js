@@ -26100,8 +26100,9 @@ var get = function get(url, params, success, error) {
   });
 };
 var post = function post(url, body, success, error) {
+  var method = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 'POST';
   return fetch(url, {
-    method: 'POST',
+    method: method,
     headers: {
       'Accept': 'application/json, text-plain, */*',
       'Content-Type': 'application/json',

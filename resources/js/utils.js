@@ -24,9 +24,9 @@ export const get = (url, params, success, error) => {
     })
 }
 
-export const post = (url, body, success, error) => {
+export const post = (url, body, success, error, method = 'POST') => {
   return fetch(url, {
-    method: 'POST',
+    method,
     headers: {
       'Accept': 'application/json, text-plain, */*',
       'Content-Type': 'application/json',

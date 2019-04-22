@@ -83,5 +83,11 @@ Route::group([
             "uses" => "AJAXPortalController@addAnnouncements",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
+
+        Route::put("/announcements", [
+            "as" => "ajax.portal.delete.announcements",
+            "uses" => "AJAXPortalController@deleteAnnouncement",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
     });
 });

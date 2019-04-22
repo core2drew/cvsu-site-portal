@@ -9,6 +9,7 @@ import Preloader from '../../components/preloader'
 import TableBody from './tablebody'
 import AnnouncementReducer, { initialState } from '../../reducers/announcements'
 import UserContext from '../../contexts/user-context'
+import AnnouncementsContext from '../../contexts/announcements'
 
 const Announcements = () => {
   const url = '/ajax/portal/announcements'
@@ -36,9 +37,32 @@ const Announcements = () => {
       res => dispatch(
         {type: 'SUCCESS_SAVE', data: res.data}
       ),
-      () => dispatch({type: "ERROR_SAVE"})
+      () => {
+        dispatch({type: "ERROR_SAVE"})
+        alert('Something went wrong. Please try again')
+      }
     )
     clearFields();
+  }
+
+  const handleUpdate = id => {
+
+  }
+
+  const handleDelete = id => {
+    dispatch({type: 'DELETING'})
+    post(
+      url, 
+      { id }, 
+      res => dispatch(
+        {type: 'SUCCESS_DELETE', data: res.data}
+      ),
+      () => {
+        dispatch({type: "ERROR_DELETE"})
+        alert('Something went wrong. Please try again')
+      },
+      'PUT'
+    )
   }
 
   useEffect(() => {
@@ -51,31 +75,33 @@ const Announcements = () => {
   },[])
 
   return (
-    <div id="Announcements">
-      <Preloader variant={'fixed'} isActive={state.isLoading}/>
-      <Button 
-        text="Add New"
-        onClick={
-          () => dispatch({type: 'OPEN_MODAL'})
-        }
-      />
-      <Table headers={tableHeaders} customTableBody={<TableBody data={state.data}/>}/>
-      <Modal 
-        isActive={state.isModalActive} 
-        handleClose={
-          () => {
-            dispatch({type: 'CLOSE_MODAL'})
-            clearFields()
+    <AnnouncementsContext.Provider value={{handleUpdate, handleDelete}}>
+      <div id="Announcements">
+        <Preloader variant={'fixed'} isActive={state.isLoading}/>
+        <Button 
+          text="Add New"
+          onClick={
+            () => dispatch({type: 'OPEN_MODAL'})
           }
-        }
-      >
-        <h2 className="section header">New Announcement</h2>
-        <Input variant="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)}/>
-        <Input variant="slug" placeholder="Slug" value={slug} onChange={e => setSlug(e.target.value)}/>
-        <CKEditor id="Editor" getEditorRef={editor => editorRef.current = editor} onChange={data => setContent(data)}/>
-        <Button variant="save" text="Create" onClick={handleSave}/>
-      </Modal>
-    </div>
+        />
+        <Table headers={tableHeaders} customTableBody={<TableBody data={state.data}/>}/>
+        <Modal 
+          isActive={state.isModalActive} 
+          handleClose={
+            () => {
+              dispatch({type: 'CLOSE_MODAL'})
+              clearFields()
+            }
+          }
+        >
+          <h2 className="section header">New Announcement</h2>
+          <Input variant="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)}/>
+          <Input variant="slug" placeholder="Slug" value={slug} onChange={e => setSlug(e.target.value)}/>
+          <CKEditor id="Editor" getEditorRef={editor => editorRef.current = editor} onChange={data => setContent(data)}/>
+          <Button variant="save" text="Create" onClick={handleSave}/>
+        </Modal>
+      </div>
+    </AnnouncementsContext.Provider>
   )
 }
 

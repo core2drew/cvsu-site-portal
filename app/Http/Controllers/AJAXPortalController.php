@@ -25,6 +25,7 @@ class AJAXPortalController extends Controller
 
     public function getAnnouncements(Request $request) {
         $response = DB::table('announcements')
+        ->whereNull('announcements.deleted_at')
         ->join('users', 'announcements.user_id', '=', 'users.id')
         ->select('users.username', 'announcements.*')
         ->paginate(15);
@@ -51,6 +52,25 @@ class AJAXPortalController extends Controller
 
         if($response) {
             $response = DB::table('announcements')
+            ->whereNull('announcements.deleted_at')
+            ->join('users', 'announcements.user_id', '=', 'users.id')
+            ->select('users.username', 'announcements.*')
+            ->paginate(15);
+            return response()->json($response);
+        }
+
+        return abort(500);
+    }
+
+    public function deleteAnnouncement(Request $request) {
+        $id = $request->get('id');
+        $response = DB::table('announcements')
+        ->where('id', '=', $id)
+        ->update(['deleted_at' => now()]);
+        
+        if($response) {
+            $response = DB::table('announcements')
+            ->whereNull('announcements.deleted_at')
             ->join('users', 'announcements.user_id', '=', 'users.id')
             ->select('users.username', 'announcements.*')
             ->paginate(15);

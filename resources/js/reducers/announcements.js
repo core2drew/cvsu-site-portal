@@ -7,15 +7,17 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
 
-    case 'SAVING':
     case 'FETCHING':
+    case 'SAVING':
+    case 'DELETING':
       return {
         ...state,
         isLoading: true,
         isModalActive: false
       }
-    case 'SUCCESS_SAVE':
     case 'SUCCESS_FETCH':
+    case 'SUCCESS_SAVE':
+    case 'SUCCESS_DELETE':
       return {
         ...state,
         isLoading: false,
@@ -23,6 +25,7 @@ const reducer = (state, action) => {
       }
     case 'ERROR_SAVE':
     case 'ERROR_FETCH':
+    case 'ERROR_DELETE':
       return {
         ...state,
         isLoading: false

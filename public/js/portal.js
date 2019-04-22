@@ -48121,6 +48121,23 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/contexts/announcements.js":
+/*!************************************************!*\
+  !*** ./resources/js/contexts/announcements.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var AnnouncementsContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+/* harmony default export */ __webpack_exports__["default"] = (AnnouncementsContext);
+
+/***/ }),
+
 /***/ "./resources/js/contexts/user-context.js":
 /*!***********************************************!*\
   !*** ./resources/js/contexts/user-context.js ***!
@@ -48407,6 +48424,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/announcements/tablebody.js");
 /* harmony import */ var _reducers_announcements__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../reducers/announcements */ "./resources/js/reducers/announcements.js");
 /* harmony import */ var _contexts_user_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../contexts/user-context */ "./resources/js/contexts/user-context.js");
+/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -48414,6 +48432,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -48477,11 +48496,33 @@ var Announcements = function Announcements() {
         data: res.data
       });
     }, function () {
-      return dispatch({
+      dispatch({
         type: "ERROR_SAVE"
       });
+      alert('Something went wrong. Please try again');
     });
     clearFields();
+  };
+
+  var handleUpdate = function handleUpdate(id) {};
+
+  var handleDelete = function handleDelete(id) {
+    dispatch({
+      type: 'DELETING'
+    });
+    Object(_utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      id: id
+    }, function (res) {
+      return dispatch({
+        type: 'SUCCESS_DELETE',
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_DELETE"
+      });
+      alert('Something went wrong. Please try again');
+    }, 'PUT');
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
@@ -48497,7 +48538,12 @@ var Announcements = function Announcements() {
       alert('Something went wrong. Please try again');
     });
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_announcements__WEBPACK_IMPORTED_MODULE_11__["default"].Provider, {
+    value: {
+      handleUpdate: handleUpdate,
+      handleDelete: handleDelete
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Announcements"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_preloader__WEBPACK_IMPORTED_MODULE_7__["default"], {
     variant: 'fixed',
@@ -48550,7 +48596,7 @@ var Announcements = function Announcements() {
     variant: "save",
     text: "Create",
     onClick: handleSave
-  })));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Announcements);
@@ -48573,6 +48619,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
+
 
 
 
@@ -48580,6 +48628,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var TableBody = function TableBody(_ref) {
   var data = _ref.data;
+  var announcementsContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_announcements__WEBPACK_IMPORTED_MODULE_4__["default"]);
   return data.map(function (d) {
     var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
     var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
@@ -48592,7 +48641,10 @@ var TableBody = function TableBody(_ref) {
       text: 'Edit'
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'delete danger',
-      text: 'Delete'
+      text: 'Delete',
+      onClick: function onClick() {
+        return announcementsContext.handleDelete(d.id);
+      }
     })));
   });
 };
@@ -48871,15 +48923,17 @@ var initialState = {
 
 var reducer = function reducer(state, action) {
   switch (action.type) {
-    case 'SAVING':
     case 'FETCHING':
+    case 'SAVING':
+    case 'DELETING':
       return _objectSpread({}, state, {
         isLoading: true,
         isModalActive: false
       });
 
-    case 'SUCCESS_SAVE':
     case 'SUCCESS_FETCH':
+    case 'SUCCESS_SAVE':
+    case 'SUCCESS_DELETE':
       return _objectSpread({}, state, {
         isLoading: false,
         data: action.data
@@ -48887,6 +48941,7 @@ var reducer = function reducer(state, action) {
 
     case 'ERROR_SAVE':
     case 'ERROR_FETCH':
+    case 'ERROR_DELETE':
       return _objectSpread({}, state, {
         isLoading: false
       });
@@ -48952,8 +49007,9 @@ var get = function get(url, params, success, error) {
   });
 };
 var post = function post(url, body, success, error) {
+  var method = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 'POST';
   return fetch(url, {
-    method: 'POST',
+    method: method,
     headers: {
       'Accept': 'application/json, text-plain, */*',
       'Content-Type': 'application/json',
