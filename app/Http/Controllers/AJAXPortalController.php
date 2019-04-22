@@ -24,7 +24,10 @@ class AJAXPortalController extends Controller
     }
 
     public function getAnnouncements(Request $request) {
-        $response = DB::table('announcements')->paginate(15);
+        $response = DB::table('announcements')
+        ->join('users', 'announcements.user_id', '=', 'users.id')
+        ->select('users.username', 'announcements.*')
+        ->paginate(15);
         return response()->json($response);
     }
 

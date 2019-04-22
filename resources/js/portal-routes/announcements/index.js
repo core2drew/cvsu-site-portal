@@ -1,5 +1,4 @@
 import React, { useEffect, useReducer, useRef, useContext } from 'react'
-import Uuid from 'uuid/v4'
 import { get, post } from '../../utils'
 import Table from '../../components/table'
 import Button from '../../components/button'
@@ -7,6 +6,7 @@ import Modal from '../../components/modal'
 import CKEditor from '../../components/ckeditor'
 import Input from '../../components/input'
 import Preloader from '../../components/preloader'
+import TableBody from './tablebody'
 import AnnouncementReducer, { initialState } from '../../reducers/announcements'
 import UserContext from '../../contexts/user-context'
 
@@ -44,22 +44,6 @@ const Announcements = () => {
     })
   },[])
 
-  const TableBody = () => (
-    state.data.map(d => (
-      <tr key={Uuid()}>
-        <td>{d.title}</td>
-        <td>{d.slug}</td>
-        <td>{d.user_id}</td>
-        <td>{d.created_at}</td>
-        <td>{d.updated_at}</td>
-        <td>
-          <Button text={'Edit'}/>
-          <Button text={'Delete'}/>
-        </td>
-      </tr>
-    ))
-  )
-
   return (
     <div id="Announcements">
       <Preloader variant={'fixed'} isActive={state.isLoading}/>
@@ -69,7 +53,7 @@ const Announcements = () => {
           () => dispatch({type: 'OPEN_MODAL'})
         }
       />
-      <Table headers={tableHeaders} customTableBody={<TableBody />}/>
+      <Table headers={tableHeaders} customTableBody={<TableBody data={state.data}/>}/>
       <Modal 
         isActive={state.isModalActive} 
         handleClose={
