@@ -32,6 +32,7 @@ class AJAXPortalController extends Controller
         $title = $request->get('title');
         $content = $request->get('content');
         $slug = $request->get('slug');
+        $userId = $request->get('userId');
         $created_at = now();
         $updated_at = now();
 
@@ -39,11 +40,17 @@ class AJAXPortalController extends Controller
         ->insert([
             'title' => $title, 
             'content' => $content, 
-            'slug' => $slug, 
+            'slug' => $slug,
+            'user_id' => $userId,
             'created_at' => $created_at, 
             'updated_at' => $updated_at
         ]);
 
-        return response()->json($response);
+        if($response) {
+            $response = DB::table('announcements')->paginate(15);
+            return response()->json($response);
+        }
+
+        return abort(500);
     }
 }
