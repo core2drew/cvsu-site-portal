@@ -14,6 +14,7 @@ const CKEditor = props => {
 
   useEffect(() => {
     editorRef.current.setData(props.initialValue)
+    props.getEditorRef(editorRef.current)
   },[props.initialValue])
   
   return (
@@ -23,7 +24,8 @@ const CKEditor = props => {
 
 CKEditor.defaultProps = {
   onChange: () => false,
-  initialValue: ''
+  initialValue: '',
+  getEditorRef: () => false
 }
 
 export default CKEditor

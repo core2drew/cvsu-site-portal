@@ -8,14 +8,15 @@ const Input = props => (
     type={props.type} 
     placeholder={props.placeholder}
     onChange={props.onChange}
+    value={props.value}
   />
 )
 
 Input.defaultProps = {
   id: '',
   variant: '',
-  ref: null,
   placeholder: '',
+  value: '',
   type: 'text'
 }
 

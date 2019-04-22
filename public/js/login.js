@@ -25849,15 +25849,16 @@ var Input = function Input(props) {
     className: "cvsu-input ".concat(props.variant),
     type: props.type,
     placeholder: props.placeholder,
-    onChange: props.onChange
+    onChange: props.onChange,
+    value: props.value
   });
 };
 
 Input.defaultProps = {
   id: '',
   variant: '',
-  ref: null,
   placeholder: '',
+  value: '',
   type: 'text'
 };
 /* harmony default export */ __webpack_exports__["default"] = (Input);

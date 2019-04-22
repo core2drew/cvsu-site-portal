@@ -47738,6 +47738,7 @@ var CKEditor = function CKEditor(props) {
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     editorRef.current.setData(props.initialValue);
+    props.getEditorRef(editorRef.current);
   }, [props.initialValue]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
     id: props.id,
@@ -47749,7 +47750,10 @@ CKEditor.defaultProps = {
   onChange: function onChange() {
     return false;
   },
-  initialValue: ''
+  initialValue: '',
+  getEditorRef: function getEditorRef() {
+    return false;
+  }
 };
 /* harmony default export */ __webpack_exports__["default"] = (CKEditor);
 
@@ -47808,15 +47812,16 @@ var Input = function Input(props) {
     className: "cvsu-input ".concat(props.variant),
     type: props.type,
     placeholder: props.placeholder,
-    onChange: props.onChange
+    onChange: props.onChange,
+    value: props.value
   });
 };
 
 Input.defaultProps = {
   id: '',
   variant: '',
-  ref: null,
   placeholder: '',
+  value: '',
   type: 'text'
 };
 /* harmony default export */ __webpack_exports__["default"] = (Input);
@@ -48424,22 +48429,39 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Announcements = function Announcements() {
   var url = '/ajax/portal/announcements';
+  var editorRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
 
   var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(_reducers_announcements__WEBPACK_IMPORTED_MODULE_9__["default"], _reducers_announcements__WEBPACK_IMPORTED_MODULE_9__["initialState"]),
       _useReducer2 = _slicedToArray(_useReducer, 2),
       state = _useReducer2[0],
       dispatch = _useReducer2[1];
 
-  var titleRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])('');
-  var slugRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])('');
-  var contentRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])('');
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      title = _useState2[0],
+      setTitle = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      slug = _useState4[0],
+      setSlug = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState6 = _slicedToArray(_useState5, 2),
+      content = _useState6[0],
+      setContent = _useState6[1];
+
   var tableHeaders = ['Title', 'Slug', 'Author', 'Created At', 'Updated At', 'Actions'];
   var userContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_user_context__WEBPACK_IMPORTED_MODULE_10__["default"]);
 
+  var clearFields = function clearFields() {
+    setTitle('');
+    setSlug('');
+    setContent('');
+    editorRef.current.setData('');
+  };
+
   var handleSave = function handleSave() {
-    var title = titleRef.current;
-    var slug = slugRef.current;
-    var content = contentRef.current;
     var userId = userContext.id;
     dispatch({
       type: 'SAVING'
@@ -48459,6 +48481,7 @@ var Announcements = function Announcements() {
         type: "ERROR_SAVE"
       });
     });
+    clearFields();
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
@@ -48494,28 +48517,34 @@ var Announcements = function Announcements() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
     isActive: state.isModalActive,
     handleClose: function handleClose() {
-      return dispatch({
+      dispatch({
         type: 'CLOSE_MODAL'
       });
+      clearFields();
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section header"
   }, "New Announcement"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_6__["default"], {
     variant: "title",
     placeholder: "Title",
+    value: title,
     onChange: function onChange(e) {
-      return titleRef.current = e.target.value;
+      return setTitle(e.target.value);
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_6__["default"], {
     variant: "slug",
     placeholder: "Slug",
+    value: slug,
     onChange: function onChange(e) {
-      return slugRef.current = e.target.value;
+      return setSlug(e.target.value);
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_5__["default"], {
     id: "Editor",
+    getEditorRef: function getEditorRef(editor) {
+      return editorRef.current = editor;
+    },
     onChange: function onChange(data) {
-      return contentRef.current = data;
+      return setContent(data);
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     variant: "save",
