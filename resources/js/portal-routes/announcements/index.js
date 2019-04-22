@@ -1,14 +1,12 @@
-import React, { useEffect, useReducer, useState, useRef } from 'react'
+import React, { useEffect, useReducer, useRef, useState } from 'react'
 import { get, post } from '../../utils'
 import Table from '../../components/table'
 import Button from '../../components/button'
-import Modal from '../../components/modal'
-import CKEditor from '../../components/ckeditor'
-import Input from '../../components/input'
 import Preloader from '../../components/preloader'
 import TableBody from './tablebody'
 import AnnouncementReducer, { initialState } from '../../reducers/announcements'
 import AnnouncementsContext from '../../contexts/announcements'
+import FormModal from './form-modal'
 
 const Announcements = () => {
   const url = '/ajax/portal/announcements'
@@ -19,46 +17,6 @@ const Announcements = () => {
   const [slug, setSlug] = useState('')
   const [content, setContent] = useState('')
   const tableHeaders = ['Title', 'Slug', 'Created At', 'Updated At', 'Actions']
-
-  const clearFields = () => {
-    setTitle('')
-    setSlug('')
-    setContent('')
-    editorRef.current.setData('')
-    announcementIdRef.current = null
-  }
-
-  const handleSave = () => {
-    dispatch({type: 'SAVING'})
-    post(
-      url, 
-      {title, slug, content}, 
-      res => dispatch(
-        {type: 'SUCCESS_SAVE', data: res.data}
-      ),
-      () => {
-        dispatch({type: "ERROR_SAVE"})
-        alert('Something went wrong. Please try again')
-      }
-    )
-    clearFields();
-  }
-
-  const handleUpdate = id => {
-    dispatch({type: 'UPDATING'})
-    post(
-      url, 
-      {id, title, slug, content}, 
-      res => dispatch(
-        {type: 'SUCCESS_UPDATE', data: res.data}
-      ),
-      () => {
-        dispatch({type: "ERROR_UPDATE"})
-        alert('Something went wrong. Please try again')
-      },
-      'PATCH'
-    )
-  }
 
   const handleDelete = id => {
     dispatch({type: 'DELETING'})
@@ -95,7 +53,7 @@ const Announcements = () => {
   },[])
 
   return (
-    <AnnouncementsContext.Provider value={{handleEdit, handleDelete}}>
+    <AnnouncementsContext.Provider value={{handleEdit, handleDelete, state, dispatch, editorRef, announcementIdRef, title, setTitle, slug, setSlug, content, setContent, url}}>
       <div id="Announcements">
         <Preloader variant={'fixed'} isActive={state.isLoading}/>
         <Button 
@@ -105,23 +63,7 @@ const Announcements = () => {
           }
         />
         <Table headers={tableHeaders} customTableBody={<TableBody data={state.data}/>}/>
-        <Modal 
-          isActive={state.isModalActive} 
-          handleClose={
-            () => {
-              dispatch({type: 'CLOSE_MODAL'})
-              clearFields()
-            }
-          }
-        >
-          <h2 className="section header">New Announcement</h2>
-          <Input variant="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)}/>
-          <Input variant="slug" placeholder="Slug" value={slug} onChange={e => setSlug(e.target.value)}/>
-          <CKEditor id="Editor" getEditorRef={editor => editorRef.current = editor} onChange={data => setContent(data)}/>
-          {
-            state.isUpdateModal ? <Button text="Update" onClick={() => handleUpdate(announcementIdRef.current)}/> : <Button text="Create" onClick={handleSave}/>
-          }
-        </Modal>
+        <FormModal />
       </div>
     </AnnouncementsContext.Provider>
   )

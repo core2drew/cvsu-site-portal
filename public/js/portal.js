@@ -48403,10 +48403,10 @@ var AcademicCalendar = function AcademicCalendar() {
 
 /***/ }),
 
-/***/ "./resources/js/portal-routes/announcements/index.js":
-/*!***********************************************************!*\
-  !*** ./resources/js/portal-routes/announcements/index.js ***!
-  \***********************************************************/
+/***/ "./resources/js/portal-routes/announcements/form-modal.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/portal-routes/announcements/form-modal.js ***!
+  \****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -48415,22 +48415,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
-/* harmony import */ var _components_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/table */ "./resources/js/components/table/index.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/modal */ "./resources/js/components/modal/index.js");
-/* harmony import */ var _components_ckeditor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/ckeditor */ "./resources/js/components/ckeditor/index.js");
-/* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/input */ "./resources/js/components/input/index.js");
-/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/preloader */ "./resources/js/components/preloader/index.js");
-/* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/announcements/tablebody.js");
-/* harmony import */ var _reducers_announcements__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../reducers/announcements */ "./resources/js/reducers/announcements.js");
-/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* harmony import */ var _components_ckeditor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/ckeditor */ "./resources/js/components/ckeditor/index.js");
+/* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
 
 
 
@@ -48439,37 +48428,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-
-
-
-
-var Announcements = function Announcements() {
-  var url = '/ajax/portal/announcements';
-  var editorRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
-  var announcementIdRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
-
-  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(_reducers_announcements__WEBPACK_IMPORTED_MODULE_9__["default"], _reducers_announcements__WEBPACK_IMPORTED_MODULE_9__["initialState"]),
-      _useReducer2 = _slicedToArray(_useReducer, 2),
-      state = _useReducer2[0],
-      dispatch = _useReducer2[1];
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState2 = _slicedToArray(_useState, 2),
-      title = _useState2[0],
-      setTitle = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState4 = _slicedToArray(_useState3, 2),
-      slug = _useState4[0],
-      setSlug = _useState4[1];
-
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState6 = _slicedToArray(_useState5, 2),
-      content = _useState6[0],
-      setContent = _useState6[1];
-
-  var tableHeaders = ['Title', 'Slug', 'Created At', 'Updated At', 'Actions'];
+var FormModal = function FormModal() {
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_announcements__WEBPACK_IMPORTED_MODULE_6__["default"]),
+      title = _useContext.title,
+      slug = _useContext.slug,
+      content = _useContext.content,
+      state = _useContext.state,
+      setTitle = _useContext.setTitle,
+      url = _useContext.url,
+      editorRef = _useContext.editorRef,
+      announcementIdRef = _useContext.announcementIdRef,
+      setSlug = _useContext.setSlug,
+      setContent = _useContext.setContent,
+      dispatch = _useContext.dispatch;
 
   var clearFields = function clearFields() {
     setTitle('');
@@ -48523,6 +48494,117 @@ var Announcements = function Announcements() {
     }, 'PATCH');
   };
 
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    isActive: state.isModalActive,
+    handleClose: function handleClose() {
+      dispatch({
+        type: 'CLOSE_MODAL'
+      });
+      clearFields();
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section header"
+  }, "New Announcement"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    variant: "title",
+    placeholder: "Title",
+    value: title,
+    onChange: function onChange(e) {
+      return setTitle(e.target.value);
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    variant: "slug",
+    placeholder: "Slug",
+    value: slug,
+    onChange: function onChange(e) {
+      return setSlug(e.target.value);
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    id: "Editor",
+    getEditorRef: function getEditorRef(editor) {
+      return editorRef.current = editor;
+    },
+    onChange: function onChange(data) {
+      return setContent(data);
+    }
+  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: "Update",
+    onClick: function onClick() {
+      return handleUpdate(announcementIdRef.current);
+    }
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: "Create",
+    onClick: handleSave
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FormModal);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/announcements/index.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/portal-routes/announcements/index.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
+/* harmony import */ var _components_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/table */ "./resources/js/components/table/index.js");
+/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/announcements/tablebody.js");
+/* harmony import */ var _reducers_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../reducers/announcements */ "./resources/js/reducers/announcements.js");
+/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
+/* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/announcements/form-modal.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+var Announcements = function Announcements() {
+  var url = '/ajax/portal/announcements';
+  var editorRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var announcementIdRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(_reducers_announcements__WEBPACK_IMPORTED_MODULE_6__["default"], _reducers_announcements__WEBPACK_IMPORTED_MODULE_6__["initialState"]),
+      _useReducer2 = _slicedToArray(_useReducer, 2),
+      state = _useReducer2[0],
+      dispatch = _useReducer2[1];
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      title = _useState2[0],
+      setTitle = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      slug = _useState4[0],
+      setSlug = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState6 = _slicedToArray(_useState5, 2),
+      content = _useState6[0],
+      setContent = _useState6[1];
+
+  var tableHeaders = ['Title', 'Slug', 'Created At', 'Updated At', 'Actions'];
+
   var handleDelete = function handleDelete(id) {
     dispatch({
       type: 'DELETING'
@@ -48571,14 +48653,25 @@ var Announcements = function Announcements() {
       alert('Something went wrong. Please try again');
     });
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_announcements__WEBPACK_IMPORTED_MODULE_10__["default"].Provider, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_announcements__WEBPACK_IMPORTED_MODULE_7__["default"].Provider, {
     value: {
       handleEdit: handleEdit,
-      handleDelete: handleDelete
+      handleDelete: handleDelete,
+      state: state,
+      dispatch: dispatch,
+      editorRef: editorRef,
+      announcementIdRef: announcementIdRef,
+      title: title,
+      setTitle: setTitle,
+      slug: slug,
+      setSlug: setSlug,
+      content: content,
+      setContent: setContent,
+      url: url
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Announcements"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_preloader__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_preloader__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: 'fixed',
     isActive: state.isLoading
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -48590,50 +48683,10 @@ var Announcements = function Announcements() {
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
     headers: tableHeaders,
-    customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_5__["default"], {
       data: state.data
     })
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    isActive: state.isModalActive,
-    handleClose: function handleClose() {
-      dispatch({
-        type: 'CLOSE_MODAL'
-      });
-      clearFields();
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "section header"
-  }, "New Announcement"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    variant: "title",
-    placeholder: "Title",
-    value: title,
-    onChange: function onChange(e) {
-      return setTitle(e.target.value);
-    }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    variant: "slug",
-    placeholder: "Slug",
-    value: slug,
-    onChange: function onChange(e) {
-      return setSlug(e.target.value);
-    }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    id: "Editor",
-    getEditorRef: function getEditorRef(editor) {
-      return editorRef.current = editor;
-    },
-    onChange: function onChange(data) {
-      return setContent(data);
-    }
-  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: "Update",
-    onClick: function onClick() {
-      return handleUpdate(announcementIdRef.current);
-    }
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: "Create",
-    onClick: handleSave
-  }))));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Announcements);
