@@ -69,7 +69,7 @@ Route::group([
         Route::post("/dean-message", [
             "as" => "ajax.portal.add.dean-message",
             "uses" => "AJAXPortalController@addDeanMessage",
-            "middleware" => ["check.isadmin", "check.session"]
+            "middleware" => ["check.session", "check.isadmin"]
         ]);
         
         //Announcements
@@ -81,7 +81,7 @@ Route::group([
         Route::post("/announcements", [
             "as" => "ajax.portal.add.announcements",
             "uses" => "AJAXPortalController@addAnnouncements",
-            "middleware" => ["check.isadmin", "check.session"]
+            "middleware" => ["check.session", "check.isadmin"]
         ]);
     });
 });
