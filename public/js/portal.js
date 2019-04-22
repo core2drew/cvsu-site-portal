@@ -48423,8 +48423,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/preloader */ "./resources/js/components/preloader/index.js");
 /* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/announcements/tablebody.js");
 /* harmony import */ var _reducers_announcements__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../reducers/announcements */ "./resources/js/reducers/announcements.js");
-/* harmony import */ var _contexts_user_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../contexts/user-context */ "./resources/js/contexts/user-context.js");
-/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
+/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -48432,7 +48431,6 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 
 
 
@@ -48470,8 +48468,7 @@ var Announcements = function Announcements() {
       content = _useState6[0],
       setContent = _useState6[1];
 
-  var tableHeaders = ['Title', 'Slug', 'Author', 'Created At', 'Updated At', 'Actions'];
-  var userContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_user_context__WEBPACK_IMPORTED_MODULE_10__["default"]);
+  var tableHeaders = ['Title', 'Slug', 'Created At', 'Updated At', 'Actions'];
 
   var clearFields = function clearFields() {
     setTitle('');
@@ -48481,15 +48478,13 @@ var Announcements = function Announcements() {
   };
 
   var handleSave = function handleSave() {
-    var userId = userContext.id;
     dispatch({
       type: 'SAVING'
     });
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
       title: title,
       slug: slug,
-      content: content,
-      userId: userId
+      content: content
     }, function (res) {
       return dispatch({
         type: 'SUCCESS_SAVE',
@@ -48504,7 +48499,23 @@ var Announcements = function Announcements() {
     clearFields();
   };
 
-  var handleUpdate = function handleUpdate(id) {};
+  var handleUpdate = function handleUpdate(id) {
+    Object(_utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      title: title,
+      slug: slug,
+      content: content
+    }, function (res) {
+      return dispatch({
+        type: 'SUCCESS_SAVE',
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_SAVE"
+      });
+      alert('Something went wrong. Please try again');
+    });
+  };
 
   var handleDelete = function handleDelete(id) {
     dispatch({
@@ -48522,7 +48533,7 @@ var Announcements = function Announcements() {
         type: "ERROR_DELETE"
       });
       alert('Something went wrong. Please try again');
-    }, 'PUT');
+    }, 'DELETE');
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
@@ -48538,7 +48549,7 @@ var Announcements = function Announcements() {
       alert('Something went wrong. Please try again');
     });
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_announcements__WEBPACK_IMPORTED_MODULE_11__["default"].Provider, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_announcements__WEBPACK_IMPORTED_MODULE_10__["default"].Provider, {
     value: {
       handleUpdate: handleUpdate,
       handleDelete: handleDelete
@@ -48634,11 +48645,14 @@ var TableBody = function TableBody(_ref) {
     var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.slug), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.slug), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'update',
-      text: 'Edit'
+      text: 'Edit',
+      onClick: function onClick() {
+        return announcementsContext.handleUpdate(d.id);
+      }
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'delete danger',
       text: 'Delete',

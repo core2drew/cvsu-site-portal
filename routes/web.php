@@ -84,7 +84,7 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
-        Route::put("/announcements", [
+        Route::delete("/announcements", [
             "as" => "ajax.portal.delete.announcements",
             "uses" => "AJAXPortalController@deleteAnnouncement",
             "middleware" => ["check.session", "check.isadmin"]

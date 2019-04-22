@@ -15,11 +15,10 @@ const TableBody = ({ data }) => {
         <tr key={Uuid()}>
           <td>{d.title}</td>
           <td>{d.slug}</td>
-          <td>{d.username}</td>
           <td>{created_at}</td>
           <td>{updated_at}</td>
           <td className="actions">
-            <Button variant={'update'} text={'Edit'}/>
+            <Button variant={'update'} text={'Edit'} onClick={() => announcementsContext.handleUpdate(d.id)}/>
             <Button variant={'delete danger'} text={'Delete'} onClick={() => announcementsContext.handleDelete(d.id)}/>
           </td>
         </tr>

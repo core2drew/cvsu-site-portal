@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState, useContext, useRef } from 'react'
+import React, { useEffect, useReducer, useState, useRef } from 'react'
 import { get, post } from '../../utils'
 import Table from '../../components/table'
 import Button from '../../components/button'
@@ -8,7 +8,6 @@ import Input from '../../components/input'
 import Preloader from '../../components/preloader'
 import TableBody from './tablebody'
 import AnnouncementReducer, { initialState } from '../../reducers/announcements'
-import UserContext from '../../contexts/user-context'
 import AnnouncementsContext from '../../contexts/announcements'
 
 const Announcements = () => {
@@ -18,8 +17,7 @@ const Announcements = () => {
   const [title, setTitle] = useState('')
   const [slug, setSlug] = useState('')
   const [content, setContent] = useState('')
-  const tableHeaders = ['Title', 'Slug', 'Author', 'Created At', 'Updated At', 'Actions']
-  const userContext = useContext(UserContext)
+  const tableHeaders = ['Title', 'Slug', 'Created At', 'Updated At', 'Actions']
 
   const clearFields = () => {
     setTitle('')
@@ -29,11 +27,10 @@ const Announcements = () => {
   }
 
   const handleSave = () => {
-    let userId = userContext.id
     dispatch({type: 'SAVING'})
     post(
       url, 
-      {title, slug, content, userId}, 
+      {title, slug, content}, 
       res => dispatch(
         {type: 'SUCCESS_SAVE', data: res.data}
       ),
@@ -46,7 +43,17 @@ const Announcements = () => {
   }
 
   const handleUpdate = id => {
-
+    post(
+      url, 
+      {title, slug, content}, 
+      res => dispatch(
+        {type: 'SUCCESS_SAVE', data: res.data}
+      ),
+      () => {
+        dispatch({type: "ERROR_SAVE"})
+        alert('Something went wrong. Please try again')
+      }
+    )
   }
 
   const handleDelete = id => {
@@ -61,7 +68,7 @@ const Announcements = () => {
         dispatch({type: "ERROR_DELETE"})
         alert('Something went wrong. Please try again')
       },
-      'PUT'
+      'DELETE'
     )
   }
 

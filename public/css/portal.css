@@ -10,12 +10,12 @@
   margin-top: 10px;
 }
 
-#Announcements > .table-container > table > thead > tr > th:nth-child(1) {
+#Announcements > .table-container > table > thead > tr > th:nth-child(2) {
   width: 20%;
 }
 
-#Announcements > .table-container > table > thead > tr > th:nth-child(4),
-#Announcements > .table-container > table > thead > tr > th:nth-child(5) {
+#Announcements > .table-container > table > thead > tr > th:nth-child(3),
+#Announcements > .table-container > table > thead > tr > th:nth-child(4) {
   width: 14%;
 }
 
