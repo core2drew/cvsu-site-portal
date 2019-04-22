@@ -48447,6 +48447,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Announcements = function Announcements() {
   var url = '/ajax/portal/announcements';
   var editorRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var announcementIdRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
 
   var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(_reducers_announcements__WEBPACK_IMPORTED_MODULE_9__["default"], _reducers_announcements__WEBPACK_IMPORTED_MODULE_9__["initialState"]),
       _useReducer2 = _slicedToArray(_useReducer, 2),
@@ -48475,6 +48476,7 @@ var Announcements = function Announcements() {
     setSlug('');
     setContent('');
     editorRef.current.setData('');
+    announcementIdRef.current = null;
   };
 
   var handleSave = function handleSave() {
@@ -48500,21 +48502,25 @@ var Announcements = function Announcements() {
   };
 
   var handleUpdate = function handleUpdate(id) {
+    dispatch({
+      type: 'UPDATING'
+    });
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      id: id,
       title: title,
       slug: slug,
       content: content
     }, function (res) {
       return dispatch({
-        type: 'SUCCESS_SAVE',
+        type: 'SUCCESS_UPDATE',
         data: res.data
       });
     }, function () {
       dispatch({
-        type: "ERROR_SAVE"
+        type: "ERROR_UPDATE"
       });
       alert('Something went wrong. Please try again');
-    });
+    }, 'PATCH');
   };
 
   var handleDelete = function handleDelete(id) {
@@ -48536,6 +48542,22 @@ var Announcements = function Announcements() {
     }, 'DELETE');
   };
 
+  var handleEdit = function handleEdit(id) {
+    announcementIdRef.current = id;
+    dispatch({
+      type: 'OPEN_UPDATE_MODAL'
+    });
+    var _state$data$filter$ = state.data.filter(function (d) {
+      return d.id === id;
+    })[0],
+        title = _state$data$filter$.title,
+        slug = _state$data$filter$.slug,
+        content = _state$data$filter$.content;
+    setTitle(title);
+    setSlug(slug);
+    editorRef.current.setData(content);
+  };
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
       dispatch({
@@ -48551,7 +48573,7 @@ var Announcements = function Announcements() {
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_announcements__WEBPACK_IMPORTED_MODULE_10__["default"].Provider, {
     value: {
-      handleUpdate: handleUpdate,
+      handleEdit: handleEdit,
       handleDelete: handleDelete
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -48603,8 +48625,12 @@ var Announcements = function Announcements() {
     onChange: function onChange(data) {
       return setContent(data);
     }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    variant: "save",
+  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: "Update",
+    onClick: function onClick() {
+      return handleUpdate(announcementIdRef.current);
+    }
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     text: "Create",
     onClick: handleSave
   }))));
@@ -48651,7 +48677,7 @@ var TableBody = function TableBody(_ref) {
       variant: 'update',
       text: 'Edit',
       onClick: function onClick() {
-        return announcementsContext.handleUpdate(d.id);
+        return announcementsContext.handleEdit(d.id);
       }
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'delete danger',
@@ -48932,6 +48958,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var initialState = {
   isLoading: true,
   isModalActive: false,
+  isUpdateModal: false,
   data: []
 };
 
@@ -48939,6 +48966,7 @@ var reducer = function reducer(state, action) {
   switch (action.type) {
     case 'FETCHING':
     case 'SAVING':
+    case 'UPDATING':
     case 'DELETING':
       return _objectSpread({}, state, {
         isLoading: true,
@@ -48947,17 +48975,21 @@ var reducer = function reducer(state, action) {
 
     case 'SUCCESS_FETCH':
     case 'SUCCESS_SAVE':
+    case 'SUCCESS_UPDATE':
     case 'SUCCESS_DELETE':
       return _objectSpread({}, state, {
         isLoading: false,
+        isUpdateModal: false,
         data: action.data
       });
 
     case 'ERROR_SAVE':
     case 'ERROR_FETCH':
+    case 'ERROR_UPDATE':
     case 'ERROR_DELETE':
       return _objectSpread({}, state, {
-        isLoading: false
+        isLoading: false,
+        isUpdateModal: false
       });
 
     case 'OPEN_MODAL':
@@ -48967,7 +48999,14 @@ var reducer = function reducer(state, action) {
 
     case 'CLOSE_MODAL':
       return _objectSpread({}, state, {
-        isModalActive: false
+        isModalActive: false,
+        isUpdateModal: false
+      });
+
+    case 'OPEN_UPDATE_MODAL':
+      return _objectSpread({}, state, {
+        isModalActive: true,
+        isUpdateModal: true
       });
 
     default:

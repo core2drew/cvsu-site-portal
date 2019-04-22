@@ -84,6 +84,12 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
+        Route::patch("/announcements", [
+            "as" => "ajax.portal.update.announcements",
+            "uses" => "AJAXPortalController@updateAnnouncement",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
         Route::delete("/announcements", [
             "as" => "ajax.portal.delete.announcements",
             "uses" => "AJAXPortalController@deleteAnnouncement",

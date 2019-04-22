@@ -1,6 +1,7 @@
 const initialState = {
   isLoading: true,
   isModalActive: false,
+  isUpdateModal: false,
   data: []
 }
 
@@ -9,6 +10,7 @@ const reducer = (state, action) => {
 
     case 'FETCHING':
     case 'SAVING':
+    case 'UPDATING':
     case 'DELETING':
       return {
         ...state,
@@ -17,18 +19,22 @@ const reducer = (state, action) => {
       }
     case 'SUCCESS_FETCH':
     case 'SUCCESS_SAVE':
+    case 'SUCCESS_UPDATE':
     case 'SUCCESS_DELETE':
       return {
         ...state,
         isLoading: false,
+        isUpdateModal: false,
         data: action.data
       }
     case 'ERROR_SAVE':
     case 'ERROR_FETCH':
+    case 'ERROR_UPDATE':
     case 'ERROR_DELETE':
       return {
         ...state,
-        isLoading: false
+        isLoading: false,
+        isUpdateModal: false
       }
 
     case 'OPEN_MODAL':
@@ -39,7 +45,14 @@ const reducer = (state, action) => {
     case 'CLOSE_MODAL':
       return {
         ...state,
-        isModalActive: false
+        isModalActive: false,
+        isUpdateModal: false
+      }
+    case 'OPEN_UPDATE_MODAL':
+      return {
+        ...state,
+        isModalActive: true,
+        isUpdateModal: true
       }
     default:
       return state;

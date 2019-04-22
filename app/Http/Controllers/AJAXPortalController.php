@@ -34,7 +34,6 @@ class AJAXPortalController extends Controller
         $title = $request->get('title');
         $content = $request->get('content');
         $slug = $request->get('slug');
-        $userId = $request->get('userId');
         $created_at = now();
         $updated_at = now();
 
@@ -43,9 +42,33 @@ class AJAXPortalController extends Controller
             'title' => $title, 
             'content' => $content, 
             'slug' => $slug,
-            'user_id' => $userId,
             'created_at' => $created_at, 
             'updated_at' => $updated_at
+        ]);
+
+        if($response) {
+            $response = DB::table('announcements')
+            ->whereNull('announcements.deleted_at')
+            ->paginate(15);
+            return response()->json($response);
+        }
+
+        return abort(500);
+    }
+
+    public function updateAnnouncement(Request $request) {
+        $id = $request->get('id');
+        $title = $request->get('title');
+        $content = $request->get('content');
+        $slug = $request->get('slug');
+
+        $response = DB::table('announcements')
+        ->where('id', '=', $id)
+        ->update([
+            'title' => $title, 
+            'content' => $content, 
+            'slug' => $slug,
+            'updated_at' => now()
         ]);
 
         if($response) {
