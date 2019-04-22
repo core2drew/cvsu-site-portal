@@ -25999,18 +25999,22 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var App = function App() {
-  var userNameRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
-  var passwordRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
-      isLoading = _useState2[0],
-      setIsLoading = _useState2[1];
+      username = _useState2[0],
+      setUsername = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      password = _useState4[0],
+      setPassword = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      isLoading = _useState6[0],
+      setIsLoading = _useState6[1];
 
   var handleLogin = function handleLogin() {
-    var username = userNameRef.current;
-    var password = passwordRef.current;
-
     if (!username || !password) {
       alert('Required Username and Password');
       return;
@@ -26039,13 +26043,15 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "title"
   }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    value: username,
     onChange: function onChange(e) {
-      return userNameRef.current = e.target.value;
+      return setUsername(e.target.value);
     },
     placeholder: "Student ID / Username"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    value: password,
     onChange: function onChange(e) {
-      return passwordRef.current = e.target.value;
+      return setPassword(e.target.value);
     },
     placeholder: "Password",
     type: 'password'

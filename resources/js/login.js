@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { post } from './utils'
 import Button from './components/button'
@@ -6,15 +6,12 @@ import Input from './components/input'
 import Preloader from './components/preloader'
 
 const App = () => {
-  const userNameRef = useRef()
-  const passwordRef = useRef()
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
 
   const handleLogin = () => {
-    let username = userNameRef.current
-    let password = passwordRef.current
-
     if(!username || !password) {
       alert('Required Username and Password')
       return
@@ -35,8 +32,8 @@ const App = () => {
     <div id="Login">
       <Preloader isActive={isLoading} variant={'fixed'}/>
       <h3 className="title">Log In</h3>
-      <Input onChange={e => userNameRef.current = e.target.value} placeholder="Student ID / Username" />
-      <Input onChange={e => passwordRef.current = e.target.value} placeholder="Password" type={'password'} />
+      <Input value={username} onChange={e => setUsername(e.target.value)} placeholder="Student ID / Username" />
+      <Input value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" type={'password'} />
       
       <Button text={'Log In'} onClick={handleLogin} />
     </div>
