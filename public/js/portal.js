@@ -48380,10 +48380,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/portal-routes/academic-calendar.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/portal-routes/academic-calendar.js ***!
-  \*********************************************************/
+/***/ "./resources/js/portal-routes/academic-calendar/index.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/portal-routes/academic-calendar/index.js ***!
+  \***************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -48923,7 +48923,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _portal_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./portal-components */ "./resources/js/portal-components/index.js");
 /* harmony import */ var _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portal-routes/dean-message */ "./resources/js/portal-routes/dean-message.js");
 /* harmony import */ var _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./portal-routes/announcements */ "./resources/js/portal-routes/announcements/index.js");
-/* harmony import */ var _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./portal-routes/academic-calendar */ "./resources/js/portal-routes/academic-calendar.js");
+/* harmony import */ var _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./portal-routes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
 /* harmony import */ var _portal_routes_students__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./portal-routes/students */ "./resources/js/portal-routes/students.js");
 /* harmony import */ var _portal_routes_users__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./portal-routes/users */ "./resources/js/portal-routes/users.js");
 /* harmony import */ var _portal_routes_nomatch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./portal-routes/nomatch */ "./resources/js/portal-routes/nomatch.js");
