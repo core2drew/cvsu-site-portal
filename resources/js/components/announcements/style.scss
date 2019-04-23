@@ -1,5 +1,11 @@
 #Announcements {
+  display: flex;
+  flex-direction: column;
   > .announcement:nth-last-child(n + 2) {
     margin-bottom: 10px;
+  }
+  > #LoadMoreAnnouncements {
+    margin-top: 15px;
+    align-self: flex-end;
   }
 }

@@ -507,7 +507,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#Announcements > .announcement:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}", ""]);
+exports.push([module.i, "#Announcements {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n#Announcements > .announcement:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n#Announcements > #LoadMoreAnnouncements {\n  margin-top: 15px;\n  -webkit-align-self: flex-end;\n      -ms-flex-item-align: end;\n          align-self: flex-end;\n}", ""]);
 
 // exports
 
@@ -526,7 +526,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  border: 0;\n  background-color: #329B58;\n  color: #fff;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: rubikmedium;\n}\n.cvsu-btn > i[class*=icon] {\n  margin-left: 10px;\n}\n\n.cvsu-btn.danger {\n  background-color: #f34141;\n}", ""]);
+exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  border: 0;\n  background-color: #329B58;\n  color: #fff;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: rubikmedium;\n}\n.cvsu-btn > i[class*=icon] {\n  margin-left: 10px;\n}\n\n.cvsu-btn.tertiary {\n  background-color: transparent;\n  color: #329B58;\n  padding: 0;\n}\n\n.cvsu-btn.danger {\n  background-color: #f34141;\n}", ""]);
 
 // exports
 
@@ -47855,7 +47855,7 @@ module.exports = LinesEllipsis;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53097,11 +53097,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
-/* harmony import */ var _announcement__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./announcement */ "./resources/js/components/announcements/announcement.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/announcements/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../button */ "./resources/js/components/button/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
+/* harmony import */ var _announcement__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./announcement */ "./resources/js/components/announcements/announcement.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/announcements/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -53117,28 +53126,47 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Announcements = function Announcements() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       _useState2 = _slicedToArray(_useState, 2),
       announcements = _useState2[0],
       setAnnouncements = _useState2[1];
 
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      nextPageURL = _useState4[0],
+      setNextPageURL = _useState4[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/limited/announcements', {
-      limit: 5
-    }, function (res) {
-      setAnnouncements(res);
+    Object(_utils__WEBPACK_IMPORTED_MODULE_3__["get"])('/ajax/portal/limited/announcements', {}, function (res) {
+      setNextPageURL(res.next_page_url);
+      setAnnouncements(res.data);
     });
   }, []);
+
+  var handleLoadMore = function handleLoadMore() {
+    Object(_utils__WEBPACK_IMPORTED_MODULE_3__["get"])(nextPageURL, {}, function (res) {
+      setNextPageURL(res.next_page_url);
+      setAnnouncements([].concat(_toConsumableArray(announcements), _toConsumableArray(res.data)));
+    });
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Announcements",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "section header"
   }, "Latest Announcements"), announcements.map(function (announcement) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_announcement__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({}, announcement, {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_announcement__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({}, announcement, {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
     }));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    id: "LoadMoreAnnouncements",
+    variant: 'tertiary',
+    text: "Load More Announcements",
+    onClick: handleLoadMore,
+    isVisible: nextPageURL
   }));
 };
 
@@ -53195,7 +53223,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Button = function Button(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  return props.isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: props.id,
     className: "cvsu-btn ".concat(props.variant),
     onClick: props.onClick
@@ -53207,6 +53235,7 @@ var Button = function Button(props) {
 Button.defaultProps = {
   id: '',
   variant: '',
+  isVisible: true,
   onClick: function onClick() {
     return false;
   }

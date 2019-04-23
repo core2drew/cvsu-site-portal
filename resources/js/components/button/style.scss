@@ -20,6 +20,12 @@
   }
 }
 
+.cvsu-btn.tertiary {
+  background-color: transparent;
+  color: $green-1;
+  padding: 0;
+}
+
 .cvsu-btn.danger {
   background-color: $red-1;
 }

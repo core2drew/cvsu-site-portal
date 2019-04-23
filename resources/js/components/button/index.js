@@ -3,6 +3,7 @@ import Icon from '../icon'
 import './style.scss'
 
 const Button = props => (
+  props.isVisible &&
   <button 
     id={props.id} 
     className={`cvsu-btn ${props.variant}`}
@@ -16,6 +17,7 @@ const Button = props => (
 Button.defaultProps = {
   id: '',
   variant: '',
+  isVisible: true,
   onClick: () => false
 }
 
