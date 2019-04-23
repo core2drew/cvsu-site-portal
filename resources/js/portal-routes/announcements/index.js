@@ -14,9 +14,8 @@ const Announcements = () => {
   const announcementIdRef = useRef(null)
   const [state, dispatch] = useReducer(AnnouncementReducer, initialState)
   const [title, setTitle] = useState('')
-  const [slug, setSlug] = useState('')
   const [content, setContent] = useState('')
-  const tableHeaders = ['Title', 'Slug', 'Created At', 'Updated At', 'Actions']
+  const tableHeaders = ['Title', 'Created At', 'Updated At', 'Actions']
 
   const handleDelete = id => {
     dispatch({type: 'DELETING'})
@@ -37,9 +36,8 @@ const Announcements = () => {
   const handleEdit = id => {
     announcementIdRef.current = id
     dispatch({type: 'OPEN_UPDATE_MODAL'})
-    let {title, slug, content} = state.data.filter(d => d.id === id)[0]
+    let {title, content} = state.data.filter(d => d.id === id)[0]
     setTitle(title)
-    setSlug(slug)
     editorRef.current.setData(content)
   }
 
@@ -64,8 +62,6 @@ const Announcements = () => {
           announcementIdRef,
           title, 
           setTitle, 
-          slug, 
-          setSlug, 
           content, 
           setContent, 
           url

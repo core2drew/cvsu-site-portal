@@ -44,7 +44,6 @@ class AJAXPortalController extends Controller
     public function addAnnouncements(Request $request) {
         $title = $request->get('title');
         $content = $request->get('content');
-        $slug = $request->get('slug');
         $created_at = now();
         $updated_at = now();
 
@@ -52,7 +51,6 @@ class AJAXPortalController extends Controller
         ->insert([
             'title' => $title, 
             'content' => $content, 
-            'slug' => $slug,
             'created_at' => $created_at, 
             'updated_at' => $updated_at
         ]);
@@ -71,14 +69,12 @@ class AJAXPortalController extends Controller
         $id = $request->get('id');
         $title = $request->get('title');
         $content = $request->get('content');
-        $slug = $request->get('slug');
 
         $response = DB::table('announcements')
         ->where('id', '=', $id)
         ->update([
             'title' => $title, 
             'content' => $content, 
-            'slug' => $slug,
             'updated_at' => now()
         ]);
 

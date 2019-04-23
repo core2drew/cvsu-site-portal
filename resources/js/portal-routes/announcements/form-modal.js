@@ -7,11 +7,10 @@ import Input from '../../components/input'
 import AnnouncementsContext from '../../contexts/announcements'
 
 const FormModal = () => {
-  const {title, slug, content, state, setTitle, url, editorRef, announcementIdRef, setSlug, setContent, dispatch} = useContext(AnnouncementsContext)
+  const {title, content, state, setTitle, url, editorRef, announcementIdRef, setContent, dispatch} = useContext(AnnouncementsContext)
   
   const clearFields = () => {
     setTitle('')
-    setSlug('')
     setContent('')
     editorRef.current.setData('')
     announcementIdRef.current = null
@@ -21,7 +20,7 @@ const FormModal = () => {
     dispatch({type: 'SAVING'})
     post(
       url, 
-      {title, slug, content}, 
+      {title, content}, 
       res => dispatch(
         {type: 'SUCCESS_SAVE', data: res.data}
       ),
@@ -37,7 +36,7 @@ const FormModal = () => {
     dispatch({type: 'UPDATING'})
     post(
       url, 
-      {id, title, slug, content}, 
+      {id, title, content}, 
       res => dispatch(
         {type: 'SUCCESS_UPDATE', data: res.data}
       ),
@@ -61,7 +60,6 @@ const FormModal = () => {
     >
       <h2 className="section header">New Announcement</h2>
       <Input variant="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)}/>
-      <Input variant="slug" placeholder="Slug" value={slug} onChange={e => setSlug(e.target.value)}/>
       <CKEditor id="Editor" getEditorRef={editor => editorRef.current = editor} onChange={data => setContent(data)}/>
       {
         state.isUpdateModal ? <Button text="Update" onClick={() => handleUpdate(announcementIdRef.current)}/> : <Button text="Create" onClick={handleSave}/>

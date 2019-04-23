@@ -14,7 +14,6 @@ const TableBody = ({ data }) => {
       return (
         <tr key={Uuid()}>
           <td>{d.title}</td>
-          <td>{d.slug}</td>
           <td>{created_at}</td>
           <td>{updated_at}</td>
           <td className="actions">

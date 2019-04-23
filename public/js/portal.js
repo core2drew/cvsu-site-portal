@@ -42591,7 +42591,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48431,20 +48431,17 @@ __webpack_require__.r(__webpack_exports__);
 var FormModal = function FormModal() {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_announcements__WEBPACK_IMPORTED_MODULE_6__["default"]),
       title = _useContext.title,
-      slug = _useContext.slug,
       content = _useContext.content,
       state = _useContext.state,
       setTitle = _useContext.setTitle,
       url = _useContext.url,
       editorRef = _useContext.editorRef,
       announcementIdRef = _useContext.announcementIdRef,
-      setSlug = _useContext.setSlug,
       setContent = _useContext.setContent,
       dispatch = _useContext.dispatch;
 
   var clearFields = function clearFields() {
     setTitle('');
-    setSlug('');
     setContent('');
     editorRef.current.setData('');
     announcementIdRef.current = null;
@@ -48456,7 +48453,6 @@ var FormModal = function FormModal() {
     });
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
       title: title,
-      slug: slug,
       content: content
     }, function (res) {
       return dispatch({
@@ -48479,7 +48475,6 @@ var FormModal = function FormModal() {
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
       id: id,
       title: title,
-      slug: slug,
       content: content
     }, function (res) {
       return dispatch({
@@ -48510,13 +48505,6 @@ var FormModal = function FormModal() {
     value: title,
     onChange: function onChange(e) {
       return setTitle(e.target.value);
-    }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    variant: "slug",
-    placeholder: "Slug",
-    value: slug,
-    onChange: function onChange(e) {
-      return setSlug(e.target.value);
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_4__["default"], {
     id: "Editor",
@@ -48595,15 +48583,10 @@ var Announcements = function Announcements() {
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState4 = _slicedToArray(_useState3, 2),
-      slug = _useState4[0],
-      setSlug = _useState4[1];
+      content = _useState4[0],
+      setContent = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState6 = _slicedToArray(_useState5, 2),
-      content = _useState6[0],
-      setContent = _useState6[1];
-
-  var tableHeaders = ['Title', 'Slug', 'Created At', 'Updated At', 'Actions'];
+  var tableHeaders = ['Title', 'Created At', 'Updated At', 'Actions'];
 
   var handleDelete = function handleDelete(id) {
     dispatch({
@@ -48633,10 +48616,8 @@ var Announcements = function Announcements() {
       return d.id === id;
     })[0],
         title = _state$data$filter$.title,
-        slug = _state$data$filter$.slug,
         content = _state$data$filter$.content;
     setTitle(title);
-    setSlug(slug);
     editorRef.current.setData(content);
   };
 
@@ -48663,8 +48644,6 @@ var Announcements = function Announcements() {
       announcementIdRef: announcementIdRef,
       title: title,
       setTitle: setTitle,
-      slug: slug,
-      setSlug: setSlug,
       content: content,
       setContent: setContent,
       url: url
@@ -48724,7 +48703,7 @@ var TableBody = function TableBody(_ref) {
     var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.slug), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'update',
