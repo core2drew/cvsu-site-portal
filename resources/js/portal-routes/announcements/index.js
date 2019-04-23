@@ -53,7 +53,25 @@ const Announcements = () => {
   },[])
 
   return (
-    <AnnouncementsContext.Provider value={{handleEdit, handleDelete, state, dispatch, editorRef, announcementIdRef, title, setTitle, slug, setSlug, content, setContent, url}}>
+    <AnnouncementsContext.Provider
+      value={
+        {
+          handleEdit, 
+          handleDelete, 
+          state, 
+          dispatch, 
+          editorRef,
+          announcementIdRef,
+          title, 
+          setTitle, 
+          slug, 
+          setSlug, 
+          content, 
+          setContent, 
+          url
+        }
+      }
+    >
       <div id="Announcements">
         <Preloader variant={'fixed'} isActive={state.isLoading}/>
         <Button 
