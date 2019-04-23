@@ -30,6 +30,17 @@ class AJAXPortalController extends Controller
         return response()->json($response);
     }
 
+    public function getAnnouncementByLimit(Request $request) {
+        $limit = $request->get('limit');
+        $response = DB::table('announcements')
+        ->whereNull('announcements.deleted_at')
+        ->latest()
+        ->orderBy('created_at')
+        ->limit($limit)
+        ->get();
+        return response()->json($response);
+    }
+
     public function addAnnouncements(Request $request) {
         $title = $request->get('title');
         $content = $request->get('content');

@@ -78,6 +78,11 @@ Route::group([
             "uses" => "AJAXPortalController@getAnnouncements"
         ]);
 
+        Route::get('/limited/announcements', [
+            "as" => "ajax.portal.limited.announcements",
+            "uses" => "AJAXPortalController@getAnnouncementByLimit"
+        ]);
+
         Route::post("/announcements", [
             "as" => "ajax.portal.add.announcements",
             "uses" => "AJAXPortalController@addAnnouncements",

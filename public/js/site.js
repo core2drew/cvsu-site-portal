@@ -476,6 +476,25 @@ exports.push([module.i, "#AcademicCalendar > .calendar {\n  width: 100%;\n  bord
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/announcements/announcement.scss":
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/announcements/announcement.scss ***!
+  \********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".announcement {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n.announcement > .header > .title {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-bottom: 0;\n}\n.announcement > .header > .post-date {\n  margin-top: 5px;\n}\n.announcement > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/announcements/style.scss":
 /*!*************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/announcements/style.scss ***!
@@ -488,7 +507,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#Announcements > .announcement {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#Announcements > .announcement > .header > .title {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-bottom: 0;\n}\n#Announcements > .announcement > .header > .post-date {\n  margin-top: 5px;\n}\n#Announcements > .announcement > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}\n#Announcements > .announcement:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}", ""]);
+exports.push([module.i, "#Announcements > .announcement:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}", ""]);
 
 // exports
 
@@ -47836,7 +47855,7 @@ module.exports = LinesEllipsis;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52990,6 +53009,81 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/announcements/announcement.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/announcements/announcement.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _announcement_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./announcement.scss */ "./resources/js/components/announcements/announcement.scss");
+/* harmony import */ var _announcement_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_announcement_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var Announcement = function Announcement(_ref) {
+  var id = _ref.id,
+      title = _ref.title,
+      slug = _ref.slug,
+      content = _ref.content,
+      created_at = _ref.created_at;
+  return id && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "announcement"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "post-date"
+  }, "Posted Date: ", moment__WEBPACK_IMPORTED_MODULE_1___default()(created_at).format('MMMM DD, YYYY')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "title"
+  }, title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "message",
+    dangerouslySetInnerHTML: {
+      __html: content
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Announcement);
+
+/***/ }),
+
+/***/ "./resources/js/components/announcements/announcement.scss":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/announcements/announcement.scss ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./announcement.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/announcements/announcement.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/announcements/index.js":
 /*!********************************************************!*\
   !*** ./resources/js/components/announcements/index.js ***!
@@ -53001,36 +53095,51 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/announcements/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
+/* harmony import */ var _announcement__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./announcement */ "./resources/js/components/announcements/announcement.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/announcements/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
 
 
 
 var Announcements = function Announcements() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      announcements = _useState2[0],
+      setAnnouncements = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/limited/announcements', {
+      limit: 5
+    }, function (res) {
+      setAnnouncements(res);
+    });
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Announcements",
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "section header"
-  }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "announcement"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "post-date"
-  }, "Posted Date: March 09, 2019"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "title"
-  }, "Deadline of Submission of Requirements for Admission Exam")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "message"
-  }, "As we all look forward to the University\u2019s continued advancement, I believe this executive summary will effectively serve as an inspiration and at the same time motivation in our efforts to become a global-research university. Our record of accomplishment in 2018 includes: Sustaining academic excellence Maintained high percentage of board passers and topnotchers in different.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "announcement"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "post-date"
-  }, "Posted Date: March 09, 2019"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "title"
-  }, "Deadline of Submission of Requirements for Admission Exam"))));
+  }, "Latest Announcements"), announcements.map(function (announcement) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_announcement__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({}, announcement, {
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
+    }));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Announcements);
