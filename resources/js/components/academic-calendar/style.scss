@@ -7,6 +7,9 @@
     .calendar-day.react-calendar__tile--active {
       background-color: $green-1;
     }
+    .calendar-day.react-calendar__tile:disabled:not(.react-calendar__tile--active) {
+      background-color: #fff;
+    }
   }
   > .activities {
     margin-top: 10px;

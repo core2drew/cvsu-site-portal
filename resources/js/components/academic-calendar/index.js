@@ -20,6 +20,7 @@ const AcademicCalendar = () => {
         prev2Label={null} 
         tileClassName={"calendar-day"}
         value={date}
+        tileDisabled={({date}) => true}
       />
       <div className="activities">
         <div className="headers">

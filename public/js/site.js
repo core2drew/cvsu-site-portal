@@ -469,7 +469,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#AcademicCalendar > .calendar {\n  width: 100%;\n  border-color: #D5D7E3;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile--active {\n  background-color: #329B58;\n}\n#AcademicCalendar > .activities {\n  margin-top: 10px;\n}\n#AcademicCalendar > .activities > .headers {\n  background-color: #2D8548;\n  color: #fff;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .headers > .activity {\n  font-family: rubikmedium;\n}\n#AcademicCalendar > .activities > .activity {\n  border: 1px solid #2D8548;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  background-color: #fff;\n}\n#AcademicCalendar > .activities > .activity:nth-child(even) {\n  background-color: #dfffe9;\n}\n#AcademicCalendar > .activities > .headers,\n#AcademicCalendar > .activities > .activity {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 10px;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .activity > .date {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n#AcademicCalendar > .activities > .headers > .activity,\n#AcademicCalendar > .activities > .activity > .activity {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n     -moz-box-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}", ""]);
+exports.push([module.i, "#AcademicCalendar > .calendar {\n  width: 100%;\n  border-color: #D5D7E3;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile--active {\n  background-color: #329B58;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile:disabled:not(.react-calendar__tile--active) {\n  background-color: #fff;\n}\n#AcademicCalendar > .activities {\n  margin-top: 10px;\n}\n#AcademicCalendar > .activities > .headers {\n  background-color: #2D8548;\n  color: #fff;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .headers > .activity {\n  font-family: rubikmedium;\n}\n#AcademicCalendar > .activities > .activity {\n  border: 1px solid #2D8548;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  background-color: #fff;\n}\n#AcademicCalendar > .activities > .activity:nth-child(even) {\n  background-color: #dfffe9;\n}\n#AcademicCalendar > .activities > .headers,\n#AcademicCalendar > .activities > .activity {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 10px;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .activity > .date {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n#AcademicCalendar > .activities > .headers > .activity,\n#AcademicCalendar > .activities > .activity > .activity {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n     -moz-box-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}", ""]);
 
 // exports
 
@@ -52945,7 +52945,11 @@ var AcademicCalendar = function AcademicCalendar() {
     next2Label: null,
     prev2Label: null,
     tileClassName: "calendar-day",
-    value: date
+    value: date,
+    tileDisabled: function tileDisabled(_ref) {
+      var date = _ref.date;
+      return true;
+    }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "activities"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
