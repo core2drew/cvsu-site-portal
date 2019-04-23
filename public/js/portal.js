@@ -545,7 +545,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 5px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 12px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}", ""]);
+exports.push([module.i, ".table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}", ""]);
 
 // exports
 
