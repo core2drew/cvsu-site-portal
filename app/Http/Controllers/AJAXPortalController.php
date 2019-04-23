@@ -26,6 +26,7 @@ class AJAXPortalController extends Controller
     public function getAnnouncements(Request $request) {
         $response = DB::table('announcements')
         ->whereNull('announcements.deleted_at')
+        ->latest()
         ->paginate(15);
         return response()->json($response);
     }
@@ -35,7 +36,6 @@ class AJAXPortalController extends Controller
         $response = DB::table('announcements')
         ->whereNull('announcements.deleted_at')
         ->latest()
-        ->orderBy('created_at')
         ->limit($limit)
         ->get();
         return response()->json($response);
@@ -58,6 +58,7 @@ class AJAXPortalController extends Controller
         if($response) {
             $response = DB::table('announcements')
             ->whereNull('announcements.deleted_at')
+            ->latest()
             ->paginate(15);
             return response()->json($response);
         }
@@ -81,6 +82,7 @@ class AJAXPortalController extends Controller
         if($response) {
             $response = DB::table('announcements')
             ->whereNull('announcements.deleted_at')
+            ->latest()
             ->paginate(15);
             return response()->json($response);
         }
@@ -97,6 +99,7 @@ class AJAXPortalController extends Controller
         if($response) {
             $response = DB::table('announcements')
             ->whereNull('announcements.deleted_at')
+            ->latest()
             ->paginate(15);
             return response()->json($response);
         }
