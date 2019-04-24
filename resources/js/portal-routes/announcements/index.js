@@ -76,7 +76,7 @@ const Announcements = () => {
             () => dispatch({type: 'OPEN_MODAL'})
           }
         />
-        <Table headers={tableHeaders} customTableBody={<TableBody data={state.data}/>}/>
+        <Table headers={tableHeaders} hasData={!!state.data.length} customTableBody={<TableBody data={state.data}/>}/>
         <FormModal />
       </div>
     </AnnouncementsContext.Provider>

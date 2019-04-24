@@ -20,7 +20,6 @@ const TableData = props => (
 const TableBody = props => (
   <tbody>
     {
-      props.customTableBody ||
       props.items.map(item => (
         <tr key={Uuid()}>
           <TableData items={item}/>
@@ -34,15 +33,23 @@ const Table = props => (
   <div id={props.id} className={classname('table-container', props.variant)}>
     <table>
       <TableHeader headers={props.headers}/>
-      <TableBody customTableBody={props.customTableBody}  items={props.items} />
+      {props.customTableBody || <TableBody items={props.items} />}
     </table>
+    {
+      props.hasData || (
+        <div className="no-data">
+          No data available
+        </div>
+      )
+    }
   </div>
 )
 
 Table.defaultProps = {
   headers: [],
   items: [],
-  customTableBody: null
+  customTableBody: null,
+  hasData: false
 }
 
 export default Table

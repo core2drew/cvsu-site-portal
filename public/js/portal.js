@@ -545,7 +545,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}", ""]);
+exports.push([module.i, ".table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}\n.table-container > .no-data {\n  min-height: 200px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 20px;\n}", ""]);
 
 // exports
 
@@ -48062,7 +48062,7 @@ var TableData = function TableData(props) {
 };
 
 var TableBody = function TableBody(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, props.customTableBody || props.items.map(function (item) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, props.items.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableData, {
@@ -48077,16 +48077,18 @@ var Table = function Table(props) {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('table-container', props.variant)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableHeader, {
     headers: props.headers
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableBody, {
-    customTableBody: props.customTableBody,
+  }), props.customTableBody || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableBody, {
     items: props.items
-  })));
+  })), props.hasData || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "no-data"
+  }, "No data available"));
 };
 
 Table.defaultProps = {
   headers: [],
   items: [],
-  customTableBody: null
+  customTableBody: null,
+  hasData: false
 };
 /* harmony default export */ __webpack_exports__["default"] = (Table);
 
@@ -48410,13 +48412,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
 
 
 
 var FormModal = function FormModal() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      title = _useState2[0],
+      setTitle = _useState2[1];
+
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__["default"]),
+      state = _useContext.state,
+      dispatch = _useContext.dispatch;
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    isActive: false
-  });
+    isActive: state.isModalActive,
+    handleClose: function handleClose() {
+      return dispatch({
+        type: 'CLOSE_MODAL'
+      });
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section header"
+  }, "New Activity"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    variant: "title",
+    placeholder: "Title",
+    value: title,
+    onChange: function onChange(e) {
+      return setTitle(e.target.value);
+    }
+  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "Update"
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "Create"
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FormModal);
@@ -48524,7 +48567,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
@@ -48544,13 +48587,13 @@ var TableBody = function TableBody(_ref) {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'update',
       text: 'Edit',
       onClick: function onClick() {
         return context.handleEdit(d.id);
       }
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'delete danger',
       text: 'Delete',
       onClick: function onClick() {
@@ -48823,6 +48866,7 @@ var Announcements = function Announcements() {
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
     headers: tableHeaders,
+    hasData: !!state.data.length,
     customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_5__["default"], {
       data: state.data
     })
@@ -48859,7 +48903,7 @@ __webpack_require__.r(__webpack_exports__);
 var TableBody = function TableBody(_ref) {
   var data = _ref.data;
   var announcementsContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_announcements__WEBPACK_IMPORTED_MODULE_4__["default"]);
-  return data.map(function (d) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
     var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
     var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
@@ -48879,7 +48923,7 @@ var TableBody = function TableBody(_ref) {
         return announcementsContext.handleDelete(d.id);
       }
     })));
-  });
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TableBody);
@@ -49144,14 +49188,6 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -49165,14 +49201,53 @@ var initialState = {
 
 var reducer = function reducer(state, action) {
   switch (action.type) {
+    case 'FETCHING':
+    case 'SAVING':
+    case 'UPDATING':
+    case 'DELETING':
+      return _objectSpread({}, state, {
+        isLoading: true,
+        isModalActive: false
+      });
+
     case 'SUCCESS_FETCH':
+    case 'SUCCESS_SAVE':
+    case 'SUCCESS_UPDATE':
+    case 'SUCCESS_DELETE':
       return _objectSpread({}, state, {
         isLoading: false,
-        data: _toConsumableArray(action.data)
+        isUpdateModal: false,
+        data: action.data
+      });
+
+    case 'ERROR_SAVE':
+    case 'ERROR_FETCH':
+    case 'ERROR_UPDATE':
+    case 'ERROR_DELETE':
+      return _objectSpread({}, state, {
+        isLoading: false,
+        isUpdateModal: false
+      });
+
+    case 'OPEN_MODAL':
+      return _objectSpread({}, state, {
+        isModalActive: true
+      });
+
+    case 'CLOSE_MODAL':
+      return _objectSpread({}, state, {
+        isModalActive: false,
+        isUpdateModal: false
+      });
+
+    case 'OPEN_UPDATE_MODAL':
+      return _objectSpread({}, state, {
+        isModalActive: true,
+        isUpdateModal: true
       });
 
     default:
-      state;
+      return state;
   }
 };
 

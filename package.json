@@ -29,6 +29,7 @@
         "moment": "^2.24.0",
         "querystring": "^0.2.0",
         "react-calendar": "^2.18.1",
+        "react-datepicker": "^2.4.0",
         "react-lines-ellipsis": "^0.14.1",
         "react-router-dom": "^5.0.0",
         "uuid": "^3.3.2"
