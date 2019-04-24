@@ -100,5 +100,11 @@ Route::group([
             "uses" => "AJAXPortalController@deleteAnnouncement",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
+
+        // Academic Calendar
+        Route::get("/academic-calendar", [
+            "as" => "ajax.portal.academic-calendar",
+            "uses" => "AJAXPortalController@getAcademicCalendar"
+        ]);
     });
 });

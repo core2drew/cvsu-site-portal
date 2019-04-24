@@ -1,0 +1,36 @@
+#AcademicCalendar {
+  > .modal {
+    > .content > input {
+      margin-bottom: 10px;
+    }
+    > .content > button {
+      margin-top: 10px;
+    }
+  }
+  > .table-container {
+    > table {
+
+      > thead > tr > th:nth-child(2),
+      > thead > tr > th:nth-child(3) {
+        width: 14%;
+      }
+
+      > thead > tr > th:last-child {
+        text-align: center;
+      }
+
+      > tbody > tr > td.actions {
+        width: 15%;
+        text-align: center;
+      }
+      > tbody > tr > td.actions > .update {
+        margin-right: 10px;
+      }
+      > tbody > tr > td.actions > .update,
+      > tbody > tr > td.actions > .delete {
+        font-size: 12px;
+        min-width: 70px;
+      }
+    }
+  }
+}

@@ -42591,7 +42591,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48122,6 +48122,23 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/contexts/academic-calendar.js":
+/*!****************************************************!*\
+  !*** ./resources/js/contexts/academic-calendar.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var AcademicCalendarContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+/* harmony default export */ __webpack_exports__["default"] = (AcademicCalendarContext);
+
+/***/ }),
+
 /***/ "./resources/js/contexts/announcements.js":
 /*!************************************************!*\
   !*** ./resources/js/contexts/announcements.js ***!
@@ -48381,6 +48398,31 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/portal-routes/academic-calendar/form-modal.js":
+/*!********************************************************************!*\
+  !*** ./resources/js/portal-routes/academic-calendar/form-modal.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
+
+
+
+var FormModal = function FormModal() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    isActive: false
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FormModal);
+
+/***/ }),
+
 /***/ "./resources/js/portal-routes/academic-calendar/index.js":
 /*!***************************************************************!*\
   !*** ./resources/js/portal-routes/academic-calendar/index.js ***!
@@ -48392,15 +48434,133 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Components_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/table */ "./resources/js/components/table/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
+/* harmony import */ var Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Reducers/academic-calendar */ "./resources/js/reducers/academic-calendar.js");
+/* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/academic-calendar/form-modal.js");
+/* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/academic-calendar/tablebody.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
 
 
 var AcademicCalendar = function AcademicCalendar() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  var url = '/ajax/portal/academic-calendar';
+
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["default"], Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["initialState"]),
+      _useReducer2 = _slicedToArray(_useReducer, 2),
+      state = _useReducer2[0],
+      dispatch = _useReducer2[1];
+
+  var tableHeaders = ['Activity', 'Created At', 'Updated At', 'Actions'];
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
+      dispatch({
+        type: "SUCCESS_FETCH",
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_FETCH"
+      });
+      alert('Something went wrong. Please try again');
+    });
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
+    value: {
+      state: state,
+      dispatch: dispatch
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "AcademicCalendar"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Academic Calendar"));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    variant: 'fixed',
+    isActive: state.isLoading
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: "Add New",
+    onClick: function onClick() {
+      return dispatch({
+        type: 'OPEN_MODAL'
+      });
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    headers: tableHeaders,
+    customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      data: state.data
+    })
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AcademicCalendar);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/academic-calendar/tablebody.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/portal-routes/academic-calendar/tablebody.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
+
+
+
+
+
+
+var TableBody = function TableBody(_ref) {
+  var data = _ref.data;
+  var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__["default"]);
+  return data.map(function (d) {
+    var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
+    var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      className: "actions"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      variant: 'update',
+      text: 'Edit',
+      onClick: function onClick() {
+        return context.handleEdit(d.id);
+      }
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      variant: 'delete danger',
+      text: 'Delete',
+      onClick: function onClick() {
+        return context.handleDelete(d.id);
+      }
+    })));
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TableBody);
 
 /***/ }),
 
@@ -48971,6 +49131,53 @@ var App = function App() {
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('App'));
+
+/***/ }),
+
+/***/ "./resources/js/reducers/academic-calendar.js":
+/*!****************************************************!*\
+  !*** ./resources/js/reducers/academic-calendar.js ***!
+  \****************************************************/
+/*! exports provided: initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var initialState = {
+  isLoading: true,
+  isModalActive: false,
+  isUpdateModal: false,
+  data: []
+};
+
+var reducer = function reducer(state, action) {
+  switch (action.type) {
+    case 'SUCCESS_FETCH':
+      return _objectSpread({}, state, {
+        isLoading: false,
+        data: _toConsumableArray(action.data)
+      });
+
+    default:
+      state;
+  }
+};
+
+
+/* harmony default export */ __webpack_exports__["default"] = (reducer);
 
 /***/ }),
 

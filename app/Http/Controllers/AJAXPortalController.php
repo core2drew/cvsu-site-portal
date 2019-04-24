@@ -104,4 +104,12 @@ class AJAXPortalController extends Controller
 
         return abort(500);
     }
+
+    public function getAcademicCalendar(Request $request) {
+        $response = DB::table('academic_calendar')
+        ->whereNull('academic_calendar.deleted_at')
+        ->latest()
+        ->paginate(5);
+        return response()->json($response);
+    } 
 }

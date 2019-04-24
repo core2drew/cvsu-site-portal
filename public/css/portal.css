@@ -34,6 +34,38 @@
   min-width: 70px;
 }
 
+#AcademicCalendar > .modal > .content > input {
+  margin-bottom: 10px;
+}
+
+#AcademicCalendar > .modal > .content > button {
+  margin-top: 10px;
+}
+
+#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(2),
+#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(3) {
+  width: 14%;
+}
+
+#AcademicCalendar > .table-container > table > thead > tr > th:last-child {
+  text-align: center;
+}
+
+#AcademicCalendar > .table-container > table > tbody > tr > td.actions {
+  width: 15%;
+  text-align: center;
+}
+
+#AcademicCalendar > .table-container > table > tbody > tr > td.actions > .update {
+  margin-right: 10px;
+}
+
+#AcademicCalendar > .table-container > table > tbody > tr > td.actions > .update,
+#AcademicCalendar > .table-container > table > tbody > tr > td.actions > .delete {
+  font-size: 12px;
+  min-width: 70px;
+}
+
 body {
   background-color: #f5f5f5;
 }
