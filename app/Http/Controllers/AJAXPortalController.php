@@ -110,10 +110,10 @@ class AJAXPortalController extends Controller
         $response = null;
 
         if($isFromHomePage) {
-            $from = $request->get('from');
+            $currentMonth = $request->get('currentMonth');
             $response = DB::table('academic_calendar')
             ->whereNull('academic_calendar.deleted_at')
-            ->where('from', '=', $from)
+            ->whereMonth ('from', '=', $currentMonth)
             ->get();
         } else {
             $response = DB::table('academic_calendar')

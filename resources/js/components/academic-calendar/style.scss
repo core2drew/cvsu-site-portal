@@ -1,6 +1,7 @@
 @import '~Sass/variables';
 
 #AcademicCalendar {
+  position: relative;
   > .calendar {
     width: 100%;
     border-color: $gray-1;

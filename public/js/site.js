@@ -605,7 +605,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#AcademicCalendar > .calendar {\n  width: 100%;\n  border-color: #D5D7E3;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile--active {\n  background-color: #329B58;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile:disabled:not(.react-calendar__tile--active) {\n  background-color: #fff;\n}", ""]);
+exports.push([module.i, "#AcademicCalendar {\n  position: relative;\n}\n#AcademicCalendar > .calendar {\n  width: 100%;\n  border-color: #D5D7E3;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile--active {\n  background-color: #329B58;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile:disabled:not(.react-calendar__tile--active) {\n  background-color: #fff;\n}", ""]);
 
 // exports
 
@@ -78512,14 +78512,16 @@ var AcademicCalendar = function AcademicCalendar() {
       activities = _useState2[0],
       setActivities = _useState2[1];
 
-  var currentMonth = moment__WEBPACK_IMPORTED_MODULE_1___default()().format('YYYY-MM-DD');
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(moment__WEBPACK_IMPORTED_MODULE_1___default()().format('M')),
+      _useState4 = _slicedToArray(_useState3, 2),
+      currentMonth = _useState4[0],
+      setCurrentMonth = _useState4[1];
 
   var handleOnChange = function handleOnChange(date) {
-    console.log(date);
+    setCurrentMonth(moment__WEBPACK_IMPORTED_MODULE_1___default()(date).format('M'));
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    console.log(currentMonth);
     Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])(url, {
       isFromHomePage: true,
       currentMonth: currentMonth
@@ -78528,7 +78530,7 @@ var AcademicCalendar = function AcademicCalendar() {
     }, function () {
       alert('Something went wrong. Please try again');
     });
-  }, []);
+  }, [currentMonth]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "AcademicCalendar",
     className: "section"
