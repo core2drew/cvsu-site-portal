@@ -6,7 +6,6 @@ import Button from 'Components/button'
 import Input from 'Components/input'
 import Context from 'Context/academic-calendar'
 import DatePicker from 'react-datepicker'
-import "react-datepicker/dist/react-datepicker.css";
 
 const FormModal = () => {
   const [activity, setActivity] = useState('')

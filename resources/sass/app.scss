@@ -1,8 +1,10 @@
 // Variables
 @import 'variables';
-
+// React Datepicker
+@import "react-datepicker.scss";
 // Normalize
 @import '~normalize.css/normalize.css';
+
 
 html,body {
   font-family: rubikregular, Helvetica, sans-serif;
@@ -19,4 +21,10 @@ h3,
 h4,
 h5 {
   font-family: rubikregular;
+}
+
+button[type=button] {
+  &:active, &:hover, &:visited, &:focus {
+    outline: none;
+  }
 }

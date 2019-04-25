@@ -106,12 +106,33 @@ class AJAXPortalController extends Controller
     }
 
     public function getAcademicCalendar(Request $request) {
-        $response = DB::table('academic_calendar')
-        ->whereNull('academic_calendar.deleted_at')
-        ->latest()
-        ->paginate(5);
+        $isFromHomePage = $request->get('isFromHomePage');
+        $response = null;
+
+        if($isFromHomePage) {
+            $from = $request->get('from');
+            $response = DB::table('academic_calendar')
+            ->whereNull('academic_calendar.deleted_at')
+            ->where('from', '=', $from)
+            ->get();
+        } else {
+            $response = DB::table('academic_calendar')
+            ->whereNull('academic_calendar.deleted_at')
+            ->latest()
+            ->paginate(15);
+        }
+
         return response()->json($response);
     } 
+
+    public function getAllAcademicCalendar(Request $request) {
+        $response = DB::table('academic_calendar')
+        ->whereNull('academic_calendar.deleted_at')
+        ->where('academic_calendar.deleted_at')
+        ->orderBy('from', 'desc');
+
+        return response()->json($response);
+    }
 
     public function addAcademicCalendar(Request $request) {
         $activity = $request->get('activity');

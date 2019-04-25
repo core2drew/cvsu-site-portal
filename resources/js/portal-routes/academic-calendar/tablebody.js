@@ -25,7 +25,9 @@ const TableBody = ({ data }) => {
     dispatch({type: 'DELETING'})
     post(
       url, 
-      { id }, 
+      { 
+        id
+      }, 
       res => dispatch(
         {type: 'SUCCESS_DELETE', data: res.data}
       ),

@@ -1,0 +1,46 @@
+@import '~Sass/variables';
+
+#AcademicCalendar > .activities {
+  margin-top: 10px;
+  > .headers {
+    background-color: $green-2;
+    color: #fff;
+    > .date,
+    > .activity {
+      font-family: rubikmedium;
+    }
+  }
+
+  > .activity {
+    border: 1px solid $green-2;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: #fff;
+  }
+
+  > .activity:nth-child(even) {
+    background-color: $green-4;
+  }
+
+  > .headers,
+  > .activity {
+    display: flex;
+    padding: 10px;
+    > .date {
+      flex: 1
+    }
+    > .activity {
+      flex: 2
+    }
+  }
+
+  > .no-data {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+    font-size: 18px;
+  }
+}

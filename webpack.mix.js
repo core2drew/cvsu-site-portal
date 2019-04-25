@@ -16,7 +16,8 @@ mix.webpackConfig({
          Components: path.resolve(__dirname, 'resources/js/components/'),
          Reducers: path.resolve(__dirname, 'resources/js/reducers/'),
          Context: path.resolve(__dirname, 'resources/js/contexts/'),
-         Utils: path.resolve(__dirname, 'resources/js/utils')
+         Utils: path.resolve(__dirname, 'resources/js/utils'),
+         Sass: path.resolve(__dirname, 'resources/sass')
       }
    }
 })

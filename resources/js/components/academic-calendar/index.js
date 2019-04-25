@@ -1,45 +1,41 @@
-import React from 'react'
-import Calendar from 'react-calendar'
+import React, { useEffect, useState } from 'react'
+import moment from 'moment'
+import { get } from 'Utils'
+import DatePicker from 'react-datepicker'
+import Activities from './activities'
 import './style.scss'
 
 const AcademicCalendar = () => {
-  let date = new Date();
-  let minDate = new Date().setMonth(0, 1)
-  let maxDate = new Date().setMonth(11, 31)
-  minDate = new Date(minDate)
-  maxDate = new Date(maxDate)
+  const url = '/ajax/portal/academic-calendar'
+  const [activities, setActivities] = useState([])
+  const currentMonth = moment().format('YYYY-MM-DD')
+  const handleOnChange = date => {
+    console.log(date)
+  }
+  
+  useEffect(() => {
+    console.log(currentMonth)
+    get(
+      url, 
+      { isFromHomePage: true, currentMonth }, 
+      res => {
+        setActivities(res)
+      }, 
+      () => {
+        alert('Something went wrong. Please try again')
+      }
+    )
+  }, [])
+
   return (
     <div id="AcademicCalendar" className="section">
       <p className="section header">Academic Calendar</p>
-      <Calendar 
-        className="calendar" 
-        minDetail={'year'} 
-        minDate={minDate} 
-        maxDate={maxDate} 
-        next2Label={null} 
-        prev2Label={null} 
-        tileClassName={"calendar-day"}
-        value={date}
-        tileDisabled={({date}) => true}
+      <DatePicker
+        inline
+        selected={moment().toDate()}
+        onMonthChange={handleOnChange}
       />
-      <div className="activities">
-        <div className="headers">
-          <span className="date">Date</span>
-          <span className="activity">Activity</span>
-        </div>
-        <div className="activity">
-          <span className="date">Apr 09 - 10</span>
-          <span className="activity">Evaluation/ Pre-registration</span>
-        </div>
-        <div className="activity">
-          <span className="date">Apr 09 - 10</span>
-          <span className="activity">Evaluation/ Pre-registration</span>
-        </div>
-        <div className="activity">
-          <span className="date">Apr 09 - 10</span>
-          <span className="activity">Evaluation/ Pre-registration</span>
-        </div>
-      </div>
+      <Activities hasItems={!!activities.length} items={activities}/>
     </div>
   )
 }
