@@ -42,8 +42,12 @@
   margin-top: 10px;
 }
 
-#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(2),
-#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(3) {
+#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(2) {
+  width: 17%;
+}
+
+#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(3),
+#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(4) {
   width: 14%;
 }
 

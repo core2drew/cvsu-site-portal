@@ -1,9 +1,9 @@
 {
-    "/js/login.js": "/js/login.js?id=5ad9e5f5374fdc896a1c",
-    "/js/portal.js": "/js/portal.js?id=a08bb19deed9df353953",
-    "/js/site.js": "/js/site.js?id=4c125de808de603d19e5",
-    "/css/app.css": "/css/app.css?id=494b439a17bda65d0ce0",
-    "/css/site.css": "/css/site.css?id=66f0cf853d47640e1411",
-    "/css/login.css": "/css/login.css?id=4d07df41714369000787",
-    "/css/portal.css": "/css/portal.css?id=ae01114c5c042e0fbfda"
+    "/js/login.js": "/js/login.js",
+    "/js/portal.js": "/js/portal.js",
+    "/js/site.js": "/js/site.js",
+    "/css/app.css": "/css/app.css",
+    "/css/site.css": "/css/site.css",
+    "/css/login.css": "/css/login.css",
+    "/css/portal.css": "/css/portal.css"
 }

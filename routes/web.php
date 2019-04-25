@@ -106,5 +106,10 @@ Route::group([
             "as" => "ajax.portal.academic-calendar",
             "uses" => "AJAXPortalController@getAcademicCalendar"
         ]);
+
+        Route::post("/academic-calendar", [
+            "as" => "ajax.portal.add.academic-calendar",
+            "uses" => "AJAXPortalController@addAcademicCalendar"
+        ]);
     });
 });

@@ -112,4 +112,31 @@ class AJAXPortalController extends Controller
         ->paginate(5);
         return response()->json($response);
     } 
+
+    public function addAcademicCalendar(Request $request) {
+        $activity = $request->get('activity');
+        $from = $request->get('from');
+        $to = $request->get('to');
+        $created_at = now();
+        $updated_at = now();
+
+        $response = DB::table('academic_calendar')
+        ->insert([
+            'activity' => $activity, 
+            'from' => $from,
+            'to' => $to, 
+            'created_at' => $created_at, 
+            'updated_at' => $updated_at
+        ]);
+
+        if($response) {
+            $response = DB::table('academic_calendar')
+            ->whereNull('academic_calendar.deleted_at')
+            ->latest()
+            ->paginate(15);
+            return response()->json($response);
+        }
+
+        return abort(500);
+    } 
 }

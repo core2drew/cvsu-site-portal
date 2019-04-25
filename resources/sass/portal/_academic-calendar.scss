@@ -9,9 +9,11 @@
   }
   > .table-container {
     > table {
-
-      > thead > tr > th:nth-child(2),
-      > thead > tr > th:nth-child(3) {
+      > thead > tr > th:nth-child(2) {
+        width: 17%;
+      }
+      > thead > tr > th:nth-child(3),
+      > thead > tr > th:nth-child(4) {
         width: 14%;
       }
 

@@ -72870,7 +72870,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return matchPath; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return withRouter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__RouterContext", function() { return context; });
-/* harmony import */ var create_react_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! create-react-context */ "./node_modules/create-react-context/lib/index.js");
+/* harmony import */ var create_react_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! create-react-context */ "./node_modules/react-router/node_modules/create-react-context/lib/index.js");
 /* harmony import */ var create_react_context__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(create_react_context__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -73609,6 +73609,240 @@ if (true) {
 
 
 
+
+/***/ }),
+
+/***/ "./node_modules/react-router/node_modules/create-react-context/lib/implementation.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/react-router/node_modules/create-react-context/lib/implementation.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _gud = __webpack_require__(/*! gud */ "./node_modules/gud/index.js");
+
+var _gud2 = _interopRequireDefault(_gud);
+
+var _warning = __webpack_require__(/*! fbjs/lib/warning */ "./node_modules/fbjs/lib/warning.js");
+
+var _warning2 = _interopRequireDefault(_warning);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MAX_SIGNED_31_BIT_INT = 1073741823;
+
+// Inlined Object.is polyfill.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+function objectIs(x, y) {
+  if (x === y) {
+    return x !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+
+function createEventEmitter(value) {
+  var handlers = [];
+  return {
+    on: function on(handler) {
+      handlers.push(handler);
+    },
+    off: function off(handler) {
+      handlers = handlers.filter(function (h) {
+        return h !== handler;
+      });
+    },
+    get: function get() {
+      return value;
+    },
+    set: function set(newValue, changedBits) {
+      value = newValue;
+      handlers.forEach(function (handler) {
+        return handler(value, changedBits);
+      });
+    }
+  };
+}
+
+function onlyChild(children) {
+  return Array.isArray(children) ? children[0] : children;
+}
+
+function createReactContext(defaultValue, calculateChangedBits) {
+  var _Provider$childContex, _Consumer$contextType;
+
+  var contextProp = '__create-react-context-' + (0, _gud2.default)() + '__';
+
+  var Provider = function (_Component) {
+    _inherits(Provider, _Component);
+
+    function Provider() {
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, Provider);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.emitter = createEventEmitter(_this.props.value), _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    Provider.prototype.getChildContext = function getChildContext() {
+      var _ref;
+
+      return _ref = {}, _ref[contextProp] = this.emitter, _ref;
+    };
+
+    Provider.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      if (this.props.value !== nextProps.value) {
+        var oldValue = this.props.value;
+        var newValue = nextProps.value;
+        var changedBits = void 0;
+
+        if (objectIs(oldValue, newValue)) {
+          changedBits = 0; // No change
+        } else {
+          changedBits = typeof calculateChangedBits === 'function' ? calculateChangedBits(oldValue, newValue) : MAX_SIGNED_31_BIT_INT;
+          if (true) {
+            (0, _warning2.default)((changedBits & MAX_SIGNED_31_BIT_INT) === changedBits, 'calculateChangedBits: Expected the return value to be a ' + '31-bit integer. Instead received: %s', changedBits);
+          }
+
+          changedBits |= 0;
+
+          if (changedBits !== 0) {
+            this.emitter.set(nextProps.value, changedBits);
+          }
+        }
+      }
+    };
+
+    Provider.prototype.render = function render() {
+      return this.props.children;
+    };
+
+    return Provider;
+  }(_react.Component);
+
+  Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = _propTypes2.default.object.isRequired, _Provider$childContex);
+
+  var Consumer = function (_Component2) {
+    _inherits(Consumer, _Component2);
+
+    function Consumer() {
+      var _temp2, _this2, _ret2;
+
+      _classCallCheck(this, Consumer);
+
+      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      return _ret2 = (_temp2 = (_this2 = _possibleConstructorReturn(this, _Component2.call.apply(_Component2, [this].concat(args))), _this2), _this2.state = {
+        value: _this2.getValue()
+      }, _this2.onUpdate = function (newValue, changedBits) {
+        var observedBits = _this2.observedBits | 0;
+        if ((observedBits & changedBits) !== 0) {
+          _this2.setState({ value: _this2.getValue() });
+        }
+      }, _temp2), _possibleConstructorReturn(_this2, _ret2);
+    }
+
+    Consumer.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      var observedBits = nextProps.observedBits;
+
+      this.observedBits = observedBits === undefined || observedBits === null ? MAX_SIGNED_31_BIT_INT // Subscribe to all changes by default
+      : observedBits;
+    };
+
+    Consumer.prototype.componentDidMount = function componentDidMount() {
+      if (this.context[contextProp]) {
+        this.context[contextProp].on(this.onUpdate);
+      }
+      var observedBits = this.props.observedBits;
+
+      this.observedBits = observedBits === undefined || observedBits === null ? MAX_SIGNED_31_BIT_INT // Subscribe to all changes by default
+      : observedBits;
+    };
+
+    Consumer.prototype.componentWillUnmount = function componentWillUnmount() {
+      if (this.context[contextProp]) {
+        this.context[contextProp].off(this.onUpdate);
+      }
+    };
+
+    Consumer.prototype.getValue = function getValue() {
+      if (this.context[contextProp]) {
+        return this.context[contextProp].get();
+      } else {
+        return defaultValue;
+      }
+    };
+
+    Consumer.prototype.render = function render() {
+      return onlyChild(this.props.children)(this.state.value);
+    };
+
+    return Consumer;
+  }(_react.Component);
+
+  Consumer.contextTypes = (_Consumer$contextType = {}, _Consumer$contextType[contextProp] = _propTypes2.default.object, _Consumer$contextType);
+
+
+  return {
+    Provider: Provider,
+    Consumer: Consumer
+  };
+}
+
+exports.default = createReactContext;
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ "./node_modules/react-router/node_modules/create-react-context/lib/index.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/react-router/node_modules/create-react-context/lib/index.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _implementation = __webpack_require__(/*! ./implementation */ "./node_modules/react-router/node_modules/create-react-context/lib/implementation.js");
+
+var _implementation2 = _interopRequireDefault(_implementation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _react2.default.createContext || _implementation2.default;
+module.exports = exports['default'];
 
 /***/ }),
 
@@ -78453,13 +78687,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
-/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
-/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/es/index.js");
-/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ "./node_modules/react-datepicker/dist/react-datepicker.css");
-/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/es/index.js");
+/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ "./node_modules/react-datepicker/dist/react-datepicker.css");
+/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_8__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -78477,11 +78712,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var FormModal = function FormModal() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
-      title = _useState2[0],
-      setTitle = _useState2[1];
+      activity = _useState2[0],
+      setActivity = _useState2[1];
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
       _useState4 = _slicedToArray(_useState3, 2),
@@ -78493,19 +78729,49 @@ var FormModal = function FormModal() {
       endDate = _useState6[0],
       setEndDate = _useState6[1];
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__["default"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["default"]),
       state = _useContext.state,
-      dispatch = _useContext.dispatch;
+      dispatch = _useContext.dispatch,
+      url = _useContext.url;
 
-  var handleChangeStart = function handleChangeStart(e) {
-    return setStartDate(e);
+  var handleDateRangeOnChange = function handleDateRangeOnChange(_ref) {
+    var start = _ref.start,
+        end = _ref.end;
+
+    var _startDate = start || startDate;
+
+    var _endDate = end || endDate || start;
+
+    if (moment__WEBPACK_IMPORTED_MODULE_1___default()(_startDate).isAfter(_endDate)) {
+      _endDate = _startDate;
+    }
+
+    console.log(_endDate);
+    setStartDate(_startDate);
+    setEndDate(_endDate);
   };
 
-  var handleChangeEnd = function handleChangeEnd(e) {
-    return setEndDate(e);
+  var handleChangeStart = function handleChangeStart(start) {
+    return handleDateRangeOnChange({
+      start: start
+    });
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  var handleChangeEnd = function handleChangeEnd(end) {
+    return handleDateRangeOnChange({
+      end: end
+    });
+  };
+
+  var handleAddActivity = function handleAddActivity() {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["post"])(url, {
+      activity: activity,
+      from: moment__WEBPACK_IMPORTED_MODULE_1___default()(startDate).format('YYYY-MM-DD'),
+      to: moment__WEBPACK_IMPORTED_MODULE_1___default()(endDate).format('YYYY-MM-DD')
+    });
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
     isActive: state.isModalActive,
     handleClose: function handleClose() {
       return dispatch({
@@ -78514,31 +78780,34 @@ var FormModal = function FormModal() {
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section header"
-  }, "New Activity"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "New Activity"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
     selected: startDate,
     selectsStart: true,
     startDate: startDate,
+    minDate: moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
     endDate: endDate,
     onChange: handleChangeStart,
-    showDisabledMonthNavigation: true
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    placeholderText: "From"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
     selected: endDate,
     selectsEnd: true,
     startDate: startDate,
+    minDate: startDate || moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
     endDate: endDate,
     onChange: handleChangeEnd,
-    showDisabledMonthNavigation: true
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    placeholderText: "To"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
     variant: "title",
-    placeholder: "Title",
-    value: title,
+    placeholder: "Activity",
+    value: activity,
     onChange: function onChange(e) {
-      return setTitle(e.target.value);
+      return setActivity(e.target.value);
     }
-  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     text: "Update"
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: "Create"
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    text: "Add Activity",
+    onClick: handleAddActivity
   }));
 };
 
@@ -78591,7 +78860,7 @@ var AcademicCalendar = function AcademicCalendar() {
       state = _useReducer2[0],
       dispatch = _useReducer2[1];
 
-  var tableHeaders = ['Activity', 'Created At', 'Updated At', 'Actions'];
+  var tableHeaders = ['Activity', 'From / To', 'Created At', 'Updated At', 'Actions'];
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
       dispatch({
@@ -78608,7 +78877,8 @@ var AcademicCalendar = function AcademicCalendar() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
     value: {
       state: state,
-      dispatch: dispatch
+      dispatch: dispatch,
+      url: url
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "AcademicCalendar"
@@ -78624,6 +78894,7 @@ var AcademicCalendar = function AcademicCalendar() {
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
     headers: tableHeaders,
+    hasData: !!state.data.length,
     customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_8__["default"], {
       data: state.data
     })
@@ -78657,15 +78928,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var fromToDate = function fromToDate(from, to) {
+  var fromDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(from);
+  var toDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(to);
+  var days = toDate.diff(fromDate, 'days');
+  return days > 1 ? "".concat(fromDate.format('MMMM DD, YYYY'), " / ").concat(toDate.format('MMMM DD, YYYY')) : fromDate.format('MMMM DD, YYYY');
+};
+
 var TableBody = function TableBody(_ref) {
   var data = _ref.data;
   var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__["default"]);
-  return data.map(function (d) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
     var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
     var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, fromToDate(d.from, d.to)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'update',
@@ -78680,7 +78958,7 @@ var TableBody = function TableBody(_ref) {
         return context.handleDelete(d.id);
       }
     })));
-  });
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TableBody);

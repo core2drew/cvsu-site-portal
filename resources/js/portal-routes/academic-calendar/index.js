@@ -11,7 +11,7 @@ import TableBody from './tablebody'
 const AcademicCalendar = () => {
   const url = '/ajax/portal/academic-calendar'
   const [state, dispatch] = useReducer(Reducer, initialState)
-  const tableHeaders = ['Activity', 'Created At', 'Updated At', 'Actions']
+  const tableHeaders = ['Activity', 'From / To', 'Created At', 'Updated At', 'Actions']
   
   useEffect(() => {
     get(url, {}, res => {
@@ -23,7 +23,7 @@ const AcademicCalendar = () => {
   },[])
 
   return (
-    <Context.Provider value={{ state, dispatch }}>
+    <Context.Provider value={{ state, dispatch, url }}>
       <div id="AcademicCalendar">
         <Preloader variant={'fixed'} isActive={state.isLoading}/>
         <Button 
@@ -32,7 +32,7 @@ const AcademicCalendar = () => {
             () => dispatch({type: 'OPEN_MODAL'})
           }
         />
-        <Table headers={tableHeaders} customTableBody={<TableBody data={state.data}/>} />
+        <Table headers={tableHeaders} hasData={!!state.data.length} customTableBody={<TableBody data={state.data}/>} />
         <FormModal />
       </div>
     </Context.Provider>
