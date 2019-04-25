@@ -17,11 +17,7 @@ const FormModal = () => {
   const handleDateRangeOnChange =({start, end}) => {
     let _startDate = start || startDate
     let _endDate = end || endDate || start
-
-    if(moment(_startDate).isAfter(_endDate)) {
-      _endDate = _startDate
-    }
-    console.log(_endDate)
+    moment(_startDate).isAfter(_endDate) && (_endDate = _startDate)
     setStartDate(_startDate)
     setEndDate(_endDate)
   }
@@ -30,10 +26,18 @@ const FormModal = () => {
   const handleChangeEnd = end => handleDateRangeOnChange({end})
 
   const handleAddActivity = () => {
+    dispatch({type: 'SAVING'})
     post(url, {
       activity,
       from: moment(startDate).format('YYYY-MM-DD'),
       to: moment(endDate).format('YYYY-MM-DD')
+    },
+    res => dispatch(
+      {type: 'SUCCESS_SAVE', data: res.data}
+    ),
+    () => {
+      dispatch({type: "ERROR_SAVE"})
+      alert('Something went wrong. Please try again')
     })
   }
   

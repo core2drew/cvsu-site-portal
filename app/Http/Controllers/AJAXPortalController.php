@@ -139,4 +139,21 @@ class AJAXPortalController extends Controller
 
         return abort(500);
     } 
+
+    public function deleteAcademicCalendar(Request $request) {
+        $id = $request->get('id');
+        $response = DB::table('academic_calendar')
+        ->where('id', '=', $id)
+        ->update(['deleted_at' => now()]);
+
+        if($response) {
+            $response = DB::table('academic_calendar')
+            ->whereNull('academic_calendar.deleted_at')
+            ->latest()
+            ->paginate(15);
+            return response()->json($response);
+        }
+
+        return abort(500);
+    }
 }

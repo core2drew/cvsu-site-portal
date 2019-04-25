@@ -109,7 +109,14 @@ Route::group([
 
         Route::post("/academic-calendar", [
             "as" => "ajax.portal.add.academic-calendar",
-            "uses" => "AJAXPortalController@addAcademicCalendar"
+            "uses" => "AJAXPortalController@addAcademicCalendar",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
+        Route::delete("/academic-calendar", [
+            "as" => "ajax.portal.delete.academic-calendar",
+            "uses" => "AJAXPortalController@deleteAcademicCalendar",
+            "middleware" => ["check.session", "check.isadmin"]
         ]);
     });
 });

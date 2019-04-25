@@ -78742,11 +78742,7 @@ var FormModal = function FormModal() {
 
     var _endDate = end || endDate || start;
 
-    if (moment__WEBPACK_IMPORTED_MODULE_1___default()(_startDate).isAfter(_endDate)) {
-      _endDate = _startDate;
-    }
-
-    console.log(_endDate);
+    moment__WEBPACK_IMPORTED_MODULE_1___default()(_startDate).isAfter(_endDate) && (_endDate = _startDate);
     setStartDate(_startDate);
     setEndDate(_endDate);
   };
@@ -78764,10 +78760,23 @@ var FormModal = function FormModal() {
   };
 
   var handleAddActivity = function handleAddActivity() {
+    dispatch({
+      type: 'SAVING'
+    });
     Object(Utils__WEBPACK_IMPORTED_MODULE_2__["post"])(url, {
       activity: activity,
       from: moment__WEBPACK_IMPORTED_MODULE_1___default()(startDate).format('YYYY-MM-DD'),
       to: moment__WEBPACK_IMPORTED_MODULE_1___default()(endDate).format('YYYY-MM-DD')
+    }, function (res) {
+      return dispatch({
+        type: 'SUCCESS_SAVE',
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_SAVE"
+      });
+      alert('Something went wrong. Please try again');
     });
   };
 
@@ -78916,12 +78925,14 @@ var AcademicCalendar = function AcademicCalendar() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
+
 
 
 
@@ -78929,33 +78940,56 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var fromToDate = function fromToDate(from, to) {
-  var fromDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(from);
-  var toDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(to);
+  var fromDate = moment__WEBPACK_IMPORTED_MODULE_2___default()(from);
+  var toDate = moment__WEBPACK_IMPORTED_MODULE_2___default()(to);
   var days = toDate.diff(fromDate, 'days');
   return days > 1 ? "".concat(fromDate.format('MMMM DD, YYYY'), " / ").concat(toDate.format('MMMM DD, YYYY')) : fromDate.format('MMMM DD, YYYY');
 };
 
 var TableBody = function TableBody(_ref) {
   var data = _ref.data;
-  var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__["default"]);
+
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__["default"]),
+      dispatch = _useContext.dispatch,
+      url = _useContext.url;
+
+  var handleDelete = function handleDelete(id) {
+    dispatch({
+      type: 'DELETING'
+    });
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      id: id
+    }, function (res) {
+      return dispatch({
+        type: 'SUCCESS_DELETE',
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_DELETE"
+      });
+      alert('Something went wrong. Please try again');
+    }, 'DELETE');
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
-    var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
-    var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
+    var created_at = moment__WEBPACK_IMPORTED_MODULE_2___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
+    var updated_at = moment__WEBPACK_IMPORTED_MODULE_2___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
-      key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_4___default()()
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, fromToDate(d.from, d.to)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
       variant: 'update',
       text: 'Edit',
       onClick: function onClick() {
         return context.handleEdit(d.id);
       }
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
       variant: 'delete danger',
       text: 'Delete',
       onClick: function onClick() {
-        return context.handleDelete(d.id);
+        return handleDelete(d.id);
       }
     })));
   }));
