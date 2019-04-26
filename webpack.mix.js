@@ -29,5 +29,5 @@ mix.react('resources/js/site.js', 'public/js')
    .sass('resources/sass/site.scss', 'public/css')
    .sass('resources/sass/login.scss', 'public/css')
    .sass('resources/sass/portal.scss', 'public/css')
-   // .version()
+   .version()
   
