@@ -78638,12 +78638,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
-/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
-/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
-/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/es/index.js");
+/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/es/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -78651,7 +78650,6 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 
 
 
@@ -78677,10 +78675,11 @@ var FormModal = function FormModal() {
       endDate = _useState6[0],
       setEndDate = _useState6[1];
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["default"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__["default"]),
       state = _useContext.state,
       dispatch = _useContext.dispatch,
-      url = _useContext.url;
+      handleAdd = _useContext.handleAdd,
+      handleUpdate = _useContext.handleUpdate;
 
   var handleDateRangeOnChange = function handleDateRangeOnChange(_ref) {
     var start = _ref.start,
@@ -78707,7 +78706,145 @@ var FormModal = function FormModal() {
     });
   };
 
-  var handleAddActivity = function handleAddActivity() {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (state.selectedId) {
+      var _state$data$filter$ = state.data.filter(function (d) {
+        return d.id === state.selectedId;
+      })[0],
+          _activity = _state$data$filter$.activity,
+          from = _state$data$filter$.from,
+          to = _state$data$filter$.to;
+      setActivity(_activity);
+      setStartDate(moment__WEBPACK_IMPORTED_MODULE_1___default()(from).toDate());
+      setEndDate(moment__WEBPACK_IMPORTED_MODULE_1___default()(to).toDate());
+    }
+  }, [state.selectedId]);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    isActive: state.isModalActive,
+    handleClose: function handleClose() {
+      return dispatch({
+        type: 'CLOSE_MODAL'
+      });
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section header"
+  }, state.modalHeaderTitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    selected: startDate,
+    selectsStart: true,
+    startDate: startDate,
+    minDate: moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
+    endDate: endDate,
+    onChange: handleChangeStart,
+    placeholderText: "From"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    selected: endDate,
+    selectsEnd: true,
+    startDate: startDate,
+    minDate: startDate || moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
+    endDate: endDate,
+    onChange: handleChangeEnd,
+    placeholderText: "To"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    variant: "title",
+    placeholder: "Activity",
+    value: activity,
+    onChange: function onChange(e) {
+      return setActivity(e.target.value);
+    }
+  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: "Update",
+    onClick: function onClick() {
+      return handleUpdate(state.selectedId, activity, startDate, endDate);
+    }
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: "Add Activity",
+    onClick: function onClick() {
+      return handleAdd(activity, startDate, endDate);
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FormModal);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/academic-calendar/index.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/portal-routes/academic-calendar/index.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Components_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/table */ "./resources/js/components/table/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
+/* harmony import */ var Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Reducers/academic-calendar */ "./resources/js/reducers/academic-calendar.js");
+/* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/academic-calendar/form-modal.js");
+/* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/academic-calendar/tablebody.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+var AcademicCalendar = function AcademicCalendar() {
+  var url = '/ajax/portal/academic-calendar';
+
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_7__["default"], Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_7__["initialState"]),
+      _useReducer2 = _slicedToArray(_useReducer, 2),
+      state = _useReducer2[0],
+      dispatch = _useReducer2[1];
+
+  var tableHeaders = ['Activity', 'From / To', 'Created At', 'Updated At', 'Actions'];
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])(url, {}, function (res) {
+      dispatch({
+        type: "SUCCESS_FETCH",
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_FETCH"
+      });
+      alert('Something went wrong. Please try again');
+    });
+  }, []);
+
+  var handleOpenModal = function handleOpenModal(id) {
+    if (id) {
+      dispatch({
+        type: 'OPEN_UPDATE_MODAL',
+        id: id
+      });
+    } else {
+      dispatch({
+        type: 'OPEN_MODAL'
+      });
+    }
+  };
+
+  var handleAdd = function handleAdd(activity, startDate, endDate) {
     dispatch({
       type: 'SAVING'
     });
@@ -78728,134 +78865,76 @@ var FormModal = function FormModal() {
     });
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    isActive: state.isModalActive,
-    handleClose: function handleClose() {
+  var handleDelete = function handleDelete(id) {
+    dispatch({
+      type: 'DELETING'
+    });
+    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["post"])(url, {
+      id: id
+    }, function (res) {
       return dispatch({
-        type: 'CLOSE_MODAL'
-      });
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "section header"
-  }, "New Activity"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    selected: startDate,
-    selectsStart: true,
-    startDate: startDate,
-    minDate: moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
-    endDate: endDate,
-    onChange: handleChangeStart,
-    placeholderText: "From"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    selected: endDate,
-    selectsEnd: true,
-    startDate: startDate,
-    minDate: startDate || moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
-    endDate: endDate,
-    onChange: handleChangeEnd,
-    placeholderText: "To"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    variant: "title",
-    placeholder: "Activity",
-    value: activity,
-    onChange: function onChange(e) {
-      return setActivity(e.target.value);
-    }
-  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    text: "Update"
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    text: "Add Activity",
-    onClick: handleAddActivity
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (FormModal);
-
-/***/ }),
-
-/***/ "./resources/js/portal-routes/academic-calendar/index.js":
-/*!***************************************************************!*\
-  !*** ./resources/js/portal-routes/academic-calendar/index.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
-/* harmony import */ var Components_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/table */ "./resources/js/components/table/index.js");
-/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
-/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
-/* harmony import */ var Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Reducers/academic-calendar */ "./resources/js/reducers/academic-calendar.js");
-/* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/academic-calendar/form-modal.js");
-/* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/academic-calendar/tablebody.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-
-
-
-
-var AcademicCalendar = function AcademicCalendar() {
-  var url = '/ajax/portal/academic-calendar';
-
-  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["default"], Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["initialState"]),
-      _useReducer2 = _slicedToArray(_useReducer, 2),
-      state = _useReducer2[0],
-      dispatch = _useReducer2[1];
-
-  var tableHeaders = ['Activity', 'From / To', 'Created At', 'Updated At', 'Actions'];
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
-      dispatch({
-        type: "SUCCESS_FETCH",
+        type: 'SUCCESS_DELETE',
         data: res.data
       });
     }, function () {
       dispatch({
-        type: "ERROR_FETCH"
+        type: "ERROR_DELETE"
       });
       alert('Something went wrong. Please try again');
+    }, 'DELETE');
+  };
+
+  var handleUpdate = function handleUpdate(id, activity, from, to) {
+    dispatch({
+      type: 'UPDATING'
     });
-  }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
+    from = moment__WEBPACK_IMPORTED_MODULE_1___default()(from).format('YYYY-MM-DD');
+    to = moment__WEBPACK_IMPORTED_MODULE_1___default()(to).format('YYYY-MM-DD');
+    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["post"])(url, {
+      id: id,
+      activity: activity,
+      from: from,
+      to: to
+    }, function (res) {
+      return dispatch({
+        type: 'SUCCESS_UPDATE',
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_UPDATE"
+      });
+      alert('Something went wrong. Please try again');
+    }, 'PATCH');
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
     value: {
       state: state,
       dispatch: dispatch,
-      url: url
+      url: url,
+      handleDelete: handleDelete,
+      handleAdd: handleAdd,
+      handleOpenModal: handleOpenModal,
+      handleUpdate: handleUpdate
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "AcademicCalendar"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_5__["default"], {
     variant: 'fixed',
     isActive: state.isLoading
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     text: "Add New",
     onClick: function onClick() {
-      return dispatch({
-        type: 'OPEN_MODAL'
-      });
+      return handleOpenModal();
     }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_3__["default"], {
     headers: tableHeaders,
     hasData: !!state.data.length,
-    customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_9__["default"], {
       data: state.data
     })
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null)));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AcademicCalendar);
@@ -78873,14 +78952,12 @@ var AcademicCalendar = function AcademicCalendar() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
-
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
 
 
 
@@ -78888,8 +78965,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var fromToDate = function fromToDate(from, to) {
-  var fromDate = moment__WEBPACK_IMPORTED_MODULE_2___default()(from);
-  var toDate = moment__WEBPACK_IMPORTED_MODULE_2___default()(to);
+  var fromDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(from);
+  var toDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(to);
   var days = toDate.diff(fromDate, 'days');
   return days > 1 ? "".concat(fromDate.format('MMMM DD, YYYY'), " / ").concat(toDate.format('MMMM DD, YYYY')) : fromDate.format('MMMM DD, YYYY');
 };
@@ -78897,43 +78974,24 @@ var fromToDate = function fromToDate(from, to) {
 var TableBody = function TableBody(_ref) {
   var data = _ref.data;
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__["default"]),
-      dispatch = _useContext.dispatch,
-      url = _useContext.url;
-
-  var handleDelete = function handleDelete(id) {
-    dispatch({
-      type: 'DELETING'
-    });
-    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
-      id: id
-    }, function (res) {
-      return dispatch({
-        type: 'SUCCESS_DELETE',
-        data: res.data
-      });
-    }, function () {
-      dispatch({
-        type: "ERROR_DELETE"
-      });
-      alert('Something went wrong. Please try again');
-    }, 'DELETE');
-  };
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__["default"]),
+      handleDelete = _useContext.handleDelete,
+      handleOpenModal = _useContext.handleOpenModal;
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
-    var created_at = moment__WEBPACK_IMPORTED_MODULE_2___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
-    var updated_at = moment__WEBPACK_IMPORTED_MODULE_2___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
+    var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
+    var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
-      key: uuid_v4__WEBPACK_IMPORTED_MODULE_4___default()()
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, fromToDate(d.from, d.to)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'update',
       text: 'Edit',
       onClick: function onClick() {
-        return context.handleEdit(d.id);
+        return handleOpenModal(d.id);
       }
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'delete danger',
       text: 'Delete',
       onClick: function onClick() {
@@ -79536,7 +79594,9 @@ var initialState = {
   isLoading: true,
   isModalActive: false,
   isUpdateModal: false,
-  data: []
+  modalHeaderTitle: 'New Activity',
+  data: [],
+  selectedId: null
 };
 
 var reducer = function reducer(state, action) {
@@ -79571,7 +79631,9 @@ var reducer = function reducer(state, action) {
 
     case 'OPEN_MODAL':
       return _objectSpread({}, state, {
-        isModalActive: true
+        isModalActive: true,
+        isUpdateModal: false,
+        selectedId: null
       });
 
     case 'CLOSE_MODAL':
@@ -79583,7 +79645,9 @@ var reducer = function reducer(state, action) {
     case 'OPEN_UPDATE_MODAL':
       return _objectSpread({}, state, {
         isModalActive: true,
-        isUpdateModal: true
+        isUpdateModal: true,
+        modalHeaderTitle: 'Update Activity',
+        selectedId: action.id
       });
 
     default:

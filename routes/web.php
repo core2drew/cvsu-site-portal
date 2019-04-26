@@ -113,6 +113,12 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
+        Route::patch("/academic-calendar", [
+            "as" => "ajax.portal.update.academic-calendar",
+            "uses" => "AJAXPortalController@updateAcademicCalendar",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
         Route::delete("/academic-calendar", [
             "as" => "ajax.portal.delete.academic-calendar",
             "uses" => "AJAXPortalController@deleteAcademicCalendar",

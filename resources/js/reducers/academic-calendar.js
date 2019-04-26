@@ -2,7 +2,9 @@ const initialState = {
   isLoading: true,
   isModalActive: false,
   isUpdateModal: false,
-  data: []
+  modalHeaderTitle: 'New Activity',
+  data: [],
+  selectedId: null
 }
 
 const reducer = (state, action) => {
@@ -40,7 +42,9 @@ const reducer = (state, action) => {
     case 'OPEN_MODAL':
       return {
         ...state,
-        isModalActive: true
+        isModalActive: true,
+        isUpdateModal: false,
+        selectedId: null
       }
     case 'CLOSE_MODAL':
       return {
@@ -52,7 +56,9 @@ const reducer = (state, action) => {
       return {
         ...state,
         isModalActive: true,
-        isUpdateModal: true
+        isUpdateModal: true,
+        modalHeaderTitle: 'Update Activity',
+        selectedId: action.id
       }
     default:
       return state;

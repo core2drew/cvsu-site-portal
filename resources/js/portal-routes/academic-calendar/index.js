@@ -1,4 +1,5 @@
 import React, { useReducer, useEffect } from 'react'
+import moment from 'moment'
 import { get, post } from 'Utils'
 import Table from 'Components/table'
 import Button from 'Components/button'
@@ -22,15 +23,73 @@ const AcademicCalendar = () => {
     })
   },[])
 
+  const handleOpenModal = id => {
+    if(id) {
+      dispatch({type: 'OPEN_UPDATE_MODAL', id})
+    } else {
+      dispatch({type: 'OPEN_MODAL'})
+    }
+  }
+  
+  const handleAdd = (activity, startDate, endDate) => {
+    dispatch({type: 'SAVING'})
+    post(url, {
+      activity,
+      from: moment(startDate).format('YYYY-MM-DD'),
+      to: moment(endDate).format('YYYY-MM-DD')
+    },
+    res => dispatch(
+      {type: 'SUCCESS_SAVE', data: res.data}
+    ),
+    () => {
+      dispatch({type: "ERROR_SAVE"})
+      alert('Something went wrong. Please try again')
+    })
+  }
+
+  const handleDelete = id => {
+    dispatch({type: 'DELETING'})
+    post(
+      url, 
+      { 
+        id
+      }, 
+      res => dispatch(
+        {type: 'SUCCESS_DELETE', data: res.data}
+      ),
+      () => {
+        dispatch({type: "ERROR_DELETE"})
+        alert('Something went wrong. Please try again')
+      },
+      'DELETE'
+    )
+  }
+
+  const handleUpdate = (id, activity, from, to) => {
+    dispatch({type: 'UPDATING'})
+    from = moment(from).format('YYYY-MM-DD')
+    to = moment(to).format('YYYY-MM-DD')
+    post(
+      url, 
+      {id, activity, from, to}, 
+      res => dispatch(
+        {type: 'SUCCESS_UPDATE', data: res.data}
+      ),
+      () => {
+        dispatch({type: "ERROR_UPDATE"})
+        alert('Something went wrong. Please try again')
+      },
+      'PATCH'
+    )
+  }
+
   return (
-    <Context.Provider value={{ state, dispatch, url }}>
+    <Context.Provider value={{ state, dispatch, url, handleDelete, handleAdd, handleOpenModal, handleUpdate }}>
       <div id="AcademicCalendar">
         <Preloader variant={'fixed'} isActive={state.isLoading}/>
         <Button 
           text="Add New"
-          onClick={
-            () => dispatch({type: 'OPEN_MODAL'})
-          }
+          onClick={() => handleOpenModal()}
         />
         <Table headers={tableHeaders} hasData={!!state.data.length} customTableBody={<TableBody data={state.data}/>} />
         <FormModal />

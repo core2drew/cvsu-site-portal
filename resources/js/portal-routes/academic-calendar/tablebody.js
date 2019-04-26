@@ -1,6 +1,5 @@
 
 import React, { useContext } from 'react'
-import { post } from 'Utils'
 import moment from 'moment'
 import Button from 'Components/button'
 import Uuid from 'uuid/v4'
@@ -19,25 +18,7 @@ const fromToDate = (from, to) => {
 }
 
 const TableBody = ({ data }) => {
-  const {dispatch, url} = useContext(AcademicCalendarContext)
-
-  const handleDelete = id => {
-    dispatch({type: 'DELETING'})
-    post(
-      url, 
-      { 
-        id
-      }, 
-      res => dispatch(
-        {type: 'SUCCESS_DELETE', data: res.data}
-      ),
-      () => {
-        dispatch({type: "ERROR_DELETE"})
-        alert('Something went wrong. Please try again')
-      },
-      'DELETE'
-    )
-  }
+  const {handleDelete, handleOpenModal} = useContext(AcademicCalendarContext)
 
   return (
     <tbody>
@@ -53,7 +34,7 @@ const TableBody = ({ data }) => {
               <td>{created_at}</td>
               <td>{updated_at}</td>
               <td className="actions">
-                <Button variant={'update'} text={'Edit'} onClick={() => context.handleEdit(d.id)}/>
+                <Button variant={'update'} text={'Edit'} onClick={() => handleOpenModal(d.id)}/>
                 <Button variant={'delete danger'} text={'Delete'} onClick={() => handleDelete(d.id)}/>
               </td>
             </tr>
