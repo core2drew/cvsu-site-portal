@@ -700,7 +700,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#TopNav {\n  background-color: #fff;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  padding-left: 15px;\n  padding-right: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  grid-column: 1/3;\n}\n#TopNav > .sitename {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 5px 0;\n  text-decoration: none;\n}\n#TopNav > .sitename:visited {\n  color: inherit;\n}\n#TopNav > .sitename > .logo {\n  width: 50px;\n  height: 50px;\n}\n#TopNav > .sitename > .schoolname {\n  margin-left: 12px;\n}\n#TopNav > .sitename > .schoolname > .name {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .sitename > .schoolname > .branch {\n  margin-top: 3px;\n  margin-bottom: 0;\n  font-size: 12px;\n}\n#TopNav > .menu {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n  position: relative;\n}\n#TopNav > .menu > .profile-image {\n  margin-right: 10px;\n  width: 40px;\n  -webkit-border-radius: 40px;\n     -moz-border-radius: 40px;\n          border-radius: 40px;\n}\n#TopNav > .menu > .greet {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-family: rubikmedium;\n  margin-top: 0;\n  margin-bottom: 0;\n  text-transform: capitalize;\n}\n#TopNav > .menu > .greet > i[class*=icon] {\n  font-size: 10px;\n  margin-left: 5px;\n}\n#TopNav > .menu > .items {\n  display: none;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  background-color: #fff;\n  position: absolute;\n  bottom: -71px;\n  width: 120px;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#TopNav > .menu > .items.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n#TopNav > .menu > .items > .item {\n  text-decoration: none;\n  padding: 10px 15px;\n  color: inherit;\n}\n#TopNav > .menu > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
+exports.push([module.i, "#TopNav {\n  background-color: #fff;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  padding-left: 15px;\n  padding-right: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  grid-column: 1/3;\n}\n#TopNav > .sitename {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 5px 0;\n  text-decoration: none;\n}\n#TopNav > .sitename:visited {\n  color: inherit;\n}\n#TopNav > .sitename > .logo {\n  width: 50px;\n  height: 50px;\n}\n#TopNav > .sitename > .schoolname {\n  margin-left: 12px;\n}\n#TopNav > .sitename > .schoolname > .name {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .sitename > .schoolname > .branch {\n  margin-top: 3px;\n  margin-bottom: 0;\n  font-size: 12px;\n}\n#TopNav > .menu {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n  position: relative;\n}\n#TopNav > .menu > .profile-image {\n  margin-right: 10px;\n  width: 40px;\n  -webkit-border-radius: 40px;\n     -moz-border-radius: 40px;\n          border-radius: 40px;\n}\n#TopNav > .menu > .greet {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-family: rubikmedium;\n  margin-top: 0;\n  margin-bottom: 0;\n  text-transform: capitalize;\n}\n#TopNav > .menu > .greet > i[class*=icon] {\n  font-size: 10px;\n  margin-left: 5px;\n}\n#TopNav > .menu > .items {\n  display: none;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  background-color: #fff;\n  position: absolute;\n  bottom: -71px;\n  width: 120px;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#TopNav > .menu > .items.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n#TopNav > .menu > .items > .item {\n  text-decoration: none;\n  padding: 10px 15px;\n  color: inherit;\n  font-family: rubikregular;\n  text-transform: none;\n}\n#TopNav > .menu > .items > .item[class*=cvsu-btn] {\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n     -moz-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n#TopNav > .menu > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
 
 // exports
 
@@ -78383,10 +78383,10 @@ var AnnouncementsContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createCo
 
 /***/ }),
 
-/***/ "./resources/js/contexts/user-context.js":
-/*!***********************************************!*\
-  !*** ./resources/js/contexts/user-context.js ***!
-  \***********************************************/
+/***/ "./resources/js/contexts/user.js":
+/*!***************************************!*\
+  !*** ./resources/js/contexts/user.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -78400,24 +78400,34 @@ var UserContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(nul
 
 /***/ }),
 
-/***/ "./resources/js/portal-components/index.js":
-/*!*************************************************!*\
-  !*** ./resources/js/portal-components/index.js ***!
-  \*************************************************/
-/*! exports provided: TopNav, Sidebar */
+/***/ "./resources/js/portal-components/profile-modal/index.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/portal-components/profile-modal/index.js ***!
+  \***************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _topnav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./topnav */ "./resources/js/portal-components/topnav/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TopNav", function() { return _topnav__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar */ "./resources/js/portal-components/sidebar/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Sidebar", function() { return _sidebar__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
 
 
 
+
+var ProfileModal = function ProfileModal(_ref) {
+  var isActive = _ref.isActive,
+      handleClose = _ref.handleClose;
+  var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_user__WEBPACK_IMPORTED_MODULE_2__["default"]);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    isActive: isActive,
+    handleClose: handleClose
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProfileModal);
 
 /***/ }),
 
@@ -78513,12 +78523,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/logo */ "./resources/js/components/logo/index.js");
-/* harmony import */ var _components_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/icon */ "./resources/js/components/icon/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _contexts_user_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../contexts/user-context */ "./resources/js/contexts/user-context.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-components/topnav/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var Components_logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/logo */ "./resources/js/components/logo/index.js");
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var _profile_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../profile-modal */ "./resources/js/portal-components/profile-modal/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-components/topnav/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_7__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -78535,13 +78546,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var TopNav = function TopNav() {
+
+var TopNav = function TopNav(_ref) {
+  var handleOpenProfileModal = _ref.handleOpenProfileModal;
+
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
       isMenuActive = _useState2[0],
       setIsMenuActive = _useState2[1];
 
-  var userContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_user_context__WEBPACK_IMPORTED_MODULE_5__["default"]);
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      isProfileModalActive = _useState4[0],
+      setProfileModalActive = _useState4[1];
+
+  var userContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_user__WEBPACK_IMPORTED_MODULE_6__["default"]);
 
   var handleMenu = function handleMenu(e) {
     e.nativeEvent.stopImmediatePropagation();
@@ -78558,11 +78577,11 @@ var TopNav = function TopNav() {
       document.removeEventListener('click', closeMenu);
     };
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "TopNav"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "sitename"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_logo__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_logo__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "schoolname"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "name"
@@ -78576,19 +78595,27 @@ var TopNav = function TopNav() {
     src: "/images/profile/profile_image_placeholder.jpg"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "greet"
-  }, "Hi, ", userContext ? userContext.username : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icon__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Hi, ", userContext ? userContext.username : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_3__["default"], {
     icon: "chevron-down"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('items', {
       'active': isMenuActive
     })
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
-    to: "/portal/profile",
-    className: "item"
-  }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    variant: 'tertiary item',
+    text: 'Profile',
+    onClick: function onClick() {
+      return setProfileModalActive(true);
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/auth/logout",
     className: "item"
-  }, "Log out"))));
+  }, "Log out")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_profile_modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    isActive: isProfileModalActive,
+    handleClose: function handleClose() {
+      return setProfileModalActive(false);
+    }
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TopNav);
@@ -79497,15 +79524,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _portal_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./portal-components */ "./resources/js/portal-components/index.js");
-/* harmony import */ var _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portal-routes/dean-message */ "./resources/js/portal-routes/dean-message.js");
-/* harmony import */ var _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./portal-routes/announcements */ "./resources/js/portal-routes/announcements/index.js");
-/* harmony import */ var _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./portal-routes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
-/* harmony import */ var _portal_routes_students__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./portal-routes/students */ "./resources/js/portal-routes/students.js");
-/* harmony import */ var _portal_routes_users__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./portal-routes/users */ "./resources/js/portal-routes/users.js");
-/* harmony import */ var _portal_routes_nomatch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./portal-routes/nomatch */ "./resources/js/portal-routes/nomatch.js");
-/* harmony import */ var _contexts_user_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./contexts/user-context */ "./resources/js/contexts/user-context.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./utils */ "./resources/js/utils.js");
+/* harmony import */ var _portal_components_topnav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./portal-components/topnav */ "./resources/js/portal-components/topnav/index.js");
+/* harmony import */ var _portal_components_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portal-components/sidebar */ "./resources/js/portal-components/sidebar/index.js");
+/* harmony import */ var _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./portal-routes/dean-message */ "./resources/js/portal-routes/dean-message.js");
+/* harmony import */ var _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./portal-routes/announcements */ "./resources/js/portal-routes/announcements/index.js");
+/* harmony import */ var _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./portal-routes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
+/* harmony import */ var _portal_routes_students__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./portal-routes/students */ "./resources/js/portal-routes/students.js");
+/* harmony import */ var _portal_routes_users__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./portal-routes/users */ "./resources/js/portal-routes/users.js");
+/* harmony import */ var _portal_routes_nomatch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./portal-routes/nomatch */ "./resources/js/portal-routes/nomatch.js");
+/* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utils */ "./resources/js/utils.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -79527,6 +79555,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var App = function App() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -79534,36 +79563,36 @@ var App = function App() {
       setUser = _useState2[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_utils__WEBPACK_IMPORTED_MODULE_11__["get"])('/ajax/portal/user', {}, function (res) {
+    Object(_utils__WEBPACK_IMPORTED_MODULE_12__["get"])('/ajax/portal/user', {}, function (res) {
       return setUser(res);
     });
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_user_context__WEBPACK_IMPORTED_MODULE_10__["default"].Provider, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_user__WEBPACK_IMPORTED_MODULE_11__["default"].Provider, {
     value: user
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components__WEBPACK_IMPORTED_MODULE_3__["TopNav"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components__WEBPACK_IMPORTED_MODULE_3__["Sidebar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components_topnav__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal",
     exact: true,
-    component: _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/announcements",
     exact: true,
-    component: _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/academic-calendar",
     exact: true,
-    component: _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/students",
     exact: true,
-    component: _portal_routes_students__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: _portal_routes_students__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/users",
     exact: true,
-    component: _portal_routes_users__WEBPACK_IMPORTED_MODULE_8__["default"]
+    component: _portal_routes_users__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    component: _portal_routes_nomatch__WEBPACK_IMPORTED_MODULE_9__["default"]
+    component: _portal_routes_nomatch__WEBPACK_IMPORTED_MODULE_10__["default"]
   })))));
 };
 

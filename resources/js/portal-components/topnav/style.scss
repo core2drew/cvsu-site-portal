@@ -76,7 +76,14 @@
       text-decoration: none;
       padding: 10px 15px;
       color: inherit;
+      font-family: rubikregular;
+      text-transform: none;
     }
+
+    > .items > .item[class*=cvsu-btn] {
+      justify-content: flex-start;
+    }
+
     > .items > .item:hover {
       background-color: $green-1;
       color: #fff;
