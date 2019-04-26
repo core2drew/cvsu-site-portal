@@ -6,7 +6,6 @@ import Button from 'Components/button'
 import Uuid from 'uuid/v4'
 import AcademicCalendarContext from 'Context/academic-calendar'
 
-
 const TableBody = ({ data }) => {
   const {handleDelete, handleOpenModal} = useContext(AcademicCalendarContext)
 
@@ -20,7 +19,7 @@ const TableBody = ({ data }) => {
           return (
             <tr key={Uuid()}>
               <td>{d.activity}</td>
-              <td>{fromToDate(d.from, d.to, 'MMMM DD', 'MMMM DD', 'MMMM DD')}</td>
+              <td>{fromToDate(d.from, d.to, 'MMMM DD YYYY', 'MMMM DD YYYY', 'MMMM DD YYYY')}</td>
               <td>{created_at}</td>
               <td>{updated_at}</td>
               <td className="actions">

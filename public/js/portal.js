@@ -78978,7 +78978,7 @@ var TableBody = function TableBody(_ref) {
     var updated_at = moment__WEBPACK_IMPORTED_MODULE_2___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_4___default()()
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, Object(Utils__WEBPACK_IMPORTED_MODULE_1__["fromToDate"])(d.from, d.to, 'MMMM DD', 'MMMM DD', 'MMMM DD')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, Object(Utils__WEBPACK_IMPORTED_MODULE_1__["fromToDate"])(d.from, d.to, 'MMMM DD YYYY', 'MMMM DD YYYY', 'MMMM DD YYYY')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
       variant: 'update',
