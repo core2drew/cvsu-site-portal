@@ -114,6 +114,7 @@ class AJAXPortalController extends Controller
             $response = DB::table('academic_calendar')
             ->whereNull('academic_calendar.deleted_at')
             ->whereMonth ('from', '=', $currentMonth)
+            ->orderBy('from', 'desc')
             ->get();
         } else {
             $response = DB::table('academic_calendar')
@@ -121,15 +122,6 @@ class AJAXPortalController extends Controller
             ->latest()
             ->paginate(15);
         }
-
-        return response()->json($response);
-    } 
-
-    public function getAllAcademicCalendar(Request $request) {
-        $response = DB::table('academic_calendar')
-        ->whereNull('academic_calendar.deleted_at')
-        ->where('academic_calendar.deleted_at')
-        ->orderBy('from', 'desc');
 
         return response()->json($response);
     }

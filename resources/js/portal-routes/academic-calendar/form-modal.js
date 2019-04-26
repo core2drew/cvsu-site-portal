@@ -58,6 +58,7 @@ const FormModal = () => {
           onChange={handleChangeEnd}
           placeholderText="To"
       />
+      
       <Input variant="title" placeholder="Activity" value={activity} onChange={e => setActivity(e.target.value)}/>
       {
         state.isUpdateModal ? 

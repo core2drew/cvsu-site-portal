@@ -1159,9 +1159,9 @@ template {
 [hidden] {
   display: none;
 }
-.react-datepicker__day-name,
-.react-datepicker__day,
-.react-datepicker__time-name {
+#Home .react-datepicker__day-name,
+#Home .react-datepicker__day,
+#Home .react-datepicker__time-name {
   width: 4rem;
   line-height: 2rem;
 }
