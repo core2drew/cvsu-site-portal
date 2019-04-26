@@ -114,7 +114,7 @@ class AJAXPortalController extends Controller
             $response = DB::table('academic_calendar')
             ->whereNull('academic_calendar.deleted_at')
             ->whereMonth ('from', '=', $currentMonth)
-            ->orderBy('from', 'desc')
+            ->orderBy('to', 'asc')
             ->get();
         } else {
             $response = DB::table('academic_calendar')

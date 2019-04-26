@@ -73018,7 +73018,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -78406,13 +78406,32 @@ var Activity = function Activity(_ref) {
   var activity = _ref.activity,
       from = _ref.from,
       to = _ref.to;
-  var fromFormat = moment__WEBPACK_IMPORTED_MODULE_2___default()(from).format('MMM DD');
-  var toFormat = moment__WEBPACK_IMPORTED_MODULE_2___default()(to).format('MMM DD');
+
+  var _fromDate = moment__WEBPACK_IMPORTED_MODULE_2___default()(from);
+
+  var _toDate = moment__WEBPACK_IMPORTED_MODULE_2___default()(to);
+
+  var daysBetweenDates = _toDate.diff(_fromDate, 'days');
+
+  var isSameMonth = _fromDate.isSame(_toDate, 'month');
+
+  var activityDate = '';
+
+  if (isSameMonth) {
+    activityDate = _fromDate.format('MMM DD');
+
+    if (daysBetweenDates > 0) {
+      activityDate = "".concat(activityDate, " - ").concat(_toDate.format('DD'));
+    }
+  } else {
+    activityDate = "".concat(_fromDate.format('MMM DD'), " / ").concat(_toDate.format('MMM DD'));
+  }
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "activity"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "date"
-  }, fromFormat, " - ", toFormat), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, activityDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "activity"
   }, activity));
 };

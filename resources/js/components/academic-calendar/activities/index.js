@@ -4,16 +4,27 @@ import moment from 'moment'
 import './style.scss'
 
 const Activity = ({ activity, from, to }) => {
-  let fromFormat = moment(from).format('MMM DD')
-  let toFormat = moment(to).format('MMM DD')
+  let _fromDate = moment(from)
+  let _toDate = moment(to)
+  let daysBetweenDates = _toDate.diff(_fromDate, 'days')
+  let isSameMonth = _fromDate.isSame(_toDate, 'month')
+  let activityDate = ''
+  
+  if(isSameMonth) {
+    activityDate = _fromDate.format('MMM DD')
+    if(daysBetweenDates > 0) {
+      activityDate = `${activityDate} - ${_toDate.format('DD')}`
+    }
+  } else {
+    activityDate = `${_fromDate.format('MMM DD')} / ${_toDate.format('MMM DD')}`
+  }
+
   return (
     <div className="activity">
-      <span className="date">{fromFormat} - {toFormat}</span>
+      <span className="date">{activityDate}</span>
       <span className="activity">{activity}</span>
     </div>
   )
-
-  
 }
 
 const Activities = ({ items, hasItems }) => (
