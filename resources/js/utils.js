@@ -1,4 +1,5 @@
 import queryString from 'querystring'
+import moment from 'moment';
 
 export const get = (url, params, success, error) => {
   if (Object.keys(params).length > 0) {
@@ -48,4 +49,24 @@ export const post = (url, body, success, error, method = 'POST') => {
       console.log(e)
       error()
     })
+}
+
+export const fromToDate = (from, to, oneDayFormat, sameMonthFormat, nextMonthFormat) => {
+  let _fromDate = moment(from)
+  let _toDate = moment(to)
+  
+  let daysBetweenDates = _toDate.diff(_fromDate, 'days')
+  let isSameMonth = _fromDate.isSame(_toDate, 'month')
+  let activityDate = ''
+  
+  if(isSameMonth) {
+    activityDate = _fromDate.format(oneDayFormat)
+    if(daysBetweenDates > 0) {
+      activityDate = `${activityDate} - ${_toDate.format(sameMonthFormat)}`
+    }
+  } else {
+    activityDate = `${_fromDate.format(nextMonthFormat)} / ${_toDate.format(nextMonthFormat)}`
+  }
+
+  return activityDate
 }

@@ -78952,46 +78952,41 @@ var AcademicCalendar = function AcademicCalendar() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
 
 
 
 
 
 
-var fromToDate = function fromToDate(from, to) {
-  var fromDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(from);
-  var toDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(to);
-  var days = toDate.diff(fromDate, 'days');
-  return days > 1 ? "".concat(fromDate.format('MMMM DD, YYYY'), " / ").concat(toDate.format('MMMM DD, YYYY')) : fromDate.format('MMMM DD, YYYY');
-};
 
 var TableBody = function TableBody(_ref) {
   var data = _ref.data;
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_4__["default"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__["default"]),
       handleDelete = _useContext.handleDelete,
       handleOpenModal = _useContext.handleOpenModal;
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
-    var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
-    var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
+    var created_at = moment__WEBPACK_IMPORTED_MODULE_2___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
+    var updated_at = moment__WEBPACK_IMPORTED_MODULE_2___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
-      key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, fromToDate(d.from, d.to)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_4___default()()
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.activity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, Object(Utils__WEBPACK_IMPORTED_MODULE_1__["fromToDate"])(d.from, d.to, 'MMMM DD', 'MMMM DD', 'MMMM DD')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
       variant: 'update',
       text: 'Edit',
       onClick: function onClick() {
         return handleOpenModal(d.id);
       }
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
       variant: 'delete danger',
       text: 'Delete',
       onClick: function onClick() {
@@ -79742,15 +79737,19 @@ var reducer = function reducer(state, action) {
 /*!*******************************!*\
   !*** ./resources/js/utils.js ***!
   \*******************************/
-/*! exports provided: get, post */
+/*! exports provided: get, post, fromToDate */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get", function() { return get; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "post", function() { return post; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fromToDate", function() { return fromToDate; });
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+
 
 var get = function get(url, params, success, error) {
   if (Object.keys(params).length > 0) {
@@ -79805,6 +79804,29 @@ var post = function post(url, body, success, error) {
     console.log(e);
     error();
   });
+};
+var fromToDate = function fromToDate(from, to, oneDayFormat, sameMonthFormat, nextMonthFormat) {
+  var _fromDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(from);
+
+  var _toDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(to);
+
+  var daysBetweenDates = _toDate.diff(_fromDate, 'days');
+
+  var isSameMonth = _fromDate.isSame(_toDate, 'month');
+
+  var activityDate = '';
+
+  if (isSameMonth) {
+    activityDate = _fromDate.format(oneDayFormat);
+
+    if (daysBetweenDates > 0) {
+      activityDate = "".concat(activityDate, " - ").concat(_toDate.format(sameMonthFormat));
+    }
+  } else {
+    activityDate = "".concat(_fromDate.format(nextMonthFormat), " / ").concat(_toDate.format(nextMonthFormat));
+  }
+
+  return activityDate;
 };
 
 /***/ }),

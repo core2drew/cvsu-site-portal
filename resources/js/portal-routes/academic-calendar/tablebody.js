@@ -1,21 +1,11 @@
 
 import React, { useContext } from 'react'
+import { fromToDate } from 'Utils'
 import moment from 'moment'
 import Button from 'Components/button'
 import Uuid from 'uuid/v4'
 import AcademicCalendarContext from 'Context/academic-calendar'
 
-const fromToDate = (from, to) => {
-  let fromDate = moment(from)
-  let toDate = moment(to)
-  let days = toDate.diff(fromDate, 'days')
-  
-  return days > 1 ? (
-    `${fromDate.format('MMMM DD, YYYY')} / ${toDate.format('MMMM DD, YYYY')}`
-    ) : (
-      fromDate.format('MMMM DD, YYYY')
-    )
-}
 
 const TableBody = ({ data }) => {
   const {handleDelete, handleOpenModal} = useContext(AcademicCalendarContext)
@@ -30,7 +20,7 @@ const TableBody = ({ data }) => {
           return (
             <tr key={Uuid()}>
               <td>{d.activity}</td>
-              <td>{fromToDate(d.from, d.to)}</td>
+              <td>{fromToDate(d.from, d.to, 'MMMM DD', 'MMMM DD', 'MMMM DD')}</td>
               <td>{created_at}</td>
               <td>{updated_at}</td>
               <td className="actions">

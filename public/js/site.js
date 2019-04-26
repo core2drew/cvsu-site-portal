@@ -78389,10 +78389,9 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/academic-calendar/activities/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -78406,32 +78405,11 @@ var Activity = function Activity(_ref) {
   var activity = _ref.activity,
       from = _ref.from,
       to = _ref.to;
-
-  var _fromDate = moment__WEBPACK_IMPORTED_MODULE_2___default()(from);
-
-  var _toDate = moment__WEBPACK_IMPORTED_MODULE_2___default()(to);
-
-  var daysBetweenDates = _toDate.diff(_fromDate, 'days');
-
-  var isSameMonth = _fromDate.isSame(_toDate, 'month');
-
-  var activityDate = '';
-
-  if (isSameMonth) {
-    activityDate = _fromDate.format('MMM DD');
-
-    if (daysBetweenDates > 0) {
-      activityDate = "".concat(activityDate, " - ").concat(_toDate.format('DD'));
-    }
-  } else {
-    activityDate = "".concat(_fromDate.format('MMM DD'), " / ").concat(_toDate.format('MMM DD'));
-  }
-
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "activity"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "date"
-  }, activityDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, Object(Utils__WEBPACK_IMPORTED_MODULE_1__["fromToDate"])(from, to, 'MMM DD', 'DD', 'MMM DD')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "activity"
   }, activity));
 };
@@ -78449,7 +78427,7 @@ var Activities = function Activities(_ref2) {
     className: "activity"
   }, "Activity")), items.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Activity, _extends({}, item, {
-      key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_2___default()()
     }));
   }), hasItems || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "no-data"
@@ -80002,15 +79980,19 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*!*******************************!*\
   !*** ./resources/js/utils.js ***!
   \*******************************/
-/*! exports provided: get, post */
+/*! exports provided: get, post, fromToDate */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get", function() { return get; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "post", function() { return post; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fromToDate", function() { return fromToDate; });
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+
 
 var get = function get(url, params, success, error) {
   if (Object.keys(params).length > 0) {
@@ -80065,6 +80047,29 @@ var post = function post(url, body, success, error) {
     console.log(e);
     error();
   });
+};
+var fromToDate = function fromToDate(from, to, oneDayFormat, sameMonthFormat, nextMonthFormat) {
+  var _fromDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(from);
+
+  var _toDate = moment__WEBPACK_IMPORTED_MODULE_1___default()(to);
+
+  var daysBetweenDates = _toDate.diff(_fromDate, 'days');
+
+  var isSameMonth = _fromDate.isSame(_toDate, 'month');
+
+  var activityDate = '';
+
+  if (isSameMonth) {
+    activityDate = _fromDate.format(oneDayFormat);
+
+    if (daysBetweenDates > 0) {
+      activityDate = "".concat(activityDate, " - ").concat(_toDate.format(sameMonthFormat));
+    }
+  } else {
+    activityDate = "".concat(_fromDate.format(nextMonthFormat), " / ").concat(_toDate.format(nextMonthFormat));
+  }
+
+  return activityDate;
 };
 
 /***/ }),
