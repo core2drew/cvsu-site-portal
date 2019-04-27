@@ -1,8 +1,8 @@
 import React from 'react'
-import Sidebar from '../components/sidebar'
-import History from '../site-components/history';
-import MissionVision from '../site-components/mission-vision';
-import Hymn from '../site-components/hymn';
+import Sidebar from 'Components/sidebar'
+import History from 'SiteComponents/history';
+import MissionVision from 'SiteComponents/mission-vision';
+import Hymn from 'SiteComponents/hymn';
 
 const About = () => (
   <div id="About">

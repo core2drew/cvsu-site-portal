@@ -1,11 +1,11 @@
 import React, { useEffect, useReducer, useRef, useState } from 'react'
-import { get, post } from '../../utils'
-import Table from '../../components/table'
-import Button from '../../components/button'
-import Preloader from '../../components/preloader'
+import { get, post } from 'Utils'
+import Table from 'Components/table'
+import Button from 'Components/button'
+import Preloader from 'Components/preloader'
 import TableBody from './tablebody'
-import AnnouncementReducer, { initialState } from '../../reducers/announcements'
-import AnnouncementsContext from '../../contexts/announcements'
+import AnnouncementReducer, { initialState } from 'Reducers/announcements'
+import AnnouncementsContext from 'Context/announcements'
 import FormModal from './form-modal'
 
 const Announcements = () => {

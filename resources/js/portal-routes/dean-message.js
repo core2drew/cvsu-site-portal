@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { get, post } from '../utils'
-import CKEditor from '../components/ckeditor'
-import Button from '../components/button'
-import Preloader from '../components/preloader'
+import { get, post } from 'Utils'
+import CKEditor from 'Components/ckeditor'
+import Button from 'Components/button'
+import Preloader from 'Components/preloader'
 
 const DeanMessage = () => {
   const url = '/ajax/portal/dean-message'

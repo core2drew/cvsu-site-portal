@@ -1,6 +1,6 @@
 import React from 'react'
-import Sidebar from '../components/sidebar'
-import Facility from '../site-components/facility'
+import Sidebar from 'Components/sidebar'
+import Facility from 'SiteComponents/facility'
 
 const Facilities = () => (
   <div id="Facilities">

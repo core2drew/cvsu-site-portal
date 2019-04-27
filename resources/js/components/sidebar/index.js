@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../icon'
+import Icon from 'Components/icon'
 import Uuid from 'uuid/v4'
 import { Link } from 'react-router-dom'
 import './style.scss'

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import LinesEllipsis from 'react-lines-ellipsis'
-import Modal from '../../components/modal'
+import Modal from 'Components/modal'
 import './style.scss'
 
 const Facility = props => {

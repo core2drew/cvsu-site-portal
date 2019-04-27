@@ -1,10 +1,10 @@
 import React, { useContext} from 'react'
 import { post } from '../../utils'
-import Modal from '../../components/modal'
-import Button from '../../components/button'
-import CKEditor from '../../components/ckeditor'
-import Input from '../../components/input'
-import AnnouncementsContext from '../../contexts/announcements'
+import Modal from 'Components/modal'
+import Button from 'Components/button'
+import CKEditor from 'Components/ckeditor'
+import Input from 'Components/input'
+import AnnouncementsContext from 'Context/announcements'
 
 const FormModal = () => {
   const {title, content, state, setTitle, url, editorRef, announcementIdRef, setContent, dispatch} = useContext(AnnouncementsContext)

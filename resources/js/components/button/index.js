@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../icon'
+import Icon from 'Components/icon'
 import './style.scss'
 
 const Button = props => (

@@ -1,9 +1,9 @@
 
 import React, { useContext } from 'react'
 import moment from 'moment'
-import Button from '../../components/button'
+import Button from 'Components/button'
 import Uuid from 'uuid/v4'
-import AnnouncementsContext from '../../contexts/announcements'
+import AnnouncementsContext from 'Context/announcements'
 
 const TableBody = ({ data }) => {
   const announcementsContext = useContext(AnnouncementsContext)

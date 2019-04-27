@@ -1,8 +1,8 @@
 import React from 'react'
-import Hero from '../components/hero'
-import DeanMessage from '../components/dean-message'
-import AcademicCalendar from '../components/academic-calendar'
-import Announcements from '../components/announcements'
+import Hero from 'SiteComponents/hero'
+import DeanMessage from 'SiteComponents/dean-message'
+import AcademicCalendar from 'SiteComponents/academic-calendar'
+import Announcements from 'SiteComponents/announcements'
 
 const Home = () => {
   return (

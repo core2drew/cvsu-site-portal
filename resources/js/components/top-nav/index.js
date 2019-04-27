@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment'
-import Button from '../button'
+import Button from 'Components/button'
 import './style.scss'
 
 const TopNav = props => (
