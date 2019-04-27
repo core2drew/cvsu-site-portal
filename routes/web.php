@@ -54,6 +54,8 @@ Route::group([
         "as" => "ajax.portal",
         "prefix" => "portal",
     ], function() {
+
+        // Users
         Route::get("/user", [
             "as" => "ajax.portal.user",
             "uses" => "AJAXPortalController@getPortalUser",
