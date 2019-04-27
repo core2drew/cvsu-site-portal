@@ -669,6 +669,25 @@ exports.push([module.i, ".table-container > table {\n  width: 100%;\n}\n.table-c
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-components/profile-modal/style.scss":
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-components/profile-modal/style.scss ***!
+  \********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#ProfileModal > .content {\n  min-height: 500px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-components/sidebar/style.scss":
 /*!**************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-components/sidebar/style.scss ***!
@@ -62769,6 +62788,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-components/profile-modal/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -62778,12 +62800,43 @@ var ProfileModal = function ProfileModal(_ref) {
       handleClose = _ref.handleClose;
   var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_user__WEBPACK_IMPORTED_MODULE_2__["default"]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    id: 'ProfileModal',
     isActive: isActive,
     handleClose: handleClose
   });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ProfileModal);
+
+/***/ }),
+
+/***/ "./resources/js/portal-components/profile-modal/style.scss":
+/*!*****************************************************************!*\
+  !*** ./resources/js/portal-components/profile-modal/style.scss ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-components/profile-modal/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -62903,9 +62956,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var TopNav = function TopNav(_ref) {
-  var handleOpenProfileModal = _ref.handleOpenProfileModal;
-
+var TopNav = function TopNav() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
       isMenuActive = _useState2[0],

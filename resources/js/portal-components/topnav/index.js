@@ -7,7 +7,7 @@ import Button from 'Components/button'
 import UserContext from 'Context/user'
 import './style.scss'
 
-const TopNav = ({ handleOpenProfileModal }) => {
+const TopNav = () => {
   const [isMenuActive, setIsMenuActive] = useState(false)
   const [isProfileModalActive, setProfileModalActive] = useState(false)
   
