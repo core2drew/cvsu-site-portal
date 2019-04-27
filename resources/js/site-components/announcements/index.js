@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Uuid from 'uuid/v4'
-import Button from '../button'
-import { get } from '../../utils'
+import Button from 'Components/button'
+import { get } from 'Utils'
 import Announcement from './announcement'
 import './style.scss'
 

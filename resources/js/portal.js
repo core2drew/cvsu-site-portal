@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import TopNav from './portal-components/topnav'
-import Sidebar from './portal-components/sidebar'
-import DeanMessage from './portal-routes/dean-message'
-import Announcements from './portal-routes/announcements'
-import AcademicCalendar from './portal-routes/academic-calendar'
-import Students from './portal-routes/students'
-import Users from './portal-routes/users'
-import NoMatch from './portal-routes/nomatch'
+import TopNav from 'PortalComponents/topnav'
+import Sidebar from 'PortalComponents/sidebar'
+import DeanMessage from 'PortalRoutes/dean-message'
+import Announcements from 'PortalRoutes/announcements'
+import AcademicCalendar from 'PortalRoutes/academic-calendar'
+import Students from 'PortalRoutes/students'
+import Users from 'PortalRoutes/users'
+import NoMatch from 'PortalRoutes/nomatch'
 import UserContext from 'Context/user'
-import { get } from './utils'
+import { get } from 'Utils'
 
 const App = () => {
   const [user, setUser] = useState(null)

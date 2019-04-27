@@ -43376,7 +43376,7 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/button/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
 
@@ -43388,7 +43388,7 @@ var Button = function Button(props) {
     id: props.id,
     className: "cvsu-btn ".concat(props.variant),
     onClick: props.onClick
-  }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
     icon: props.icon
   }));
 };
@@ -43618,10 +43618,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils */ "./resources/js/utils.js");
-/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/input */ "./resources/js/components/input/index.js");
-/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -43660,7 +43660,7 @@ var App = function App() {
     }
 
     setIsLoading(true);
-    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["post"])('/ajax/login', {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["post"])('/ajax/login', {
       username: username,
       password: password
     }, function (res) {
@@ -43676,25 +43676,25 @@ var App = function App() {
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Login"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_preloader__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_5__["default"], {
     isActive: isLoading,
     variant: 'fixed'
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "title"
-  }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     value: username,
     onChange: function onChange(e) {
       return setUsername(e.target.value);
     },
     placeholder: "Student ID / Username"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     value: password,
     onChange: function onChange(e) {
       return setPassword(e.target.value);
     },
     placeholder: "Password",
     type: 'password'
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     text: 'Log In',
     onClick: handleLogin
   }));

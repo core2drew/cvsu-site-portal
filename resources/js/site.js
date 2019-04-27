@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from './site-routes/home'
-import About from './site-routes/about'
-import Facilities from './site-routes/facilities'
-import TopNav from './components/top-nav'
-import MainNav from './components/main-nav'
-import Footer from './components/footer'
+import Home from 'SiteRoutes/home'
+import About from 'SiteRoutes/about'
+import Facilities from 'SiteRoutes/facilities'
+import TopNav from 'Components/top-nav'
+import MainNav from 'Components/main-nav'
+import Footer from 'Components/footer'
 
 const App = () => (
     <Router>

@@ -574,82 +574,6 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/academic-calendar/activities/style.scss":
-/*!****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/academic-calendar/activities/style.scss ***!
-  \****************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "#AcademicCalendar > .activities {\n  margin-top: 10px;\n}\n#AcademicCalendar > .activities > .headers {\n  background-color: #2D8548;\n  color: #fff;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .headers > .activity {\n  font-family: rubikmedium;\n}\n#AcademicCalendar > .activities > .activity {\n  border: 1px solid #2D8548;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  background-color: #fff;\n}\n#AcademicCalendar > .activities > .activity:nth-child(even) {\n  background-color: #dfffe9;\n}\n#AcademicCalendar > .activities > .headers,\n#AcademicCalendar > .activities > .activity {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 10px;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .activity > .date {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n#AcademicCalendar > .activities > .headers > .activity,\n#AcademicCalendar > .activities > .activity > .activity {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n     -moz-box-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n#AcademicCalendar > .activities > .no-data {\n  min-height: 150px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 18px;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/academic-calendar/style.scss":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/academic-calendar/style.scss ***!
-  \*****************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "#AcademicCalendar {\n  position: relative;\n}\n#AcademicCalendar > .calendar {\n  width: 100%;\n  border-color: #D5D7E3;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile--active {\n  background-color: #329B58;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile:disabled:not(.react-calendar__tile--active) {\n  background-color: #fff;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/announcements/announcement.scss":
-/*!********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/announcements/announcement.scss ***!
-  \********************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".announcement {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n.announcement > .header > .title {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-bottom: 0;\n}\n.announcement > .header > .post-date {\n  margin-top: 5px;\n}\n.announcement > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/announcements/style.scss":
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/announcements/style.scss ***!
-  \*************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "#Announcements {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n#Announcements > .announcement:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n#Announcements > #LoadMoreAnnouncements {\n  margin-top: 15px;\n  -webkit-align-self: flex-end;\n      -ms-flex-item-align: end;\n          align-self: flex-end;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/button/style.scss":
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/button/style.scss ***!
@@ -669,25 +593,6 @@ exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/dean-message/style.scss":
-/*!************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/dean-message/style.scss ***!
-  \************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "#DeanMessage > .message-container {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#DeanMessage > .message-container > .header > p {\n  margin-top: 0;\n}\n#DeanMessage > .message-container > .header > .greet {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n#DeanMessage > .message-container > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}\n#DeanMessage > .message-container > .message h1, #DeanMessage > .message-container > .message h2, #DeanMessage > .message-container > .message h3 {\n  margin-top: 0;\n  line-height: 1;\n}\n#DeanMessage > .message-container > .message > p {\n  margin: 0;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/footer/style.scss":
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/footer/style.scss ***!
@@ -701,25 +606,6 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "#Footer {\n  width: 100%;\n  background-color: #2D8548;\n  padding: 10px 0;\n}\n#Footer > .container > .reserved {\n  font-size: 12px;\n  color: #fff;\n  margin: 0;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/hero/style.scss":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/hero/style.scss ***!
-  \****************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "#Hero {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  min-height: 550px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-repeat: no-repeat;\n}\n#Hero > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color: #fff;\n}\n#Hero > .container > .greet {\n  font-family: rubikmedium;\n  font-size: 55px;\n  max-width: 660px;\n  font-weight: normal;\n}\n#Hero > .container > .tagline {\n  font-size: 30px;\n}\n#Hero > .container > .greet,\n#Hero > .container > .tagline {\n  margin: 0;\n}", ""]);
 
 // exports
 
@@ -802,6 +688,101 @@ exports.push([module.i, "#TopNav {\n  background-color: #329B58;\n  color: #fff;
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/academic-calendar/activities/style.scss":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/site-components/academic-calendar/activities/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#AcademicCalendar > .activities {\n  margin-top: 10px;\n}\n#AcademicCalendar > .activities > .headers {\n  background-color: #2D8548;\n  color: #fff;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .headers > .activity {\n  font-family: rubikmedium;\n}\n#AcademicCalendar > .activities > .activity {\n  border: 1px solid #2D8548;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  background-color: #fff;\n}\n#AcademicCalendar > .activities > .activity:nth-child(even) {\n  background-color: #dfffe9;\n}\n#AcademicCalendar > .activities > .headers,\n#AcademicCalendar > .activities > .activity {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 10px;\n}\n#AcademicCalendar > .activities > .headers > .date,\n#AcademicCalendar > .activities > .activity > .date {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n#AcademicCalendar > .activities > .headers > .activity,\n#AcademicCalendar > .activities > .activity > .activity {\n  -webkit-box-flex: 2;\n  -webkit-flex: 2;\n     -moz-box-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n#AcademicCalendar > .activities > .no-data {\n  min-height: 150px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 18px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/academic-calendar/style.scss":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/site-components/academic-calendar/style.scss ***!
+  \**********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#AcademicCalendar {\n  position: relative;\n}\n#AcademicCalendar > .calendar {\n  width: 100%;\n  border-color: #D5D7E3;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile--active {\n  background-color: #329B58;\n}\n#AcademicCalendar > .calendar .calendar-day.react-calendar__tile:disabled:not(.react-calendar__tile--active) {\n  background-color: #fff;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/announcements/announcement.scss":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/site-components/announcements/announcement.scss ***!
+  \*************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".announcement {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n.announcement > .header > .title {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-bottom: 0;\n}\n.announcement > .header > .post-date {\n  margin-top: 5px;\n}\n.announcement > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/announcements/style.scss":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/site-components/announcements/style.scss ***!
+  \******************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#Announcements {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n#Announcements > .announcement:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n#Announcements > #LoadMoreAnnouncements {\n  margin-top: 15px;\n  -webkit-align-self: flex-end;\n      -ms-flex-item-align: end;\n          align-self: flex-end;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/dean-message/style.scss":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/site-components/dean-message/style.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#DeanMessage > .message-container {\n  background-color: #fff;\n  padding: 17px 20px;\n  border: 1px solid #D5D7E3;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#DeanMessage > .message-container > .header > p {\n  margin-top: 0;\n}\n#DeanMessage > .message-container > .header > .greet {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n#DeanMessage > .message-container > .message {\n  line-height: 1.5;\n  margin-bottom: 0;\n}\n#DeanMessage > .message-container > .message h1, #DeanMessage > .message-container > .message h2, #DeanMessage > .message-container > .message h3 {\n  margin-top: 0;\n  line-height: 1;\n}\n#DeanMessage > .message-container > .message > p {\n  margin: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/facility/style.scss":
 /*!*************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/site-components/facility/style.scss ***!
@@ -815,6 +796,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, ".facility {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n}\n.facility:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n.facility:hover > .hover {\n  opacity: 1;\n  visibility: visible;\n}\n.facility > .hover {\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  transition: all 0.2s;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: rgba(50, 155, 88, 0.9);\n  color: #fff;\n  font-size: 1.3em;\n  font-family: rubikmedium;\n  cursor: pointer;\n  visibility: hidden;\n  opacity: 0;\n}\n.facility > .feature-image {\n  min-width: 200px;\n  height: 160px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-position: center;\n}\n.facility > .details {\n  padding: 0 15px;\n}\n.facility > .details > .title {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n.facility > .details > .description {\n  font-size: 13px;\n  margin-top: 10px;\n}\n.facility > .details > .title,\n.facility > .details > .description {\n  margin-bottom: 0;\n  line-height: 1.4;\n}\n\n.modal > .content {\n  max-width: 500px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/hero/style.scss":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/site-components/hero/style.scss ***!
+  \*********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#Hero {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  min-height: 550px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-repeat: no-repeat;\n}\n#Hero > .container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color: #fff;\n}\n#Hero > .container > .greet {\n  font-family: rubikmedium;\n  font-size: 55px;\n  max-width: 660px;\n  font-weight: normal;\n}\n#Hero > .container > .tagline {\n  font-size: 30px;\n}\n#Hero > .container > .greet,\n#Hero > .container > .tagline {\n  margin: 0;\n}", ""]);
 
 // exports
 
@@ -62734,400 +62734,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/js/components/academic-calendar/activities/index.js":
-/*!***********************************************************************!*\
-  !*** ./resources/js/components/academic-calendar/activities/index.js ***!
-  \***********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/academic-calendar/activities/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-
-
-
-
-
-var Activity = function Activity(_ref) {
-  var activity = _ref.activity,
-      from = _ref.from,
-      to = _ref.to;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "activity"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "date"
-  }, Object(Utils__WEBPACK_IMPORTED_MODULE_1__["fromToDate"])(from, to, 'MMM DD', 'DD', 'MMM DD')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "activity"
-  }, activity));
-};
-
-var Activities = function Activities(_ref2) {
-  var items = _ref2.items,
-      hasItems = _ref2.hasItems;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "activities"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "headers"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "date"
-  }, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "activity"
-  }, "Activity")), items.map(function (item) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Activity, _extends({}, item, {
-      key: uuid_v4__WEBPACK_IMPORTED_MODULE_2___default()()
-    }));
-  }), hasItems || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "no-data"
-  }, "No activity available"));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Activities);
-
-/***/ }),
-
-/***/ "./resources/js/components/academic-calendar/activities/style.scss":
-/*!*************************************************************************!*\
-  !*** ./resources/js/components/academic-calendar/activities/style.scss ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/academic-calendar/activities/style.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/components/academic-calendar/index.js":
-/*!************************************************************!*\
-  !*** ./resources/js/components/academic-calendar/index.js ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/es/index.js");
-/* harmony import */ var _activities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./activities */ "./resources/js/components/academic-calendar/activities/index.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/academic-calendar/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-
-var AcademicCalendar = function AcademicCalendar() {
-  var url = '/ajax/portal/academic-calendar';
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
-      _useState2 = _slicedToArray(_useState, 2),
-      activities = _useState2[0],
-      setActivities = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(moment__WEBPACK_IMPORTED_MODULE_1___default()().format('M')),
-      _useState4 = _slicedToArray(_useState3, 2),
-      currentMonth = _useState4[0],
-      setCurrentMonth = _useState4[1];
-
-  var handleOnChange = function handleOnChange(date) {
-    setCurrentMonth(moment__WEBPACK_IMPORTED_MODULE_1___default()(date).format('M'));
-  };
-
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])(url, {
-      isFromHomePage: true,
-      currentMonth: currentMonth
-    }, function (res) {
-      setActivities(res);
-    }, function () {
-      alert('Something went wrong. Please try again');
-    });
-  }, [currentMonth]);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "AcademicCalendar",
-    className: "section"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "section header"
-  }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    inline: true,
-    selected: moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
-    onMonthChange: handleOnChange
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_activities__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    hasItems: !!activities.length,
-    items: activities
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (AcademicCalendar);
-
-/***/ }),
-
-/***/ "./resources/js/components/academic-calendar/style.scss":
-/*!**************************************************************!*\
-  !*** ./resources/js/components/academic-calendar/style.scss ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/academic-calendar/style.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/components/announcements/announcement.js":
-/*!***************************************************************!*\
-  !*** ./resources/js/components/announcements/announcement.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _announcement_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./announcement.scss */ "./resources/js/components/announcements/announcement.scss");
-/* harmony import */ var _announcement_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_announcement_scss__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-
-var Announcement = function Announcement(_ref) {
-  var id = _ref.id,
-      title = _ref.title,
-      slug = _ref.slug,
-      content = _ref.content,
-      created_at = _ref.created_at;
-  return id && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "announcement"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "post-date"
-  }, "Posted Date: ", moment__WEBPACK_IMPORTED_MODULE_1___default()(created_at).format('MMMM DD, YYYY')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "title"
-  }, title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "message",
-    dangerouslySetInnerHTML: {
-      __html: content
-    }
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Announcement);
-
-/***/ }),
-
-/***/ "./resources/js/components/announcements/announcement.scss":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/announcements/announcement.scss ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./announcement.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/announcements/announcement.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/components/announcements/index.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/announcements/index.js ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../button */ "./resources/js/components/button/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
-/* harmony import */ var _announcement__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./announcement */ "./resources/js/components/announcements/announcement.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/announcements/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-
-var Announcements = function Announcements() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
-      _useState2 = _slicedToArray(_useState, 2),
-      announcements = _useState2[0],
-      setAnnouncements = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      nextPageURL = _useState4[0],
-      setNextPageURL = _useState4[1];
-
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_utils__WEBPACK_IMPORTED_MODULE_3__["get"])('/ajax/portal/limited/announcements', {}, function (res) {
-      setNextPageURL(res.next_page_url);
-      setAnnouncements(res.data);
-    });
-  }, []);
-
-  var handleLoadMore = function handleLoadMore() {
-    Object(_utils__WEBPACK_IMPORTED_MODULE_3__["get"])(nextPageURL, {}, function (res) {
-      setNextPageURL(res.next_page_url);
-      setAnnouncements([].concat(_toConsumableArray(announcements), _toConsumableArray(res.data)));
-    });
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "Announcements",
-    className: "section"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "section header"
-  }, "Latest Announcements"), announcements.map(function (announcement) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_announcement__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({}, announcement, {
-      key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
-    }));
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    id: "LoadMoreAnnouncements",
-    variant: 'tertiary',
-    text: "Load More Announcements",
-    onClick: handleLoadMore,
-    isVisible: nextPageURL
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Announcements);
-
-/***/ }),
-
-/***/ "./resources/js/components/announcements/style.scss":
-/*!**********************************************************!*\
-  !*** ./resources/js/components/announcements/style.scss ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/announcements/style.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./resources/js/components/button/index.js":
 /*!*************************************************!*\
   !*** ./resources/js/components/button/index.js ***!
@@ -63139,7 +62745,7 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/button/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
 
@@ -63151,7 +62757,7 @@ var Button = function Button(props) {
     id: props.id,
     className: "cvsu-btn ".concat(props.variant),
     onClick: props.onClick
-  }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
     icon: props.icon
   }));
 };
@@ -63177,103 +62783,6 @@ Button.defaultProps = {
 
 
 var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/button/style.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/components/dean-message/index.js":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/dean-message/index.js ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/dean-message/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-var DeanMessage = function DeanMessage() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      deanMessage = _useState2[0],
-      setDeanMessage = _useState2[1];
-
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (!deanMessage) {
-      Object(_utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/dean-message', {}, function (res) {
-        if (res.id) {
-          setDeanMessage(res);
-        }
-      });
-    }
-  });
-  return deanMessage && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "DeanMessage",
-    className: "section"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "section header"
-  }, "Message from the Dean"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "message-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "post-date"
-  }, "Posted Date: ", deanMessage && moment__WEBPACK_IMPORTED_MODULE_1___default()(deanMessage.created_at).format('MMMM DD, YYYY'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "message",
-    dangerouslySetInnerHTML: {
-      __html: deanMessage && deanMessage.message
-    }
-  })));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (DeanMessage);
-
-/***/ }),
-
-/***/ "./resources/js/components/dean-message/style.scss":
-/*!*********************************************************!*\
-  !*** ./resources/js/components/dean-message/style.scss ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/dean-message/style.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -63355,71 +62864,6 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/hero/index.js":
-/*!***********************************************!*\
-  !*** ./resources/js/components/hero/index.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/hero/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-var Hero = function Hero() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "Hero",
-    style: {
-      backgroundImage: "url('images/cvsu_front.png')"
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "greet"
-  }, "Welcome To ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " Cavite State University"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "tagline"
-  }, "A University that helps you to build your future")));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Hero);
-
-/***/ }),
-
-/***/ "./resources/js/components/hero/style.scss":
-/*!*************************************************!*\
-  !*** ./resources/js/components/hero/style.scss ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/hero/style.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./resources/js/components/icon/index.js":
 /*!***********************************************!*\
   !*** ./resources/js/components/icon/index.js ***!
@@ -63477,7 +62921,7 @@ var Logo=function Logo(){return react__WEBPACK_IMPORTED_MODULE_0___default.a.cre
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo */ "./resources/js/components/logo/index.js");
+/* harmony import */ var Components_logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/logo */ "./resources/js/components/logo/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/main-nav/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
@@ -63494,7 +62938,7 @@ var MainNav = function MainNav() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/",
     className: "sitename"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "schoolname"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "name"
@@ -63569,7 +63013,7 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/modal/style.scss");
@@ -63587,7 +63031,7 @@ var Modal = function Modal(props) {
     })
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
     variant: 'close',
     icon: 'clear',
     onClick: props.handleClose
@@ -63647,7 +63091,7 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
@@ -63674,7 +63118,7 @@ var Sidebar = function Sidebar(props) {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_2___default()(),
       className: "link",
       to: to
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
       icon: "caret-right"
     }), slug);
   })));
@@ -63733,7 +63177,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/top-nav/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
 
@@ -63756,7 +63200,7 @@ var TopNav = function TopNav(props) {
     className: "breaker"
   }, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "detail"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "info@cvsu-cc.com")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "info@cvsu-cc.com")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "Portal",
     onClick: function onClick() {
       return window.location.href = "/portal";
@@ -63800,6 +63244,497 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/site-components/academic-calendar/activities/index.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/site-components/academic-calendar/activities/index.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/academic-calendar/activities/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+
+
+
+var Activity = function Activity(_ref) {
+  var activity = _ref.activity,
+      from = _ref.from,
+      to = _ref.to;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "activity"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "date"
+  }, Object(Utils__WEBPACK_IMPORTED_MODULE_1__["fromToDate"])(from, to, 'MMM DD', 'DD', 'MMM DD')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "activity"
+  }, activity));
+};
+
+var Activities = function Activities(_ref2) {
+  var items = _ref2.items,
+      hasItems = _ref2.hasItems;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "activities"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "headers"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "date"
+  }, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "activity"
+  }, "Activity")), items.map(function (item) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Activity, _extends({}, item, {
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_2___default()()
+    }));
+  }), hasItems || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "no-data"
+  }, "No activity available"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Activities);
+
+/***/ }),
+
+/***/ "./resources/js/site-components/academic-calendar/activities/style.scss":
+/*!******************************************************************************!*\
+  !*** ./resources/js/site-components/academic-calendar/activities/style.scss ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/academic-calendar/activities/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/site-components/academic-calendar/index.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/site-components/academic-calendar/index.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/es/index.js");
+/* harmony import */ var _activities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./activities */ "./resources/js/site-components/academic-calendar/activities/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/academic-calendar/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+var AcademicCalendar = function AcademicCalendar() {
+  var url = '/ajax/portal/academic-calendar';
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      activities = _useState2[0],
+      setActivities = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(moment__WEBPACK_IMPORTED_MODULE_1___default()().format('M')),
+      _useState4 = _slicedToArray(_useState3, 2),
+      currentMonth = _useState4[0],
+      setCurrentMonth = _useState4[1];
+
+  var handleOnChange = function handleOnChange(date) {
+    setCurrentMonth(moment__WEBPACK_IMPORTED_MODULE_1___default()(date).format('M'));
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])(url, {
+      isFromHomePage: true,
+      currentMonth: currentMonth
+    }, function (res) {
+      setActivities(res);
+    }, function () {
+      alert('Something went wrong. Please try again');
+    });
+  }, [currentMonth]);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "AcademicCalendar",
+    className: "section"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section header"
+  }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    inline: true,
+    selected: moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
+    onMonthChange: handleOnChange
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_activities__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    hasItems: !!activities.length,
+    items: activities
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AcademicCalendar);
+
+/***/ }),
+
+/***/ "./resources/js/site-components/academic-calendar/style.scss":
+/*!*******************************************************************!*\
+  !*** ./resources/js/site-components/academic-calendar/style.scss ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/academic-calendar/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/site-components/announcements/announcement.js":
+/*!********************************************************************!*\
+  !*** ./resources/js/site-components/announcements/announcement.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _announcement_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./announcement.scss */ "./resources/js/site-components/announcements/announcement.scss");
+/* harmony import */ var _announcement_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_announcement_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var Announcement = function Announcement(_ref) {
+  var id = _ref.id,
+      title = _ref.title,
+      slug = _ref.slug,
+      content = _ref.content,
+      created_at = _ref.created_at;
+  return id && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "announcement"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "post-date"
+  }, "Posted Date: ", moment__WEBPACK_IMPORTED_MODULE_1___default()(created_at).format('MMMM DD, YYYY')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "title"
+  }, title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "message",
+    dangerouslySetInnerHTML: {
+      __html: content
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Announcement);
+
+/***/ }),
+
+/***/ "./resources/js/site-components/announcements/announcement.scss":
+/*!**********************************************************************!*\
+  !*** ./resources/js/site-components/announcements/announcement.scss ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./announcement.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/announcements/announcement.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/site-components/announcements/index.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/site-components/announcements/index.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var _announcement__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./announcement */ "./resources/js/site-components/announcements/announcement.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/announcements/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+var Announcements = function Announcements() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      announcements = _useState2[0],
+      setAnnouncements = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      nextPageURL = _useState4[0],
+      setNextPageURL = _useState4[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_3__["get"])('/ajax/portal/limited/announcements', {}, function (res) {
+      setNextPageURL(res.next_page_url);
+      setAnnouncements(res.data);
+    });
+  }, []);
+
+  var handleLoadMore = function handleLoadMore() {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_3__["get"])(nextPageURL, {}, function (res) {
+      setNextPageURL(res.next_page_url);
+      setAnnouncements([].concat(_toConsumableArray(announcements), _toConsumableArray(res.data)));
+    });
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Announcements",
+    className: "section"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section header"
+  }, "Latest Announcements"), announcements.map(function (announcement) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_announcement__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({}, announcement, {
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
+    }));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    id: "LoadMoreAnnouncements",
+    variant: 'tertiary',
+    text: "Load More Announcements",
+    onClick: handleLoadMore,
+    isVisible: nextPageURL
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Announcements);
+
+/***/ }),
+
+/***/ "./resources/js/site-components/announcements/style.scss":
+/*!***************************************************************!*\
+  !*** ./resources/js/site-components/announcements/style.scss ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/announcements/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/site-components/dean-message/index.js":
+/*!************************************************************!*\
+  !*** ./resources/js/site-components/dean-message/index.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/dean-message/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var DeanMessage = function DeanMessage() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      deanMessage = _useState2[0],
+      setDeanMessage = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (!deanMessage) {
+      Object(_utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/dean-message', {}, function (res) {
+        if (res.id) {
+          setDeanMessage(res);
+        }
+      });
+    }
+  });
+  return deanMessage && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "DeanMessage",
+    className: "section"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section header"
+  }, "Message from the Dean"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "message-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "post-date"
+  }, "Posted Date: ", deanMessage && moment__WEBPACK_IMPORTED_MODULE_1___default()(deanMessage.created_at).format('MMMM DD, YYYY'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "message",
+    dangerouslySetInnerHTML: {
+      __html: deanMessage && deanMessage.message
+    }
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DeanMessage);
+
+/***/ }),
+
+/***/ "./resources/js/site-components/dean-message/style.scss":
+/*!**************************************************************!*\
+  !*** ./resources/js/site-components/dean-message/style.scss ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/dean-message/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/site-components/facility/index.js":
 /*!********************************************************!*\
   !*** ./resources/js/site-components/facility/index.js ***!
@@ -63813,7 +63748,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lines-ellipsis */ "./node_modules/react-lines-ellipsis/lib/index.js");
 /* harmony import */ var react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lines_ellipsis__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/facility/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
@@ -63843,7 +63778,7 @@ var Facility = function Facility(props) {
     return setIsModalActive(true);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
     isActive: isModalActive,
     handleClose: handleCloseModal
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -63892,6 +63827,71 @@ var Facility = function Facility(props) {
 
 
 var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/facility/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/site-components/hero/index.js":
+/*!****************************************************!*\
+  !*** ./resources/js/site-components/hero/index.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/hero/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Hero = function Hero() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Hero",
+    style: {
+      backgroundImage: "url('images/cvsu_front.png')"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "greet"
+  }, "Welcome To ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " Cavite State University"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "tagline"
+  }, "A University that helps you to build your future")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Hero);
+
+/***/ }),
+
+/***/ "./resources/js/site-components/hero/style.scss":
+/*!******************************************************!*\
+  !*** ./resources/js/site-components/hero/style.scss ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/hero/style.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -64121,10 +64121,10 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/sidebar */ "./resources/js/components/sidebar/index.js");
-/* harmony import */ var _site_components_history__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../site-components/history */ "./resources/js/site-components/history/index.js");
-/* harmony import */ var _site_components_mission_vision__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../site-components/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
-/* harmony import */ var _site_components_hymn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../site-components/hymn */ "./resources/js/site-components/hymn/index.js");
+/* harmony import */ var Components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/sidebar */ "./resources/js/components/sidebar/index.js");
+/* harmony import */ var SiteComponents_history__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/history */ "./resources/js/site-components/history/index.js");
+/* harmony import */ var SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
+/* harmony import */ var SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/hymn */ "./resources/js/site-components/hymn/index.js");
 
 
 
@@ -64136,7 +64136,7 @@ var About = function About() {
     id: "About"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     id: "SideQuickLinks",
     title: "Quick Links",
     links: [{
@@ -64149,7 +64149,7 @@ var About = function About() {
       to: '/',
       slug: 'Course Offered'
     }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     id: "SideAnnouncements",
     title: "Announcements",
     links: [{
@@ -64165,7 +64165,7 @@ var About = function About() {
       to: '/',
       slug: 'Deadline of Submission of Requirements for Admission Exam'
     }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_history__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_mission_vision__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_hymn__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -64183,8 +64183,8 @@ var About = function About() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/sidebar */ "./resources/js/components/sidebar/index.js");
-/* harmony import */ var _site_components_facility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../site-components/facility */ "./resources/js/site-components/facility/index.js");
+/* harmony import */ var Components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/sidebar */ "./resources/js/components/sidebar/index.js");
+/* harmony import */ var SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/facility */ "./resources/js/site-components/facility/index.js");
 
 
 
@@ -64194,7 +64194,7 @@ var Facilities = function Facilities() {
     id: "Facilities"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     id: "SideQuickLinks",
     title: "Quick Links",
     links: [{
@@ -64207,7 +64207,7 @@ var Facilities = function Facilities() {
       to: '/',
       slug: 'Course Offered'
     }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     id: "SideAnnouncements",
     title: "Announcements",
     links: [{
@@ -64228,19 +64228,19 @@ var Facilities = function Facilities() {
     className: "grid-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "section header"
-  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_site_components_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
@@ -64262,10 +64262,10 @@ var Facilities = function Facilities() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/hero */ "./resources/js/components/hero/index.js");
-/* harmony import */ var _components_dean_message__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/dean-message */ "./resources/js/components/dean-message/index.js");
-/* harmony import */ var _components_academic_calendar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/academic-calendar */ "./resources/js/components/academic-calendar/index.js");
-/* harmony import */ var _components_announcements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/announcements */ "./resources/js/components/announcements/index.js");
+/* harmony import */ var SiteComponents_hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! SiteComponents/hero */ "./resources/js/site-components/hero/index.js");
+/* harmony import */ var SiteComponents_dean_message__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/dean-message */ "./resources/js/site-components/dean-message/index.js");
+/* harmony import */ var SiteComponents_academic_calendar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/academic-calendar */ "./resources/js/site-components/academic-calendar/index.js");
+/* harmony import */ var SiteComponents_announcements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/announcements */ "./resources/js/site-components/announcements/index.js");
 
 
 
@@ -64275,9 +64275,9 @@ __webpack_require__.r(__webpack_exports__);
 var Home = function Home() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Home"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_hero__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hero__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_dean_message__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_academic_calendar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_announcements__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_dean_message__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_academic_calendar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_announcements__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -64298,12 +64298,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _site_routes_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./site-routes/home */ "./resources/js/site-routes/home.js");
-/* harmony import */ var _site_routes_about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./site-routes/about */ "./resources/js/site-routes/about.js");
-/* harmony import */ var _site_routes_facilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./site-routes/facilities */ "./resources/js/site-routes/facilities.js");
-/* harmony import */ var _components_top_nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/top-nav */ "./resources/js/components/top-nav/index.js");
-/* harmony import */ var _components_main_nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/main-nav */ "./resources/js/components/main-nav/index.js");
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/footer */ "./resources/js/components/footer/index.js");
+/* harmony import */ var SiteRoutes_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteRoutes/home */ "./resources/js/site-routes/home.js");
+/* harmony import */ var SiteRoutes_about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteRoutes/about */ "./resources/js/site-routes/about.js");
+/* harmony import */ var SiteRoutes_facilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! SiteRoutes/facilities */ "./resources/js/site-routes/facilities.js");
+/* harmony import */ var Components_top_nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Components/top-nav */ "./resources/js/components/top-nav/index.js");
+/* harmony import */ var Components_main_nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Components/main-nav */ "./resources/js/components/main-nav/index.js");
+/* harmony import */ var Components_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! Components/footer */ "./resources/js/components/footer/index.js");
 
 
 
@@ -64315,17 +64315,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_top_nav__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_main_nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_top_nav__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_main_nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/",
     exact: true,
-    component: _site_routes_home__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: SiteRoutes_home__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/about",
-    component: _site_routes_about__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: SiteRoutes_about__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/facilities",
-    component: _site_routes_facilities__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_8__["default"], null));
+    component: SiteRoutes_facilities__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_footer__WEBPACK_IMPORTED_MODULE_8__["default"], null));
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('App'));

@@ -19,7 +19,9 @@ mix.webpackConfig({
          Utils: path.resolve(__dirname, 'resources/js/utils'),
          Sass: path.resolve(__dirname, 'resources/sass'),
          SiteComponents: path.resolve(__dirname, 'resources/js/site-components/'),
-         PortalComponents: path.resolve(__dirname, 'resources/js/portal-components/')
+         SiteRoutes: path.resolve(__dirname, 'resources/js/site-routes/'),
+         PortalComponents: path.resolve(__dirname, 'resources/js/portal-components/'),
+         PortalRoutes: path.resolve(__dirname, 'resources/js/portal-routes/')
       }
    }
 })

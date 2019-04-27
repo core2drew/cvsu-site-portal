@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { post } from './utils'
-import Button from './components/button'
-import Input from './components/input'
-import Preloader from './components/preloader'
+import { post } from 'Utils'
+import Button from 'Components/button'
+import Input from 'Components/input'
+import Preloader from 'Components/preloader'
 
 const App = () => {
   const [username, setUsername] = useState('')

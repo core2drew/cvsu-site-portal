@@ -62235,7 +62235,7 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/button/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
 
@@ -62247,7 +62247,7 @@ var Button = function Button(props) {
     id: props.id,
     className: "cvsu-btn ".concat(props.variant),
     onClick: props.onClick
-  }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
     icon: props.icon
   }));
 };
@@ -62466,7 +62466,7 @@ var Logo=function Logo(){return react__WEBPACK_IMPORTED_MODULE_0___default.a.cre
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/modal/style.scss");
@@ -62484,7 +62484,7 @@ var Modal = function Modal(props) {
     })
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
     variant: 'close',
     icon: 'clear',
     onClick: props.handleClose
@@ -62881,7 +62881,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var Components_logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/logo */ "./resources/js/components/logo/index.js");
 /* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
-/* harmony import */ var _profile_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../profile-modal */ "./resources/js/portal-components/profile-modal/index.js");
+/* harmony import */ var PortalComponents_profile_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PortalComponents/profile-modal */ "./resources/js/portal-components/profile-modal/index.js");
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-components/topnav/style.scss");
@@ -62966,7 +62966,7 @@ var TopNav = function TopNav(_ref) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/auth/logout",
     className: "item"
-  }, "Log out")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_profile_modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "Log out")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_profile_modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
     isActive: isProfileModalActive,
     handleClose: function handleClose() {
       return setProfileModalActive(false);
@@ -63395,11 +63395,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
-/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/modal */ "./resources/js/components/modal/index.js");
-/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var _components_ckeditor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/ckeditor */ "./resources/js/components/ckeditor/index.js");
-/* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/input */ "./resources/js/components/input/index.js");
-/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
+/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_ckeditor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/ckeditor */ "./resources/js/components/ckeditor/index.js");
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Context_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Context/announcements */ "./resources/js/contexts/announcements.js");
 
 
 
@@ -63409,7 +63409,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var FormModal = function FormModal() {
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_announcements__WEBPACK_IMPORTED_MODULE_6__["default"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_announcements__WEBPACK_IMPORTED_MODULE_6__["default"]),
       title = _useContext.title,
       content = _useContext.content,
       state = _useContext.state,
@@ -63469,7 +63469,7 @@ var FormModal = function FormModal() {
     }, 'PATCH');
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
     isActive: state.isModalActive,
     handleClose: function handleClose() {
       dispatch({
@@ -63479,14 +63479,14 @@ var FormModal = function FormModal() {
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section header"
-  }, "New Announcement"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, "New Announcement"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
     variant: "title",
     placeholder: "Title",
     value: title,
     onChange: function onChange(e) {
       return setTitle(e.target.value);
     }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_ckeditor__WEBPACK_IMPORTED_MODULE_4__["default"], {
     id: "Editor",
     getEditorRef: function getEditorRef(editor) {
       return editorRef.current = editor;
@@ -63494,12 +63494,12 @@ var FormModal = function FormModal() {
     onChange: function onChange(data) {
       return setContent(data);
     }
-  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     text: "Update",
     onClick: function onClick() {
       return handleUpdate(announcementIdRef.current);
     }
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     text: "Create",
     onClick: handleSave
   }));
@@ -63520,13 +63520,13 @@ var FormModal = function FormModal() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
-/* harmony import */ var _components_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/table */ "./resources/js/components/table/index.js");
-/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Components_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/table */ "./resources/js/components/table/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
 /* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/announcements/tablebody.js");
-/* harmony import */ var _reducers_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../reducers/announcements */ "./resources/js/reducers/announcements.js");
-/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
+/* harmony import */ var Reducers_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Reducers/announcements */ "./resources/js/reducers/announcements.js");
+/* harmony import */ var Context_announcements__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Context/announcements */ "./resources/js/contexts/announcements.js");
 /* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/announcements/form-modal.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -63551,7 +63551,7 @@ var Announcements = function Announcements() {
   var editorRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   var announcementIdRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
 
-  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(_reducers_announcements__WEBPACK_IMPORTED_MODULE_6__["default"], _reducers_announcements__WEBPACK_IMPORTED_MODULE_6__["initialState"]),
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(Reducers_announcements__WEBPACK_IMPORTED_MODULE_6__["default"], Reducers_announcements__WEBPACK_IMPORTED_MODULE_6__["initialState"]),
       _useReducer2 = _slicedToArray(_useReducer, 2),
       state = _useReducer2[0],
       dispatch = _useReducer2[1];
@@ -63572,7 +63572,7 @@ var Announcements = function Announcements() {
     dispatch({
       type: 'DELETING'
     });
-    Object(_utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
       id: id
     }, function (res) {
       return dispatch({
@@ -63602,7 +63602,7 @@ var Announcements = function Announcements() {
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
       dispatch({
         type: "SUCCESS_FETCH",
         data: res.data
@@ -63614,7 +63614,7 @@ var Announcements = function Announcements() {
       alert('Something went wrong. Please try again');
     });
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_announcements__WEBPACK_IMPORTED_MODULE_7__["default"].Provider, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_announcements__WEBPACK_IMPORTED_MODULE_7__["default"].Provider, {
     value: {
       handleEdit: handleEdit,
       handleDelete: handleDelete,
@@ -63630,17 +63630,17 @@ var Announcements = function Announcements() {
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Announcements"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_preloader__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: 'fixed',
     isActive: state.isLoading
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     text: "Add New",
     onClick: function onClick() {
       return dispatch({
         type: 'OPEN_MODAL'
       });
     }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
     headers: tableHeaders,
     hasData: !!state.data.length,
     customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -63666,10 +63666,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _contexts_announcements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../contexts/announcements */ "./resources/js/contexts/announcements.js");
+/* harmony import */ var Context_announcements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/announcements */ "./resources/js/contexts/announcements.js");
 
 
 
@@ -63678,7 +63678,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var TableBody = function TableBody(_ref) {
   var data = _ref.data;
-  var announcementsContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_announcements__WEBPACK_IMPORTED_MODULE_4__["default"]);
+  var announcementsContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_announcements__WEBPACK_IMPORTED_MODULE_4__["default"]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
     var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A');
     var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A');
@@ -63686,13 +63686,13 @@ var TableBody = function TableBody(_ref) {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'update',
       text: 'Edit',
       onClick: function onClick() {
         return announcementsContext.handleEdit(d.id);
       }
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'delete danger',
       text: 'Delete',
       onClick: function onClick() {
@@ -63717,10 +63717,10 @@ var TableBody = function TableBody(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./resources/js/utils.js");
-/* harmony import */ var _components_ckeditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ckeditor */ "./resources/js/components/ckeditor/index.js");
-/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Components_ckeditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/ckeditor */ "./resources/js/components/ckeditor/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -63758,7 +63758,7 @@ var DeanMessage = function DeanMessage() {
   };
 
   var handleSave = function handleSave() {
-    Object(_utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
       message: message
     }, function () {
       return alert('Message Save');
@@ -63768,7 +63768,7 @@ var DeanMessage = function DeanMessage() {
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
       setMessage(res.message);
       setInitialMessage(res.message);
       setIsLoading(false);
@@ -63779,15 +63779,15 @@ var DeanMessage = function DeanMessage() {
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "DeanMessage"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_preloader__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: 'fixed',
     isActive: isLoading
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "Editor",
     onChange: handleEditor,
     value: message,
     initialValue: initialMessage
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "Save",
     text: 'Save',
     onClick: handleSave
@@ -63880,16 +63880,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _portal_components_topnav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./portal-components/topnav */ "./resources/js/portal-components/topnav/index.js");
-/* harmony import */ var _portal_components_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portal-components/sidebar */ "./resources/js/portal-components/sidebar/index.js");
-/* harmony import */ var _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./portal-routes/dean-message */ "./resources/js/portal-routes/dean-message.js");
-/* harmony import */ var _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./portal-routes/announcements */ "./resources/js/portal-routes/announcements/index.js");
-/* harmony import */ var _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./portal-routes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
-/* harmony import */ var _portal_routes_students__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./portal-routes/students */ "./resources/js/portal-routes/students.js");
-/* harmony import */ var _portal_routes_users__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./portal-routes/users */ "./resources/js/portal-routes/users.js");
-/* harmony import */ var _portal_routes_nomatch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./portal-routes/nomatch */ "./resources/js/portal-routes/nomatch.js");
+/* harmony import */ var PortalComponents_topnav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! PortalComponents/topnav */ "./resources/js/portal-components/topnav/index.js");
+/* harmony import */ var PortalComponents_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PortalComponents/sidebar */ "./resources/js/portal-components/sidebar/index.js");
+/* harmony import */ var PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! PortalRoutes/dean-message */ "./resources/js/portal-routes/dean-message.js");
+/* harmony import */ var PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! PortalRoutes/announcements */ "./resources/js/portal-routes/announcements/index.js");
+/* harmony import */ var PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! PortalRoutes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
+/* harmony import */ var PortalRoutes_students__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! PortalRoutes/students */ "./resources/js/portal-routes/students.js");
+/* harmony import */ var PortalRoutes_users__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! PortalRoutes/users */ "./resources/js/portal-routes/users.js");
+/* harmony import */ var PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! PortalRoutes/nomatch */ "./resources/js/portal-routes/nomatch.js");
 /* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utils */ "./resources/js/utils.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -63919,36 +63919,36 @@ var App = function App() {
       setUser = _useState2[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_utils__WEBPACK_IMPORTED_MODULE_12__["get"])('/ajax/portal/user', {}, function (res) {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_12__["get"])('/ajax/portal/user', {}, function (res) {
       return setUser(res);
     });
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_user__WEBPACK_IMPORTED_MODULE_11__["default"].Provider, {
     value: user
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components_topnav__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portal_components_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_topnav__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal",
     exact: true,
-    component: _portal_routes_dean_message__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/announcements",
     exact: true,
-    component: _portal_routes_announcements__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/academic-calendar",
     exact: true,
-    component: _portal_routes_academic_calendar__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/students",
     exact: true,
-    component: _portal_routes_students__WEBPACK_IMPORTED_MODULE_8__["default"]
+    component: PortalRoutes_students__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/users",
     exact: true,
-    component: _portal_routes_users__WEBPACK_IMPORTED_MODULE_9__["default"]
+    component: PortalRoutes_users__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    component: _portal_routes_nomatch__WEBPACK_IMPORTED_MODULE_10__["default"]
+    component: PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_10__["default"]
   })))));
 };
 
