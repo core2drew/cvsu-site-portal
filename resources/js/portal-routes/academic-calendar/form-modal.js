@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import moment from 'moment'
 import Modal from 'Components/modal'
 import Button from 'Components/button'
-import Input from 'Components/input'
+import Textarea from 'Components/textarea'
 import Context from 'Context/academic-calendar'
 import DatePicker from 'Components/datepicker'
 
@@ -59,7 +59,13 @@ const FormModal = () => {
           label="To"
         />
       </div>
-      <Input variant="title" label="Activity" value={activity} onChange={e => setActivity(e.target.value)}/>
+      <Textarea 
+        variant="title" 
+        label="Activity" 
+        value={activity} 
+        onChange={e => setActivity(e.target.value)}
+        rows={5}
+      />
       {
         state.isUpdateModal ? 
           <Button text="Update" onClick={() => handleUpdate(state.selectedId, activity, startDate, endDate)}/> : 

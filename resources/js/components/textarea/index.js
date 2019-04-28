@@ -9,6 +9,7 @@ const Textarea = props => (
       placeholder={props.placeholder}
       onChange={props.onChange}
       value={props.value}
+      rows={props.rows}
     />
   </div>
 )

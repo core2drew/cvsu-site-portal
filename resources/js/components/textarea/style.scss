@@ -1,0 +1,18 @@
+@import '~Sass/variables';
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  > .label {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  textarea {
+    border-radius: 4px;
+    border: 1px solid $gray-1;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    resize: none;
+  }
+}

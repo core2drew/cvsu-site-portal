@@ -688,6 +688,25 @@ exports.push([module.i, ".table-container > table {\n  width: 100%;\n}\n.table-c
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/textarea/style.scss":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/textarea/style.scss ***!
+  \********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".textarea {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.textarea > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.textarea textarea {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  resize: none;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-components/profile-modal/style.scss":
 /*!********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-components/profile-modal/style.scss ***!
@@ -62860,6 +62879,79 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/textarea/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/textarea/index.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/textarea/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var Textarea = function Textarea(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: props.id,
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("textarea", props.variant)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "label"
+  }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    placeholder: props.placeholder,
+    onChange: props.onChange,
+    value: props.value,
+    rows: props.rows
+  }));
+};
+
+Textarea.defaultProps = {
+  id: null,
+  variant: '',
+  placeholder: '',
+  value: ''
+};
+/* harmony default export */ __webpack_exports__["default"] = (Textarea);
+
+/***/ }),
+
+/***/ "./resources/js/components/textarea/style.scss":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/textarea/style.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/textarea/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/contexts/academic-calendar.js":
 /*!****************************************************!*\
   !*** ./resources/js/contexts/academic-calendar.js ***!
@@ -63328,7 +63420,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Components_textarea__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/textarea */ "./resources/js/components/textarea/index.js");
 /* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
 /* harmony import */ var Components_datepicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Components/datepicker */ "./resources/js/components/datepicker/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
@@ -63434,13 +63526,14 @@ var FormModal = function FormModal() {
     endDate: endDate,
     onChange: handleChangeEnd,
     label: "To"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_textarea__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: "title",
     label: "Activity",
     value: activity,
     onChange: function onChange(e) {
       return setActivity(e.target.value);
-    }
+    },
+    rows: 5
   }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     text: "Update",
     onClick: function onClick() {
