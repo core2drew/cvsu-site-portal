@@ -42,8 +42,8 @@
         align-items: center;
         justify-content: center;
       }
-      > input:nth-last-child(n + 2) {
-        margin-bottom: 10px;
+      > .input:nth-last-child(n + 2) {
+        margin-bottom: 15px;
       }
     }
   }

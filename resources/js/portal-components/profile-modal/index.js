@@ -69,8 +69,8 @@ const ProfileModal = ({ isActive, handleClose }) => {
         <FileInput id='ChooseImage' accept='.jpg, .jpeg, .png' onChange={handleProfileImage}/>
       </div>
       <div className="fields">
-        <Input value={firstName} placeholder={'First Name'} onChange={e => setFirstName(e.target.value)} key={Uuid()}/>
-        <Input value={lastName} placeholder={'Last Name'} onChange={e => setLastName(e.target.value)} key={Uuid()}/>
+        <Input label={'First Name'} value={firstName} onChange={e => setFirstName(e.target.value)} key={Uuid()}/>
+        <Input label={'Last Name'} value={lastName} onChange={e => setLastName(e.target.value)} key={Uuid()}/>
       </div>
       <Button text='Update Profile' onClick={handleUpdate}/>
     </Modal>

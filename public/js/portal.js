@@ -605,7 +605,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".input > .label {\n  margin-bottom: 5px;\n  font-size: 12px;\n}\n.input input[type=text] {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -681,7 +681,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#ProfileModal > .content {\n  min-width: 350px;\n}\n#ProfileModal > .content > .section.header {\n  font-size: 25px;\n  margin-top: 0;\n}\n#ProfileModal > .content > .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-bottom: 10px;\n  overflow: hidden;\n}\n#ProfileModal > .content > .fields > input[type=file] {\n  display: none;\n}\n#ProfileModal > .content > .fields > .profile-image {\n  -webkit-border-radius: 100%;\n     -moz-border-radius: 100%;\n          border-radius: 100%;\n  width: 150px;\n  height: 150px;\n  margin: auto;\n  position: relative;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n  border: 1px solid #bbb;\n}\n#ProfileModal > .content > .fields > .profile-image:hover > .hover {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n#ProfileModal > .content > .fields > .profile-image > img {\n  width: 100%;\n}\n#ProfileModal > .content > .fields > .profile-image > .hover {\n  display: none;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: #fff;\n  bottom: 0;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n#ProfileModal > .content > .fields > input:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}", ""]);
+exports.push([module.i, "#ProfileModal > .content {\n  min-width: 350px;\n}\n#ProfileModal > .content > .section.header {\n  font-size: 25px;\n  margin-top: 0;\n}\n#ProfileModal > .content > .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-bottom: 10px;\n  overflow: hidden;\n}\n#ProfileModal > .content > .fields > input[type=file] {\n  display: none;\n}\n#ProfileModal > .content > .fields > .profile-image {\n  -webkit-border-radius: 100%;\n     -moz-border-radius: 100%;\n          border-radius: 100%;\n  width: 150px;\n  height: 150px;\n  margin: auto;\n  position: relative;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n  border: 1px solid #bbb;\n}\n#ProfileModal > .content > .fields > .profile-image:hover > .hover {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n#ProfileModal > .content > .fields > .profile-image > img {\n  width: 100%;\n}\n#ProfileModal > .content > .fields > .profile-image > .hover {\n  display: none;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: #fff;\n  bottom: 0;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n#ProfileModal > .content > .fields > .input:nth-last-child(n+2) {\n  margin-bottom: 15px;\n}", ""]);
 
 // exports
 
@@ -62449,14 +62449,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Input = function Input(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "label"
+  }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     id: props.id,
     className: "cvsu-input ".concat(props.variant),
     type: props.type,
     placeholder: props.placeholder,
     onChange: props.onChange,
     value: props.value
-  });
+  }));
 };
 
 Input.defaultProps = {
@@ -62942,15 +62946,15 @@ var ProfileModal = function ProfileModal(_ref) {
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "fields"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    label: 'First Name',
     value: firstName,
-    placeholder: 'First Name',
     onChange: function onChange(e) {
       return setFirstName(e.target.value);
     },
     key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    label: 'Last Name',
     value: lastName,
-    placeholder: 'Last Name',
     onChange: function onChange(e) {
       return setLastName(e.target.value);
     },

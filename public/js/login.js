@@ -179,7 +179,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".input > .label {\n  margin-bottom: 5px;\n  font-size: 12px;\n}\n.input input[type=text] {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -43483,14 +43483,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Input = function Input(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "label"
+  }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     id: props.id,
     className: "cvsu-input ".concat(props.variant),
     type: props.type,
     placeholder: props.placeholder,
     onChange: props.onChange,
     value: props.value
-  });
+  }));
 };
 
 Input.defaultProps = {
