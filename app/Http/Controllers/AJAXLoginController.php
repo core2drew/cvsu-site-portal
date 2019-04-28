@@ -14,10 +14,10 @@ class AJAXLoginController extends Controller
       $password = $request->get('password');
       
       $user = DB::table('users')
-        ->select("id", "username", "type", "profile_image_url", "first_name", "last_name")
+        ->whereNull('users.deleted_at')
+        ->select("id", "username", "type", "profile_image", "first_name", "last_name")
         ->where('username', '=', $username)
         ->where('password', '=', $password)
-        ->where('deleted_at', '=', null)
         ->first();
       if(!empty($user) && $user->id){
         $request->session()->put('user', $user);

@@ -22,6 +22,8 @@ const TopNav = () => {
     setIsMenuActive(false)
   }
 
+  const displayProfileImage = image => image ? `/storage/${image}` : '/images/profile/profile_image_placeholder.jpg'
+
   useEffect(() => {
     document.addEventListener('click', closeMenu)
     return () => {
@@ -40,9 +42,9 @@ const TopNav = () => {
           </span>
         </div>
         <div className="menu" onClick={handleMenu}>
-          <img className="profile-image" src="/images/profile/profile_image_placeholder.jpg" />
+          <img className="profile-image" src={displayProfileImage(userContext.profile_image)} />
           <p className="greet">
-            Hi, {userContext ? userContext.username : ''}
+            Hi, {userContext ? userContext.first_name : ''}
             <Icon icon="chevron-down"/>
           </p>
           <div 

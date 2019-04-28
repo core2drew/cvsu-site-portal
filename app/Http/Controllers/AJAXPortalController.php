@@ -4,12 +4,64 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
 use Log;
 
 class AJAXPortalController extends Controller
 {
     public function getPortalUser(Request $request) {
         return response()->json($request->session()->get('user'));
+    }
+
+    public function updatePortalUser(Request $request) {
+        $id = $request->get('id');
+        $firstName = $request->get('firstName');
+        $lastName = $request->get('lastName');
+        $response = DB::table('users')
+        ->where('id', '=', $id)
+        ->update([
+            'first_name' => $firstName, 
+            'last_name' => $lastName, 
+            'updated_at' => now()
+        ]);
+
+        if($response) {
+            $response = DB::table('users')
+            ->select("id", "profile_image", "first_name", "last_name", "username")
+            ->where('id', '=', $id)
+            ->first();
+            $request->session()->put('user', $response);
+            return response()->json($response);
+        }
+
+        return abort(500);
+    }
+
+    public function updatePortalUserProfileImage(Request $request) {
+        $id = $request->get('id');
+        $image = $request->file('image');
+        $imageExt = $image->getClientOriginalExtension();
+        $profileImage =  now()->timestamp.".$imageExt";
+        $path = Storage::disk('public')->putFileAs("profile-images", $image, $profileImage);
+ 
+        $response = DB::table('users')
+        ->where('id', '=', $id)
+        ->update([
+            "profile_image" => $path,
+            'updated_at' => now()
+        ]);
+
+        if($response) {
+            $response = DB::table('users')
+            ->select("id", "profile_image", "first_name", "last_name", "username")
+            ->where('id', '=', $id)
+            ->first();
+            $request->session()->put('user', $response);
+            return response()->json($response);
+        }
+
+        return abort(500);
     }
 
     public function getDeanMessage(Request $request) {

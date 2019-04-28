@@ -1,5 +1,23 @@
 #ProfileModal {
   > .content {
-    min-height: 500px
+    > .section.header {
+      font-size: 25px;
+      margin-top: 0;
+    }
+    > .fields {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      overflow: hidden;
+      > .profile-image {
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+        margin: auto;
+      }
+      > input:nth-last-child(n + 2) {
+        margin-bottom: 10px;
+      }
+    }
   }
 }

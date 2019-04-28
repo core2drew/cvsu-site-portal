@@ -13,7 +13,7 @@ const Input = props => (
 )
 
 Input.defaultProps = {
-  id: '',
+  id: null,
   variant: '',
   placeholder: '',
   value: '',

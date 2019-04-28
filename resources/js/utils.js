@@ -51,6 +51,32 @@ export const post = (url, body, success, error, method = 'POST') => {
     })
 }
 
+export const updateProfileImage = (body, success, error) => {
+  const formData  = new FormData()
+  formData.append('id', body.id)
+  formData.append('image', body.image)
+  return fetch('/ajax/portal/user/profile-image', {
+    method: 'POST',
+    headers: {
+      'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    },
+    credentials: 'same-origin', //for session to work
+    body: formData
+  })
+    .then(res => {
+      if (!res.ok) {
+        throw Error(res.statusText)
+      }
+      return res
+    })
+    .then(res => res.json())
+    .then(res => success(res))
+    .catch(e => {
+      console.log(e)
+      error()
+    })
+}
+
 export const fromToDate = (from, to, oneDayFormat, sameMonthFormat, nextMonthFormat) => {
   let _fromDate = moment(from)
   let _toDate = moment(to)

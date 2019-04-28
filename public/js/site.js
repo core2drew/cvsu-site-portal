@@ -643,7 +643,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".modal {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: none;\n  top: 0;\n  left: 0;\n  z-index: 4;\n}\n.modal.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.modal .content {\n  margin: auto;\n  background-color: #fff;\n  position: relative;\n  padding: 20px;\n  min-width: 500px;\n}\n.modal .content > .close {\n  position: absolute;\n  cursor: pointer;\n  right: 10px;\n  top: 10px;\n}", ""]);
+exports.push([module.i, ".modal {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: none;\n  top: 0;\n  left: 0;\n  z-index: 4;\n  overflow: auto;\n}\n.modal.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.modal .content {\n  margin: auto;\n  background-color: #fff;\n  position: relative;\n  padding: 20px;\n  min-width: 500px;\n}\n.modal .content > .close {\n  position: absolute;\n  cursor: pointer;\n  right: 10px;\n  top: 10px;\n}", ""]);
 
 // exports
 
@@ -57608,7 +57608,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64336,13 +64336,14 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*!*******************************!*\
   !*** ./resources/js/utils.js ***!
   \*******************************/
-/*! exports provided: get, post, fromToDate */
+/*! exports provided: get, post, updateProfileImage, fromToDate */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get", function() { return get; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "post", function() { return post; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateProfileImage", function() { return updateProfileImage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fromToDate", function() { return fromToDate; });
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_0__);
@@ -64389,6 +64390,33 @@ var post = function post(url, body, success, error) {
     credentials: 'same-origin',
     //for session to work
     body: JSON.stringify(body)
+  }).then(function (res) {
+    if (!res.ok) {
+      throw Error(res.statusText);
+    }
+
+    return res;
+  }).then(function (res) {
+    return res.json();
+  }).then(function (res) {
+    return success(res);
+  })["catch"](function (e) {
+    console.log(e);
+    error();
+  });
+};
+var updateProfileImage = function updateProfileImage(body, success, error) {
+  var formData = new FormData();
+  formData.append('id', body.id);
+  formData.append('image', body.image);
+  return fetch('/ajax/portal/user/profile-image', {
+    method: 'POST',
+    headers: {
+      'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    },
+    credentials: 'same-origin',
+    //for session to work
+    body: formData
   }).then(function (res) {
     if (!res.ok) {
       throw Error(res.statusText);

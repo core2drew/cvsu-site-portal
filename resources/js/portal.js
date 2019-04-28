@@ -13,7 +13,14 @@ import UserContext from 'Context/user'
 import { get } from 'Utils'
 
 const App = () => {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState({
+    id: null,
+    first_name: '',
+    last_name: '',
+    profile_image: '',
+    type: null,
+    username: ''
+  })
 
   useEffect(() => {
     get('/ajax/portal/user', {},  res => setUser(res))

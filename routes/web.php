@@ -62,6 +62,18 @@ Route::group([
             "middleware" => "check.session"
         ]);
 
+        Route::patch("/user", [
+            "as" => "ajax.portal.update.user",
+            "uses" => "AJAXPortalController@updatePortalUser",
+            "middleware" => "check.session"
+        ]);
+
+        Route::post('/user/profile-image', [
+            "as" => "ajax.portal.update.user.profile-image",
+            "uses" => "AJAXPortalController@updatePortalUserProfileImage",
+            "middleware" => "check.session"
+        ]);
+
         // Dean Message
         Route::get("/dean-message", [
             "as" => "ajax.portal.dean-message",
