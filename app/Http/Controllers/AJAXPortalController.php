@@ -28,7 +28,7 @@ class AJAXPortalController extends Controller
 
         if($response) {
             $response = DB::table('users')
-            ->select("id", "profile_image", "first_name", "last_name", "username")
+            ->select("id", "profile_image", "first_name", "last_name", "username", "type")
             ->where('id', '=', $id)
             ->first();
             $request->session()->put('user', $response);
@@ -54,7 +54,7 @@ class AJAXPortalController extends Controller
 
         if($response) {
             $response = DB::table('users')
-            ->select("id", "profile_image", "first_name", "last_name", "username")
+            ->select("id", "profile_image", "first_name", "last_name", "username", "type")
             ->where('id', '=', $id)
             ->first();
             $request->session()->put('user', $response);

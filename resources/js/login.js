@@ -32,8 +32,8 @@ const App = () => {
     <div id="Login">
       <Preloader isActive={isLoading} variant={'fixed'}/>
       <h3 className="title">Log In</h3>
-      <Input value={username} onChange={e => setUsername(e.target.value)} placeholder="Student ID / Username" />
-      <Input value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" type={'password'} />
+      <Input value={username} onChange={e => setUsername(e.target.value)} label="Student ID / Username" />
+      <Input value={password} onChange={e => setPassword(e.target.value)} label="Password" type={'password'} />
       
       <Button text={'Log In'} onClick={handleLogin} />
     </div>

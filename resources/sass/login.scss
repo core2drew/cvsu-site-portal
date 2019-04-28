@@ -10,13 +10,16 @@
   left: 0;
   right: 0;
   max-width: 400px;
-  max-height: 300px;
+  max-height: 330px;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: $global-box-shadow;
   box-sizing: border-box;
   padding: 30px;
   border-top: 5px solid $green-1;
+  > .input {
+    margin-bottom: 15px;
+  }
   > .title {
     font-size: 22px;
     margin-top: 0;
