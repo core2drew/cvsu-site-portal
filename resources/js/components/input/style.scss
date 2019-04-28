@@ -1,9 +1,11 @@
 @import '../../../sass/variables';
 
 .input {
+  display: flex;
+  flex-direction: column;
   > .label {
-    margin-bottom: 5px;
     font-size: 12px;
+    margin-bottom: 5px;
   }
   input[type=text] {
     border-radius: 4px;

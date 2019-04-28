@@ -2,11 +2,10 @@ import React from 'react'
 import classname from 'classnames'
 import './style.scss'
 
-const Input = props => (
-  <div id={props.id} className={classname("input", props.variant)}>
+const Textarea = props => (
+  <div id={props.id} className={classname("textarea", props.variant)}>
     <label className="label">{props.label}</label>
-    <input
-      type={props.type} 
+    <textarea
       placeholder={props.placeholder}
       onChange={props.onChange}
       value={props.value}
@@ -14,13 +13,11 @@ const Input = props => (
   </div>
 )
 
-Input.defaultProps = {
+Textarea.defaultProps = {
   id: null,
   variant: '',
   placeholder: '',
   value: '',
-  type: 'text',
-  label: ''
 }
 
-export default Input
+export default Textarea

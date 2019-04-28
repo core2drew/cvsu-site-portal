@@ -59,7 +59,7 @@ const FormModal = () => {
       }
     >
       <h2 className="section header">New Announcement</h2>
-      <Input variant="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)}/>
+      <Input variant="title" label="Title" value={title} onChange={e => setTitle(e.target.value)}/>
       <CKEditor id="Editor" getEditorRef={editor => editorRef.current = editor} onChange={data => setContent(data)}/>
       {
         state.isUpdateModal ? <Button text="Update" onClick={() => handleUpdate(announcementIdRef.current)}/> : <Button text="Create" onClick={handleSave}/>

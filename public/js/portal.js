@@ -593,6 +593,25 @@ exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/datepicker/style.scss":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/datepicker/style.scss ***!
+  \**********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".date-picker {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.date-picker > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.date-picker > .react-datepicker-wrapper > .react-datepicker__input-container {\n  width: 100%;\n}\n.date-picker > .react-datepicker-wrapper > .react-datepicker__input-container > input[type=text] {\n  padding: 15px;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  width: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/input/style.scss":
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/input/style.scss ***!
@@ -605,7 +624,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".input > .label {\n  margin-bottom: 5px;\n  font-size: 12px;\n}\n.input input[type=text] {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".input {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.input > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.input input[type=text] {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -62360,6 +62379,75 @@ CKEditor.defaultProps = {
 
 /***/ }),
 
+/***/ "./resources/js/components/datepicker/index.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/datepicker/index.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/es/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/datepicker/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+var DatePicker = function DatePicker(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: props.id,
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("date-picker", props.variant)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "label"
+  }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_2__["default"], props));
+};
+
+DatePicker.defaultProps = {
+  id: null,
+  variant: '',
+  label: ''
+};
+/* harmony default export */ __webpack_exports__["default"] = (DatePicker);
+
+/***/ }),
+
+/***/ "./resources/js/components/datepicker/style.scss":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/datepicker/style.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/datepicker/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/file-input/index.js":
 /*!*****************************************************!*\
   !*** ./resources/js/components/file-input/index.js ***!
@@ -62443,19 +62531,21 @@ Icon.defaultProps = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/input/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/input/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
 var Input = function Input(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "input"
+    id: props.id,
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("input", props.variant)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "label"
   }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    id: props.id,
-    className: "cvsu-input ".concat(props.variant),
     type: props.type,
     placeholder: props.placeholder,
     onChange: props.onChange,
@@ -62468,7 +62558,8 @@ Input.defaultProps = {
   variant: '',
   placeholder: '',
   value: '',
-  type: 'text'
+  type: 'text',
+  label: ''
 };
 /* harmony default export */ __webpack_exports__["default"] = (Input);
 
@@ -63239,7 +63330,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
 /* harmony import */ var Context_academic_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/academic-calendar */ "./resources/js/contexts/academic-calendar.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/es/index.js");
+/* harmony import */ var Components_datepicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Components/datepicker */ "./resources/js/components/datepicker/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -63325,25 +63416,27 @@ var FormModal = function FormModal() {
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section header"
-  }, state.modalHeaderTitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, state.modalHeaderTitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "date-pickers"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
     selected: startDate,
     selectsStart: true,
     startDate: startDate,
     minDate: moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
     endDate: endDate,
     onChange: handleChangeStart,
-    placeholderText: "From"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    label: "From"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"], {
     selected: endDate,
     selectsEnd: true,
     startDate: startDate,
     minDate: startDate || moment__WEBPACK_IMPORTED_MODULE_1___default()().toDate(),
     endDate: endDate,
     onChange: handleChangeEnd,
-    placeholderText: "To"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    label: "To"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     variant: "title",
-    placeholder: "Activity",
+    label: "Activity",
     value: activity,
     onChange: function onChange(e) {
       return setActivity(e.target.value);
@@ -63695,7 +63788,7 @@ var FormModal = function FormModal() {
     className: "section header"
   }, "New Announcement"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
     variant: "title",
-    placeholder: "Title",
+    label: "Title",
     value: title,
     onChange: function onChange(e) {
       return setTitle(e.target.value);

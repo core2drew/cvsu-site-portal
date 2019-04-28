@@ -179,7 +179,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".input > .label {\n  margin-bottom: 5px;\n  font-size: 12px;\n}\n.input input[type=text] {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".input {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.input > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.input input[type=text] {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -43477,19 +43477,21 @@ Icon.defaultProps = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/input/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/input/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
 var Input = function Input(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "input"
+    id: props.id,
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("input", props.variant)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "label"
   }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    id: props.id,
-    className: "cvsu-input ".concat(props.variant),
     type: props.type,
     placeholder: props.placeholder,
     onChange: props.onChange,
@@ -43502,7 +43504,8 @@ Input.defaultProps = {
   variant: '',
   placeholder: '',
   value: '',
-  type: 'text'
+  type: 'text',
+  label: ''
 };
 /* harmony default export */ __webpack_exports__["default"] = (Input);
 

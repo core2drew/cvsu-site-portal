@@ -6,16 +6,15 @@
     > .content > button {
       margin-top: 10px;
     }
-    > .content > .react-datepicker-wrapper {
+    > .content > .date-pickers {
+      display: flex;
       margin-bottom: 10px;
     }
-    > .content > .react-datepicker-wrapper:nth-of-type(1) {
-      margin-right: 10px;
+    > .content > .date-pickers > .date-picker {
+      width: 100%;
     }
-    > .content > .react-datepicker-wrapper > .react-datepicker__input-container > input[type=text]{
-      padding: 15px;
-      border-radius: 4px;
-      border: 1px solid #D5D7E3;
+    > .content > .date-pickers > .date-picker:nth-of-type(1) {
+      margin-right: 10px;
     }
   }
   > .table-container {
