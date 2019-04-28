@@ -108,13 +108,15 @@ body {
 
 #DeanMessage .section.header,
 #Announcements .section.header,
-#ProfileModal .section.header {
+#ProfileModal .section.header,
+#AccountModal .section.header {
   font-size: 20px;
 }
 
 #DeanMessage .section.header:after,
 #Announcements .section.header:after,
-#ProfileModal .section.header:after {
+#ProfileModal .section.header:after,
+#AccountModal .section.header:after {
   display: block;
   content: "";
   border-bottom: solid 3px #329B58;

@@ -3,6 +3,7 @@ import classnames from 'classnames'
 import Logo from 'Components/logo'
 import Icon from 'Components/icon'
 import ProfileModal from 'PortalComponents/profile-modal'
+import AccountModal from 'PortalComponents/account-modal'
 import Button from 'Components/button'
 import UserContext from 'Context/user'
 import './style.scss'
@@ -10,7 +11,7 @@ import './style.scss'
 const TopNav = () => {
   const [isMenuActive, setIsMenuActive] = useState(false)
   const [isProfileModalActive, setProfileModalActive] = useState(false)
-  
+  const [isAccountModalActive, setAccountModalActive] = useState(false)
   const userContext = useContext(UserContext)
 
   const handleMenu = e => {
@@ -53,6 +54,7 @@ const TopNav = () => {
             }
           >
             <Button variant={'tertiary item'} text={'Profile'} onClick={() => setProfileModalActive(true)}/>
+            <Button variant={'tertiary item'} text={'Account'} onClick={() => setAccountModalActive(true)}/>
             <a href="/auth/logout" className="item">Log out</a>
           </div>
         </div>
@@ -60,6 +62,10 @@ const TopNav = () => {
       <ProfileModal 
         isActive={isProfileModalActive} 
         handleClose={() => setProfileModalActive(false)}
+      />
+      <AccountModal 
+        isActive={isAccountModalActive} 
+        handleClose={() => setAccountModalActive(false)}
       />
     </React.Fragment>
   )

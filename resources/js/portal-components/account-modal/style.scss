@@ -1,0 +1,22 @@
+#AccountModal {
+  > .content {
+    min-width: 350px;
+    > .section.header {
+      font-size: 25px;
+      margin-top: 0;
+    }
+    > .fields {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      > .input:nth-last-child(n + 2) {
+        margin-bottom: 10px;
+      }
+    }
+    > .fields.change-password {
+      > strong {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

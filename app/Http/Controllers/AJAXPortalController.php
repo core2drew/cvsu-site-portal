@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-
+use Session;
 use Log;
+use Crypt;
 
 class AJAXPortalController extends Controller
 {
@@ -14,28 +15,65 @@ class AJAXPortalController extends Controller
         return response()->json($request->session()->get('user'));
     }
 
+    function updateUserSession($id) {
+        $response = DB::table('users')
+        ->select("id", "profile_image", "first_name", "last_name", "username", "type", "password")
+        ->where('id', '=', $id)
+        ->first();
+        Session::put('user', $response);
+
+        return response()->json(true);
+    }
+
     public function updatePortalUser(Request $request) {
         $id = $request->get('id');
+        $username = $request->get('username');
         $firstName = $request->get('firstName');
         $lastName = $request->get('lastName');
+
+        $username = !empty($username) ? $username : Session::get('user')->username;
+        $firstName = !empty($firstName) ? $firstName : Session::get('user')->first_name;
+        $lastName = !empty($lastName) ? $lastName : Session::get('user')->last_name;
+
         $response = DB::table('users')
         ->where('id', '=', $id)
         ->update([
             'first_name' => $firstName, 
             'last_name' => $lastName, 
+            'username' => $username,
             'updated_at' => now()
         ]);
 
         if($response) {
-            $response = DB::table('users')
-            ->select("id", "profile_image", "first_name", "last_name", "username", "type")
-            ->where('id', '=', $id)
-            ->first();
-            $request->session()->put('user', $response);
-            return response()->json($response);
+            return response()->json($this->updateUserSession($id));
         }
 
         return abort(500);
+    }
+
+    public function updatePortalUserPassword(Request $request) {
+        $id = $request->get('id');
+        $sessionPassword = Session::get('user')->password;
+        $currentPassword = $request->get('currentPassword');
+        $newPassword = $request->get('newPassword');
+
+        if($currentPassword === $sessionPassword) {
+            $response = DB::table('users')
+            ->where('id', '=', $id)
+            ->update([
+                'password' => $newPassword,
+                'updated_at' => now()
+            ]);
+
+            if($response) {
+                return response()->json($this->updateUserSession($id));
+            }
+            return abort(500);
+        }
+
+        return response()->json([
+            'message' => 'Incorrect Current password'
+        ]);
     }
 
     public function updatePortalUserProfileImage(Request $request) {
@@ -53,12 +91,7 @@ class AJAXPortalController extends Controller
         ]);
 
         if($response) {
-            $response = DB::table('users')
-            ->select("id", "profile_image", "first_name", "last_name", "username", "type")
-            ->where('id', '=', $id)
-            ->first();
-            $request->session()->put('user', $response);
-            return response()->json($response);
+            return response()->json($this->updateUserSession($id));
         }
 
         return abort(500);

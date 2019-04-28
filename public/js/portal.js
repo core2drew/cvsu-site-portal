@@ -707,6 +707,25 @@ exports.push([module.i, ".textarea {\n  display: -webkit-box;\n  display: -webki
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-components/account-modal/style.scss":
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-components/account-modal/style.scss ***!
+  \********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#AccountModal > .content {\n  min-width: 350px;\n}\n#AccountModal > .content > .section.header {\n  font-size: 25px;\n  margin-top: 0;\n}\n#AccountModal > .content > .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-bottom: 20px;\n}\n#AccountModal > .content > .fields > .input:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n#AccountModal > .content > .fields.change-password > strong {\n  margin-bottom: 15px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-components/profile-modal/style.scss":
 /*!********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-components/profile-modal/style.scss ***!
@@ -757,7 +776,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#TopNav {\n  background-color: #fff;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  padding-left: 15px;\n  padding-right: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  grid-column: 1/3;\n}\n#TopNav > .sitename {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 5px 0;\n  text-decoration: none;\n}\n#TopNav > .sitename:visited {\n  color: inherit;\n}\n#TopNav > .sitename > .logo {\n  width: 50px;\n  height: 50px;\n}\n#TopNav > .sitename > .schoolname {\n  margin-left: 12px;\n}\n#TopNav > .sitename > .schoolname > .name {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .sitename > .schoolname > .branch {\n  margin-top: 3px;\n  margin-bottom: 0;\n  font-size: 12px;\n}\n#TopNav > .menu {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n  position: relative;\n}\n#TopNav > .menu > .profile-image {\n  margin-right: 10px;\n  width: 40px;\n  height: 40px;\n  -webkit-border-radius: 40px;\n     -moz-border-radius: 40px;\n          border-radius: 40px;\n}\n#TopNav > .menu > .greet {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-family: rubikmedium;\n  margin-top: 0;\n  margin-bottom: 0;\n  text-transform: capitalize;\n}\n#TopNav > .menu > .greet > i[class*=icon] {\n  font-size: 10px;\n  margin-left: 5px;\n}\n#TopNav > .menu > .items {\n  display: none;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  background-color: #fff;\n  position: absolute;\n  bottom: -71px;\n  width: 120px;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#TopNav > .menu > .items.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n#TopNav > .menu > .items > .item {\n  text-decoration: none;\n  padding: 10px 15px;\n  color: inherit;\n  font-family: rubikregular;\n  text-transform: none;\n}\n#TopNav > .menu > .items > .item[class*=cvsu-btn] {\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n     -moz-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n#TopNav > .menu > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
+exports.push([module.i, "#TopNav {\n  background-color: #fff;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  padding-left: 15px;\n  padding-right: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  grid-column: 1/3;\n}\n#TopNav > .sitename {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 5px 0;\n  text-decoration: none;\n}\n#TopNav > .sitename:visited {\n  color: inherit;\n}\n#TopNav > .sitename > .logo {\n  width: 50px;\n  height: 50px;\n}\n#TopNav > .sitename > .schoolname {\n  margin-left: 12px;\n}\n#TopNav > .sitename > .schoolname > .name {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .sitename > .schoolname > .branch {\n  margin-top: 3px;\n  margin-bottom: 0;\n  font-size: 12px;\n}\n#TopNav > .menu {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n  position: relative;\n}\n#TopNav > .menu > .profile-image {\n  margin-right: 10px;\n  width: 40px;\n  height: 40px;\n  -webkit-border-radius: 40px;\n     -moz-border-radius: 40px;\n          border-radius: 40px;\n}\n#TopNav > .menu > .greet {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-family: rubikmedium;\n  margin-top: 0;\n  margin-bottom: 0;\n  text-transform: capitalize;\n}\n#TopNav > .menu > .greet > i[class*=icon] {\n  font-size: 10px;\n  margin-left: 5px;\n}\n#TopNav > .menu > .items {\n  display: none;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  background-color: #fff;\n  position: absolute;\n  bottom: -115px;\n  width: 120px;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#TopNav > .menu > .items.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n#TopNav > .menu > .items > .item {\n  text-decoration: none;\n  padding: 10px 15px;\n  color: inherit;\n  font-family: rubikregular;\n  text-transform: none;\n}\n#TopNav > .menu > .items > .item[class*=cvsu-btn] {\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n     -moz-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n#TopNav > .menu > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
 
 // exports
 
@@ -63003,6 +63022,198 @@ var UserContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
 
 /***/ }),
 
+/***/ "./resources/js/portal-components/account-modal/index.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/portal-components/account-modal/index.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-components/account-modal/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_6__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+var AccountModal = function AccountModal(_ref) {
+  var isActive = _ref.isActive,
+      handleClose = _ref.handleClose;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      username = _useState2[0],
+      setUsername = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      currentPassword = _useState4[0],
+      setCurrentPassword = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState6 = _slicedToArray(_useState5, 2),
+      newPassword = _useState6[0],
+      setNewPassword = _useState6[1];
+
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState8 = _slicedToArray(_useState7, 2),
+      verifyPassword = _useState8[0],
+      setVerifyPassword = _useState8[1];
+
+  var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_user__WEBPACK_IMPORTED_MODULE_5__["default"]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    setUsername(context.username);
+  }, [context, isActive]);
+
+  var handleUpdateUsername = function handleUpdateUsername() {
+    if (!username) {
+      alert('Username is required');
+      return;
+    }
+
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])('/ajax/portal/user', {
+      id: context.id,
+      username: username
+    }, function () {
+      return window.location.reload();
+    }, function () {
+      return alert('Something went wrong.');
+    }, 'PATCH');
+  };
+
+  var handleUpdatePassword = function handleUpdatePassword() {
+    if (!currentPassword) {
+      alert('Current password is required');
+      return;
+    }
+
+    if (!newPassword || !verifyPassword) {
+      alert('New password and verify password is required');
+      return;
+    }
+
+    if (newPassword !== verifyPassword) {
+      alert('Password does not match');
+      return;
+    }
+
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])('/ajax/portal/user/update-password', {
+      id: context.id,
+      currentPassword: currentPassword,
+      newPassword: newPassword
+    }, function (res) {
+      if (res.message) {
+        alert(res.message);
+        return;
+      }
+
+      alert('Password changed.');
+      handleClose();
+    }, function () {
+      return alert('Something went wrong.');
+    }, 'PATCH');
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    id: "AccountModal",
+    isActive: isActive,
+    handleClose: handleClose
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "section header"
+  }, "Account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "fields"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    label: 'Username',
+    value: username,
+    onChange: function onChange(e) {
+      return setUsername(e.target.value);
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    text: 'Update Username',
+    onClick: handleUpdateUsername
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "fields change-password"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Change Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    label: 'Current Password',
+    value: currentPassword,
+    onChange: function onChange(e) {
+      return setCurrentPassword(e.target.value);
+    },
+    type: 'password'
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    label: 'New Password',
+    value: newPassword,
+    onChange: function onChange(e) {
+      return setNewPassword(e.target.value);
+    },
+    type: 'password'
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    label: 'Verify Password',
+    value: verifyPassword,
+    onChange: function onChange(e) {
+      return setVerifyPassword(e.target.value);
+    },
+    type: 'password'
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    text: 'Update Password',
+    onClick: handleUpdatePassword
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AccountModal);
+
+/***/ }),
+
+/***/ "./resources/js/portal-components/account-modal/style.scss":
+/*!*****************************************************************!*\
+  !*** ./resources/js/portal-components/account-modal/style.scss ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-components/account-modal/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/portal-components/profile-modal/index.js":
 /*!***************************************************************!*\
   !*** ./resources/js/portal-components/profile-modal/index.js ***!
@@ -63014,16 +63225,14 @@ var UserContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
-/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
-/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
-/* harmony import */ var Components_file_input__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Components/file-input */ "./resources/js/components/file-input/index.js");
-/* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-components/profile-modal/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Components_file_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/file-input */ "./resources/js/components/file-input/index.js");
+/* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-components/profile-modal/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_7__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -63041,12 +63250,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 var ProfileModal = function ProfileModal(_ref) {
   var isActive = _ref.isActive,
       handleClose = _ref.handleClose;
   var reader = new FileReader();
-  var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_user__WEBPACK_IMPORTED_MODULE_7__["default"]);
+  var context = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_user__WEBPACK_IMPORTED_MODULE_6__["default"]);
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
@@ -63072,11 +63280,10 @@ var ProfileModal = function ProfileModal(_ref) {
     setLastName(context.last_name);
     setProfileImage(context.profile_image);
   }, [context, isActive]);
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {}, []);
 
   var handleUpdate = function handleUpdate() {
     var id = context.id;
-    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["post"])('/ajax/portal/user', {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])('/ajax/portal/user', {
       id: id,
       firstName: firstName,
       lastName: lastName
@@ -63093,7 +63300,7 @@ var ProfileModal = function ProfileModal(_ref) {
 
   var handleProfileImage = function handleProfileImage(e) {
     var image = e.target.files[0];
-    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["updateProfileImage"])({
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["updateProfileImage"])({
       id: context.id,
       image: image
     }, function (res) {
@@ -63105,7 +63312,7 @@ var ProfileModal = function ProfileModal(_ref) {
     reader.readAsDataURL(image);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: 'ProfileModal',
     isActive: isActive,
     handleClose: handleClose
@@ -63122,27 +63329,25 @@ var ProfileModal = function ProfileModal(_ref) {
     onClick: function onClick() {
       return document.getElementById('ChooseImage').click();
     }
-  }, "Choose Image")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_file_input__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "Choose Image")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_file_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
     id: "ChooseImage",
     accept: ".jpg, .jpeg, .png",
     onChange: handleProfileImage
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "fields"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     label: 'First Name',
     value: firstName,
     onChange: function onChange(e) {
       return setFirstName(e.target.value);
-    },
-    key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     label: 'Last Name',
     value: lastName,
     onChange: function onChange(e) {
       return setLastName(e.target.value);
-    },
-    key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: "Update Profile",
     onClick: handleUpdate
   }));
@@ -63277,10 +63482,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/logo */ "./resources/js/components/logo/index.js");
 /* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
 /* harmony import */ var PortalComponents_profile_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PortalComponents/profile-modal */ "./resources/js/portal-components/profile-modal/index.js");
-/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-components/topnav/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var PortalComponents_account_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! PortalComponents/account-modal */ "./resources/js/portal-components/account-modal/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Context_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Context/user */ "./resources/js/contexts/user.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-components/topnav/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_8__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -63288,6 +63494,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -63309,7 +63516,12 @@ var TopNav = function TopNav() {
       isProfileModalActive = _useState4[0],
       setProfileModalActive = _useState4[1];
 
-  var userContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_user__WEBPACK_IMPORTED_MODULE_6__["default"]);
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      isAccountModalActive = _useState6[0],
+      setAccountModalActive = _useState6[1];
+
+  var userContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_user__WEBPACK_IMPORTED_MODULE_7__["default"]);
 
   var handleMenu = function handleMenu(e) {
     e.nativeEvent.stopImmediatePropagation();
@@ -63354,11 +63566,17 @@ var TopNav = function TopNav() {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('items', {
       'active': isMenuActive
     })
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_6__["default"], {
     variant: 'tertiary item',
     text: 'Profile',
     onClick: function onClick() {
       return setProfileModalActive(true);
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    variant: 'tertiary item',
+    text: 'Account',
+    onClick: function onClick() {
+      return setAccountModalActive(true);
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/auth/logout",
@@ -63367,6 +63585,11 @@ var TopNav = function TopNav() {
     isActive: isProfileModalActive,
     handleClose: function handleClose() {
       return setProfileModalActive(false);
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_account_modal__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    isActive: isAccountModalActive,
+    handleClose: function handleClose() {
+      return setAccountModalActive(false);
     }
   }));
 };

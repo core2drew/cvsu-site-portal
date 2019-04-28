@@ -68,6 +68,12 @@ Route::group([
             "middleware" => "check.session"
         ]);
 
+        Route::patch("/user/update-password", [
+            "as" => "ajax.portal.update.user.password",
+            "uses" => "AJAXPortalController@updatePortalUserPassword",
+            "middleware" => "check.session"
+        ]);
+
         Route::post('/user/profile-image', [
             "as" => "ajax.portal.update.user.profile-image",
             "uses" => "AJAXPortalController@updatePortalUserProfileImage",

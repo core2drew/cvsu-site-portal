@@ -15,7 +15,7 @@ class AJAXLoginController extends Controller
       
       $user = DB::table('users')
         ->whereNull('users.deleted_at')
-        ->select("id", "username", "type", "profile_image", "first_name", "last_name")
+        ->select("id", "username", "type", "profile_image", "first_name", "last_name", "password")
         ->where('username', '=', $username)
         ->where('password', '=', $password)
         ->first();

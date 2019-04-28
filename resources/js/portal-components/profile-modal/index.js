@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from 'react'
-import Uuid from 'uuid/v4'
 import { post, updateProfileImage } from 'Utils'
 import Button from 'Components/button'
 import Modal from 'Components/modal'
@@ -24,10 +23,6 @@ const ProfileModal = ({ isActive, handleClose }) => {
     setLastName(context.last_name)
     setProfileImage(context.profile_image)
   }, [context, isActive])
-
-  useEffect(() => {
-    
-  },[])
 
   const handleUpdate = () => {
     const id = context.id
@@ -69,8 +64,8 @@ const ProfileModal = ({ isActive, handleClose }) => {
         <FileInput id='ChooseImage' accept='.jpg, .jpeg, .png' onChange={handleProfileImage}/>
       </div>
       <div className="fields">
-        <Input label={'First Name'} value={firstName} onChange={e => setFirstName(e.target.value)} key={Uuid()}/>
-        <Input label={'Last Name'} value={lastName} onChange={e => setLastName(e.target.value)} key={Uuid()}/>
+        <Input label={'First Name'} value={firstName} onChange={e => setFirstName(e.target.value)} />
+        <Input label={'Last Name'} value={lastName} onChange={e => setLastName(e.target.value)} />
       </div>
       <Button text='Update Profile' onClick={handleUpdate}/>
     </Modal>
