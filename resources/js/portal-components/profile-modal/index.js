@@ -25,6 +25,10 @@ const ProfileModal = ({ isActive, handleClose }) => {
     setProfileImage(context.profile_image)
   }, [context, isActive])
 
+  useEffect(() => {
+    
+  },[])
+
   const handleUpdate = () => {
     const id = context.id
     post(
@@ -58,7 +62,10 @@ const ProfileModal = ({ isActive, handleClose }) => {
     <Modal id={'ProfileModal'} isActive={isActive} handleClose={handleClose}>
       <h3 className="section header">Profile</h3>
       <div className="fields profile">
-        <img className="profile-image" src={displayProfileImage(profileImage)} />
+        <div className="profile-image">
+          <img src={displayProfileImage(profileImage)} />
+          <span className="hover" onClick={() => document.getElementById('ChooseImage').click()}>Choose Image</span>
+        </div>
         <FileInput id='ChooseImage' accept='.jpg, .jpeg, .png' onChange={handleProfileImage}/>
       </div>
       <div className="fields">

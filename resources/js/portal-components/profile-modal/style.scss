@@ -9,11 +9,37 @@
       flex-direction: column;
       margin-bottom: 10px;
       overflow: hidden;
+      > input[type=file] {
+        display: none;
+      }
       > .profile-image {
         border-radius: 100%;
         width: 150px;
         height: 150px;
         margin: auto;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border: 1px solid #bbb;
+      }
+      > .profile-image:hover > .hover {
+        display: flex;
+      }
+      > .profile-image > img {
+        width: 100%;
+      }
+      > .profile-image > .hover {
+        display: none;
+        background-color: rgba(0,0,0,0.5);
+        color: #fff;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
       }
       > input:nth-last-child(n + 2) {
         margin-bottom: 10px;

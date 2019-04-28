@@ -681,7 +681,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#ProfileModal > .content > .section.header {\n  font-size: 25px;\n  margin-top: 0;\n}\n#ProfileModal > .content > .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-bottom: 10px;\n  overflow: hidden;\n}\n#ProfileModal > .content > .fields > .profile-image {\n  -webkit-border-radius: 100%;\n     -moz-border-radius: 100%;\n          border-radius: 100%;\n  width: 150px;\n  height: 150px;\n  margin: auto;\n}\n#ProfileModal > .content > .fields > input:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}", ""]);
+exports.push([module.i, "#ProfileModal > .content > .section.header {\n  font-size: 25px;\n  margin-top: 0;\n}\n#ProfileModal > .content > .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-bottom: 10px;\n  overflow: hidden;\n}\n#ProfileModal > .content > .fields > input[type=file] {\n  display: none;\n}\n#ProfileModal > .content > .fields > .profile-image {\n  -webkit-border-radius: 100%;\n     -moz-border-radius: 100%;\n          border-radius: 100%;\n  width: 150px;\n  height: 150px;\n  margin: auto;\n  position: relative;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n  border: 1px solid #bbb;\n}\n#ProfileModal > .content > .fields > .profile-image:hover > .hover {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n#ProfileModal > .content > .fields > .profile-image > img {\n  width: 100%;\n}\n#ProfileModal > .content > .fields > .profile-image > .hover {\n  display: none;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: #fff;\n  bottom: 0;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n#ProfileModal > .content > .fields > input:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}", ""]);
 
 // exports
 
@@ -62885,6 +62885,7 @@ var ProfileModal = function ProfileModal(_ref) {
     setLastName(context.last_name);
     setProfileImage(context.profile_image);
   }, [context, isActive]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {}, []);
 
   var handleUpdate = function handleUpdate() {
     var id = context.id;
@@ -62925,10 +62926,16 @@ var ProfileModal = function ProfileModal(_ref) {
     className: "section header"
   }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "fields profile"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "profile-image"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "profile-image",
     src: displayProfileImage(profileImage)
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_file_input__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "hover",
+    onClick: function onClick() {
+      return document.getElementById('ChooseImage').click();
+    }
+  }, "Choose Image")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_file_input__WEBPACK_IMPORTED_MODULE_6__["default"], {
     id: "ChooseImage",
     accept: ".jpg, .jpeg, .png",
     onChange: handleProfileImage

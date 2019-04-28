@@ -1,7 +1,7 @@
 import React from 'react'
 import classname from 'classnames'
 
-const FileInput = props => {
+const FileInput = (props) => {
   return (
     <input 
       id={props.id} 
