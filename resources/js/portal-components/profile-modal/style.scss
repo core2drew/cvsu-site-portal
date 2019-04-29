@@ -8,7 +8,6 @@
     > .fields {
       display: flex;
       flex-direction: column;
-      margin-bottom: 10px;
       overflow: hidden;
       > input[type=file] {
         display: none;
@@ -45,6 +44,10 @@
       > .input:nth-last-child(n + 2) {
         margin-bottom: 15px;
       }
+    }
+
+    > .fields::nth-last-child(n + 2) {
+      margin-bottom: 10px;
     }
   }
 }

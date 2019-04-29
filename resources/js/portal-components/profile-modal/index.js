@@ -66,8 +66,8 @@ const ProfileModal = ({ isActive, handleClose }) => {
       <div className="fields">
         <Input label={'First Name'} value={firstName} onChange={e => setFirstName(e.target.value)} />
         <Input label={'Last Name'} value={lastName} onChange={e => setLastName(e.target.value)} />
+        <Button text='Update Profile' onClick={handleUpdate}/>
       </div>
-      <Button text='Update Profile' onClick={handleUpdate}/>
     </Modal>
   )
 }
