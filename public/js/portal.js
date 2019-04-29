@@ -821,6 +821,25 @@ exports.push([module.i, "#Announcements > .modal > .content > .input {\n  margin
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/course-offered/style.scss":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-routes/course-offered/style.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#CourseOffered {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n#CourseOffered > #Save {\n  -webkit-align-self: flex-start;\n      -ms-flex-item-align: start;\n          align-self: flex-start;\n  margin-top: 10px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/dean-message/style.scss":
 /*!***************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-routes/dean-message/style.scss ***!
@@ -853,6 +872,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "#Requirements {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n#Requirements > #Save {\n  -webkit-align-self: flex-start;\n      -ms-flex-item-align: start;\n          align-self: flex-start;\n  margin-top: 10px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/retention-policies/style.scss":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-routes/retention-policies/style.scss ***!
+  \*********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#RetentionPolicies {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n#RetentionPolicies > #Save {\n  -webkit-align-self: flex-start;\n      -ms-flex-item-align: start;\n          align-self: flex-start;\n  margin-top: 10px;\n}", ""]);
 
 // exports
 
@@ -64498,6 +64536,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_ckeditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/ckeditor */ "./resources/js/components/ckeditor/index.js");
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/course-offered/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_6__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -64512,8 +64552,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var CourseOffered = function CourseOffered() {
-  var url = '/ajax/portal/dean-message';
+  var url = '/ajax/portal/course-offered';
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
       _useState2 = _slicedToArray(_useState, 2),
@@ -64522,23 +64563,23 @@ var CourseOffered = function CourseOffered() {
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState4 = _slicedToArray(_useState3, 2),
-      initialMessage = _useState4[0],
-      setInitialMessage = _useState4[1];
+      initialContent = _useState4[0],
+      setInitialContent = _useState4[1];
 
   var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState6 = _slicedToArray(_useState5, 2),
-      message = _useState6[0],
-      setMessage = _useState6[1];
+      content = _useState6[0],
+      setContent = _useState6[1];
 
   var handleEditor = function handleEditor(data) {
-    setMessage(data);
+    setContent(data);
   };
 
   var handleSave = function handleSave() {
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
-      message: message
+      content: content
     }, function () {
-      return alert('Message Save');
+      return alert('Content Save');
     }, function () {
       return alert('Something went wrong');
     });
@@ -64546,8 +64587,8 @@ var CourseOffered = function CourseOffered() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
-      setMessage(res.message);
-      setInitialMessage(res.message);
+      setContent(res.content);
+      setInitialContent(res.content);
       setIsLoading(false);
     }, function () {
       alert('Something went wrong. Please try again');
@@ -64562,8 +64603,8 @@ var CourseOffered = function CourseOffered() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "Editor",
     onChange: handleEditor,
-    value: message,
-    initialValue: initialMessage
+    value: content,
+    initialValue: initialContent
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "Save",
     text: 'Save',
@@ -64572,6 +64613,36 @@ var CourseOffered = function CourseOffered() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CourseOffered);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/course-offered/style.scss":
+/*!**************************************************************!*\
+  !*** ./resources/js/portal-routes/course-offered/style.scss ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/course-offered/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -64862,6 +64933,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_ckeditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/ckeditor */ "./resources/js/components/ckeditor/index.js");
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/retention-policies/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -64876,8 +64949,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var RetentionPolicies = function RetentionPolicies() {
-  var url = '/ajax/portal/dean-message';
+  var url = '/ajax/portal/retention-policies';
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
       _useState2 = _slicedToArray(_useState, 2),
@@ -64886,23 +64960,23 @@ var RetentionPolicies = function RetentionPolicies() {
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState4 = _slicedToArray(_useState3, 2),
-      initialMessage = _useState4[0],
-      setInitialMessage = _useState4[1];
+      initialContent = _useState4[0],
+      setInitialContent = _useState4[1];
 
   var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState6 = _slicedToArray(_useState5, 2),
-      message = _useState6[0],
-      setMessage = _useState6[1];
+      content = _useState6[0],
+      setContent = _useState6[1];
 
   var handleEditor = function handleEditor(data) {
-    setMessage(data);
+    setContent(data);
   };
 
   var handleSave = function handleSave() {
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
-      message: message
+      content: content
     }, function () {
-      return alert('Message Save');
+      return alert('Content Save');
     }, function () {
       return alert('Something went wrong');
     });
@@ -64910,8 +64984,8 @@ var RetentionPolicies = function RetentionPolicies() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
-      setMessage(res.message);
-      setInitialMessage(res.message);
+      setContent(res.content);
+      setInitialContent(res.content);
       setIsLoading(false);
     }, function () {
       alert('Something went wrong. Please try again');
@@ -64926,8 +65000,8 @@ var RetentionPolicies = function RetentionPolicies() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "Editor",
     onChange: handleEditor,
-    value: message,
-    initialValue: initialMessage
+    value: content,
+    initialValue: initialContent
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "Save",
     text: 'Save',
@@ -64936,6 +65010,36 @@ var RetentionPolicies = function RetentionPolicies() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (RetentionPolicies);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/retention-policies/style.scss":
+/*!******************************************************************!*\
+  !*** ./resources/js/portal-routes/retention-policies/style.scss ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/retention-policies/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 

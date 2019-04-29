@@ -1,0 +1,8 @@
+#RetentionPolicies {
+  display: flex;
+  flex-direction: column;
+  > #Save {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+}

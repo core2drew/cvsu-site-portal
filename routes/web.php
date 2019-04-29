@@ -156,5 +156,29 @@ Route::group([
             "uses" => "AJAXPortalController@addRequirements",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
+
+        // Retention Policies 
+         Route::get("/retention-policies", [
+            "as" => "ajax.portal.retention-policies",
+            "uses" => "AJAXPortalController@getRetentionPolicies"
+        ]);
+        
+        Route::post("/retention-policies", [
+            "as" => "ajax.portal.add.retention-policies",
+            "uses" => "AJAXPortalController@addRetentionPolicies",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
+         // Course Offered 
+         Route::get("/course-offered", [
+            "as" => "ajax.portal.course-offered",
+            "uses" => "AJAXPortalController@getCourseOffered"
+        ]);
+        
+        Route::post("/course-offered", [
+            "as" => "ajax.portal.add.course-offered",
+            "uses" => "AJAXPortalController@addCourseOffered",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
     });
 });

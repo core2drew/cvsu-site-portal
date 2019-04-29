@@ -86,28 +86,6 @@
   max-height: 140px;
 }
 
-#Admission > .grid.container > #SideQuickLinks {
-  grid-row: 1;
-}
-
-#Admission > .grid.container > #SideAnnouncements {
-  grid-row: 2;
-}
-
-#Admission > .grid.container > #Requirements {
-  grid-column: 1/5;
-  grid-row: 1/4;
-}
-
-#Admission > .grid.container > #MissionVision {
-  grid-column: 1/5;
-  grid-row: 4;
-}
-
-#Admission > .grid.container > #Hymn {
-  grid-column: 1/5;
-}
-
 body {
   background-color: #F5FFF4;
 }

@@ -5,23 +5,5 @@
 @import './site/components/side-quicklinks';
 
 #Admission {
-  > .grid.container {
-    > #SideQuickLinks {
-      grid-row: 1;
-    }
-    > #SideAnnouncements {
-      grid-row: 2;
-    }
-    > #Requirements {
-      grid-column: 1 / 5;
-      grid-row: 1 / 4;
-    }
-    > #MissionVision {
-      grid-column: 1 / 5;
-      grid-row: 4;
-    }
-    > #Hymn {
-      grid-column: 1 / 5;
-    }
-  }
+  
 }

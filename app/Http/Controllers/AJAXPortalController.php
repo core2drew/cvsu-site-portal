@@ -292,4 +292,26 @@ class AJAXPortalController extends Controller
         ->insert(['content' => $request->get('content'), 'created_at' => now()]);
         return response()->json($response);
     }
+
+    public function getRetentionPolicies(Request $request) {
+        $response = DB::table('retention_policies_content')->latest()->first();
+        return response()->json($response);
+    }
+
+    public function addRetentionPolicies(Request $request) {
+        $response = DB::table('retention_policies_content')
+        ->insert(['content' => $request->get('content'), 'created_at' => now()]);
+        return response()->json($response);
+    }
+    
+    public function getCourseOffered(Request $request) {
+        $response = DB::table('course_offered_content')->latest()->first();
+        return response()->json($response);
+    }
+
+    public function addCourseOffered(Request $request) {
+        $response = DB::table('course_offered_content')
+        ->insert(['content' => $request->get('content'), 'created_at' => now()]);
+        return response()->json($response);
+    }
 }

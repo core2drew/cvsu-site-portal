@@ -3,25 +3,31 @@ import { get, post } from 'Utils'
 import CKEditor from 'Components/ckeditor'
 import Button from 'Components/button'
 import Preloader from 'Components/preloader'
+import './style.scss'
 
 const CourseOffered = () => {
-  const url = '/ajax/portal/dean-message'
+  const url = '/ajax/portal/course-offered'
   const [isLoading, setIsLoading] = useState(true)
-  const [initialMessage, setInitialMessage] = useState('')
-  const [message, setMessage] = useState('')
+  const [initialContent, setInitialContent] = useState('')
+  const [content, setContent] = useState('')
 
   const handleEditor = data => {
-    setMessage(data)
+    setContent(data)
   }
 
   const handleSave = () => {
-    post(url, {message}, () => alert('Message Save'), () => alert('Something went wrong'))
+    post(
+      url, 
+      {content}, 
+      () => alert('Content Save'), 
+      () => alert('Something went wrong')
+    )
   }
 
   useEffect(() => {
     get(url, {}, res => {
-      setMessage(res.message)
-      setInitialMessage(res.message)
+      setContent(res.content)
+      setInitialContent(res.content)
       setIsLoading(false)
     }, () => {
       alert('Something went wrong. Please try again')
@@ -32,7 +38,7 @@ const CourseOffered = () => {
   return (
     <div id="CourseOffered">
       <Preloader variant={'fixed'} isActive={isLoading}/>
-      <CKEditor id="Editor" onChange={handleEditor} value={message} initialValue={initialMessage}/>
+      <CKEditor id="Editor" onChange={handleEditor} value={content} initialValue={initialContent}/>
       <Button id="Save" text={'Save'} onClick={handleSave} />
     </div>
   )

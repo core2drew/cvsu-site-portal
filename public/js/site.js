@@ -63640,6 +63640,64 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/site-components/course-offered/index.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/site-components/course-offered/index.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var CourseOffered = function CourseOffered() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      couseOffered = _useState2[0],
+      setCourseOffered = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (!couseOffered) {
+      Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/course-offered', {}, function (res) {
+        if (res.id) {
+          setCourseOffered(res);
+        }
+      });
+    }
+  });
+  return couseOffered && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "CourseOffered",
+    className: "grid-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "section header"
+  }, "Course Offered"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content",
+    dangerouslySetInnerHTML: {
+      __html: couseOffered && couseOffered.content
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CourseOffered);
+
+/***/ }),
+
 /***/ "./resources/js/site-components/dean-message/index.js":
 /*!************************************************************!*\
   !*** ./resources/js/site-components/dean-message/index.js ***!
@@ -64142,19 +64200,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Requirements = function Requirements() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
       _useState2 = _slicedToArray(_useState, 2),
-      requirementsContent = _useState2[0],
-      setRequirementsContent = _useState2[1];
+      requirements = _useState2[0],
+      setRequirements = _useState2[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (!requirementsContent) {
+    if (!requirements) {
       Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/requirements', {}, function (res) {
         if (res.id) {
-          setRequirementsContent(res);
+          setRequirements(res);
         }
       });
     }
   });
-  return requirementsContent && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return requirements && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Requirements",
     className: "grid-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -64162,12 +64220,70 @@ var Requirements = function Requirements() {
   }, "Admission Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content",
     dangerouslySetInnerHTML: {
-      __html: requirementsContent && requirementsContent.content
+      __html: requirements && requirements.content
     }
   }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Requirements);
+
+/***/ }),
+
+/***/ "./resources/js/site-components/retention-policies/index.js":
+/*!******************************************************************!*\
+  !*** ./resources/js/site-components/retention-policies/index.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var RetentionPolicies = function RetentionPolicies() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      retentionPolicy = _useState2[0],
+      setRetentionPolicy = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (!retentionPolicy) {
+      Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/retention-policies', {}, function (res) {
+        if (res.id) {
+          setRetentionPolicy(res);
+        }
+      });
+    }
+  });
+  return retentionPolicy && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "RetentionPolicies",
+    className: "grid-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "section header"
+  }, "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content",
+    dangerouslySetInnerHTML: {
+      __html: retentionPolicy && retentionPolicy.content
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (RetentionPolicies);
 
 /***/ }),
 
@@ -64244,11 +64360,9 @@ var About = function About() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/sidebar */ "./resources/js/components/sidebar/index.js");
-/* harmony import */ var SiteComponents_requirements__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/requirements */ "./resources/js/site-components/requirements/index.js");
-/* harmony import */ var SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
-/* harmony import */ var SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/hymn */ "./resources/js/site-components/hymn/index.js");
-
+/* harmony import */ var SiteComponents_requirements__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! SiteComponents/requirements */ "./resources/js/site-components/requirements/index.js");
+/* harmony import */ var SiteComponents_retention_policies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/retention-policies */ "./resources/js/site-components/retention-policies/index.js");
+/* harmony import */ var SiteComponents_course_offered__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/course-offered */ "./resources/js/site-components/course-offered/index.js");
 
 
 
@@ -64259,36 +64373,7 @@ var Admission = function Admission() {
     id: "Admission"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    id: "SideQuickLinks",
-    title: "Quick Links",
-    links: [{
-      to: '/',
-      slug: 'Admission Requirements'
-    }, {
-      to: '/',
-      slug: 'Retention Policies'
-    }, {
-      to: '/',
-      slug: 'Course Offered'
-    }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    id: "SideAnnouncements",
-    title: "Announcements",
-    links: [{
-      to: '/',
-      slug: 'Application for Admission Exam for 1st Semester SY 2019-2020'
-    }, {
-      to: '/',
-      slug: 'Grade 11 Application for SY 2019-2020'
-    }, {
-      to: '/',
-      slug: 'Grade 7 Application for SY 2019-2020'
-    }, {
-      to: '/',
-      slug: 'Deadline of Submission of Requirements for Admission Exam'
-    }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_requirements__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_requirements__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_retention_policies__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_course_offered__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Admission);
