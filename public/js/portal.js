@@ -62504,6 +62504,7 @@ var CKEditor = function CKEditor(props) {
   var editorRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     editorRef.current = window.CKEDITOR.replace(props.id);
+    editorRef.current.config.height = props.height;
     editorRef.current.on('change', function () {
       props.onChange(editorRef.current.getData());
     });
@@ -64536,8 +64537,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_ckeditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/ckeditor */ "./resources/js/components/ckeditor/index.js");
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/course-offered/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/course-offered/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -64604,7 +64605,8 @@ var CourseOffered = function CourseOffered() {
     id: "Editor",
     onChange: handleEditor,
     value: content,
-    initialValue: initialContent
+    initialValue: initialContent,
+    height: 500
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "Save",
     text: 'Save',
@@ -64876,7 +64878,8 @@ var Requirements = function Requirements() {
     id: "Editor",
     onChange: handleEditor,
     value: content,
-    initialValue: initialContent
+    initialValue: initialContent,
+    height: 500
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "Save",
     text: 'Save',
@@ -65001,7 +65004,8 @@ var RetentionPolicies = function RetentionPolicies() {
     id: "Editor",
     onChange: handleEditor,
     value: content,
-    initialValue: initialContent
+    initialValue: initialContent,
+    height: 500
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "Save",
     text: 'Save',

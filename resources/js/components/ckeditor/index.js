@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import classname from 'classnames'
 
 const CKEditor = props => {
@@ -6,6 +6,7 @@ const CKEditor = props => {
 
   useEffect(() => {
     editorRef.current = window.CKEDITOR.replace(props.id);
+    editorRef.current.config.height = props.height;
     editorRef.current.on('change', () => {
       props.onChange(editorRef.current.getData())
     })

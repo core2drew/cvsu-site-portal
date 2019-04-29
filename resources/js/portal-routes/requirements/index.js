@@ -37,7 +37,7 @@ const Requirements = () => {
   return (
     <div id="Requirements">
       <Preloader variant={'fixed'} isActive={isLoading}/>
-      <CKEditor id="Editor" onChange={handleEditor} value={content} initialValue={initialContent}/>
+      <CKEditor id="Editor" onChange={handleEditor} value={content} initialValue={initialContent} height={500} />
       <Button id="Save" text={'Save'} onClick={handleSave} />
     </div>
   )
