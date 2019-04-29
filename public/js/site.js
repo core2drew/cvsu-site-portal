@@ -62949,20 +62949,10 @@ var MainNav = function MainNav() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
     className: "item",
     to: "/about"
-  }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "item"
-  }, "Admission", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "sub-menu"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
-    to: "/admission#Hymn",
-    className: "item"
-  }, "Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
-    to: "/admission#RetentionPolicies",
-    className: "item"
-  }, "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
-    to: "/admission#CourseOffered",
-    className: "item"
-  }, "Course Offered"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+  }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    className: "item",
+    to: "/admission"
+  }, "Admission"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
     className: "item",
     to: "/facilities"
   }, "Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {

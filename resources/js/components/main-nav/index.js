@@ -17,14 +17,14 @@ const MainNav = () => (
         <NavLink className="item" to="/about">
           About
         </NavLink>
-        <div className="item" >
+        <NavLink className="item" to="/admission">
           Admission
-          <ul className="sub-menu">
+          {/* <ul className="sub-menu">
             <NavLink to="/admission#Hymn" className="item">Requirements</NavLink>
             <NavLink to="/admission#RetentionPolicies" className="item">Retention Policies</NavLink>
             <NavLink to="/admission#CourseOffered" className="item">Course Offered</NavLink>
-          </ul>
-        </div>
+          </ul> */}
+        </NavLink>
         <NavLink className="item" to="/facilities">
           Facilities
         </NavLink>
