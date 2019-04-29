@@ -2,7 +2,7 @@ import React from 'react'
 import './style.scss'
 
 const MissionVision = () => (
-  <div id="MissionVision">
+  <div id="MissionVision" className="grid-item">
     <div id="Mission">
       <h3 className="section header">Mission</h3>
       <p className="content">

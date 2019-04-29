@@ -871,7 +871,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#MissionVision > #Mission,\n#MissionVision > #Vision {\n  background-color: #fff;\n  padding: 20px;\n}\n#MissionVision > #Mission > p,\n#MissionVision > #Vision > p {\n  line-height: 1.4;\n}", ""]);
+exports.push([module.i, "#MissionVision > #Mission > p,\n#MissionVision > #Vision > p {\n  line-height: 1.4;\n}", ""]);
 
 // exports
 
@@ -64062,7 +64062,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var MissionVision = function MissionVision() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "MissionVision"
+    id: "MissionVision",
+    className: "grid-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Mission"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -64109,6 +64110,64 @@ var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/a
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/site-components/requirements/index.js":
+/*!************************************************************!*\
+  !*** ./resources/js/site-components/requirements/index.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var Requirements = function Requirements() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      requirementsContent = _useState2[0],
+      setRequirementsContent = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (!requirementsContent) {
+      Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/requirements', {}, function (res) {
+        if (res.id) {
+          setRequirementsContent(res);
+        }
+      });
+    }
+  });
+  return requirementsContent && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Requirements",
+    className: "grid-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "section header"
+  }, "Admission Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content",
+    dangerouslySetInnerHTML: {
+      __html: requirementsContent && requirementsContent.content
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Requirements);
 
 /***/ }),
 
@@ -64186,7 +64245,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var Components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/sidebar */ "./resources/js/components/sidebar/index.js");
-/* harmony import */ var SiteComponents_history__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/history */ "./resources/js/site-components/history/index.js");
+/* harmony import */ var SiteComponents_requirements__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/requirements */ "./resources/js/site-components/requirements/index.js");
 /* harmony import */ var SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
 /* harmony import */ var SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/hymn */ "./resources/js/site-components/hymn/index.js");
 
@@ -64229,7 +64288,7 @@ var Admission = function Admission() {
       to: '/',
       slug: 'Deadline of Submission of Requirements for Admission Exam'
     }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_requirements__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Admission);

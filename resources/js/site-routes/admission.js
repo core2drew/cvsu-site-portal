@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from 'Components/sidebar'
-import History from 'SiteComponents/history';
+import Requirements from 'SiteComponents/requirements';
 import MissionVision from 'SiteComponents/mission-vision';
 import Hymn from 'SiteComponents/hymn';
 
@@ -47,7 +47,7 @@ const Admission = () => (
           }
         ]} 
       />
-      <History />
+      <Requirements />
       <MissionVision />
       <Hymn />
     </div>
