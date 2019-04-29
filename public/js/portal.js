@@ -63534,6 +63534,10 @@ var Sidebar = function Sidebar(props) {
     className: "link"
   }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     exact: true,
+    to: "/portal/academic-calendar",
+    className: "link"
+  }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
     to: "/portal/requirements",
     className: "link"
   }, "Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -63545,10 +63549,6 @@ var Sidebar = function Sidebar(props) {
     to: "/portal/course-offered",
     className: "link"
   }, "Course Offered"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    exact: true,
-    to: "/portal/academic-calendar",
-    className: "link"
-  }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     exact: true,
     to: "/portal/students",
     className: "link"
