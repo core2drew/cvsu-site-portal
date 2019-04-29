@@ -719,7 +719,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#AccountModal > .content {\n  min-width: 350px;\n}\n#AccountModal > .content > .section.header {\n  font-size: 25px;\n  margin-top: 0;\n}\n#AccountModal > .content > .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-bottom: 20px;\n}\n#AccountModal > .content > .fields > .input:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n#AccountModal > .content > .fields.change-password > strong {\n  margin-bottom: 15px;\n}", ""]);
+exports.push([module.i, "#AccountModal > .content {\n  min-width: 350px;\n}\n#AccountModal > .content > .section.header {\n  font-size: 25px;\n  margin-top: 0;\n}\n#AccountModal > .content > .fields {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n#AccountModal > .content > .fields > .input:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n#AccountModal > .content > .fields:nth-last-child(n+2) {\n  margin-bottom: 20px;\n}\n#AccountModal > .content > .fields.change-password > strong {\n  margin-bottom: 15px;\n}", ""]);
 
 // exports
 

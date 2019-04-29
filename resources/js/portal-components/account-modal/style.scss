@@ -8,10 +8,12 @@
     > .fields {
       display: flex;
       flex-direction: column;
-      margin-bottom: 20px;
       > .input:nth-last-child(n + 2) {
         margin-bottom: 10px;
       }
+    }
+    > .fields:nth-last-child(n + 2) {
+      margin-bottom: 20px;
     }
     > .fields.change-password {
       > strong {
