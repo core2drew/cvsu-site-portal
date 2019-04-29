@@ -4,7 +4,7 @@ import CKEditor from 'Components/ckeditor'
 import Button from 'Components/button'
 import Preloader from 'Components/preloader'
 
-const DeanMessage = () => {
+const RetentionPolicies = () => {
   const url = '/ajax/portal/dean-message'
   const [isLoading, setIsLoading] = useState(true)
   const [initialMessage, setInitialMessage] = useState('')
@@ -30,7 +30,7 @@ const DeanMessage = () => {
   },[])
 
   return (
-    <div id="DeanMessage">
+    <div id="RetentionPolicies">
       <Preloader variant={'fixed'} isActive={isLoading}/>
       <CKEditor id="Editor" onChange={handleEditor} value={message} initialValue={initialMessage}/>
       <Button id="Save" text={'Save'} onClick={handleSave} />
@@ -38,4 +38,4 @@ const DeanMessage = () => {
   )
 }
 
-export default DeanMessage
+export default RetentionPolicies

@@ -8,6 +8,7 @@ import Context from 'Context/academic-calendar'
 import Reducer, { initialState } from 'Reducers/academic-calendar'
 import FormModal from './form-modal'
 import TableBody from './tablebody'
+import './style.scss'
 
 const AcademicCalendar = () => {
   const url = '/ajax/portal/academic-calendar'

@@ -783,6 +783,63 @@ exports.push([module.i, "#TopNav {\n  background-color: #fff;\n  position: -webk
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/academic-calendar/style.scss":
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-routes/academic-calendar/style.scss ***!
+  \********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#AcademicCalendar > .modal > .content > input {\n  margin-bottom: 10px;\n}\n#AcademicCalendar > .modal > .content > button {\n  margin-top: 10px;\n}\n#AcademicCalendar > .modal > .content > .date-pickers {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 10px;\n}\n#AcademicCalendar > .modal > .content > .date-pickers > .date-picker {\n  width: 100%;\n}\n#AcademicCalendar > .modal > .content > .date-pickers > .date-picker:nth-of-type(1) {\n  margin-right: 10px;\n}\n#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(2) {\n  width: 17%;\n}\n#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(3),\n#AcademicCalendar > .table-container > table > thead > tr > th:nth-child(4) {\n  width: 14%;\n}\n#AcademicCalendar > .table-container > table > thead > tr > th:last-child {\n  width: 15%;\n  text-align: center;\n}\n#AcademicCalendar > .table-container > table > tbody > tr > td.actions {\n  text-align: center;\n}\n#AcademicCalendar > .table-container > table > tbody > tr > td.actions > .update {\n  margin-right: 10px;\n}\n#AcademicCalendar > .table-container > table > tbody > tr > td.actions > .update,\n#AcademicCalendar > .table-container > table > tbody > tr > td.actions > .delete {\n  font-size: 12px;\n  min-width: 70px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/announcements/style.scss":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-routes/announcements/style.scss ***!
+  \****************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#Announcements > .modal > .content > .input {\n  margin-bottom: 10px;\n}\n#Announcements > .modal > .content > button {\n  margin-top: 10px;\n}\n#Announcements > .table-container > table > thead > tr > th:nth-child(2),\n#Announcements > .table-container > table > thead > tr > th:nth-child(3) {\n  width: 14%;\n}\n#Announcements > .table-container > table > thead > tr > th:last-child {\n  width: 15%;\n  text-align: center;\n}\n#Announcements > .table-container > table > tbody > tr > td.actions {\n  text-align: center;\n}\n#Announcements > .table-container > table > tbody > tr > td.actions > .update {\n  margin-right: 10px;\n}\n#Announcements > .table-container > table > tbody > tr > td.actions > .update,\n#Announcements > .table-container > table > tbody > tr > td.actions > .delete {\n  font-size: 12px;\n  min-width: 70px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/dean-message/style.scss":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-routes/dean-message/style.scss ***!
+  \***************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#DeanMessage > #Save {\n  margin-top: 10px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/lib/css-base.js":
 /*!*************************************************!*\
   !*** ./node_modules/css-loader/lib/css-base.js ***!
@@ -57174,7 +57231,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63419,6 +63476,18 @@ var Sidebar = function Sidebar(props) {
     className: "link"
   }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     exact: true,
+    to: "/portal/requirements",
+    className: "link"
+  }, "Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    to: "/portal/retention-policies",
+    className: "link"
+  }, "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    to: "/portal/course-offered",
+    className: "link"
+  }, "Course Offered"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
     to: "/portal/academic-calendar",
     className: "link"
   }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -63795,6 +63864,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Reducers/academic-calendar */ "./resources/js/reducers/academic-calendar.js");
 /* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/academic-calendar/form-modal.js");
 /* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/academic-calendar/tablebody.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/academic-calendar/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_10__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -63802,6 +63873,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -63944,6 +64016,36 @@ var AcademicCalendar = function AcademicCalendar() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AcademicCalendar);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/academic-calendar/style.scss":
+/*!*****************************************************************!*\
+  !*** ./resources/js/portal-routes/academic-calendar/style.scss ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/academic-calendar/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -64151,6 +64253,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Reducers_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Reducers/announcements */ "./resources/js/reducers/announcements.js");
 /* harmony import */ var Context_announcements__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Context/announcements */ "./resources/js/contexts/announcements.js");
 /* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/announcements/form-modal.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/announcements/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_9__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -64158,6 +64262,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -64276,6 +64381,36 @@ var Announcements = function Announcements() {
 
 /***/ }),
 
+/***/ "./resources/js/portal-routes/announcements/style.scss":
+/*!*************************************************************!*\
+  !*** ./resources/js/portal-routes/announcements/style.scss ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/announcements/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/portal-routes/announcements/tablebody.js":
 /*!***************************************************************!*\
   !*** ./resources/js/portal-routes/announcements/tablebody.js ***!
@@ -64329,10 +64464,10 @@ var TableBody = function TableBody(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/portal-routes/dean-message.js":
-/*!****************************************************!*\
-  !*** ./resources/js/portal-routes/dean-message.js ***!
-  \****************************************************/
+/***/ "./resources/js/portal-routes/dean-message/index.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/portal-routes/dean-message/index.js ***!
+  \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -64344,6 +64479,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_ckeditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/ckeditor */ "./resources/js/components/ckeditor/index.js");
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/dean-message/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -64351,6 +64488,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -64418,6 +64556,36 @@ var DeanMessage = function DeanMessage() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DeanMessage);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/dean-message/style.scss":
+/*!************************************************************!*\
+  !*** ./resources/js/portal-routes/dean-message/style.scss ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/dean-message/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -64505,7 +64673,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var PortalComponents_topnav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! PortalComponents/topnav */ "./resources/js/portal-components/topnav/index.js");
 /* harmony import */ var PortalComponents_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PortalComponents/sidebar */ "./resources/js/portal-components/sidebar/index.js");
-/* harmony import */ var PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! PortalRoutes/dean-message */ "./resources/js/portal-routes/dean-message.js");
+/* harmony import */ var PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! PortalRoutes/dean-message */ "./resources/js/portal-routes/dean-message/index.js");
 /* harmony import */ var PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! PortalRoutes/announcements */ "./resources/js/portal-routes/announcements/index.js");
 /* harmony import */ var PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! PortalRoutes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
 /* harmony import */ var PortalRoutes_students__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! PortalRoutes/students */ "./resources/js/portal-routes/students.js");

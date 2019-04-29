@@ -7,6 +7,7 @@ import TableBody from './tablebody'
 import AnnouncementReducer, { initialState } from 'Reducers/announcements'
 import AnnouncementsContext from 'Context/announcements'
 import FormModal from './form-modal'
+import './style.scss'
 
 const Announcements = () => {
   const url = '/ajax/portal/announcements'
