@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { get } from 'Utils'
+import UserContext from 'Context/user'
 import TopNav from 'PortalComponents/topnav'
 import Sidebar from 'PortalComponents/sidebar'
 import DeanMessage from 'PortalRoutes/dean-message'
@@ -9,8 +11,9 @@ import AcademicCalendar from 'PortalRoutes/academic-calendar'
 import Students from 'PortalRoutes/students'
 import Users from 'PortalRoutes/users'
 import NoMatch from 'PortalRoutes/nomatch'
-import UserContext from 'Context/user'
-import { get } from 'Utils'
+import Requirements from 'PortalRoutes/requirements';
+import RetentionPolicies from 'PortalRoutes/retention-policies';
+import CourseOffered from 'PortalRoutes/course-offered';
 
 const App = () => {
   const [user, setUser] = useState({
@@ -36,6 +39,9 @@ const App = () => {
               <Route path="/portal" exact component={DeanMessage} />
               <Route path="/portal/announcements" exact component={Announcements} />
               <Route path="/portal/academic-calendar" exact component={AcademicCalendar} />
+              <Route path="/portal/requirements" exact component={Requirements} />
+              <Route path="/portal/retention-policies" exact component={RetentionPolicies} />
+              <Route path="/portal/course-offered" exact component={CourseOffered} />
               <Route path="/portal/students" exact component={Students} />
               <Route path="/portal/users" exact component={Users} />
               <Route component={NoMatch} />

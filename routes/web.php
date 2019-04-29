@@ -22,7 +22,7 @@ Route::group([
 ], function() {
     Route::get("/{route?}", [
         "uses" => "PortalController@index",
-    ])->where('route', '(dean-message|announcements|academic-calendar|students|users)');
+    ])->where('route', '(dean-message|announcements|academic-calendar|requirements|retention-policies|course-offered|students|users)');
 });
 
 Route::group([
