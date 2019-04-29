@@ -57608,7 +57608,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62949,16 +62949,18 @@ var MainNav = function MainNav() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
     className: "item",
     to: "/about"
-  }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
-    className: "item",
-    to: "/admission"
+  }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "item"
   }, "Admission", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "sub-menu"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    to: "/admission#Hymn",
     className: "item"
-  }, "Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    to: "/admission#RetentionPolicies",
     className: "item"
-  }, "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    to: "/admission#CourseOffered",
     className: "item"
   }, "Course Offered"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
     className: "item",
@@ -64172,6 +64174,68 @@ var About = function About() {
 
 /***/ }),
 
+/***/ "./resources/js/site-routes/admission.js":
+/*!***********************************************!*\
+  !*** ./resources/js/site-routes/admission.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/sidebar */ "./resources/js/components/sidebar/index.js");
+/* harmony import */ var SiteComponents_history__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/history */ "./resources/js/site-components/history/index.js");
+/* harmony import */ var SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
+/* harmony import */ var SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/hymn */ "./resources/js/site-components/hymn/index.js");
+
+
+
+
+
+
+var Admission = function Admission() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Admission"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container grid"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    id: "SideQuickLinks",
+    title: "Quick Links",
+    links: [{
+      to: '/',
+      slug: 'Admission Requirements'
+    }, {
+      to: '/',
+      slug: 'Retention Policies'
+    }, {
+      to: '/',
+      slug: 'Course Offered'
+    }]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    id: "SideAnnouncements",
+    title: "Announcements",
+    links: [{
+      to: '/',
+      slug: 'Application for Admission Exam for 1st Semester SY 2019-2020'
+    }, {
+      to: '/',
+      slug: 'Grade 11 Application for SY 2019-2020'
+    }, {
+      to: '/',
+      slug: 'Grade 7 Application for SY 2019-2020'
+    }, {
+      to: '/',
+      slug: 'Deadline of Submission of Requirements for Admission Exam'
+    }]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Admission);
+
+/***/ }),
+
 /***/ "./resources/js/site-routes/facilities.js":
 /*!************************************************!*\
   !*** ./resources/js/site-routes/facilities.js ***!
@@ -64301,9 +64365,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var SiteRoutes_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteRoutes/home */ "./resources/js/site-routes/home.js");
 /* harmony import */ var SiteRoutes_about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteRoutes/about */ "./resources/js/site-routes/about.js");
 /* harmony import */ var SiteRoutes_facilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! SiteRoutes/facilities */ "./resources/js/site-routes/facilities.js");
-/* harmony import */ var Components_top_nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Components/top-nav */ "./resources/js/components/top-nav/index.js");
-/* harmony import */ var Components_main_nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Components/main-nav */ "./resources/js/components/main-nav/index.js");
-/* harmony import */ var Components_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! Components/footer */ "./resources/js/components/footer/index.js");
+/* harmony import */ var SiteRoutes_admission__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! SiteRoutes/admission */ "./resources/js/site-routes/admission.js");
+/* harmony import */ var Components_top_nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Components/top-nav */ "./resources/js/components/top-nav/index.js");
+/* harmony import */ var Components_main_nav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! Components/main-nav */ "./resources/js/components/main-nav/index.js");
+/* harmony import */ var Components_footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! Components/footer */ "./resources/js/components/footer/index.js");
+
 
 
 
@@ -64315,7 +64381,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_top_nav__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_main_nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_top_nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_main_nav__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/",
     exact: true,
     component: SiteRoutes_home__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -64323,9 +64389,12 @@ var App = function App() {
     path: "/about",
     component: SiteRoutes_about__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/admission",
+    component: SiteRoutes_admission__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/facilities",
     component: SiteRoutes_facilities__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_footer__WEBPACK_IMPORTED_MODULE_8__["default"], null));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_footer__WEBPACK_IMPORTED_MODULE_9__["default"], null));
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('App'));

@@ -281,4 +281,15 @@ class AJAXPortalController extends Controller
 
         return abort(500);
     }
+
+    public function getRequirements(Request $request) {
+        $response = DB::table('requirements_content')->latest()->first();
+        return response()->json($response);
+    }
+
+    public function addRequirements(Request $request) {
+        $response = DB::table('requirements_content')
+        ->insert(['content' => $request->get('content'), 'created_at' => now()]);
+        return response()->json($response);
+    }
 }

@@ -144,5 +144,17 @@ Route::group([
             "uses" => "AJAXPortalController@deleteAcademicCalendar",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
+
+        // Requirements 
+        Route::get("/requirements", [
+            "as" => "ajax.portal.requirements",
+            "uses" => "AJAXPortalController@getRequirements"
+        ]);
+        
+        Route::post("/requirements", [
+            "as" => "ajax.portal.add.requirements",
+            "uses" => "AJAXPortalController@addRequirements",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
     });
 });

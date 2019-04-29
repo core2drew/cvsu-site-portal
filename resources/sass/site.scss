@@ -1,7 +1,8 @@
-@import "./variables";
-@import './site/home';
-@import './site/about';
-@import './site/facilities';
+@import "~Sass/variables";
+@import '~Sass/site/home';
+@import '~Sass/site/about';
+@import '~Sass/site/facilities';
+@import '~Sass/site/admission';
 
 body {
   background-color: $green-3;
@@ -25,7 +26,7 @@ body {
   }
 }
 
-#Home, #About, #Facilities {
+#Home, #About, #Facilities, #Admission {
   height: 100%;
   .section.header {
     font-size: 20px;

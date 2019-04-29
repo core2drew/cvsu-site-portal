@@ -4,20 +4,24 @@
 @import './site/components/side-announcements';
 @import './site/components/side-quicklinks';
 
-#Facilities {
+#Admission {
   > .grid.container {
-    grid-template-columns: 650px auto;
     > #SideQuickLinks {
-      grid-column: 3
+      grid-row: 1;
     }
     > #SideAnnouncements {
       grid-row: 2;
     }
-    > #UniversityFacilities {
-      max-width: 628px;
-      width: 100%;
-      grid-column: 1 / 3;
+    > #History {
+      grid-column: 1 / 5;
       grid-row: 1 / 4;
+    }
+    > #MissionVision {
+      grid-column: 1 / 5;
+      grid-row: 4;
+    }
+    > #Hymn {
+      grid-column: 1 / 5;
     }
   }
 }
