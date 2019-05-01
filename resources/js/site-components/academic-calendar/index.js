@@ -9,14 +9,16 @@ const AcademicCalendar = () => {
   const url = '/ajax/portal/academic-calendar'
   const [activities, setActivities] = useState([])
   const [currentMonth, setCurrentMonth] = useState(moment().format('M')) 
+  const [currentYear, setCurrentYear] = useState(moment().format('YYYY')) 
   const handleOnChange = date => {
     setCurrentMonth(moment(date).format('M'))
+    setCurrentYear(moment(date).format('YYYY'))
   }
   
   useEffect(() => {
     get(
       url, 
-      { isFromHomePage: true, currentMonth }, 
+      { isFromHomePage: true, currentMonth, currentYear }, 
       res => {
         setActivities(res)
       }, 
@@ -24,7 +26,7 @@ const AcademicCalendar = () => {
         alert('Something went wrong. Please try again')
       }
     )
-  }, [currentMonth])
+  }, [currentMonth, currentYear])
 
   return (
     <div id="AcademicCalendar" className="section">

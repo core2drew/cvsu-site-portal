@@ -196,9 +196,11 @@ class AJAXPortalController extends Controller
 
         if($isFromHomePage) {
             $currentMonth = $request->get('currentMonth');
+            $currentYear = $request->get('currentYear');
             $response = DB::table('academic_calendar')
             ->whereNull('academic_calendar.deleted_at')
             ->whereMonth ('from', '=', $currentMonth)
+            ->whereYear ('from', '=', $currentYear)
             ->orderBy('to', 'asc')
             ->get();
         } else {

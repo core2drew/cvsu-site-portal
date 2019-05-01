@@ -63372,20 +63372,27 @@ var AcademicCalendar = function AcademicCalendar() {
       currentMonth = _useState4[0],
       setCurrentMonth = _useState4[1];
 
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(moment__WEBPACK_IMPORTED_MODULE_1___default()().format('YYYY')),
+      _useState6 = _slicedToArray(_useState5, 2),
+      currentYear = _useState6[0],
+      setCurrentYear = _useState6[1];
+
   var handleOnChange = function handleOnChange(date) {
     setCurrentMonth(moment__WEBPACK_IMPORTED_MODULE_1___default()(date).format('M'));
+    setCurrentYear(moment__WEBPACK_IMPORTED_MODULE_1___default()(date).format('YYYY'));
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])(url, {
       isFromHomePage: true,
-      currentMonth: currentMonth
+      currentMonth: currentMonth,
+      currentYear: currentYear
     }, function (res) {
       setActivities(res);
     }, function () {
       alert('Something went wrong. Please try again');
     });
-  }, [currentMonth]);
+  }, [currentMonth, currentYear]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "AcademicCalendar",
     className: "section"
