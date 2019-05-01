@@ -13,7 +13,7 @@
 Route::get('/{route?}', [
     "as" => "site",
     "uses" => "SiteController@index"
-])->where('route', '(about|admission|facilities|contact)');
+])->where('route', '(about|admission|facilities|contact-us)');
 
 Route::group([
     "as" => "portal",

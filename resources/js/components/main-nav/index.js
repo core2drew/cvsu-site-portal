@@ -28,9 +28,9 @@ const MainNav = () => (
         <NavLink className="item" to="/facilities">
           Facilities
         </NavLink>
-        <li className="item">
-          Contact
-        </li>
+        <NavLink className="item" to="/contact-us">
+          Contact Us
+        </NavLink>
       </ul>
     </div>
   </div>

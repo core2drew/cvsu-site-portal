@@ -27,63 +27,53 @@
   max-height: 140px;
 }
 
-#About > .grid.container > #SideQuickLinks {
-  grid-row: 1;
+#ContactUs > .container > #ContactInfo {
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 15px;
+  background-color: #fff;
 }
 
-#About > .grid.container > #SideAnnouncements {
-  grid-row: 2;
+#ContactUs > .container > #ContactInfo > .section.header {
+  grid-column: 1/6;
 }
 
-#About > .grid.container > #History {
-  grid-column: 1/5;
-  grid-row: 1/4;
+#ContactUs > .container > #ContactInfo > .contact-form {
+  grid-column: 1/4;
 }
 
-#About > .grid.container > #MissionVision {
-  grid-column: 1/5;
-  grid-row: 4;
+#ContactUs > .container > #ContactInfo > .contact-form > .input,
+#ContactUs > .container > #ContactInfo > .contact-form > .textarea {
+  margin-bottom: 15px;
 }
 
-#About > .grid.container > #Hymn {
-  grid-column: 1/5;
+#ContactUs > .container > #ContactInfo > .contact-details {
+  grid-column: 4/6;
+  margin-bottom: 20px;
 }
 
-#SideAnnouncements {
-  top: 309px;
+#ContactUs > .container > #ContactInfo > .contact-details > .detail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#SideQuickLinks {
-  top: 117px;
-  max-height: 140px;
+#ContactUs > .container > #ContactInfo > .contact-details > .detail:nth-last-child(n+2) {
+  margin-bottom: 25px;
 }
 
-#Facilities > .grid.container {
-  grid-template-columns: 650px auto;
-}
-
-#Facilities > .grid.container > #SideQuickLinks {
-  grid-column: 3;
-}
-
-#Facilities > .grid.container > #SideAnnouncements {
-  grid-row: 2;
-}
-
-#Facilities > .grid.container > #UniversityFacilities {
-  max-width: 628px;
-  width: 100%;
-  grid-column: 1/3;
-  grid-row: 1/4;
-}
-
-#SideAnnouncements {
-  top: 309px;
-}
-
-#SideQuickLinks {
-  top: 117px;
-  max-height: 140px;
+#ContactUs > .container > #ContactInfo > .contact-details > .detail > i[class*=icon] {
+  font-size: 23px;
+  min-width: 23px;
+  margin-right: 10px;
+  color: #2D8548;
 }
 
 body {
@@ -93,6 +83,13 @@ body {
 #App {
   position: relative;
   min-height: 100%;
+  height: 100%;
+}
+
+#App > .wrapper {
+  min-height: -webkit-calc(100% - 128px);
+  min-height: -moz-calc(100% - 128px);
+  min-height: calc(100% - 128px);
 }
 
 .container {
@@ -111,21 +108,24 @@ body {
 #Home,
 #About,
 #Facilities,
-#Admission {
+#Admission,
+#ContactUs {
   height: 100%;
 }
 
 #Home .section.header,
 #About .section.header,
 #Facilities .section.header,
-#Admission .section.header {
+#Admission .section.header,
+#ContactUs .section.header {
   font-size: 20px;
 }
 
 #Home .section.header:after,
 #About .section.header:after,
 #Facilities .section.header:after,
-#Admission .section.header:after {
+#Admission .section.header:after,
+#ContactUs .section.header:after {
   display: block;
   content: "";
   border-bottom: solid 3px #329B58;
@@ -133,19 +133,28 @@ body {
   margin-top: 8px;
 }
 
+#Home > .container,
+#About > .container,
+#Facilities > .container,
+#Admission > .container,
+#ContactUs > .container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 #Home > .grid.container,
 #About > .grid.container,
 #Facilities > .grid.container,
-#Admission > .grid.container {
-  margin-top: 20px;
-  margin-bottom: 20px;
+#Admission > .grid.container,
+#ContactUs > .grid.container {
   grid-gap: 15px;
 }
 
 #Home > .grid.container > .grid-item,
 #About > .grid.container > .grid-item,
 #Facilities > .grid.container > .grid-item,
-#Admission > .grid.container > .grid-item {
+#Admission > .grid.container > .grid-item,
+#ContactUs > .grid.container > .grid-item {
   background-color: #fff;
   padding: 20px;
 }

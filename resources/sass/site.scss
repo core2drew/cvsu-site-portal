@@ -3,6 +3,7 @@
 @import '~Sass/site/about';
 @import '~Sass/site/facilities';
 @import '~Sass/site/admission';
+@import '~Sass/site/contactus';
 
 body {
   background-color: $green-3;
@@ -11,6 +12,11 @@ body {
 #App {
   position: relative;
   min-height: 100%;
+  height: 100%;
+
+  > .wrapper {
+    min-height: calc(100% - 128px);
+  }
 }
 
 .container {
@@ -26,7 +32,7 @@ body {
   }
 }
 
-#Home, #About, #Facilities, #Admission {
+#Home, #About, #Facilities, #Admission, #ContactUs {
   height: 100%;
   .section.header {
     font-size: 20px;
@@ -38,11 +44,12 @@ body {
       margin-top: 8px;
     }
   }
-  > .grid.container {
+  > .container {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  > .grid.container {
     grid-gap: 15px;
-
     > .grid-item {
       background-color: #fff;
       padding: 20px;

@@ -612,6 +612,25 @@ exports.push([module.i, "#Footer {\n  width: 100%;\n  background-color: #2D8548;
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/input/style.scss":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/input/style.scss ***!
+  \*****************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".input {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.input > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.input input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/main-nav/style.scss":
 /*!********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/main-nav/style.scss ***!
@@ -650,10 +669,10 @@ exports.push([module.i, ".modal {\n  position: fixed;\n  width: 100%;\n  height:
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/sidebar/style.scss":
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/sidebar/style.scss ***!
-  \*******************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/textarea/style.scss":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/textarea/style.scss ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -662,7 +681,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".sidebar {\n  position: -webkit-sticky;\n  position: sticky;\n  background-color: #fff;\n  padding: 20px;\n}\n.sidebar > .links > .link {\n  text-decoration: none;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-bottom: 15px;\n}\n.sidebar > .links > .link:visited {\n  color: inherit;\n}\n.sidebar > .links > .link > i[class*=icon] {\n  font-size: 8px;\n  margin-right: 8px;\n}", ""]);
+exports.push([module.i, ".textarea {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.textarea > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.textarea textarea {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  resize: none;\n}", ""]);
 
 // exports
 
@@ -62895,6 +62914,81 @@ Icon.defaultProps = {
 
 /***/ }),
 
+/***/ "./resources/js/components/input/index.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/input/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/input/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var Input = function Input(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: props.id,
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("input", props.variant)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "label"
+  }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: props.type,
+    placeholder: props.placeholder,
+    onChange: props.onChange,
+    value: props.value
+  }));
+};
+
+Input.defaultProps = {
+  id: null,
+  variant: '',
+  placeholder: '',
+  value: '',
+  type: 'text',
+  label: ''
+};
+/* harmony default export */ __webpack_exports__["default"] = (Input);
+
+/***/ }),
+
+/***/ "./resources/js/components/input/style.scss":
+/*!**************************************************!*\
+  !*** ./resources/js/components/input/style.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/input/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/logo/index.js":
 /*!***********************************************!*\
   !*** ./resources/js/components/logo/index.js ***!
@@ -62955,9 +63049,10 @@ var MainNav = function MainNav() {
   }, "Admission"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
     className: "item",
     to: "/facilities"
-  }, "Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "item"
-  }, "Contact"))));
+  }, "Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    className: "item",
+    to: "/contact-us"
+  }, "Contact Us"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MainNav);
@@ -63072,10 +63167,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/sidebar/index.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/sidebar/index.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/textarea/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/textarea/index.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -63083,58 +63178,47 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/sidebar/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/textarea/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
 
-
-
-var Sidebar = function Sidebar(props) {
+var Textarea = function Textarea(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: props.id,
-    className: "sidebar ".concat(props.variant)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "section header"
-  }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "links"
-  }, props.links.map(function (link) {
-    var to = link.to,
-        slug = link.slug;
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-      key: uuid_v4__WEBPACK_IMPORTED_MODULE_2___default()(),
-      className: "link",
-      to: to
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      icon: "caret-right"
-    }), slug);
-  })));
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("textarea", props.variant)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "label"
+  }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    placeholder: props.placeholder,
+    onChange: props.onChange,
+    value: props.value,
+    rows: props.rows
+  }));
 };
 
-Sidebar.defaultProps = {
-  id: '',
+Textarea.defaultProps = {
+  id: null,
   variant: '',
-  title: '',
-  links: []
+  placeholder: '',
+  value: ''
 };
-/* harmony default export */ __webpack_exports__["default"] = (Sidebar);
+/* harmony default export */ __webpack_exports__["default"] = (Textarea);
 
 /***/ }),
 
-/***/ "./resources/js/components/sidebar/style.scss":
-/*!****************************************************!*\
-  !*** ./resources/js/components/sidebar/style.scss ***!
-  \****************************************************/
+/***/ "./resources/js/components/textarea/style.scss":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/textarea/style.scss ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/sidebar/style.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/textarea/style.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -64295,11 +64379,9 @@ var RetentionPolicies = function RetentionPolicies() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/sidebar */ "./resources/js/components/sidebar/index.js");
-/* harmony import */ var SiteComponents_history__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/history */ "./resources/js/site-components/history/index.js");
-/* harmony import */ var SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
-/* harmony import */ var SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/hymn */ "./resources/js/site-components/hymn/index.js");
-
+/* harmony import */ var SiteComponents_history__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! SiteComponents/history */ "./resources/js/site-components/history/index.js");
+/* harmony import */ var SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
+/* harmony import */ var SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/hymn */ "./resources/js/site-components/hymn/index.js");
 
 
 
@@ -64310,36 +64392,7 @@ var About = function About() {
     id: "About"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    id: "SideQuickLinks",
-    title: "Quick Links",
-    links: [{
-      to: '/',
-      slug: 'Admission Requirements'
-    }, {
-      to: '/',
-      slug: 'Retention Policies'
-    }, {
-      to: '/',
-      slug: 'Course Offered'
-    }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    id: "SideAnnouncements",
-    title: "Announcements",
-    links: [{
-      to: '/',
-      slug: 'Application for Admission Exam for 1st Semester SY 2019-2020'
-    }, {
-      to: '/',
-      slug: 'Grade 11 Application for SY 2019-2020'
-    }, {
-      to: '/',
-      slug: 'Grade 7 Application for SY 2019-2020'
-    }, {
-      to: '/',
-      slug: 'Deadline of Submission of Requirements for Admission Exam'
-    }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -64377,6 +64430,67 @@ var Admission = function Admission() {
 
 /***/ }),
 
+/***/ "./resources/js/site-routes/contactus.js":
+/*!***********************************************!*\
+  !*** ./resources/js/site-routes/contactus.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Components_textarea__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/textarea */ "./resources/js/components/textarea/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
+
+
+
+
+
+
+var ContactUs = function ContactUs() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "ContactUs"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "ContactInfo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "section header"
+  }, "Contact Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "contact-details"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "detail"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    icon: 'map-marker'
+  }), "Pulo II, Dalahican, Cavite City"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "detail"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    icon: 'close-envelope'
+  }), "info@cvsu-cc.com"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "detail"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    icon: 'phone'
+  }), "+63 (46) 481-1990")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "contact-form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    label: 'Full name'
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    label: 'Email Address'
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_textarea__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    label: 'Inquiry / Message'
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: 'Send'
+  })))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ContactUs);
+
+/***/ }),
+
 /***/ "./resources/js/site-routes/facilities.js":
 /*!************************************************!*\
   !*** ./resources/js/site-routes/facilities.js ***!
@@ -64388,9 +64502,7 @@ var Admission = function Admission() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/sidebar */ "./resources/js/components/sidebar/index.js");
-/* harmony import */ var SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/facility */ "./resources/js/site-components/facility/index.js");
-
+/* harmony import */ var SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! SiteComponents/facility */ "./resources/js/site-components/facility/index.js");
 
 
 
@@ -64399,53 +64511,24 @@ var Facilities = function Facilities() {
     id: "Facilities"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    id: "SideQuickLinks",
-    title: "Quick Links",
-    links: [{
-      to: '/',
-      slug: 'Admission Requirements'
-    }, {
-      to: '/',
-      slug: 'Retention Policies'
-    }, {
-      to: '/',
-      slug: 'Course Offered'
-    }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    id: "SideAnnouncements",
-    title: "Announcements",
-    links: [{
-      to: '/',
-      slug: 'Application for Admission Exam for 1st Semester SY 2019-2020'
-    }, {
-      to: '/',
-      slug: 'Grade 11 Application for SY 2019-2020'
-    }, {
-      to: '/',
-      slug: 'Grade 7 Application for SY 2019-2020'
-    }, {
-      to: '/',
-      slug: 'Deadline of Submission of Requirements for Admission Exam'
-    }]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "UniversityFacilities",
     className: "grid-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "section header"
-  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Canteen",
     backgroundImage: "/images/facilities/canteen/front.jpg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
@@ -64506,10 +64589,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var SiteRoutes_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteRoutes/home */ "./resources/js/site-routes/home.js");
 /* harmony import */ var SiteRoutes_about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteRoutes/about */ "./resources/js/site-routes/about.js");
 /* harmony import */ var SiteRoutes_facilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! SiteRoutes/facilities */ "./resources/js/site-routes/facilities.js");
-/* harmony import */ var SiteRoutes_admission__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! SiteRoutes/admission */ "./resources/js/site-routes/admission.js");
-/* harmony import */ var Components_top_nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Components/top-nav */ "./resources/js/components/top-nav/index.js");
-/* harmony import */ var Components_main_nav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! Components/main-nav */ "./resources/js/components/main-nav/index.js");
-/* harmony import */ var Components_footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! Components/footer */ "./resources/js/components/footer/index.js");
+/* harmony import */ var SiteRoutes_contactus__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! SiteRoutes/contactus */ "./resources/js/site-routes/contactus.js");
+/* harmony import */ var SiteRoutes_admission__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! SiteRoutes/admission */ "./resources/js/site-routes/admission.js");
+/* harmony import */ var Components_top_nav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! Components/top-nav */ "./resources/js/components/top-nav/index.js");
+/* harmony import */ var Components_main_nav__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! Components/main-nav */ "./resources/js/components/main-nav/index.js");
+/* harmony import */ var Components_footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! Components/footer */ "./resources/js/components/footer/index.js");
+
 
 
 
@@ -64522,7 +64607,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_top_nav__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_main_nav__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_top_nav__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_main_nav__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/",
     exact: true,
     component: SiteRoutes_home__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -64531,11 +64618,14 @@ var App = function App() {
     component: SiteRoutes_about__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/admission",
-    component: SiteRoutes_admission__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: SiteRoutes_admission__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/facilities",
     component: SiteRoutes_facilities__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_footer__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/contact-us",
+    component: SiteRoutes_contactus__WEBPACK_IMPORTED_MODULE_6__["default"]
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_footer__WEBPACK_IMPORTED_MODULE_10__["default"], null));
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('App'));
