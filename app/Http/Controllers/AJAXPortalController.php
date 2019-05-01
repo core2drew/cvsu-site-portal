@@ -17,7 +17,7 @@ class AJAXPortalController extends Controller
 
     function updateUserSession($id) {
         $response = DB::table('users')
-        ->select("id", "profile_image", "first_name", "last_name", "username", "type", "password")
+        ->select("id", "profile_image", "first_name", "last_name", "username", "type")
         ->where('id', '=', $id)
         ->first();
         Session::put('user', $response);
@@ -53,15 +53,17 @@ class AJAXPortalController extends Controller
 
     public function updatePortalUserPassword(Request $request) {
         $id = $request->get('id');
-        $sessionPassword = Session::get('user')->password;
+        $response = DB::table('users')->select('password')->where('id', '=', $id)->first();
+        $oldPassword = Crypt::decrypt($response->password);
+
         $currentPassword = $request->get('currentPassword');
         $newPassword = $request->get('newPassword');
 
-        if($currentPassword === $sessionPassword) {
+        if($currentPassword === $oldPassword) {
             $response = DB::table('users')
             ->where('id', '=', $id)
             ->update([
-                'password' => $newPassword,
+                'password' => Crypt::encrypt($newPassword),
                 'updated_at' => now()
             ]);
 

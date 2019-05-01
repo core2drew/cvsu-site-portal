@@ -33,6 +33,12 @@ const AccountModal = ({ isActive, handleClose }) => {
     )
   }
 
+  const clearPasswordFields = () => {
+    setCurrentPassword('')
+    setNewPassword('')
+    setVerifyPassword('')
+  }
+
   const handleUpdatePassword = () => {
     if(!currentPassword) {
       alert('Current password is required')
@@ -62,6 +68,7 @@ const AccountModal = ({ isActive, handleClose }) => {
         }
         alert('Password changed.')
         handleClose()
+        clearPasswordFields()
       },
       () => alert('Something went wrong.'),
       'PATCH'
