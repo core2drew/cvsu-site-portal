@@ -1,5 +1,5 @@
 @if($module === 'portal')
-<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<script defer src="https://cdn.ckeditor.com/4.11.4/full/ckeditor.js"></script>
 @endif
 
 @if($module === 'site')
