@@ -47,6 +47,11 @@
   margin-bottom: 15px;
 }
 
+#ContactUs > .container > #ContactInfo > .contact-form > #Send {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 #ContactUs > .container > #ContactInfo > .contact-details {
   grid-column: 4/6;
   margin-bottom: 20px;

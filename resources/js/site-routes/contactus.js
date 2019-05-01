@@ -27,7 +27,7 @@ const ContactUs = () => (
           <Input label={'Full name'}/>
           <Input label={'Email Address'}/>
           <Textarea label={'Inquiry / Message'}/>
-          <Button text={'Send'}/>
+          <Button id="Send" text={'Send'}/>
         </div>
       </div>
     </div>
