@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import LinesEllipsis from 'react-lines-ellipsis'
 import Modal from 'Components/modal'
 import './style.scss'
@@ -18,7 +18,10 @@ const Facility = props => {
     <React.Fragment>
       <Modal isActive={isModalActive} handleClose={handleCloseModal}>
         <div className="details">
-          <div className="slider" style={{backgroundImage: `url(${props.backgroundImage})`}}></div>
+          <div className="facility-slider owl-carousel owl-theme slider">
+            <div className="image" style={{backgroundImage: `url(${props.sliderImages[0]})`}} />
+            <div className="image" style={{backgroundImage: `url(${props.sliderImages[0]})`}} />
+          </div>
           <p className="section title">{props.title}</p>
           <p>{props.description}</p>
         </div>
@@ -27,7 +30,7 @@ const Facility = props => {
         <div className="hover" onClick={handleOpenModal}>
           View
         </div>
-        <div className="feature-image" style={{backgroundImage: `url(${props.backgroundImage})`}} />
+        <div className="feature-image" style={{backgroundImage: `url(${props.sliderImages[0]})`}} />
         <div className="details">
           <p className="title">{props.title}</p>
           <LinesEllipsis 

@@ -814,7 +814,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".facility {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n}\n.facility:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n.facility:hover > .hover {\n  opacity: 1;\n  visibility: visible;\n}\n.facility > .hover {\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  transition: all 0.2s;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: rgba(50, 155, 88, 0.9);\n  color: #fff;\n  font-size: 1.3em;\n  font-family: rubikmedium;\n  cursor: pointer;\n  visibility: hidden;\n  opacity: 0;\n}\n.facility > .feature-image {\n  min-width: 200px;\n  height: 160px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-position: center;\n}\n.facility > .details {\n  padding: 0 15px;\n}\n.facility > .details > .title {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n.facility > .details > .description {\n  font-size: 13px;\n  margin-top: 10px;\n}\n.facility > .details > .title,\n.facility > .details > .description {\n  margin-bottom: 0;\n  line-height: 1.4;\n}\n\n.modal > .content {\n  max-width: 500px;\n}", ""]);
+exports.push([module.i, ".facility {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n}\n.facility:nth-last-child(n+2) {\n  margin-bottom: 10px;\n}\n.facility:hover > .hover {\n  opacity: 1;\n  visibility: visible;\n}\n.facility > .hover {\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  transition: all 0.2s;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: rgba(50, 155, 88, 0.9);\n  color: #fff;\n  font-size: 1.3em;\n  font-family: rubikmedium;\n  cursor: pointer;\n  visibility: hidden;\n  opacity: 0;\n}\n.facility > .feature-image {\n  min-width: 200px;\n  height: 160px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-position: center;\n}\n.facility > .details {\n  padding: 0 15px;\n}\n.facility > .details > .title {\n  font-family: rubikmedium;\n  font-size: 16px;\n}\n.facility > .details > .description {\n  font-size: 13px;\n  margin-top: 10px;\n}\n.facility > .details > .title,\n.facility > .details > .description {\n  margin-bottom: 0;\n  line-height: 1.4;\n}\n\n.modal > .content {\n  max-width: 500px;\n  padding: 30px;\n}\n.modal > .content > .details > .facility-slider .image {\n  height: 260px;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n          background-size: cover;\n  background-position: center;\n}", ""]);
 
 // exports
 
@@ -63925,11 +63925,18 @@ var Facility = function Facility(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "details"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "slider",
+    className: "facility-slider owl-carousel owl-theme slider"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image",
     style: {
-      backgroundImage: "url(".concat(props.backgroundImage, ")")
+      backgroundImage: "url(".concat(props.sliderImages[0], ")")
     }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image",
+    style: {
+      backgroundImage: "url(".concat(props.sliderImages[0], ")")
+    }
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "section title"
   }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.description))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "facility"
@@ -63939,7 +63946,7 @@ var Facility = function Facility(props) {
   }, "View"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-image",
     style: {
-      backgroundImage: "url(".concat(props.backgroundImage, ")")
+      backgroundImage: "url(".concat(props.sliderImages[0], ")")
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "details"
@@ -64518,19 +64525,19 @@ var Facilities = function Facilities() {
     className: "section header"
   }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Canteen",
-    backgroundImage: "/images/facilities/canteen/front.jpg",
+    sliderImages: ["/storage/facilities/front.jpg"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Canteen",
-    backgroundImage: "/images/facilities/canteen/front.jpg",
+    sliderImages: ["/storage/facilities/front.jpg"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Canteen",
-    backgroundImage: "/images/facilities/canteen/front.jpg",
+    sliderImages: ["/storage/facilities/front.jpg"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Canteen",
-    backgroundImage: "/images/facilities/canteen/front.jpg",
+    sliderImages: ["/storage/facilities/front.jpg"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
   }))));
 };

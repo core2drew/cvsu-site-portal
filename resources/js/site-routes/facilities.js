@@ -8,7 +8,7 @@ const Facilities = () => (
         <h3 className="section header">University Facilities</h3>
         <Facility
           title={"Canteen"}
-          backgroundImage={"/images/facilities/canteen/front.jpg"}
+          sliderImages={["/storage/facilities/front.jpg"]}
           description={
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet 
             commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, 
@@ -21,7 +21,7 @@ const Facilities = () => (
         />
          <Facility
           title={"Canteen"}
-          backgroundImage={"/images/facilities/canteen/front.jpg"}
+          sliderImages={["/storage/facilities/front.jpg"]}
           description={
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet 
             commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, 
@@ -34,7 +34,7 @@ const Facilities = () => (
         />
          <Facility
           title={"Canteen"}
-          backgroundImage={"/images/facilities/canteen/front.jpg"}
+          sliderImages={["/storage/facilities/front.jpg"]}
           description={
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet 
             commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, 
@@ -47,7 +47,7 @@ const Facilities = () => (
         />
          <Facility
           title={"Canteen"}
-          backgroundImage={"/images/facilities/canteen/front.jpg"}
+          sliderImages={["/storage/facilities/front.jpg"]}
           description={
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet 
             commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, 
