@@ -1,8 +1,8 @@
 const initialState = {
-  isLoading: true,
+  isLoading: false,
   isModalActive: false,
   isUpdateModal: false,
-  modalHeaderTitle: 'New Activity',
+  modalHeaderTitle: 'New User',
   data: [],
   selectedId: null
 }
@@ -44,7 +44,7 @@ const reducer = (state, action) => {
         ...state,
         isModalActive: true,
         isUpdateModal: false,
-        modalHeaderTitle: 'New Activity',
+        modalHeaderTitle: 'New User',
         selectedId: null
       }
     case 'CLOSE_MODAL':
@@ -58,7 +58,7 @@ const reducer = (state, action) => {
         ...state,
         isModalActive: true,
         isUpdateModal: true,
-        modalHeaderTitle: 'Update Activity',
+        modalHeaderTitle: 'Update User',
         selectedId: action.id
       }
     default:

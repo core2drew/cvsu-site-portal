@@ -318,4 +318,12 @@ class AJAXPortalController extends Controller
         ->insert(['content' => $request->get('content'), 'created_at' => now()]);
         return response()->json($response);
     }
+
+    public function getUsers(Request $request) {
+        $response = DB::table('users')
+        ->whereNull('users.deleted_at')
+        ->latest()
+        ->paginate(15);
+        return response()->json($response);
+    }
 }

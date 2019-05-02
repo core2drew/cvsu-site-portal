@@ -1,10 +1,9 @@
 
 import React, { useContext } from 'react'
-import { fromToDate } from 'Utils'
 import moment from 'moment'
 import Button from 'Components/button'
 import Uuid from 'uuid/v4'
-import AcademicCalendarContext from 'Context/academic-calendar'
+import AcademicCalendarContext from 'Context/users'
 
 const TableBody = ({ data }) => {
   const {handleDelete, handleOpenModal} = useContext(AcademicCalendarContext)
@@ -13,13 +12,14 @@ const TableBody = ({ data }) => {
     <tbody>
       {
          data.map(d => {
-          let created_at = moment.utc(d.created_at).local().format('MMMM DD, YYYY hh:mm A')
-          let updated_at = moment.utc(d.updated_at).local().format('MMMM DD, YYYY hh:mm A')
+          let created_at = moment.utc(d.created_at).local().format('MMMM DD, YYYY')
+          let updated_at = moment.utc(d.updated_at).local().format('MMMM DD, YYYY')
 
           return (
             <tr key={Uuid()}>
-              <td>{d.activity}</td>
-              <td>{fromToDate(d.from, d.to, 'MMMM DD YYYY', 'MMMM DD YYYY', 'MMMM DD YYYY')}</td>
+              <td>{d.first_name}</td>
+              <td>{d.last_name}</td>
+              <td>{d.username}</td>
               <td>{created_at}</td>
               <td>{updated_at}</td>
               <td className="actions">

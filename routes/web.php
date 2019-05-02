@@ -55,7 +55,7 @@ Route::group([
         "prefix" => "portal",
     ], function() {
 
-        // Users
+        // User
         Route::get("/user", [
             "as" => "ajax.portal.user",
             "uses" => "AJAXPortalController@getPortalUser",
@@ -178,6 +178,13 @@ Route::group([
         Route::post("/course-offered", [
             "as" => "ajax.portal.add.course-offered",
             "uses" => "AJAXPortalController@addCourseOffered",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
+        // Users Table
+        Route::get("/users", [
+            "as" => "ajax.portal.users",
+            "uses" => "AJAXPortalController@getUsers",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
     });
