@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { get } from 'Utils'
-import UserContext from 'Context/user'
+import CurrentUser from 'Context/current-user'
 import TopNav from 'PortalComponents/topnav'
 import Sidebar from 'PortalComponents/sidebar'
 import DeanMessage from 'PortalRoutes/dean-message'
@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <Router>
-      <UserContext.Provider value={user}>
+      <CurrentUser.Provider value={user}>
         <TopNav />
         <Sidebar />
         <div id="Content">
@@ -47,7 +47,7 @@ const App = () => {
               <Route component={NoMatch} />
           </Switch>
         </div>
-      </UserContext.Provider>
+      </CurrentUser.Provider>
     </Router>
   )
 }

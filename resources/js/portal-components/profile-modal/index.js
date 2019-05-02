@@ -4,12 +4,12 @@ import Button from 'Components/button'
 import Modal from 'Components/modal'
 import Input from 'Components/input'
 import FileInput from 'Components/file-input'
-import UserContext from 'Context/user'
+import CurrentUser from 'Context/current-user'
 import './style.scss'
 
 const ProfileModal = ({ isActive, handleClose }) => {
   const reader = new FileReader()
-  const context = useContext(UserContext)
+  const context = useContext(CurrentUser)
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [profileImage, setProfileImage] = useState(null)

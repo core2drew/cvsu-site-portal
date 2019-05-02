@@ -5,14 +5,14 @@ import Icon from 'Components/icon'
 import ProfileModal from 'PortalComponents/profile-modal'
 import AccountModal from 'PortalComponents/account-modal'
 import Button from 'Components/button'
-import UserContext from 'Context/user'
+import CurrentUser from 'Context/current-user'
 import './style.scss'
 
 const TopNav = () => {
   const [isMenuActive, setIsMenuActive] = useState(false)
   const [isProfileModalActive, setProfileModalActive] = useState(false)
   const [isAccountModalActive, setAccountModalActive] = useState(false)
-  const userContext = useContext(UserContext)
+  const currentUserContext = useContext(CurrentUser)
 
   const handleMenu = e => {
     e.nativeEvent.stopImmediatePropagation()
@@ -43,9 +43,9 @@ const TopNav = () => {
           </span>
         </div>
         <div className="menu" onClick={handleMenu}>
-          <img className="profile-image" src={displayProfileImage(userContext.profile_image)} />
+          <img className="profile-image" src={displayProfileImage(currentUserContext.profile_image)} />
           <p className="greet">
-            Hi, {userContext ? userContext.first_name : ''}
+            Hi, {currentUserContext ? currentUserContext.first_name : ''}
             <Icon icon="chevron-down"/>
           </p>
           <div 

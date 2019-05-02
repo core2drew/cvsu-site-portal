@@ -3,7 +3,7 @@ import { post } from 'Utils'
 import Modal from 'Components/modal'
 import Input from 'Components/input'
 import Button from 'Components/button'
-import UserContext from 'Context/user'
+import CurrentUser from 'Context/current-user'
 import './style.scss'
 
 const AccountModal = ({ isActive, handleClose }) => {
@@ -11,7 +11,7 @@ const AccountModal = ({ isActive, handleClose }) => {
   const [currentPassword, setCurrentPassword] = useState('')
   const [newPassword, setNewPassword] = useState('')
   const [verifyPassword, setVerifyPassword] = useState('')
-  const context = useContext(UserContext)
+  const context = useContext(CurrentUser)
 
   useEffect(() => {
     setUsername(context.username)
