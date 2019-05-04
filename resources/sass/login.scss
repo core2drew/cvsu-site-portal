@@ -1,16 +1,19 @@
 @import "~Sass/variables";
 
+#App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;;
+}
+
 #Login {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 0;
-  right: 0;
   max-width: 400px;
-  max-height: 330px;
+  width: 100%;
+  min-height: 330px;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: $global-box-shadow;
@@ -35,5 +38,28 @@
     padding-bottom: 14px;
     border-radius: 8px;
     margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+  > .footer {
+    display: flex;
+    justify-content: space-between;
+    > .cvsu-btn {
+      text-transform: capitalize;
+      font-family: rubikregular;
+    }
+  }
+}
+
+#SignUpModal {
+  .section.header {
+    font-size: 20px;
+    &:after {
+      display: block;
+      content: "";
+      border-bottom: solid 3px $green-1;
+      width: 100px;
+      margin-top: 8px;
+    }
   }
 }

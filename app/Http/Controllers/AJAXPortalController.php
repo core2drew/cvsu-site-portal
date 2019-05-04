@@ -333,31 +333,34 @@ class AJAXPortalController extends Controller
         $username = $request->get('username');
         $password = $request->get('password');
 
-        $isUsernameExists = $this->checkUsername($username);
+        $isUsernameExist = $this->checkUsername($username);
 
-        if(!$isUsernameExists) {
-            $response = DB::table('users')
-            ->insert([
-                'first_name' => $firstName, 
-                'last_name' => $lastName,
-                'username' => $username, 
-                'password' => Crypt::encrypt($password),
-                'created_at' => now(), 
-                'updated_at' => now()
+        if($isUsernameExist) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Username already exists. Please change it and try again.'
             ]);
-    
-            if($response) {
-                $response = DB::table('users')
-                ->whereNull('users.deleted_at')
-                ->latest()
-                ->paginate(15);
-                return response()->json($response);
-            }
         }
-        return response()->json([
-            'status' => 400,
-            'message' => 'Username already exists. Please change it and try again.'
+
+        $response = DB::table('users')
+        ->insert([
+            'first_name' => $firstName, 
+            'last_name' => $lastName,
+            'username' => $username, 
+            'password' => Crypt::encrypt($password),
+            'created_at' => now(), 
+            'updated_at' => now()
         ]);
+
+        if($response) {
+            $response = DB::table('users')
+            ->whereNull('users.deleted_at')
+            ->latest()
+            ->paginate(15);
+            return response()->json($response);
+        }
+
+        return abort(500);
     }
 
     public function deleteUser(Request $request) {
@@ -377,10 +380,82 @@ class AJAXPortalController extends Controller
         return abort(500);
     }
 
+    public function studentSignup(Request $request) {
+        $studentNo = $request->get('studentNo');
+        $username = $request->get('username');
+        $password = $request->get('password');
+        $firstName = null;
+        $lastName = null;
+        $isUsernameExist = $this->checkUsername($username);
+        $isStudentNoExist = $this->checkStudentNo($studentNo);
+        $isVerifiedStudentNo = $this->verifyStudentNo($studentNo);
+
+        if(!$isVerifiedStudentNo) {
+            return  response()->json([
+                'status' => 400,
+                'message' => 'Student number does not exists. Please change it and try again.'
+            ]);
+        }
+
+        if($isStudentNoExist) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Student number already registered.'
+            ]);
+        }
+
+        if($isUsernameExist) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Username already exists. Please change it and try again.'
+            ]);
+        }
+
+        $firstName = $isVerifiedStudentNo->FirstName;
+        $lastName = $isVerifiedStudentNo->LastName;
+        $created_at = now();
+        $updated_at = now();
+        
+        $response = DB::table('users')
+        ->insert([
+            'student_no' => $studentNo,
+            'username' => $username,
+            'password' => Crypt::encrypt($password),
+            'first_name' => $firstName, 
+            'last_name' => $lastName,
+            'created_at' => $created_at, 
+            'updated_at' => $updated_at
+        ]);
+        
+        if($response) {
+            return response()->json([
+                'status' => 200,
+                'message' => 'You have been successfully registered!'
+            ]);
+        }
+
+        return abort(500);
+    }
+
     private function checkUsername($username) {
         $response = DB::table('users')
                     ->whereNull('users.deleted_at')
                     ->where('username', '=', $username)
+                    ->first();
+        return $response;
+    }
+
+    private function checkStudentNo($studentNo) {
+        $response = DB::table('users')
+                    ->whereNull('users.deleted_at')
+                    ->where('student_no', '=', $studentNo)
+                    ->first();
+        return $response;
+    }
+
+    private function verifyStudentNo($studentNo) {
+        $response = DB::table('studentinfo')
+                    ->where('StudentNumber', '=', $studentNo)
                     ->first();
         return $response;
     }

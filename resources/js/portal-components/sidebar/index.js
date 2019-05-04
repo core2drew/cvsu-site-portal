@@ -6,10 +6,9 @@ import './style.scss'
 const Sidebar = props => {
   const currentUserContext = useContext(CurrentUser)
   
-  return (
-    <div id="Sidebar" className={props.variant}>
-      {
-        currentUserContext.is_admin &&
+  const render = isAdmin => {
+    if(isAdmin) {
+      return (
         <React.Fragment>
           <NavLink exact to="/portal" className="link">Announcements</NavLink>
           <NavLink exact to="/portal/academic-calendar" className="link">Academic Calendar</NavLink>
@@ -20,10 +19,17 @@ const Sidebar = props => {
           <NavLink to="/portal/students" className="link">Students</NavLink>
           {/* <NavLink exact to="/portal/users" className="link">Users</NavLink> */}
         </React.Fragment>
-      }
-      {
-
-      }
+      )
+    }
+    return (
+      <React.Fragment>
+        <NavLink exact to="/portal" className="link">Grades</NavLink>
+      </React.Fragment>
+    )
+  }
+  return (
+    <div id="Sidebar" className={props.variant}>
+      {render(currentUserContext.is_admin)}
     </div>
   )
 }

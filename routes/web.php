@@ -202,5 +202,11 @@ Route::group([
             "uses" => "AJAXPortalController@deleteUser",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
+
+        // Students
+        Route::post('/signup', [
+            "as" => "ajax.portal.student.signup",
+            "uses" => "AJAXPortalController@studentSignup",
+        ]);
     });
 });

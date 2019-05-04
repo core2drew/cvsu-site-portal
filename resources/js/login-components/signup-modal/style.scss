@@ -1,0 +1,16 @@
+#SignUpModal {
+  > .content {
+    min-width: 350px;
+    > .section.header {
+      margin-top: 0;
+    }
+    > .fields {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      > .input:nth-last-child(n + 2) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
