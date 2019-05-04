@@ -36,8 +36,8 @@ const App = () => {
         <Sidebar />
         <div id="Content">
           <Switch>
-              <Route path="/portal" exact component={DeanMessage} />
-              <Route path="/portal/announcements" exact component={Announcements} />
+              <Route path="/portal" exact component={Announcements} />
+              <Route path="/portal/dean-message" exact component={DeanMessage} />
               <Route path="/portal/academic-calendar" exact component={AcademicCalendar} />
               <Route path="/portal/requirements" exact component={Requirements} />
               <Route path="/portal/retention-policies" exact component={RetentionPolicies} />
