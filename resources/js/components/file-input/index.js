@@ -1,5 +1,6 @@
 import React from 'react'
 import classname from 'classnames'
+import './style.scss'
 
 const FileInput = (props) => {
   return (
