@@ -3,24 +3,24 @@ import { get, post } from 'Utils'
 import Table from 'Components/table'
 import Preloader from 'Components/preloader'
 import Button from 'Components/button'
-import Context from 'Context/users'
-import Reducer, { initialState } from 'Reducers/users'
+import Context from 'Context/students'
+import Reducer, { initialState } from 'Reducers/students'
 import FormModal from './form-modal'
 import TableBody from './tablebody'
 import './style.scss'
 
-const Users = () => {
-  const url = '/ajax/portal/users'
+const Students = props => {
+  const url = '/ajax/portal/students'
   const [state, dispatch] = useReducer(Reducer, initialState)
   const tableHeaders = ['First Name', 'Last Name', 'Username', 'Created At', 'Updated At', 'Actions']
 
   useEffect(() => {
-    get(url, {}, res => {
-      dispatch({type: "SUCCESS_FETCH", data: res.data})
-    }, () => {
-      dispatch({type: "ERROR_FETCH"})
-      alert('Something went wrong. Please try again')
-    })
+    // get(url, {}, res => {
+    //   dispatch({type: "SUCCESS_FETCH", data: res.data})
+    // }, () => {
+    //   dispatch({type: "ERROR_FETCH"})
+    //   alert('Something went wrong. Please try again')
+    // })
   },[])
 
   const handleOpenModal = id => {
@@ -92,15 +92,14 @@ const Users = () => {
     )
   }
 
-  
   return (
     <Context.Provider value={{ state, dispatch, handleOpenModal, handleAdd, handleDelete, handleUpdate }}>
-    <div id="Users">
+    <div id="Students">
       <Preloader variant={'fixed'} isActive={state.isLoading}/>
-      <Button 
+      {/* <Button 
         text="Add New"
         onClick={() => handleOpenModal()}
-      />
+      /> */}
       <Table headers={tableHeaders} hasData={!!state.data.length} customTableBody={<TableBody data={state.data}/>} />
       <FormModal />
     </div>
@@ -108,4 +107,4 @@ const Users = () => {
   )
 }
 
-export default Users
+export default Students

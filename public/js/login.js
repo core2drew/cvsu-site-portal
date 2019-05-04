@@ -43661,11 +43661,10 @@ var App = function App() {
       setIsLoading = _useState6[1];
 
   var handleLogin = function handleLogin() {
-    if (!username || !password) {
-      alert('Required Username and Password');
-      return;
-    }
-
+    // if(!username || !password) {
+    //   alert('Required Username and Password')
+    //   return
+    // }
     setIsLoading(true);
     Object(Utils__WEBPACK_IMPORTED_MODULE_2__["post"])('/ajax/login', {
       username: username,
@@ -43676,6 +43675,9 @@ var App = function App() {
         return;
       }
 
+      setIsLoading(false);
+      alert('Something went wrong. Please try again.');
+    }, function () {
       setIsLoading(false);
       alert('Incorrect Username or Password');
     });
@@ -43693,7 +43695,7 @@ var App = function App() {
     onChange: function onChange(e) {
       return setUsername(e.target.value);
     },
-    label: "Student ID / Username"
+    label: "Username"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     value: password,
     onChange: function onChange(e) {

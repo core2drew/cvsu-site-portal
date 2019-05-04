@@ -14,21 +14,27 @@ class AJAXLoginController extends Controller
       $loginFormUsername = $request->get('username');
       $loginFormPassword = $request->get('password');
 
-      $response = DB::table('users')->select('id', 'password')->where('username', '=', $loginFormUsername)->first();
-      $password = Crypt::decrypt($response->password);
-      
-      if($loginFormPassword === $password) {
-        $user = DB::table('users')
-        ->whereNull('users.deleted_at')
-        ->select("id", "username", "type", "profile_image", "first_name", "last_name")
-        ->where('id', '=', $response->id)
-        ->first();
-      }
+      $response = DB::table('users')
+                  ->select('id', 'password')
+                  ->where('username', '=', $loginFormUsername)
+                  ->first();
 
-      if(!empty($user) && $user->id){
-        $request->session()->put('user', $user);
-        return response()->json($user);
+      if($response && $loginFormUsername) {
+        $password = Crypt::decrypt($response->password);
+      
+        if($loginFormPassword === $password) {
+          $user = DB::table('users')
+          ->whereNull('users.deleted_at')
+          ->select("id", "username", "student_no", "type", "profile_image", "first_name", "last_name", 'is_admin')
+          ->where('id', '=', $response->id)
+          ->first();
+        }
+  
+        if(!empty($user) && $user->id){
+          $request->session()->put('user', $user);
+          return response()->json($user);
+        }
       }
-      return response()->json(false);
+      abort(403);
     }
 }

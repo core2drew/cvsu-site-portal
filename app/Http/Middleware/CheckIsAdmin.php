@@ -15,9 +15,9 @@ class CheckIsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if($request->session()->get('user')->type === 0) {
+        if($request->session()->get('user')->is_admin) {
             return $next($request);
         }
-        return abort(500);
+        return abort(403);
     }
 }

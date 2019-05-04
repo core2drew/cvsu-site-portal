@@ -22,7 +22,10 @@ Route::group([
 ], function() {
     Route::get("/{route?}", [
         "uses" => "PortalController@index",
-    ])->where('route', '(dean-message|announcements|academic-calendar|requirements|retention-policies|course-offered|students|users)');
+    ])->where('route', '(dean-message|announcements|academic-calendar|requirements|retention-policies|course-offered)');
+    Route::get("/students/{id?}", [
+        "uses" => "PortalController@index",
+    ])->where('id', '[0-9]+');
 });
 
 Route::group([
@@ -185,6 +188,18 @@ Route::group([
         Route::get("/users", [
             "as" => "ajax.portal.users",
             "uses" => "AJAXPortalController@getUsers",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
+        Route::post("/users", [
+            "as" => "ajax.portal.add.users",
+            "uses" => "AJAXPortalController@addUser",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
+        Route::delete("/users", [
+            "as" => "ajax.portal.delete.users",
+            "uses" => "AJAXPortalController@deleteUser",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
     });

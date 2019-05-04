@@ -326,4 +326,62 @@ class AJAXPortalController extends Controller
         ->paginate(15);
         return response()->json($response);
     }
+
+    public function addUser(Request $request) {
+        $firstName = $request->get('firstName');
+        $lastName = $request->get('lastName');
+        $username = $request->get('username');
+        $password = $request->get('password');
+
+        $isUsernameExists = $this->checkUsername($username);
+
+        if(!$isUsernameExists) {
+            $response = DB::table('users')
+            ->insert([
+                'first_name' => $firstName, 
+                'last_name' => $lastName,
+                'username' => $username, 
+                'password' => Crypt::encrypt($password),
+                'created_at' => now(), 
+                'updated_at' => now()
+            ]);
+    
+            if($response) {
+                $response = DB::table('users')
+                ->whereNull('users.deleted_at')
+                ->latest()
+                ->paginate(15);
+                return response()->json($response);
+            }
+        }
+        return response()->json([
+            'status' => 400,
+            'message' => 'Username already exists. Please change it and try again.'
+        ]);
+    }
+
+    public function deleteUser(Request $request) {
+        $id = $request->get('id');
+        $response = DB::table('users')
+        ->where('id', '=', $id)
+        ->update(['deleted_at' => now()]);
+
+        if($response) {
+            $response = DB::table('users')
+            ->whereNull('users.deleted_at')
+            ->latest()
+            ->paginate(15);
+            return response()->json($response);
+        }
+
+        return abort(500);
+    }
+
+    private function checkUsername($username) {
+        $response = DB::table('users')
+                    ->whereNull('users.deleted_at')
+                    ->where('username', '=', $username)
+                    ->first();
+        return $response;
+    }
 }

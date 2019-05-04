@@ -897,10 +897,10 @@ exports.push([module.i, "#RetentionPolicies {\n  display: -webkit-box;\n  displa
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/users/style.scss":
-/*!********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-routes/users/style.scss ***!
-  \********************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/students/style.scss":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-routes/students/style.scss ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -909,7 +909,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#Users > .modal > .content > button {\n  margin-top: 10px;\n}\n#Users > .modal > .content > .input {\n  margin-bottom: 10px;\n}\n#Users > .table-container > table > thead > tr > th:nth-child(2) {\n  width: 17%;\n}\n#Users > .table-container > table > thead > tr > th:nth-child(3),\n#Users > .table-container > table > thead > tr > th:nth-child(4) {\n  width: 14%;\n}\n#Users > .table-container > table > thead > tr > th:last-child {\n  width: 15%;\n  text-align: center;\n}\n#Users > .table-container > table > tbody > tr > td.actions {\n  text-align: center;\n}\n#Users > .table-container > table > tbody > tr > td.actions > .update {\n  margin-right: 10px;\n}\n#Users > .table-container > table > tbody > tr > td.actions > .update,\n#Users > .table-container > table > tbody > tr > td.actions > .delete {\n  font-size: 12px;\n  min-width: 70px;\n}", ""]);
+exports.push([module.i, "#Students > .modal > .content > button {\n  margin-top: 10px;\n}\n#Students > .modal > .content > .input {\n  margin-bottom: 10px;\n}\n#Students > .table-container > table > thead > tr > th:nth-child(2) {\n  width: 17%;\n}\n#Students > .table-container > table > thead > tr > th:nth-child(3),\n#Students > .table-container > table > thead > tr > th:nth-child(4) {\n  width: 14%;\n}\n#Students > .table-container > table > thead > tr > th:last-child {\n  width: 15%;\n  text-align: center;\n}\n#Students > .table-container > table > tbody > tr > td.actions {\n  text-align: center;\n}\n#Students > .table-container > table > tbody > tr > td.actions > .update {\n  margin-right: 10px;\n}\n#Students > .table-container > table > tbody > tr > td.actions > .update,\n#Students > .table-container > table > tbody > tr > td.actions > .delete {\n  font-size: 12px;\n  min-width: 70px;\n}", ""]);
 
 // exports
 
@@ -78800,10 +78800,10 @@ var CurrentUserContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createCont
 
 /***/ }),
 
-/***/ "./resources/js/contexts/users.js":
-/*!****************************************!*\
-  !*** ./resources/js/contexts/users.js ***!
-  \****************************************/
+/***/ "./resources/js/contexts/students.js":
+/*!*******************************************!*\
+  !*** ./resources/js/contexts/students.js ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -78812,8 +78812,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-var UsersContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
-/* harmony default export */ __webpack_exports__["default"] = (UsersContext);
+var StudentsContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
+/* harmony default export */ __webpack_exports__["default"] = (StudentsContext);
 
 /***/ }),
 
@@ -79214,19 +79214,19 @@ var Sidebar = function Sidebar(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Sidebar",
     className: props.variant
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+  }, currentUserContext.is_admin && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     exact: true,
     to: "/portal",
-    className: "link"
-  }, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    exact: true,
-    to: "/portal/announcements",
     className: "link"
   }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     exact: true,
     to: "/portal/academic-calendar",
     className: "link"
   }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    to: "/portal/dean-message",
+    className: "link"
+  }, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     exact: true,
     to: "/portal/requirements",
     className: "link"
@@ -79239,14 +79239,9 @@ var Sidebar = function Sidebar(props) {
     to: "/portal/course-offered",
     className: "link"
   }, "Course Offered"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    exact: true,
     to: "/portal/students",
     className: "link"
-  }, "Students"), currentUserContext.type === 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    exact: true,
-    to: "/portal/users",
-    className: "link"
-  }, "Users"));
+  }, "Students")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Sidebar);
@@ -80737,33 +80732,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/portal-routes/students.js":
-/*!************************************************!*\
-  !*** ./resources/js/portal-routes/students.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var Students = function Students() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "Students"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Students"));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Students);
-
-/***/ }),
-
-/***/ "./resources/js/portal-routes/users/form-modal.js":
-/*!********************************************************!*\
-  !*** ./resources/js/portal-routes/users/form-modal.js ***!
-  \********************************************************/
+/***/ "./resources/js/portal-routes/students/form-modal.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/portal-routes/students/form-modal.js ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80774,7 +80746,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
-/* harmony import */ var Context_users__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/users */ "./resources/js/contexts/users.js");
+/* harmony import */ var Context_students__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/students */ "./resources/js/contexts/students.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -80792,10 +80764,25 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var FormModal = function FormModal() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
-      activity = _useState2[0],
-      setActivity = _useState2[1];
+      firstName = _useState2[0],
+      setFirstName = _useState2[1];
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_users__WEBPACK_IMPORTED_MODULE_4__["default"]),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      lastName = _useState4[0],
+      setLastName = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState6 = _slicedToArray(_useState5, 2),
+      username = _useState6[0],
+      setUsername = _useState6[1];
+
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState8 = _slicedToArray(_useState7, 2),
+      password = _useState8[0],
+      setPassword = _useState8[1];
+
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_students__WEBPACK_IMPORTED_MODULE_4__["default"]),
       state = _useContext.state,
       dispatch = _useContext.dispatch,
       handleAdd = _useContext.handleAdd,
@@ -80806,10 +80793,12 @@ var FormModal = function FormModal() {
       var _state$data$filter$ = state.data.filter(function (d) {
         return d.id === state.selectedId;
       })[0],
-          _activity = _state$data$filter$.activity,
-          from = _state$data$filter$.from,
-          to = _state$data$filter$.to;
-      setActivity(_activity);
+          first_name = _state$data$filter$.first_name,
+          last_name = _state$data$filter$.last_name,
+          _username = _state$data$filter$.username;
+      setFirstName(first_name);
+      setLastName(last_name);
+      setUsername(_username);
     }
   }, [state.selectedId]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -80822,23 +80811,30 @@ var FormModal = function FormModal() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section header"
   }, state.modalHeaderTitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    label: 'First Name'
+    label: 'First Name',
+    onChange: function onChange(e) {
+      return setFirstName(e.target.value);
+    },
+    value: firstName
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    label: 'Last Name'
+    label: 'Last Name',
+    onChange: function onChange(e) {
+      return setLastName(e.target.value);
+    },
+    value: lastName
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    label: 'Username'
+    label: 'Username',
+    onChange: function onChange(e) {
+      return setUsername(e.target.value);
+    },
+    value: username
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    label: 'Password'
-  }), state.isUpdateModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: "Update",
-    onClick: function onClick() {
-      return handleUpdate(state.selectedId, activity, startDate, endDate);
-    }
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: "Create",
-    onClick: function onClick() {
-      return handleAdd(activity, startDate, endDate);
-    }
+    label: 'Password',
+    onChange: function onChange(e) {
+      return setPassword(e.target.value);
+    },
+    value: password,
+    type: 'password'
   }));
 };
 
@@ -80846,10 +80842,10 @@ var FormModal = function FormModal() {
 
 /***/ }),
 
-/***/ "./resources/js/portal-routes/users/index.js":
-/*!***************************************************!*\
-  !*** ./resources/js/portal-routes/users/index.js ***!
-  \***************************************************/
+/***/ "./resources/js/portal-routes/students/index.js":
+/*!******************************************************!*\
+  !*** ./resources/js/portal-routes/students/index.js ***!
+  \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80861,11 +80857,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/table */ "./resources/js/components/table/index.js");
 /* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var Context_users__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/users */ "./resources/js/contexts/users.js");
-/* harmony import */ var Reducers_users__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Reducers/users */ "./resources/js/reducers/users.js");
-/* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/users/form-modal.js");
-/* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/users/tablebody.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/users/style.scss");
+/* harmony import */ var Context_students__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/students */ "./resources/js/contexts/students.js");
+/* harmony import */ var Reducers_students__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Reducers/students */ "./resources/js/reducers/students.js");
+/* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/students/form-modal.js");
+/* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/students/tablebody.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/students/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_9__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -80886,27 +80882,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Users = function Users() {
-  var url = '/ajax/portal/users';
+var Students = function Students(props) {
+  var url = '/ajax/portal/students';
 
-  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(Reducers_users__WEBPACK_IMPORTED_MODULE_6__["default"], Reducers_users__WEBPACK_IMPORTED_MODULE_6__["initialState"]),
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(Reducers_students__WEBPACK_IMPORTED_MODULE_6__["default"], Reducers_students__WEBPACK_IMPORTED_MODULE_6__["initialState"]),
       _useReducer2 = _slicedToArray(_useReducer, 2),
       state = _useReducer2[0],
       dispatch = _useReducer2[1];
 
   var tableHeaders = ['First Name', 'Last Name', 'Username', 'Created At', 'Updated At', 'Actions'];
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
-      dispatch({
-        type: "SUCCESS_FETCH",
-        data: res.data
-      });
-    }, function () {
-      dispatch({
-        type: "ERROR_FETCH"
-      });
-      alert('Something went wrong. Please try again');
-    });
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {// get(url, {}, res => {
+    //   dispatch({type: "SUCCESS_FETCH", data: res.data})
+    // }, () => {
+    //   dispatch({type: "ERROR_FETCH"})
+    //   alert('Something went wrong. Please try again')
+    // })
   }, []);
 
   var handleOpenModal = function handleOpenModal(id) {
@@ -80922,22 +80912,100 @@ var Users = function Users() {
     }
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_users__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
+  var handleAdd = function handleAdd(firstName, lastName, username, password) {
+    dispatch({
+      type: 'SAVING'
+    });
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      firstName: firstName,
+      lastName: lastName,
+      username: username,
+      password: password
+    }, function (res) {
+      if (res.status > 200) {
+        dispatch({
+          type: "ERROR_SAVE"
+        });
+        alert(res.message);
+        return;
+      }
+
+      dispatch({
+        type: 'SUCCESS_SAVE',
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_SAVE"
+      });
+      alert('Something went wrong. Please try again');
+    });
+  };
+
+  var handleDelete = function handleDelete(id) {
+    dispatch({
+      type: 'DELETING'
+    });
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      id: id
+    }, function (res) {
+      return dispatch({
+        type: 'SUCCESS_DELETE',
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_DELETE"
+      });
+      alert('Something went wrong. Please try again');
+    }, 'DELETE');
+  };
+
+  var handleUpdate = function handleUpdate(id, firstName, lastName, username, password) {
+    dispatch({
+      type: 'UPDATING'
+    });
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      id: id,
+      firstName: firstName,
+      lastName: lastName,
+      username: username,
+      password: password
+    }, function (res) {
+      if (res.status > 200) {
+        dispatch({
+          type: "ERROR_SAVE"
+        });
+        alert(res.message);
+        return;
+      }
+
+      dispatch({
+        type: 'SUCCESS_UPDATE',
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_UPDATE"
+      });
+      alert('Something went wrong. Please try again');
+    }, 'PATCH');
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_students__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
     value: {
       state: state,
       dispatch: dispatch,
-      handleOpenModal: handleOpenModal
+      handleOpenModal: handleOpenModal,
+      handleAdd: handleAdd,
+      handleDelete: handleDelete,
+      handleUpdate: handleUpdate
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "Users"
+    id: "Students"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_3__["default"], {
     variant: 'fixed',
     isActive: state.isLoading
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    text: "Add New",
-    onClick: function onClick() {
-      return handleOpenModal();
-    }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
     headers: tableHeaders,
     hasData: !!state.data.length,
@@ -80947,19 +81015,19 @@ var Users = function Users() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null)));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Users);
+/* harmony default export */ __webpack_exports__["default"] = (Students);
 
 /***/ }),
 
-/***/ "./resources/js/portal-routes/users/style.scss":
-/*!*****************************************************!*\
-  !*** ./resources/js/portal-routes/users/style.scss ***!
-  \*****************************************************/
+/***/ "./resources/js/portal-routes/students/style.scss":
+/*!********************************************************!*\
+  !*** ./resources/js/portal-routes/students/style.scss ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/users/style.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/students/style.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -80981,10 +81049,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/portal-routes/users/tablebody.js":
-/*!*******************************************************!*\
-  !*** ./resources/js/portal-routes/users/tablebody.js ***!
-  \*******************************************************/
+/***/ "./resources/js/portal-routes/students/tablebody.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/portal-routes/students/tablebody.js ***!
+  \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80997,7 +81065,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var Context_users__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/users */ "./resources/js/contexts/users.js");
+/* harmony import */ var Context_students__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/students */ "./resources/js/contexts/students.js");
 
 
 
@@ -81007,7 +81075,7 @@ __webpack_require__.r(__webpack_exports__);
 var TableBody = function TableBody(_ref) {
   var data = _ref.data;
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_users__WEBPACK_IMPORTED_MODULE_4__["default"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_students__WEBPACK_IMPORTED_MODULE_4__["default"]),
       handleDelete = _useContext.handleDelete,
       handleOpenModal = _useContext.handleOpenModal;
 
@@ -81020,7 +81088,7 @@ var TableBody = function TableBody(_ref) {
       className: "actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'update',
-      text: 'Edit',
+      text: 'View',
       onClick: function onClick() {
         return handleOpenModal(d.id);
       }
@@ -81059,12 +81127,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! PortalRoutes/dean-message */ "./resources/js/portal-routes/dean-message/index.js");
 /* harmony import */ var PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! PortalRoutes/announcements */ "./resources/js/portal-routes/announcements/index.js");
 /* harmony import */ var PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! PortalRoutes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
-/* harmony import */ var PortalRoutes_students__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! PortalRoutes/students */ "./resources/js/portal-routes/students.js");
-/* harmony import */ var PortalRoutes_users__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! PortalRoutes/users */ "./resources/js/portal-routes/users/index.js");
-/* harmony import */ var PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! PortalRoutes/nomatch */ "./resources/js/portal-routes/nomatch.js");
-/* harmony import */ var PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! PortalRoutes/requirements */ "./resources/js/portal-routes/requirements/index.js");
-/* harmony import */ var PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! PortalRoutes/retention-policies */ "./resources/js/portal-routes/retention-policies/index.js");
-/* harmony import */ var PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! PortalRoutes/course-offered */ "./resources/js/portal-routes/course-offered/index.js");
+/* harmony import */ var PortalRoutes_students__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! PortalRoutes/students */ "./resources/js/portal-routes/students/index.js");
+/* harmony import */ var PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! PortalRoutes/nomatch */ "./resources/js/portal-routes/nomatch.js");
+/* harmony import */ var PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! PortalRoutes/requirements */ "./resources/js/portal-routes/requirements/index.js");
+/* harmony import */ var PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! PortalRoutes/retention-policies */ "./resources/js/portal-routes/retention-policies/index.js");
+/* harmony import */ var PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! PortalRoutes/course-offered */ "./resources/js/portal-routes/course-offered/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -81083,7 +81150,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
+ // import Users from 'PortalRoutes/users'
 
 
 
@@ -81115,11 +81182,11 @@ var App = function App() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal",
     exact: true,
-    component: PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    path: "/portal/announcements",
-    exact: true,
     component: PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/portal/dean-message",
+    exact: true,
+    component: PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/academic-calendar",
     exact: true,
@@ -81127,25 +81194,26 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/requirements",
     exact: true,
-    component: PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_13__["default"]
+    component: PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_12__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/retention-policies",
     exact: true,
-    component: PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_14__["default"]
+    component: PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_13__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/course-offered",
     exact: true,
-    component: PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_15__["default"]
+    component: PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_14__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/portal/students",
     exact: true,
     component: PortalRoutes_students__WEBPACK_IMPORTED_MODULE_10__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    path: "/portal/users",
-    exact: true,
-    component: PortalRoutes_users__WEBPACK_IMPORTED_MODULE_11__["default"]
+    path: "/portal/students/:id?",
+    component: function component() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Student Grade Info");
+    }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    component: PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_12__["default"]
+    component: PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_11__["default"]
   })))));
 };
 
@@ -81316,10 +81384,10 @@ var reducer = function reducer(state, action) {
 
 /***/ }),
 
-/***/ "./resources/js/reducers/users.js":
-/*!****************************************!*\
-  !*** ./resources/js/reducers/users.js ***!
-  \****************************************/
+/***/ "./resources/js/reducers/students.js":
+/*!*******************************************!*\
+  !*** ./resources/js/reducers/students.js ***!
+  \*******************************************/
 /*! exports provided: initialState, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -81346,16 +81414,34 @@ var reducer = function reducer(state, action) {
     case 'UPDATING':
     case 'DELETING':
       return _objectSpread({}, state, {
-        isLoading: true,
-        isModalActive: false
+        isLoading: true
       });
 
     case 'SUCCESS_FETCH':
-    case 'SUCCESS_SAVE':
-    case 'SUCCESS_UPDATE':
+      return _objectSpread({}, state, {
+        isLoading: false,
+        isUpdateModal: false,
+        data: action.data
+      });
+
     case 'SUCCESS_DELETE':
       return _objectSpread({}, state, {
         isLoading: false,
+        data: action.data
+      });
+
+    case 'SUCCESS_UPDATE':
+      return _objectSpread({}, state, {
+        isLoading: false,
+        isModalActive: false,
+        isUpdateModal: false,
+        data: action.data
+      });
+
+    case 'SUCCESS_SAVE':
+      return _objectSpread({}, state, {
+        isLoading: false,
+        isModalActive: false,
         isUpdateModal: false,
         data: action.data
       });
@@ -81365,8 +81451,7 @@ var reducer = function reducer(state, action) {
     case 'ERROR_UPDATE':
     case 'ERROR_DELETE':
       return _objectSpread({}, state, {
-        isLoading: false,
-        isUpdateModal: false
+        isLoading: false
       });
 
     case 'OPEN_MODAL':

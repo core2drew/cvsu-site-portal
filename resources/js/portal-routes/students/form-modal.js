@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import Modal from 'Components/modal'
 import Button from 'Components/button'
 import Input from 'Components/input'
-import Context from 'Context/users'
+import Context from 'Context/students'
 
 const FormModal = () => {
   const [firstName, setFirstName] = useState('')
@@ -30,11 +30,11 @@ const FormModal = () => {
       <Input label={'Last Name'} onChange={e => setLastName(e.target.value)} value={lastName} />
       <Input label={'Username'} onChange={e => setUsername(e.target.value)} value={username} />
       <Input label={'Password'} onChange={e => setPassword(e.target.value)} value={password} type={'password'}/>
-      {
+      {/* {
         state.isUpdateModal ? 
           <Button text="Update" onClick={() => handleUpdate(state.selectedId, first_name, last_name, username)}/> : 
           <Button text="Create" onClick={() => handleAdd(firstName, lastName, username, password)}/>
-      }
+      } */}
     </Modal>
   )
 }

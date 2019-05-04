@@ -9,7 +9,7 @@ import DeanMessage from 'PortalRoutes/dean-message'
 import Announcements from 'PortalRoutes/announcements'
 import AcademicCalendar from 'PortalRoutes/academic-calendar'
 import Students from 'PortalRoutes/students'
-import Users from 'PortalRoutes/users'
+// import Users from 'PortalRoutes/users'
 import NoMatch from 'PortalRoutes/nomatch'
 import Requirements from 'PortalRoutes/requirements';
 import RetentionPolicies from 'PortalRoutes/retention-policies';
@@ -43,7 +43,8 @@ const App = () => {
               <Route path="/portal/retention-policies" exact component={RetentionPolicies} />
               <Route path="/portal/course-offered" exact component={CourseOffered} />
               <Route path="/portal/students" exact component={Students} />
-              <Route path="/portal/users" exact component={Users} />
+              <Route path="/portal/students/:id?" component={() => <h1>Student Grade Info</h1>} />
+              {/* <Route path="/portal/users" exact component={Users} /> */}
               <Route component={NoMatch} />
           </Switch>
         </div>

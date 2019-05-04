@@ -1,5 +1,5 @@
 const initialState = {
-  isLoading: true,
+  isLoading: false,
   isModalActive: false,
   isUpdateModal: false,
   modalHeaderTitle: 'New User',
