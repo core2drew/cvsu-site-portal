@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from 'react'
+import Uuid from 'uuid/v4'
 import { get } from 'Utils'
+
+const ReportCards = grade => {
+
+  return (
+    <div className="report-card">
+      <p>{grade}</p>
+    </div>
+  )
+}
 
 const Info = () => {
   const [studentNo, setStudentNo] = useState('')
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
+  const [name, setName] = useState('')
+  const [gradesArr, setGradesArr] = useState([])
 
   useEffect(() => {
     get(
@@ -12,16 +22,20 @@ const Info = () => {
       {},
       res => {
         setStudentNo(res.studentNo)
-        setFirstName(res.firstName)
-        setLastName(res.lastName)
+        setName(`${res.lastName}, ${res.firstName}`)
       }
     )
   },[])
 
   return(
     <div id="StudentInfo">
-      <h3>{studentNo}</h3>
-      <h4>{lastName}, {firstName}</h4>
+      <h3>Student No.: {studentNo}</h3>
+      <h3>Name: {name}</h3>
+      {
+        gradesArr.map(grade => {
+          <ReportCard key={Uuid} {...grade}/>
+        })
+      }
     </div>
   )
 }

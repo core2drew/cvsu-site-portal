@@ -79262,51 +79262,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Sidebar = function Sidebar(props) {
-  var currentUserContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_current_user__WEBPACK_IMPORTED_MODULE_2__["default"]);
-
-  var render = function render(isAdmin) {
-    if (isAdmin) {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-        exact: true,
-        to: "/portal",
-        className: "link"
-      }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-        exact: true,
-        to: "/portal/academic-calendar",
-        className: "link"
-      }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-        exact: true,
-        to: "/portal/dean-message",
-        className: "link"
-      }, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-        exact: true,
-        to: "/portal/requirements",
-        className: "link"
-      }, "Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-        exact: true,
-        to: "/portal/retention-policies",
-        className: "link"
-      }, "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-        exact: true,
-        to: "/portal/course-offered",
-        className: "link"
-      }, "Course Offered"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-        to: "/portal/students",
-        className: "link"
-      }, "Students"));
-    }
-
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-      exact: true,
-      to: "/portal",
-      className: "link"
-    }, "Student Info"));
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return props.isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Sidebar",
     className: props.variant
-  }, render(currentUserContext.is_admin));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    to: "/portal",
+    className: "link"
+  }, "Announcements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    to: "/portal/academic-calendar",
+    className: "link"
+  }, "Academic Calendar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    to: "/portal/dean-message",
+    className: "link"
+  }, "Dean Message"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    to: "/portal/requirements",
+    className: "link"
+  }, "Requirements"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    to: "/portal/retention-policies",
+    className: "link"
+  }, "Retention Policies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    to: "/portal/course-offered",
+    className: "link"
+  }, "Course Offered"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    to: "/portal/students",
+    className: "link"
+  }, "Students")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Sidebar);
@@ -81185,19 +81171,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
-/* harmony import */ var Context_current_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/current-user */ "./resources/js/contexts/current-user.js");
-/* harmony import */ var PortalComponents_topnav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! PortalComponents/topnav */ "./resources/js/portal-components/topnav/index.js");
-/* harmony import */ var PortalComponents_sidebar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! PortalComponents/sidebar */ "./resources/js/portal-components/sidebar/index.js");
-/* harmony import */ var PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! PortalRoutes/dean-message */ "./resources/js/portal-routes/dean-message/index.js");
-/* harmony import */ var PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! PortalRoutes/announcements */ "./resources/js/portal-routes/announcements/index.js");
-/* harmony import */ var PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! PortalRoutes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
-/* harmony import */ var PortalRoutes_students__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! PortalRoutes/students */ "./resources/js/portal-routes/students/index.js");
-/* harmony import */ var PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! PortalRoutes/nomatch */ "./resources/js/portal-routes/nomatch.js");
-/* harmony import */ var PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! PortalRoutes/requirements */ "./resources/js/portal-routes/requirements/index.js");
-/* harmony import */ var PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! PortalRoutes/retention-policies */ "./resources/js/portal-routes/retention-policies/index.js");
-/* harmony import */ var PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! PortalRoutes/course-offered */ "./resources/js/portal-routes/course-offered/index.js");
-/* harmony import */ var StudentRoutes_info__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! StudentRoutes/info */ "./resources/js/student-routes/info/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Context_current_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/current-user */ "./resources/js/contexts/current-user.js");
+/* harmony import */ var PortalComponents_topnav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! PortalComponents/topnav */ "./resources/js/portal-components/topnav/index.js");
+/* harmony import */ var PortalComponents_sidebar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! PortalComponents/sidebar */ "./resources/js/portal-components/sidebar/index.js");
+/* harmony import */ var PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! PortalRoutes/dean-message */ "./resources/js/portal-routes/dean-message/index.js");
+/* harmony import */ var PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! PortalRoutes/announcements */ "./resources/js/portal-routes/announcements/index.js");
+/* harmony import */ var PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! PortalRoutes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
+/* harmony import */ var PortalRoutes_students__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! PortalRoutes/students */ "./resources/js/portal-routes/students/index.js");
+/* harmony import */ var PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! PortalRoutes/nomatch */ "./resources/js/portal-routes/nomatch.js");
+/* harmony import */ var PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! PortalRoutes/requirements */ "./resources/js/portal-routes/requirements/index.js");
+/* harmony import */ var PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! PortalRoutes/retention-policies */ "./resources/js/portal-routes/retention-policies/index.js");
+/* harmony import */ var PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! PortalRoutes/course-offered */ "./resources/js/portal-routes/course-offered/index.js");
+/* harmony import */ var StudentRoutes_info__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! StudentRoutes/info */ "./resources/js/student-routes/info/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -81205,6 +81193,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -81232,14 +81221,14 @@ var App = function App() {
     profile_image: '',
     type: null,
     username: '',
-    is_admin: 0
+    is_admin: false
   }),
       _useState2 = _slicedToArray(_useState, 2),
       user = _useState2[0],
       setUser = _useState2[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(Utils__WEBPACK_IMPORTED_MODULE_3__["get"])('/ajax/portal/user', {}, function (res) {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_4__["get"])('/ajax/portal/user', {}, function (res) {
       return setUser(res);
     });
   }, []);
@@ -81249,31 +81238,31 @@ var App = function App() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal",
         exact: true,
-        component: PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_8__["default"]
+        component: PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_9__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/dean-message",
         exact: true,
-        component: PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_7__["default"]
+        component: PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_8__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/academic-calendar",
         exact: true,
-        component: PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_9__["default"]
+        component: PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_10__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/requirements",
         exact: true,
-        component: PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_12__["default"]
+        component: PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_13__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/retention-policies",
         exact: true,
-        component: PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_13__["default"]
+        component: PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_14__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/course-offered",
         exact: true,
-        component: PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_14__["default"]
+        component: PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_15__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/students",
         exact: true,
-        component: PortalRoutes_students__WEBPACK_IMPORTED_MODULE_10__["default"]
+        component: PortalRoutes_students__WEBPACK_IMPORTED_MODULE_11__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/students/:id?",
         component: function component() {
@@ -81285,16 +81274,21 @@ var App = function App() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
       path: "/portal",
       exact: true,
-      component: StudentRoutes_info__WEBPACK_IMPORTED_MODULE_15__["default"]
+      component: StudentRoutes_info__WEBPACK_IMPORTED_MODULE_16__["default"]
     }));
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_current_user__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_current_user__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
     value: user
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_topnav__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_sidebar__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "Content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_topnav__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_sidebar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    isVisible: user.is_admin
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Content",
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()({
+      '-student': !user.is_admin
+    })
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, routes(user.is_admin), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    component: PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_11__["default"]
+    component: PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_12__["default"]
   })))));
 };
 
@@ -81578,7 +81572,11 @@ var reducer = function reducer(state, action) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -81590,6 +81588,13 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+var ReportCards = function ReportCards(grade) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "report-card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, grade));
+};
+
 var Info = function Info() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
@@ -81598,24 +81603,27 @@ var Info = function Info() {
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState4 = _slicedToArray(_useState3, 2),
-      firstName = _useState4[0],
-      setFirstName = _useState4[1];
+      name = _useState4[0],
+      setName = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       _useState6 = _slicedToArray(_useState5, 2),
-      lastName = _useState6[0],
-      setLastName = _useState6[1];
+      gradesArr = _useState6[0],
+      setGradesArr = _useState6[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])('/ajax/portal/student', {}, function (res) {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/student', {}, function (res) {
       setStudentNo(res.studentNo);
-      setFirstName(res.firstName);
-      setLastName(res.lastName);
+      setName("".concat(res.lastName, ", ").concat(res.firstName));
     });
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "StudentInfo"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, studentNo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, lastName, ", ", firstName));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Student No.: ", studentNo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Name: ", name), gradesArr.map(function (grade) {
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ReportCard, _extends({
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default.a
+    }, grade));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Info);

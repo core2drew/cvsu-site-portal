@@ -8,7 +8,12 @@
         @include("templates.styles")
     </head>
     <body>
-        <div id="App"></div>
+        @if($module === 'portal' && !$isAdmin)
+            <div id="App" class="-student"></div>
+        @else
+            <div id="App"></div>
+        @endif
+
     </body>
     @include("templates.scripts")
 </html>

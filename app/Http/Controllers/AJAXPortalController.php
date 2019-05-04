@@ -230,7 +230,7 @@ class AJAXPortalController extends Controller
     }
 
     private function getGrades($studentNo) {
-        $grades = null;
+        $grades = [];
         // Get All School Years
         $schoolYears = DB::table('grades')
             ->select('Schoolyear')

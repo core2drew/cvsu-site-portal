@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import classname from 'classnames'
 import { get } from 'Utils'
 import CurrentUser from 'Context/current-user'
 import TopNav from 'PortalComponents/topnav'
@@ -24,7 +25,7 @@ const App = () => {
     profile_image: '',
     type: null,
     username: '',
-    is_admin: 0
+    is_admin: false
   })
 
   useEffect(() => {
@@ -58,8 +59,15 @@ const App = () => {
     <Router>
       <CurrentUser.Provider value={user}>
         <TopNav />
-        <Sidebar />
-        <div id="Content">
+        <Sidebar isVisible={user.is_admin}/>
+        <div 
+            id="Content" 
+            className={
+              classname({
+                '-student': !user.is_admin 
+              })
+            }
+        >
           <Switch>
               { routes(user.is_admin) }
               <Route component={NoMatch} />

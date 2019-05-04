@@ -9,12 +9,23 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-columns: 200px;
+
+  &.-student {
+    display: block;
+  }
 }
 
 #Content {
   overflow-y: auto;
-  max-height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   padding: 20px;
+
+  &.-student {
+    background-color: #fff;
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto 0;
+  }
 }
 
 #DeanMessage, #Announcements, #ProfileModal, #AccountModal {
