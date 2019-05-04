@@ -22,7 +22,8 @@ mix.webpackConfig({
          SiteRoutes: path.resolve(__dirname, 'resources/js/site-routes/'),
          PortalComponents: path.resolve(__dirname, 'resources/js/portal-components/'),
          PortalRoutes: path.resolve(__dirname, 'resources/js/portal-routes/'),
-         LoginComponents: path.resolve(__dirname, 'resources/js/login-components/')
+         LoginComponents: path.resolve(__dirname, 'resources/js/login-components/'),
+         StudentRoutes: path.resolve(__dirname, 'resources/js/student-routes/')
       }
    }
 })

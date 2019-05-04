@@ -1,7 +1,5 @@
 import React from 'react'
 
-const CurrentUserContext = React.createContext({
-  is_admin: 0
-})
+const CurrentUserContext = React.createContext()
 
 export default CurrentUserContext

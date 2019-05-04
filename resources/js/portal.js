@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { get } from 'Utils'
@@ -14,9 +14,9 @@ import NoMatch from 'PortalRoutes/nomatch'
 import Requirements from 'PortalRoutes/requirements';
 import RetentionPolicies from 'PortalRoutes/retention-policies';
 import CourseOffered from 'PortalRoutes/course-offered';
+import StudentInfo from 'StudentRoutes/info'
 
 const App = () => {
-  const currentUserContext = useContext(CurrentUser)
   const [user, setUser] = useState({
     id: null,
     first_name: '',
@@ -49,7 +49,7 @@ const App = () => {
     }
     return (
       <React.Fragment>
-        <Route path="/portal" exact component={() => <h1>Current Student Grade</h1>} />
+        <Route path="/portal" exact component={StudentInfo} />
       </React.Fragment>
     )
   }
@@ -61,7 +61,7 @@ const App = () => {
         <Sidebar />
         <div id="Content">
           <Switch>
-              { routes(currentUserContext.is_admin) }
+              { routes(user.is_admin) }
               <Route component={NoMatch} />
           </Switch>
         </div>

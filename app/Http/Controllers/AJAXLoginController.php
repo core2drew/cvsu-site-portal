@@ -32,7 +32,9 @@ class AJAXLoginController extends Controller
   
         if(!empty($user) && $user->id){
           $request->session()->put('user', $user);
-          return response()->json($user);
+          return response()->json([
+            'id' => $user->id
+          ]);
         }
       }
       abort(403);

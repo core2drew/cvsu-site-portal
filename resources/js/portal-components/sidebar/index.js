@@ -23,7 +23,7 @@ const Sidebar = props => {
     }
     return (
       <React.Fragment>
-        <NavLink exact to="/portal" className="link">Grades</NavLink>
+        <NavLink exact to="/portal" className="link">Student Info</NavLink>
       </React.Fragment>
     )
   }

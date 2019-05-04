@@ -104,12 +104,6 @@ class AJAXPortalController extends Controller
         return response()->json($response);
     }
 
-    public function addDeanMessage(Request $request) {
-        $response = DB::table('dean_message')
-        ->insert(['message' => $request->get('message'), 'created_at' => now()]);
-        return response()->json($response);
-    }
-
     public function getAnnouncements(Request $request) {
         $response = DB::table('announcements')
         ->whereNull('announcements.deleted_at')
@@ -124,72 +118,6 @@ class AJAXPortalController extends Controller
         ->latest()
         ->simplePaginate(5);
         return response()->json($response);
-    }
-
-    public function addAnnouncements(Request $request) {
-        $title = $request->get('title');
-        $content = $request->get('content');
-        $created_at = now();
-        $updated_at = now();
-
-        $response = DB::table('announcements')
-        ->insert([
-            'title' => $title, 
-            'content' => $content, 
-            'created_at' => $created_at, 
-            'updated_at' => $updated_at
-        ]);
-
-        if($response) {
-            $response = DB::table('announcements')
-            ->whereNull('announcements.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
-        }
-
-        return abort(500);
-    }
-
-    public function updateAnnouncement(Request $request) {
-        $id = $request->get('id');
-        $title = $request->get('title');
-        $content = $request->get('content');
-
-        $response = DB::table('announcements')
-        ->where('id', '=', $id)
-        ->update([
-            'title' => $title, 
-            'content' => $content, 
-            'updated_at' => now()
-        ]);
-
-        if($response) {
-            $response = DB::table('announcements')
-            ->whereNull('announcements.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
-        }
-
-        return abort(500);
-    }
-
-    public function deleteAnnouncement(Request $request) {
-        $id = $request->get('id');
-        $response = DB::table('announcements')
-        ->where('id', '=', $id)
-        ->update(['deleted_at' => now()]);
-
-        if($response) {
-            $response = DB::table('announcements')
-            ->whereNull('announcements.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
-        }
-
-        return abort(500);
     }
 
     public function getAcademicCalendar(Request $request) {
@@ -215,85 +143,8 @@ class AJAXPortalController extends Controller
         return response()->json($response);
     }
 
-    public function addAcademicCalendar(Request $request) {
-        $activity = $request->get('activity');
-        $from = $request->get('from');
-        $to = $request->get('to');
-        $created_at = now();
-        $updated_at = now();
-
-        $response = DB::table('academic_calendar')
-        ->insert([
-            'activity' => $activity, 
-            'from' => $from,
-            'to' => $to, 
-            'created_at' => $created_at, 
-            'updated_at' => $updated_at
-        ]);
-
-        if($response) {
-            $response = DB::table('academic_calendar')
-            ->whereNull('academic_calendar.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
-        }
-
-        return abort(500);
-    } 
-
-    public function updateAcademicCalendar(Request $request) {
-        $id = $request->get('id');
-        $activity = $request->get('activity');
-        $from = $request->get('from');
-        $to = $request->get('to');
-        $updated_at = now();
-
-        $response = DB::table('academic_calendar')
-        ->where('id', '=', $id)
-        ->update([
-            'activity' => $activity, 
-            'from' => $from, 
-            'to' => $to, 
-            'updated_at' => $updated_at
-        ]);
-
-        if($response) {
-            $response = DB::table('academic_calendar')
-            ->whereNull('academic_calendar.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
-        }
-
-        return abort(500);
-    }
-
-    public function deleteAcademicCalendar(Request $request) {
-        $id = $request->get('id');
-        $response = DB::table('academic_calendar')
-        ->where('id', '=', $id)
-        ->update(['deleted_at' => now()]);
-
-        if($response) {
-            $response = DB::table('academic_calendar')
-            ->whereNull('academic_calendar.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
-        }
-
-        return abort(500);
-    }
-
     public function getRequirements(Request $request) {
         $response = DB::table('requirements_content')->latest()->first();
-        return response()->json($response);
-    }
-
-    public function addRequirements(Request $request) {
-        $response = DB::table('requirements_content')
-        ->insert(['content' => $request->get('content'), 'created_at' => now()]);
         return response()->json($response);
     }
 
@@ -301,83 +152,10 @@ class AJAXPortalController extends Controller
         $response = DB::table('retention_policies_content')->latest()->first();
         return response()->json($response);
     }
-
-    public function addRetentionPolicies(Request $request) {
-        $response = DB::table('retention_policies_content')
-        ->insert(['content' => $request->get('content'), 'created_at' => now()]);
-        return response()->json($response);
-    }
     
     public function getCourseOffered(Request $request) {
         $response = DB::table('course_offered_content')->latest()->first();
         return response()->json($response);
-    }
-
-    public function addCourseOffered(Request $request) {
-        $response = DB::table('course_offered_content')
-        ->insert(['content' => $request->get('content'), 'created_at' => now()]);
-        return response()->json($response);
-    }
-
-    public function getUsers(Request $request) {
-        $response = DB::table('users')
-        ->whereNull('users.deleted_at')
-        ->latest()
-        ->paginate(15);
-        return response()->json($response);
-    }
-
-    public function addUser(Request $request) {
-        $firstName = $request->get('firstName');
-        $lastName = $request->get('lastName');
-        $username = $request->get('username');
-        $password = $request->get('password');
-
-        $isUsernameExist = $this->checkUsername($username);
-
-        if($isUsernameExist) {
-            return response()->json([
-                'status' => 400,
-                'message' => 'Username already exists. Please change it and try again.'
-            ]);
-        }
-
-        $response = DB::table('users')
-        ->insert([
-            'first_name' => $firstName, 
-            'last_name' => $lastName,
-            'username' => $username, 
-            'password' => Crypt::encrypt($password),
-            'created_at' => now(), 
-            'updated_at' => now()
-        ]);
-
-        if($response) {
-            $response = DB::table('users')
-            ->whereNull('users.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
-        }
-
-        return abort(500);
-    }
-
-    public function deleteUser(Request $request) {
-        $id = $request->get('id');
-        $response = DB::table('users')
-        ->where('id', '=', $id)
-        ->update(['deleted_at' => now()]);
-
-        if($response) {
-            $response = DB::table('users')
-            ->whereNull('users.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
-        }
-
-        return abort(500);
     }
 
     public function studentSignup(Request $request) {
@@ -435,6 +213,54 @@ class AJAXPortalController extends Controller
         }
 
         return abort(500);
+    }
+
+    public function getStudentInfo(Request $request) {
+        $studentNo = $request->session()->get('user')->student_no;
+        $firstName = $request->session()->get('user')->first_name;
+        $lastName = $request->session()->get('user')->last_name;
+        $grades = $this->getGrades($studentNo);
+        
+        return response()->json([
+            'studentNo' => $studentNo,
+            'firstName' => $firstName,
+            'lastName' => $lastName,
+            'grades' => $grades
+        ]);
+    }
+
+    private function getGrades($studentNo) {
+        $grades = null;
+        // Get All School Years
+        $schoolYears = DB::table('grades')
+            ->select('Schoolyear')
+            ->where('StudentNumber', '=', $studentNo)
+            ->groupBy('Schoolyear')
+            ->orderBy('Schoolyear', 'asc')
+            ->get();
+
+        foreach($schoolYears as $schoolYear) {
+            // Get All Semester on each School Year
+            $semesters = DB::table('grades')
+                ->select('Semester')
+                ->where('StudentNumber', '=', $studentNo)
+                ->where('Schoolyear', "$schoolYear->Schoolyear")
+                ->groupBy('Semester')
+                ->get();
+     
+            foreach($semesters as $semester) {
+                // Get Grades on each School year and on each semester
+                $grade = DB::table('grades')
+                    ->select('CourseCode', "CreditUnits", "Grade", "remarks")
+                    ->where('StudentNumber', '=', $studentNo)
+                    ->where('Schoolyear', "$schoolYear->Schoolyear")
+                    ->where('Semester', "$semester->Semester")
+                    ->get();
+
+                $grades["$schoolYear->Schoolyear"]["$semester->Semester"] = $grade;
+            }
+        }
+        return $grades;
     }
 
     private function checkUsername($username) {

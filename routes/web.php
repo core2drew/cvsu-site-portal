@@ -22,10 +22,7 @@ Route::group([
 ], function() {
     Route::get("/{route?}", [
         "uses" => "PortalController@index",
-    ])->where('route', '(dean-message|announcements|academic-calendar|requirements|retention-policies|course-offered)');
-    Route::get("/students/{id?}", [
-        "uses" => "PortalController@index",
-    ])->where('id', '[0-9]+');
+    ])->where('route', '(dean-message|announcements|academic-calendar|requirements|retention-policies|course-offered|students)');
 });
 
 Route::group([
@@ -91,7 +88,7 @@ Route::group([
         
         Route::post("/dean-message", [
             "as" => "ajax.portal.add.dean-message",
-            "uses" => "AJAXPortalController@addDeanMessage",
+            "uses" => "AJAXAdminPortalController@addDeanMessage",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
         
@@ -108,19 +105,19 @@ Route::group([
 
         Route::post("/announcements", [
             "as" => "ajax.portal.add.announcements",
-            "uses" => "AJAXPortalController@addAnnouncements",
+            "uses" => "AJAXAdminPortalController@addAnnouncements",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
         Route::patch("/announcements", [
             "as" => "ajax.portal.update.announcements",
-            "uses" => "AJAXPortalController@updateAnnouncement",
+            "uses" => "AJAXAdminPortalController@updateAnnouncement",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
         Route::delete("/announcements", [
             "as" => "ajax.portal.delete.announcements",
-            "uses" => "AJAXPortalController@deleteAnnouncement",
+            "uses" => "AJAXAdminPortalController@deleteAnnouncement",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
@@ -132,19 +129,19 @@ Route::group([
 
         Route::post("/academic-calendar", [
             "as" => "ajax.portal.add.academic-calendar",
-            "uses" => "AJAXPortalController@addAcademicCalendar",
+            "uses" => "AJAXAdminPortalController@addAcademicCalendar",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
         Route::patch("/academic-calendar", [
             "as" => "ajax.portal.update.academic-calendar",
-            "uses" => "AJAXPortalController@updateAcademicCalendar",
+            "uses" => "AJAXAdminPortalController@updateAcademicCalendar",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
         Route::delete("/academic-calendar", [
             "as" => "ajax.portal.delete.academic-calendar",
-            "uses" => "AJAXPortalController@deleteAcademicCalendar",
+            "uses" => "AJAXAdminPortalController@deleteAcademicCalendar",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
@@ -156,7 +153,7 @@ Route::group([
         
         Route::post("/requirements", [
             "as" => "ajax.portal.add.requirements",
-            "uses" => "AJAXPortalController@addRequirements",
+            "uses" => "AJAXAdminPortalController@addRequirements",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
@@ -168,7 +165,7 @@ Route::group([
         
         Route::post("/retention-policies", [
             "as" => "ajax.portal.add.retention-policies",
-            "uses" => "AJAXPortalController@addRetentionPolicies",
+            "uses" => "AJAXAdminPortalController@addRetentionPolicies",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
@@ -180,33 +177,40 @@ Route::group([
         
         Route::post("/course-offered", [
             "as" => "ajax.portal.add.course-offered",
-            "uses" => "AJAXPortalController@addCourseOffered",
+            "uses" => "AJAXAdminPortalController@addCourseOffered",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
         // Users Table
         Route::get("/users", [
             "as" => "ajax.portal.users",
-            "uses" => "AJAXPortalController@getUsers",
+            "uses" => "AJAXAdminPortalController@getUsers",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
         Route::post("/users", [
             "as" => "ajax.portal.add.users",
-            "uses" => "AJAXPortalController@addUser",
+            "uses" => "AJAXAdminPortalController@addUser",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
         Route::delete("/users", [
             "as" => "ajax.portal.delete.users",
-            "uses" => "AJAXPortalController@deleteUser",
+            "uses" => "AJAXAdminPortalController@deleteUser",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
-        // Students
+        // Student Sign Up
         Route::post('/signup', [
             "as" => "ajax.portal.student.signup",
             "uses" => "AJAXPortalController@studentSignup",
+        ]);
+        
+        // Student Info
+        Route::get('/student', [
+            "as" => "ajax.portal.student",
+            "uses" => "AJAXPortalController@getStudentInfo",
+            "middleware" => ["check.session"]
         ]);
     });
 });

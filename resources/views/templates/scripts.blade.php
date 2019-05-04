@@ -1,4 +1,4 @@
-@if($module === 'portal')
+@if($module === 'portal' && $isAdmin)
 <script defer src="https://cdn.ckeditor.com/4.11.4/full/ckeditor.js"></script>
 @endif
 

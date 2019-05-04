@@ -78847,9 +78847,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-var CurrentUserContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
-  is_admin: 0
-});
+var CurrentUserContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
 /* harmony default export */ __webpack_exports__["default"] = (CurrentUserContext);
 
 /***/ }),
@@ -79302,7 +79300,7 @@ var Sidebar = function Sidebar(props) {
       exact: true,
       to: "/portal",
       className: "link"
-    }, "Grades"));
+    }, "Student Info"));
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -81199,6 +81197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! PortalRoutes/requirements */ "./resources/js/portal-routes/requirements/index.js");
 /* harmony import */ var PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! PortalRoutes/retention-policies */ "./resources/js/portal-routes/retention-policies/index.js");
 /* harmony import */ var PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! PortalRoutes/course-offered */ "./resources/js/portal-routes/course-offered/index.js");
+/* harmony import */ var StudentRoutes_info__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! StudentRoutes/info */ "./resources/js/student-routes/info/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -81224,9 +81223,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var App = function App() {
-  var currentUserContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_current_user__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
+var App = function App() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     id: null,
     first_name: '',
@@ -81287,9 +81285,7 @@ var App = function App() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
       path: "/portal",
       exact: true,
-      component: function component() {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Current Student Grade");
-      }
+      component: StudentRoutes_info__WEBPACK_IMPORTED_MODULE_15__["default"]
     }));
   };
 
@@ -81297,7 +81293,7 @@ var App = function App() {
     value: user
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_topnav__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PortalComponents_sidebar__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, routes(currentUserContext.is_admin), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, routes(user.is_admin), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     component: PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_11__["default"]
   })))));
 };
@@ -81568,6 +81564,61 @@ var reducer = function reducer(state, action) {
 
 
 /* harmony default export */ __webpack_exports__["default"] = (reducer);
+
+/***/ }),
+
+/***/ "./resources/js/student-routes/info/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/student-routes/info/index.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+var Info = function Info() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      studentNo = _useState2[0],
+      setStudentNo = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      firstName = _useState4[0],
+      setFirstName = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState6 = _slicedToArray(_useState5, 2),
+      lastName = _useState6[0],
+      setLastName = _useState6[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])('/ajax/portal/student', {}, function (res) {
+      setStudentNo(res.studentNo);
+      setFirstName(res.firstName);
+      setLastName(res.lastName);
+    });
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "StudentInfo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, studentNo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, lastName, ", ", firstName));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Info);
 
 /***/ }),
 
