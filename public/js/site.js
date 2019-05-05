@@ -605,7 +605,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#Footer {\n  width: 100%;\n  background-color: #2D8548;\n  padding: 10px 0;\n}\n#Footer > .container > .reserved {\n  font-size: 12px;\n  color: #fff;\n  margin: 0;\n}", ""]);
+exports.push([module.i, "#Footer {\n  width: 100%;\n  background-color: #2D8548;\n  padding: 10px 0;\n}\n#Footer > .container {\n  max-width: 960px;\n  width: 100%;\n  margin: auto;\n}\n#Footer > .container > .reserved {\n  font-size: 12px;\n  color: #fff;\n  margin: 0;\n}", ""]);
 
 // exports
 
@@ -73037,7 +73037,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

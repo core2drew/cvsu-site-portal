@@ -6,6 +6,7 @@ import { get } from 'Utils'
 import CurrentUser from 'Context/current-user'
 import TopNav from 'PortalComponents/topnav'
 import Sidebar from 'PortalComponents/sidebar'
+import Footer from 'Components/footer'
 import DeanMessage from 'PortalRoutes/dean-message'
 import Announcements from 'PortalRoutes/announcements'
 import AcademicCalendar from 'PortalRoutes/academic-calendar'
@@ -74,6 +75,7 @@ const App = () => {
           </Switch>
         </div>
       </CurrentUser.Provider>
+      <Footer />
     </Router>
   )
 }

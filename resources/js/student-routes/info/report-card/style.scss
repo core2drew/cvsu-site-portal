@@ -1,0 +1,11 @@
+@import '~Sass/variables';
+
+.report-card {
+  >.header {
+    background-color: $green-1;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 10px 0;
+  }
+}

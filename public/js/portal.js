@@ -631,6 +631,25 @@ exports.push([module.i, ".cvsu-file {\n  display: none;\n}", ""]);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/footer/style.scss":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/footer/style.scss ***!
+  \******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#Footer {\n  width: 100%;\n  background-color: #2D8548;\n  padding: 10px 0;\n}\n#Footer > .container {\n  max-width: 960px;\n  width: 100%;\n  margin: auto;\n}\n#Footer > .container > .reserved {\n  font-size: 12px;\n  color: #fff;\n  margin: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/input/style.scss":
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/input/style.scss ***!
@@ -700,7 +719,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}\n.table-container > .no-data {\n  min-height: 200px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 20px;\n}", ""]);
+exports.push([module.i, ".table-container > table {\n  width: 100%;\n  border-bottom: 2px solid #329B58;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}\n.table-container > .no-data {\n  min-height: 200px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 20px;\n}", ""]);
 
 // exports
 
@@ -929,6 +948,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "#Students > .modal > .content > button {\n  margin-top: 10px;\n}\n#Students > .modal > .content > .input {\n  margin-bottom: 10px;\n}\n#Students > .table-container > table > thead > tr > th:nth-child(2) {\n  width: 17%;\n}\n#Students > .table-container > table > thead > tr > th:nth-child(3),\n#Students > .table-container > table > thead > tr > th:nth-child(4) {\n  width: 14%;\n}\n#Students > .table-container > table > thead > tr > th:last-child {\n  width: 15%;\n  text-align: center;\n}\n#Students > .table-container > table > tbody > tr > td.actions {\n  text-align: center;\n}\n#Students > .table-container > table > tbody > tr > td.actions > .update {\n  margin-right: 10px;\n}\n#Students > .table-container > table > tbody > tr > td.actions > .update,\n#Students > .table-container > table > tbody > tr > td.actions > .delete {\n  font-size: 12px;\n  min-width: 70px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/student-routes/info/report-card/style.scss":
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/student-routes/info/report-card/style.scss ***!
+  \********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".report-card > .header {\n  background-color: #329B58;\n  text-align: center;\n  color: #fff;\n  margin-bottom: 0;\n  padding: 10px 0;\n}", ""]);
 
 // exports
 
@@ -78357,6 +78395,66 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/footer/index.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/footer/index.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/footer/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Footer = function Footer() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+    id: "Footer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "reserved"
+  }, "2019 Cavite State University | Cavite City, Philippines")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
+/***/ "./resources/js/components/footer/style.scss":
+/*!***************************************************!*\
+  !*** ./resources/js/components/footer/style.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/footer/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/icon/index.js":
 /*!***********************************************!*\
   !*** ./resources/js/components/icon/index.js ***!
@@ -81177,15 +81275,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Context_current_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/current-user */ "./resources/js/contexts/current-user.js");
 /* harmony import */ var PortalComponents_topnav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! PortalComponents/topnav */ "./resources/js/portal-components/topnav/index.js");
 /* harmony import */ var PortalComponents_sidebar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! PortalComponents/sidebar */ "./resources/js/portal-components/sidebar/index.js");
-/* harmony import */ var PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! PortalRoutes/dean-message */ "./resources/js/portal-routes/dean-message/index.js");
-/* harmony import */ var PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! PortalRoutes/announcements */ "./resources/js/portal-routes/announcements/index.js");
-/* harmony import */ var PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! PortalRoutes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
-/* harmony import */ var PortalRoutes_students__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! PortalRoutes/students */ "./resources/js/portal-routes/students/index.js");
-/* harmony import */ var PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! PortalRoutes/nomatch */ "./resources/js/portal-routes/nomatch.js");
-/* harmony import */ var PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! PortalRoutes/requirements */ "./resources/js/portal-routes/requirements/index.js");
-/* harmony import */ var PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! PortalRoutes/retention-policies */ "./resources/js/portal-routes/retention-policies/index.js");
-/* harmony import */ var PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! PortalRoutes/course-offered */ "./resources/js/portal-routes/course-offered/index.js");
-/* harmony import */ var StudentRoutes_info__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! StudentRoutes/info */ "./resources/js/student-routes/info/index.js");
+/* harmony import */ var Components_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! Components/footer */ "./resources/js/components/footer/index.js");
+/* harmony import */ var PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! PortalRoutes/dean-message */ "./resources/js/portal-routes/dean-message/index.js");
+/* harmony import */ var PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! PortalRoutes/announcements */ "./resources/js/portal-routes/announcements/index.js");
+/* harmony import */ var PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! PortalRoutes/academic-calendar */ "./resources/js/portal-routes/academic-calendar/index.js");
+/* harmony import */ var PortalRoutes_students__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! PortalRoutes/students */ "./resources/js/portal-routes/students/index.js");
+/* harmony import */ var PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! PortalRoutes/nomatch */ "./resources/js/portal-routes/nomatch.js");
+/* harmony import */ var PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! PortalRoutes/requirements */ "./resources/js/portal-routes/requirements/index.js");
+/* harmony import */ var PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! PortalRoutes/retention-policies */ "./resources/js/portal-routes/retention-policies/index.js");
+/* harmony import */ var PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! PortalRoutes/course-offered */ "./resources/js/portal-routes/course-offered/index.js");
+/* harmony import */ var StudentRoutes_info__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! StudentRoutes/info */ "./resources/js/student-routes/info/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -81193,6 +81292,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -81238,31 +81338,31 @@ var App = function App() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal",
         exact: true,
-        component: PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_9__["default"]
+        component: PortalRoutes_announcements__WEBPACK_IMPORTED_MODULE_10__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/dean-message",
         exact: true,
-        component: PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_8__["default"]
+        component: PortalRoutes_dean_message__WEBPACK_IMPORTED_MODULE_9__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/academic-calendar",
         exact: true,
-        component: PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_10__["default"]
+        component: PortalRoutes_academic_calendar__WEBPACK_IMPORTED_MODULE_11__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/requirements",
         exact: true,
-        component: PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_13__["default"]
+        component: PortalRoutes_requirements__WEBPACK_IMPORTED_MODULE_14__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/retention-policies",
         exact: true,
-        component: PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_14__["default"]
+        component: PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_15__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/course-offered",
         exact: true,
-        component: PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_15__["default"]
+        component: PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_16__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/students",
         exact: true,
-        component: PortalRoutes_students__WEBPACK_IMPORTED_MODULE_11__["default"]
+        component: PortalRoutes_students__WEBPACK_IMPORTED_MODULE_12__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/students/:id?",
         component: function component() {
@@ -81274,7 +81374,7 @@ var App = function App() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
       path: "/portal",
       exact: true,
-      component: StudentRoutes_info__WEBPACK_IMPORTED_MODULE_16__["default"]
+      component: StudentRoutes_info__WEBPACK_IMPORTED_MODULE_17__["default"]
     }));
   };
 
@@ -81288,8 +81388,8 @@ var App = function App() {
       '-student': !user.is_admin
     })
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, routes(user.is_admin), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    component: PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_12__["default"]
-  })))));
+    component: PortalRoutes_nomatch__WEBPACK_IMPORTED_MODULE_13__["default"]
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_footer__WEBPACK_IMPORTED_MODULE_8__["default"], null));
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('App'));
@@ -81629,10 +81729,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var Reducers_student_info__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Reducers/student-info */ "./resources/js/reducers/student-info.js");
 /* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
-/* harmony import */ var Context_current_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Context/current-user */ "./resources/js/contexts/current-user.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var _report_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./report-card */ "./resources/js/student-routes/info/report-card/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -81647,70 +81745,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-var ReportCards = function ReportCards(_ref) {
-  var schoolYears = _ref.schoolYears,
-      semesters = _ref.semesters,
-      grades = _ref.grades;
-  return schoolYears.map(function (sy) {
-    return semesters.map(function (sem) {
-      return grades[sy][sem] && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "report-card"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Course Code"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Credit Units"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Grade"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Remarks"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, grades[sy][sem].map(function (grade) {
-        var CourseCode = grade.CourseCode,
-            CreditUnits = grade.CreditUnits,
-            Grade = grade.Grade,
-            remarks = grade.remarks;
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, CourseCode), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, CreditUnits), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, Grade), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, remarks));
-      }))));
-    });
-  }); // return schoolYearsKeys.map(sykey => {
-  //   let semester = Object.keys(grades[sykey])
-  //   return (
-  //     <div className="report-card">
-  //       <p>{sykey}</p>
-  //       {
-  //         semester.map(semkey => {
-  //           console.log(grades[sykey][semkey])
-  //           return (
-  //             <React.Fragment>
-  //               <p>{semkey}</p>
-  //               <div className="grades">
-  //                 <table>
-  //                   <thead>
-  //                     <tr>
-  //                       <th>Course Code</th>
-  //                       <th>Credit Units</th>
-  //                       <th>Grade</th>
-  //                       <th>Remarks</th>
-  //                     </tr>
-  //                   </thead>
-  //                   <tbody>
-  //                     {
-  //                       grades[sykey][semkey].map(data => {
-  //                         const [CourseCode, CreditsUnits, Grade, remarks] = data
-  //                         return(
-  //                           <tr>
-  //                             <tr>data.CourseCode</tr>
-  //                             {/* <tr>CreditsUnits</tr>
-  //                             <tr>Grade</tr>
-  //                             <tr>remarks</tr> */}
-  //                           </tr>
-  //                         )
-  //                       })
-  //                     }
-  //                   </tbody>
-  //                 </table>
-  //               </div>
-  //             </React.Fragment>
-  //           )
-  //         })
-  //       }
-  //     </div>
-  //     )
-  // })
-};
-
 var Info = function Info() {
   var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(Reducers_student_info__WEBPACK_IMPORTED_MODULE_1__["default"], Reducers_student_info__WEBPACK_IMPORTED_MODULE_1__["initialState"]),
       _useReducer2 = _slicedToArray(_useReducer, 2),
@@ -81721,7 +81755,7 @@ var Info = function Info() {
     dispatch({
       type: 'FETCHING'
     });
-    Object(Utils__WEBPACK_IMPORTED_MODULE_5__["get"])('/ajax/portal/student', {}, function (res) {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_3__["get"])('/ajax/portal/student', {}, function (res) {
       dispatch({
         type: 'SUCCESS_FETCH',
         studentNo: res.studentNo,
@@ -81742,7 +81776,7 @@ var Info = function Info() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_2__["default"], {
     variant: 'fixed',
     isActive: state.isLoading
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Student No.: ", state.studentNo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Name: ", state.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ReportCards, {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Student No.: ", state.studentNo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Name: ", state.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_report_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
     schoolYears: state.schoolYears,
     semesters: state.semesters,
     grades: state.grades
@@ -81750,6 +81784,123 @@ var Info = function Info() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Info);
+
+/***/ }),
+
+/***/ "./resources/js/student-routes/info/report-card/index.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/student-routes/info/report-card/index.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Components_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/table */ "./resources/js/components/table/index.js");
+/* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tablebody */ "./resources/js/student-routes/info/report-card/tablebody.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/student-routes/info/report-card/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+var ReportCards = function ReportCards(_ref) {
+  var schoolYears = _ref.schoolYears,
+      semesters = _ref.semesters,
+      grades = _ref.grades;
+  var tableHeaders = ['Course Code', 'Credit Units', 'Grade', 'Remarks'];
+  return schoolYears.map(function (schoolYear) {
+    return semesters.map(function (semester) {
+      return grades[schoolYear][semester] && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "report-card",
+        key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+        className: "header"
+      }, semester.toLowerCase() === 'summer' ? semester : "".concat(semester, " SEMESTER"), "  S.Y. ", schoolYear), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        headers: tableHeaders,
+        hasData: !!schoolYears.length,
+        customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          schoolYear: schoolYear,
+          semester: semester,
+          grades: grades
+        })
+      }));
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ReportCards);
+
+/***/ }),
+
+/***/ "./resources/js/student-routes/info/report-card/style.scss":
+/*!*****************************************************************!*\
+  !*** ./resources/js/student-routes/info/report-card/style.scss ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/student-routes/info/report-card/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/student-routes/info/report-card/tablebody.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/student-routes/info/report-card/tablebody.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var TableBody = function TableBody(_ref) {
+  var grades = _ref.grades,
+      schoolYear = _ref.schoolYear,
+      semester = _ref.semester;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, grades[schoolYear][semester].map(function (grade) {
+    var CourseCode = grade.CourseCode,
+        CreditUnits = grade.CreditUnits,
+        Grade = grade.Grade,
+        remarks = grade.remarks;
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default()()
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, CourseCode), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, CreditUnits), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, Grade), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, remarks));
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TableBody);
 
 /***/ }),
 
