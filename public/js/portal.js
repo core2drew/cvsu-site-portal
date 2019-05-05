@@ -81459,6 +81459,61 @@ var reducer = function reducer(state, action) {
 
 /***/ }),
 
+/***/ "./resources/js/reducers/student-info.js":
+/*!***********************************************!*\
+  !*** ./resources/js/reducers/student-info.js ***!
+  \***********************************************/
+/*! exports provided: initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var initialState = {
+  isLoading: false,
+  studentNo: null,
+  name: null,
+  schoolYears: [],
+  semesters: [],
+  grades: []
+};
+
+var reducer = function reducer(state, action) {
+  switch (action.type) {
+    case 'FETCHING':
+      return _objectSpread({}, state, {
+        isLoading: true
+      });
+
+    case 'SUCCESS_FETCH':
+      return _objectSpread({}, state, {
+        isLoading: false,
+        studentNo: action.studentNo,
+        name: action.name,
+        schoolYears: action.schoolYears,
+        semesters: action.semesters,
+        grades: action.grades
+      });
+
+    case 'ERROR_FETCH':
+      return _objectSpread({}, state, {
+        isLoading: false
+      });
+
+    default:
+      return state;
+  }
+};
+
+
+/* harmony default export */ __webpack_exports__["default"] = (reducer);
+
+/***/ }),
+
 /***/ "./resources/js/reducers/students.js":
 /*!*******************************************!*\
   !*** ./resources/js/reducers/students.js ***!
@@ -81572,11 +81627,12 @@ var reducer = function reducer(state, action) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
-/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+/* harmony import */ var Reducers_student_info__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Reducers/student-info */ "./resources/js/reducers/student-info.js");
+/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var Context_current_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Context/current-user */ "./resources/js/contexts/current-user.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -81589,40 +81645,107 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var ReportCards = function ReportCards(grade) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "report-card"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, grade));
+
+
+
+var ReportCards = function ReportCards(_ref) {
+  var schoolYears = _ref.schoolYears,
+      semesters = _ref.semesters,
+      grades = _ref.grades;
+  return schoolYears.map(function (sy) {
+    return semesters.map(function (sem) {
+      return grades[sy][sem] && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "report-card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Course Code"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Credit Units"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Grade"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Remarks"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, grades[sy][sem].map(function (grade) {
+        var CourseCode = grade.CourseCode,
+            CreditUnits = grade.CreditUnits,
+            Grade = grade.Grade,
+            remarks = grade.remarks;
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, CourseCode), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, CreditUnits), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, Grade), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, remarks));
+      }))));
+    });
+  }); // return schoolYearsKeys.map(sykey => {
+  //   let semester = Object.keys(grades[sykey])
+  //   return (
+  //     <div className="report-card">
+  //       <p>{sykey}</p>
+  //       {
+  //         semester.map(semkey => {
+  //           console.log(grades[sykey][semkey])
+  //           return (
+  //             <React.Fragment>
+  //               <p>{semkey}</p>
+  //               <div className="grades">
+  //                 <table>
+  //                   <thead>
+  //                     <tr>
+  //                       <th>Course Code</th>
+  //                       <th>Credit Units</th>
+  //                       <th>Grade</th>
+  //                       <th>Remarks</th>
+  //                     </tr>
+  //                   </thead>
+  //                   <tbody>
+  //                     {
+  //                       grades[sykey][semkey].map(data => {
+  //                         const [CourseCode, CreditsUnits, Grade, remarks] = data
+  //                         return(
+  //                           <tr>
+  //                             <tr>data.CourseCode</tr>
+  //                             {/* <tr>CreditsUnits</tr>
+  //                             <tr>Grade</tr>
+  //                             <tr>remarks</tr> */}
+  //                           </tr>
+  //                         )
+  //                       })
+  //                     }
+  //                   </tbody>
+  //                 </table>
+  //               </div>
+  //             </React.Fragment>
+  //           )
+  //         })
+  //       }
+  //     </div>
+  //     )
+  // })
 };
 
 var Info = function Info() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState2 = _slicedToArray(_useState, 2),
-      studentNo = _useState2[0],
-      setStudentNo = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState4 = _slicedToArray(_useState3, 2),
-      name = _useState4[0],
-      setName = _useState4[1];
-
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
-      _useState6 = _slicedToArray(_useState5, 2),
-      gradesArr = _useState6[0],
-      setGradesArr = _useState6[1];
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(Reducers_student_info__WEBPACK_IMPORTED_MODULE_1__["default"], Reducers_student_info__WEBPACK_IMPORTED_MODULE_1__["initialState"]),
+      _useReducer2 = _slicedToArray(_useReducer, 2),
+      state = _useReducer2[0],
+      dispatch = _useReducer2[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])('/ajax/portal/student', {}, function (res) {
-      setStudentNo(res.studentNo);
-      setName("".concat(res.lastName, ", ").concat(res.firstName));
+    dispatch({
+      type: 'FETCHING'
+    });
+    Object(Utils__WEBPACK_IMPORTED_MODULE_5__["get"])('/ajax/portal/student', {}, function (res) {
+      dispatch({
+        type: 'SUCCESS_FETCH',
+        studentNo: res.studentNo,
+        name: "".concat(res.lastName, ", ").concat(res.firstName),
+        schoolYears: res.schoolYears,
+        semesters: res.semesters,
+        grades: res.grades
+      });
+    }, function () {
+      dispatch({
+        type: 'ERROR_FETCH'
+      });
+      alert('Something went wrong. Please try again.');
     });
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "StudentInfo"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Student No.: ", studentNo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Name: ", name), gradesArr.map(function (grade) {
-    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ReportCard, _extends({
-      key: uuid_v4__WEBPACK_IMPORTED_MODULE_1___default.a
-    }, grade));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    variant: 'fixed',
+    isActive: state.isLoading
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Student No.: ", state.studentNo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Name: ", state.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ReportCards, {
+    schoolYears: state.schoolYears,
+    semesters: state.semesters,
+    grades: state.grades
   }));
 };
 

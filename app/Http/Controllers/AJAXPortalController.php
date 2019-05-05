@@ -219,48 +219,67 @@ class AJAXPortalController extends Controller
         $studentNo = $request->session()->get('user')->student_no;
         $firstName = $request->session()->get('user')->first_name;
         $lastName = $request->session()->get('user')->last_name;
-        $grades = $this->getGrades($studentNo);
-        
+        $schoolYears = $this->getSchoolYears($studentNo);
+        $semesters = $this->getSemesters($studentNo);
+        $grades = $this->getStudentGrades($studentNo, $schoolYears, $semesters);
+
         return response()->json([
             'studentNo' => $studentNo,
             'firstName' => $firstName,
             'lastName' => $lastName,
+            'schoolYears' => $schoolYears,
+            'semesters' => $semesters,
             'grades' => $grades
         ]);
     }
 
-    private function getGrades($studentNo) {
-        $grades = [];
-        // Get All School Years
+    private function getSchoolYears($studentNo) {
+        $response = [];
         $schoolYears = DB::table('grades')
             ->select('Schoolyear')
             ->where('StudentNumber', '=', $studentNo)
             ->groupBy('Schoolyear')
             ->orderBy('Schoolyear', 'asc')
             ->get();
-
+        
         foreach($schoolYears as $schoolYear) {
-            // Get All Semester on each School Year
-            $semesters = DB::table('grades')
-                ->select('Semester')
-                ->where('StudentNumber', '=', $studentNo)
-                ->where('Schoolyear', "$schoolYear->Schoolyear")
-                ->groupBy('Semester')
-                ->get();
-     
+            $response[] = $schoolYear->Schoolyear;
+        }
+        
+        return $response;
+    }
+
+    private function getStudentGrades($studentNo, $schoolYears, $semesters) {
+        $response = [];
+        foreach($schoolYears as $schoolYear) {
             foreach($semesters as $semester) {
                 // Get Grades on each School year and on each semester
                 $grade = DB::table('grades')
                     ->select('CourseCode', "CreditUnits", "Grade", "remarks")
                     ->where('StudentNumber', '=', $studentNo)
-                    ->where('Schoolyear', "$schoolYear->Schoolyear")
-                    ->where('Semester', "$semester->Semester")
+                    ->where('Schoolyear', $schoolYear)
+                    ->where('Semester', $semester)
                     ->get();
-
-                $grades["$schoolYear->Schoolyear"]["$semester->Semester"] = $grade;
+                // Return semesters that only have grades
+                if(count($grade)) {
+                    $response["$schoolYear"]["$semester"] = $grade;
+                }
             }
         }
-        return $grades;
+        return $response;
+    }
+
+    private function getSemesters($studentNo) {
+        $response = [];
+        $semesters = DB::table('grades')
+                ->select('Semester')
+                ->where('StudentNumber', '=', $studentNo)
+                ->groupBy('Semester')
+                ->get();
+        foreach($semesters as $semester) {
+            $response[] = $semester->Semester;
+        }
+        return $response;
     }
 
     private function checkUsername($username) {
