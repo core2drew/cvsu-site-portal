@@ -1,9 +1,9 @@
 @import '../../../sass/variables';
 
 .table-container {
+  border-bottom: 2px solid $green-1;
   > table {
     width: 100%;
-    border-bottom: 2px solid $green-1;
     > thead {
       background-color: $green-1;
       color: #fff;

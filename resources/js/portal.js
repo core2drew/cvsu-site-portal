@@ -44,7 +44,6 @@ const App = () => {
           <Route path="/portal/retention-policies" exact component={RetentionPolicies} />
           <Route path="/portal/course-offered" exact component={CourseOffered} />
           <Route path="/portal/students" exact component={Students} />
-          <Route path="/portal/students/:id?" component={() => <h1>Student Grade Info</h1>} />
           {/* <Route path="/portal/users" exact component={Users} /> */}
         </React.Fragment>
       )
