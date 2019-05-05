@@ -4,7 +4,7 @@ import './style.scss'
 
 const Input = props => (
   <div id={props.id} className={classname("input", props.variant)}>
-    <label className="label">{props.label}</label>
+    {props.label && <label className="label">{props.label}</label>}
     <input
       type={props.type} 
       placeholder={props.placeholder}

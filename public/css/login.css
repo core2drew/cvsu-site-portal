@@ -68,7 +68,7 @@
   margin-bottom: 15px;
 }
 
-#Login > .cvsu-btn {
+#Login > .button {
   padding-top: 14px;
   padding-bottom: 14px;
   -webkit-border-radius: 8px;
@@ -91,7 +91,7 @@
           justify-content: space-between;
 }
 
-#Login > .footer > .cvsu-btn {
+#Login > .footer > .button {
   text-transform: capitalize;
   font-family: rubikregular;
 }

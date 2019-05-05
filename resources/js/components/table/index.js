@@ -2,6 +2,7 @@ import React from 'react'
 import Uuid from 'uuid/v4'
 import classname from 'classnames'
 import Dropdown from 'Components/dropdown'
+import FilterAction from './filter-action'
 import './style.scss'
 
 const TableHeader = props => (
@@ -32,7 +33,7 @@ const TableBody = props => (
 
 const Table = props => (
   <div id={props.id} className={classname('table-container', props.variant)}>
-    <Dropdown/>
+    {props.customFilterAction || <FilterAction handleFilter={props.handleFilter}/>}
     <table>
       <TableHeader headers={props.headers}/>
       {props.customTableBody || <TableBody items={props.items} />}
@@ -51,7 +52,8 @@ Table.defaultProps = {
   headers: [],
   items: [],
   customTableBody: null,
-  hasData: false
+  hasData: false,
+  customFilterAction: null
 }
 
 export default Table

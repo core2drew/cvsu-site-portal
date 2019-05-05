@@ -586,7 +586,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  border: 0;\n  background-color: #329B58;\n  color: #fff;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: rubikmedium;\n}\n.cvsu-btn > i[class*=icon] {\n  margin-left: 10px;\n}\n\n.cvsu-btn.tertiary {\n  background-color: transparent;\n  color: #329B58;\n  padding: 0;\n}\n\n.cvsu-btn.danger {\n  background-color: #f34141;\n}", ""]);
+exports.push([module.i, ".button {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  border: 0;\n  background-color: #329B58;\n  color: #fff;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: rubikmedium;\n}\n.button > i[class*=icon] {\n  margin-left: 10px;\n}\n.button.-tertiary {\n  background-color: transparent;\n  color: #329B58;\n  padding: 0;\n}\n.button.-danger {\n  background-color: #f34141;\n}", ""]);
 
 // exports
 
@@ -624,7 +624,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".dropdown {\n  position: relative;\n  padding: 10px 20px;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  cursor: pointer;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.dropdown.-active {\n  -webkit-border-bottom-left-radius: 0;\n     -moz-border-radius-bottomleft: 0;\n          border-bottom-left-radius: 0;\n  -webkit-border-bottom-right-radius: 0;\n     -moz-border-radius-bottomright: 0;\n          border-bottom-right-radius: 0;\n}\n.dropdown.-active > .items {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.dropdown > .selected {\n  cursor: pointer;\n}\n.dropdown > i[class*=icon] {\n  font-size: 8px;\n  margin-left: 15px;\n}\n.dropdown > .items {\n  display: none;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  position: absolute;\n  width: 100%;\n  left: -1px;\n  top: 36px;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-border-bottom-left-radius: 4px;\n     -moz-border-radius-bottomleft: 4px;\n          border-bottom-left-radius: 4px;\n  -webkit-border-bottom-right-radius: 4px;\n     -moz-border-radius-bottomright: 4px;\n          border-bottom-right-radius: 4px;\n}\n.dropdown > .items > .item {\n  padding: 10px;\n  cursor: pointer;\n}\n.dropdown > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
+exports.push([module.i, ".dropdown {\n  position: relative;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  cursor: pointer;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.dropdown.-active {\n  -webkit-border-bottom-left-radius: 0;\n     -moz-border-radius-bottomleft: 0;\n          border-bottom-left-radius: 0;\n  -webkit-border-bottom-right-radius: 0;\n     -moz-border-radius-bottomright: 0;\n          border-bottom-right-radius: 0;\n}\n.dropdown.-active > .items {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.dropdown > .selected {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  padding: 10px 40px 10px 20px;\n  cursor: pointer;\n}\n.dropdown > .selected.-placeholder {\n  color: #828282;\n}\n.dropdown > .selected > i[class*=icon] {\n  position: absolute;\n  font-size: 8px;\n  right: 15px;\n  color: #828282;\n}\n.dropdown > .items {\n  display: none;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  position: absolute;\n  width: 100%;\n  left: -1px;\n  top: 36px;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-border-bottom-left-radius: 4px;\n     -moz-border-radius-bottomleft: 4px;\n          border-bottom-left-radius: 4px;\n  -webkit-border-bottom-right-radius: 4px;\n     -moz-border-radius-bottomright: 4px;\n          border-bottom-right-radius: 4px;\n}\n.dropdown > .items > .item {\n  padding: 10px;\n  cursor: pointer;\n}\n.dropdown > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
 
 // exports
 
@@ -681,7 +681,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".input {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.input > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.input input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".input {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.input > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.input input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 10px 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -738,7 +738,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".table-container {\n  border-bottom: 2px solid #329B58;\n}\n.table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}\n.table-container > .no-data {\n  min-height: 200px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 20px;\n}", ""]);
+exports.push([module.i, ".table-container {\n  border-bottom: 2px solid #329B58;\n}\n.table-container > .search-filter {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}\n.table-container > .no-data {\n  min-height: 200px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 20px;\n}", ""]);
 
 // exports
 
@@ -833,7 +833,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#TopNav {\n  background-color: #fff;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  padding-left: 15px;\n  padding-right: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  grid-column: 1/3;\n  max-height: 60px;\n}\n#TopNav > .sitename {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 5px 0;\n  text-decoration: none;\n}\n#TopNav > .sitename:visited {\n  color: inherit;\n}\n#TopNav > .sitename > .logo {\n  width: 50px;\n  height: 50px;\n}\n#TopNav > .sitename > .schoolname {\n  margin-left: 12px;\n}\n#TopNav > .sitename > .schoolname > .name {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .sitename > .schoolname > .branch {\n  margin-top: 3px;\n  margin-bottom: 0;\n  font-size: 12px;\n}\n#TopNav > .menu {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n  position: relative;\n}\n#TopNav > .menu > .profile-image {\n  margin-right: 10px;\n  width: 40px;\n  height: 40px;\n  -webkit-border-radius: 40px;\n     -moz-border-radius: 40px;\n          border-radius: 40px;\n}\n#TopNav > .menu > .greet {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-family: rubikmedium;\n  margin-top: 0;\n  margin-bottom: 0;\n  text-transform: capitalize;\n}\n#TopNav > .menu > .greet > i[class*=icon] {\n  font-size: 10px;\n  margin-left: 5px;\n}\n#TopNav > .menu > .items {\n  display: none;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  background-color: #fff;\n  position: absolute;\n  bottom: -115px;\n  width: 120px;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#TopNav > .menu > .items.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n#TopNav > .menu > .items > .item {\n  text-decoration: none;\n  padding: 10px 15px;\n  color: inherit;\n  font-family: rubikregular;\n  text-transform: none;\n}\n#TopNav > .menu > .items > .item[class*=cvsu-btn] {\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n     -moz-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n#TopNav > .menu > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
+exports.push([module.i, "#TopNav {\n  background-color: #fff;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  padding-left: 15px;\n  padding-right: 15px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  grid-column: 1/3;\n  max-height: 60px;\n}\n#TopNav > .sitename {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 5px 0;\n  text-decoration: none;\n}\n#TopNav > .sitename:visited {\n  color: inherit;\n}\n#TopNav > .sitename > .logo {\n  width: 50px;\n  height: 50px;\n}\n#TopNav > .sitename > .schoolname {\n  margin-left: 12px;\n}\n#TopNav > .sitename > .schoolname > .name {\n  font-family: rubikmedium;\n  font-size: 14px;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n#TopNav > .sitename > .schoolname > .branch {\n  margin-top: 3px;\n  margin-bottom: 0;\n  font-size: 12px;\n}\n#TopNav > .menu {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  cursor: pointer;\n  position: relative;\n}\n#TopNav > .menu > .profile-image {\n  margin-right: 10px;\n  width: 40px;\n  height: 40px;\n  -webkit-border-radius: 40px;\n     -moz-border-radius: 40px;\n          border-radius: 40px;\n}\n#TopNav > .menu > .greet {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-family: rubikmedium;\n  margin-top: 0;\n  margin-bottom: 0;\n  text-transform: capitalize;\n}\n#TopNav > .menu > .greet > i[class*=icon] {\n  font-size: 10px;\n  margin-left: 5px;\n}\n#TopNav > .menu > .items {\n  display: none;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  background-color: #fff;\n  position: absolute;\n  bottom: -115px;\n  width: 120px;\n  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n     -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14);\n}\n#TopNav > .menu > .items.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n#TopNav > .menu > .items > .item {\n  text-decoration: none;\n  padding: 10px 15px;\n  color: inherit;\n  font-family: rubikregular;\n  text-transform: none;\n}\n#TopNav > .menu > .items > .item[class*=button] {\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n     -moz-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n#TopNav > .menu > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
 
 // exports
 
@@ -78174,7 +78174,7 @@ __webpack_require__.r(__webpack_exports__);
 var Button = function Button(props) {
   return props.isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: props.id,
-    className: "cvsu-btn ".concat(props.variant),
+    className: "button ".concat(props.variant),
     onClick: props.onClick
   }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
     icon: props.icon
@@ -78353,9 +78353,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/dropdown/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+/* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/dropdown/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -78369,45 +78371,84 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Dropdown = function Dropdown() {
+
+var Items = function Items(_ref) {
+  var items = _ref.items,
+      handleSelectItem = _ref.handleSelectItem;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "items"
+  }, items.map(function (item) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      key: uuid_v4__WEBPACK_IMPORTED_MODULE_2___default()(),
+      className: "item",
+      onClick: function onClick() {
+        return handleSelectItem(item.value, item.label);
+      }
+    }, item.label);
+  }));
+};
+
+var Dropdown = function Dropdown(_ref2) {
+  var placeHolder = _ref2.placeHolder,
+      items = _ref2.items,
+      onChange = _ref2.onChange;
+
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
       isActive = _useState2[0],
       setIsActive = _useState2[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    var handleClose = function handleClose() {
-      setIsActive(false);
-    };
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      selectedLabel = _useState4[0],
+      setSelectedLabel = _useState4[1];
 
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState6 = _slicedToArray(_useState5, 2),
+      selectedValue = _useState6[0],
+      setSelectedValue = _useState6[1];
+
+  var handleClose = function handleClose() {
+    setIsActive(false);
+  };
+
+  var handleSelectItem = function handleSelectItem(value, label) {
+    handleClose();
+    setSelectedValue(value);
+    setSelectedLabel(label);
+    onChange(value);
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     document.addEventListener('click', handleClose);
     return function () {
       document.removeEventListener('click', handleClose);
     };
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: function onClick(e) {
-      e.nativeEvent.stopImmediatePropagation();
-      setIsActive(true);
-    },
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('dropdown', {
       '-active': isActive
     })
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "selected"
-  }, "Dropdown"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onClick: function onClick(e) {
+      e.nativeEvent.stopImmediatePropagation();
+      setIsActive(true);
+    },
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("selected", {
+      '-placeholder': placeHolder && !selectedLabel
+    })
+  }, selectedLabel || placeHolder, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_3__["default"], {
     icon: 'caret-down'
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "items"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "item"
-  }, "Item 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "item"
-  }, "Item 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "item"
-  }, "Item 3")));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Items, {
+    items: items,
+    handleSelectItem: handleSelectItem
+  }));
 };
 
+Dropdown.defaultProps = {
+  placeHolder: '',
+  items: []
+};
 /* harmony default export */ __webpack_exports__["default"] = (Dropdown);
 
 /***/ }),
@@ -78630,7 +78671,7 @@ var Input = function Input(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: props.id,
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("input", props.variant)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, props.label && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "label"
   }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: props.type,
@@ -78846,6 +78887,40 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/table/filter-action.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/table/filter-action.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Components_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/dropdown */ "./resources/js/components/dropdown/index.js");
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+
+
+
+
+var SearchFilter = function SearchFilter() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "search-filter"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_dropdown__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    placeHolder: 'Search By',
+    onChange: function onChange(value) {
+      return console.log(value);
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    variant: 'search'
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SearchFilter);
+
+/***/ }),
+
 /***/ "./resources/js/components/table/index.js":
 /*!************************************************!*\
   !*** ./resources/js/components/table/index.js ***!
@@ -78862,8 +78937,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var Components_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/dropdown */ "./resources/js/components/dropdown/index.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/table/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _filter_action__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./filter-action */ "./resources/js/components/table/filter-action.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/table/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -78900,7 +78977,9 @@ var Table = function Table(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: props.id,
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('table-container', props.variant)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableHeader, {
+  }, props.customFilterAction || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_filter_action__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    handleFilter: props.handleFilter
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableHeader, {
     headers: props.headers
   }), props.customTableBody || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableBody, {
     items: props.items
@@ -78913,7 +78992,8 @@ Table.defaultProps = {
   headers: [],
   items: [],
   customTableBody: null,
-  hasData: false
+  hasData: false,
+  customFilterAction: null
 };
 /* harmony default export */ __webpack_exports__["default"] = (Table);
 
@@ -79651,13 +79731,13 @@ var TopNav = function TopNav() {
       'active': isMenuActive
     })
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    variant: 'tertiary item',
+    variant: '-tertiary item',
     text: 'Profile',
     onClick: function onClick() {
       return setProfileModalActive(true);
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    variant: 'tertiary item',
+    variant: '-tertiary item',
     text: 'Account',
     onClick: function onClick() {
       return setAccountModalActive(true);
@@ -80110,7 +80190,7 @@ var TableBody = function TableBody(_ref) {
         return handleOpenModal(d.id);
       }
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      variant: 'delete danger',
+      variant: 'delete -danger',
       text: 'Delete',
       onClick: function onClick() {
         return handleDelete(d.id);
@@ -80466,7 +80546,7 @@ var TableBody = function TableBody(_ref) {
         return announcementsContext.handleEdit(d.id);
       }
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      variant: 'delete danger',
+      variant: 'delete -danger',
       text: 'Delete',
       onClick: function onClick() {
         return announcementsContext.handleDelete(d.id);
@@ -81371,7 +81451,7 @@ var TableBody = function TableBody(_ref) {
         return handleOpenModal(d.id);
       }
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      variant: 'delete danger',
+      variant: 'delete -danger',
       text: 'Delete',
       onClick: function onClick() {
         return handleDelete(d.id);
@@ -81753,7 +81833,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var initialState = {
-  isLoading: false,
+  isLoading: true,
   isModalActive: false,
   isUpdateModal: false,
   modalHeaderTitle: 'New User',

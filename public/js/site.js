@@ -586,7 +586,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cvsu-btn {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  border: 0;\n  background-color: #329B58;\n  color: #fff;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: rubikmedium;\n}\n.cvsu-btn > i[class*=icon] {\n  margin-left: 10px;\n}\n\n.cvsu-btn.tertiary {\n  background-color: transparent;\n  color: #329B58;\n  padding: 0;\n}\n\n.cvsu-btn.danger {\n  background-color: #f34141;\n}", ""]);
+exports.push([module.i, ".button {\n  -webkit-transition: background-color 0.2s;\n  -o-transition: background-color 0.2s;\n  -moz-transition: background-color 0.2s;\n  transition: background-color 0.2s;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  border: 0;\n  background-color: #329B58;\n  color: #fff;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  padding: 10px 15px;\n  text-decoration: none;\n  cursor: pointer;\n  outline: none;\n  border-radius: 4px;\n  text-transform: uppercase;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: rubikmedium;\n}\n.button > i[class*=icon] {\n  margin-left: 10px;\n}\n.button.-tertiary {\n  background-color: transparent;\n  color: #329B58;\n  padding: 0;\n}\n.button.-danger {\n  background-color: #f34141;\n}", ""]);
 
 // exports
 
@@ -624,7 +624,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".input {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.input > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.input input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
+exports.push([module.i, ".input {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.input > .label {\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n.input input {\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  border: 1px solid #D5D7E3;\n  padding: 10px 15px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n  outline: none;\n}", ""]);
 
 // exports
 
@@ -78418,7 +78418,7 @@ __webpack_require__.r(__webpack_exports__);
 var Button = function Button(props) {
   return props.isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: props.id,
-    className: "cvsu-btn ".concat(props.variant),
+    className: "button ".concat(props.variant),
     onClick: props.onClick
   }, props.text, props.icon && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
     icon: props.icon
@@ -78581,7 +78581,7 @@ var Input = function Input(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: props.id,
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("input", props.variant)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, props.label && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "label"
   }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: props.type,
@@ -79324,7 +79324,7 @@ var Announcements = function Announcements() {
     }));
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "LoadMoreAnnouncements",
-    variant: 'tertiary',
+    variant: '-tertiary',
     text: "Load More Announcements",
     onClick: handleLoadMore,
     isVisible: nextPageURL

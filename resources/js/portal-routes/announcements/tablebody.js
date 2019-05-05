@@ -20,7 +20,7 @@ const TableBody = ({ data }) => {
               <td>{updated_at}</td>
               <td className="actions">
                 <Button variant={'update'} text={'Edit'} onClick={() => announcementsContext.handleEdit(d.id)}/>
-                <Button variant={'delete danger'} text={'Delete'} onClick={() => announcementsContext.handleDelete(d.id)}/>
+                <Button variant={'delete -danger'} text={'Delete'} onClick={() => announcementsContext.handleDelete(d.id)}/>
               </td>
             </tr>
           )

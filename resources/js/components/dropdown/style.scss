@@ -2,7 +2,6 @@
 
 .dropdown {
   position: relative;
-  padding: 10px 20px;
   display: inline-flex;
   background-color: #fff;
   border: 1px solid $gray-1;
@@ -18,12 +17,21 @@
   }
 
   > .selected {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 40px 10px 20px;
     cursor: pointer;
-  }
+    &.-placeholder {
+      color: $gray-2;
+    }
 
-  > i[class*=icon] {
-    font-size: 8px;
-    margin-left: 15px;
+    > i[class*=icon] {
+      position: absolute;
+      font-size: 8px;
+      right: 15px;
+      color: $gray-2;
+    }
   }
 
   > .items {

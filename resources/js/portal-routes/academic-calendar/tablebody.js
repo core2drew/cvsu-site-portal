@@ -24,7 +24,7 @@ const TableBody = ({ data }) => {
               <td>{updated_at}</td>
               <td className="actions">
                 <Button variant={'update'} text={'Edit'} onClick={() => handleOpenModal(d.id)}/>
-                <Button variant={'delete danger'} text={'Delete'} onClick={() => handleDelete(d.id)}/>
+                <Button variant={'delete -danger'} text={'Delete'} onClick={() => handleDelete(d.id)}/>
               </td>
             </tr>
           )

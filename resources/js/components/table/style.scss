@@ -2,6 +2,10 @@
 
 .table-container {
   border-bottom: 2px solid $green-1;
+  > .search-filter {
+    display: flex;
+    align-items: center;
+  }
   > table {
     width: 100%;
     > thead {

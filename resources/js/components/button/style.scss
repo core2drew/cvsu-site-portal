@@ -1,6 +1,6 @@
 @import '../../../sass/variables';
 
-.cvsu-btn {
+.button {
   transition: background-color 0.2s;
   display: inline-flex;
   border: 0;
@@ -18,14 +18,12 @@
   > i[class*=icon] {
     margin-left: 10px;
   }
-}
-
-.cvsu-btn.tertiary {
-  background-color: transparent;
-  color: $green-1;
-  padding: 0;
-}
-
-.cvsu-btn.danger {
-  background-color: $red-1;
+  &.-tertiary {
+    background-color: transparent;
+    color: $green-1;
+    padding: 0;
+  }
+  &.-danger {
+    background-color: $red-1;
+  }
 }

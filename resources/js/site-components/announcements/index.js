@@ -38,7 +38,7 @@ const Announcements = () => {
     <div id="Announcements" className="section">
       <p className="section header">Latest Announcements</p>
       { announcements.map(announcement => <Announcement {...announcement} key={Uuid()}/>) }
-      <Button id="LoadMoreAnnouncements" variant={'tertiary'} text="Load More Announcements" onClick={handleLoadMore} isVisible={nextPageURL}/>
+      <Button id="LoadMoreAnnouncements" variant={'-tertiary'} text="Load More Announcements" onClick={handleLoadMore} isVisible={nextPageURL}/>
     </div>
   )
 }

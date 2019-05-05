@@ -6,7 +6,7 @@ const Button = props => (
   props.isVisible &&
   <button 
     id={props.id} 
-    className={`cvsu-btn ${props.variant}`}
+    className={`button ${props.variant}`}
     onClick={props.onClick}
   >
     {props.text}

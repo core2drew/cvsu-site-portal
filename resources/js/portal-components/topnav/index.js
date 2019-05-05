@@ -53,8 +53,8 @@ const TopNav = () => {
               classnames('items', {'active': isMenuActive })
             }
           >
-            <Button variant={'tertiary item'} text={'Profile'} onClick={() => setProfileModalActive(true)}/>
-            <Button variant={'tertiary item'} text={'Account'} onClick={() => setAccountModalActive(true)}/>
+            <Button variant={'-tertiary item'} text={'Profile'} onClick={() => setProfileModalActive(true)}/>
+            <Button variant={'-tertiary item'} text={'Account'} onClick={() => setAccountModalActive(true)}/>
             <a href="/auth/logout" className="item">Log out</a>
           </div>
         </div>

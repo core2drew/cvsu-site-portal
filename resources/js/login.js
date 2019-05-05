@@ -43,7 +43,7 @@ const App = () => {
         
         <Button text={'Log In'} onClick={handleLogin} />
         <div className="footer">
-          <Button text={'Sign up'} variant={'tertiary'} onClick={() => setSignUpModalActive(true)}/> 
+          <Button text={'Sign up'} variant={'-tertiary'} onClick={() => setSignUpModalActive(true)}/> 
           {/* <Button text={'Forget Password'} variant={'tertiary'} />  */}
         </div>
       </div>
