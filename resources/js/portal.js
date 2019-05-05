@@ -60,22 +60,27 @@ const App = () => {
     <Router>
       <CurrentUser.Provider value={user}>
         <TopNav />
-        <Sidebar isVisible={user.is_admin}/>
-        <div 
-            id="Content" 
-            className={
-              classname({
-                '-student': !user.is_admin 
-              })
-            }
-        >
-          <Switch>
-              { routes(user.is_admin) }
-              <Route component={NoMatch} />
-          </Switch>
-        </div>
+        {
+          user.id && (
+            <React.Fragment>
+              <Sidebar isVisible={user.is_admin}/>
+              <div 
+                  id="Content" 
+                  className={
+                    classname({
+                      '-student': !user.is_admin 
+                    })
+                  }
+              >
+                <Switch>
+                    { routes(user.is_admin) }
+                    <Route component={NoMatch} />
+                </Switch>
+              </div>
+            </React.Fragment>
+          )
+        }
       </CurrentUser.Provider>
-      <Footer />
     </Router>
   )
 }

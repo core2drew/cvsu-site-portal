@@ -8,8 +8,8 @@ body {
   position: relative;
   min-height: 100%;
   display: grid;
-  grid-template-columns: 200px;
-
+  grid-template-columns: min-content;
+  grid-template-rows: 60px;
   &.-student {
     display: block;
   }
@@ -17,9 +17,7 @@ body {
 
 #Content {
   overflow-y: auto;
-  min-height: calc(100vh - 60px);
   padding: 20px;
-
   &.-student {
     background-color: #fff;
     max-width: 960px;
