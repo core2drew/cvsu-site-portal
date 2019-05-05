@@ -1,6 +1,7 @@
 import React from 'react'
 import Uuid from 'uuid/v4'
 import classname from 'classnames'
+import Dropdown from 'Components/dropdown'
 import './style.scss'
 
 const TableHeader = props => (
@@ -31,6 +32,7 @@ const TableBody = props => (
 
 const Table = props => (
   <div id={props.id} className={classname('table-container', props.variant)}>
+    <Dropdown/>
     <table>
       <TableHeader headers={props.headers}/>
       {props.customTableBody || <TableBody items={props.items} />}

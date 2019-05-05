@@ -612,6 +612,25 @@ exports.push([module.i, ".date-picker {\n  display: -webkit-box;\n  display: -we
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/dropdown/style.scss":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/dropdown/style.scss ***!
+  \********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".dropdown {\n  position: relative;\n  padding: 10px 20px;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  cursor: pointer;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.dropdown.-active {\n  -webkit-border-bottom-left-radius: 0;\n     -moz-border-radius-bottomleft: 0;\n          border-bottom-left-radius: 0;\n  -webkit-border-bottom-right-radius: 0;\n     -moz-border-radius-bottomright: 0;\n          border-bottom-right-radius: 0;\n}\n.dropdown.-active > .items {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.dropdown > .selected {\n  cursor: pointer;\n}\n.dropdown > i[class*=icon] {\n  font-size: 8px;\n  margin-left: 15px;\n}\n.dropdown > .items {\n  display: none;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  position: absolute;\n  width: 100%;\n  left: -1px;\n  top: 36px;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-border-bottom-left-radius: 4px;\n     -moz-border-radius-bottomleft: 4px;\n          border-bottom-left-radius: 4px;\n  -webkit-border-bottom-right-radius: 4px;\n     -moz-border-radius-bottomright: 4px;\n          border-bottom-right-radius: 4px;\n}\n.dropdown > .items > .item {\n  padding: 10px;\n  cursor: pointer;\n}\n.dropdown > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/file-input/style.scss":
 /*!**********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/file-input/style.scss ***!
@@ -78321,6 +78340,108 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/dropdown/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/dropdown/index.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/dropdown/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var Dropdown = function Dropdown() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isActive = _useState2[0],
+      setIsActive = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var handleClose = function handleClose() {
+      setIsActive(false);
+    };
+
+    document.addEventListener('click', handleClose);
+    return function () {
+      document.removeEventListener('click', handleClose);
+    };
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick(e) {
+      e.nativeEvent.stopImmediatePropagation();
+      setIsActive(true);
+    },
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('dropdown', {
+      '-active': isActive
+    })
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "selected"
+  }, "Dropdown"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    icon: 'caret-down'
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "items"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "item"
+  }, "Item 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "item"
+  }, "Item 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "item"
+  }, "Item 3")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Dropdown);
+
+/***/ }),
+
+/***/ "./resources/js/components/dropdown/style.scss":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/dropdown/style.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/dropdown/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/file-input/index.js":
 /*!*****************************************************!*\
   !*** ./resources/js/components/file-input/index.js ***!
@@ -78740,8 +78861,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var uuid_v4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid_v4__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/table/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var Components_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/dropdown */ "./resources/js/components/dropdown/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/table/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -78777,7 +78900,7 @@ var Table = function Table(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: props.id,
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('table-container', props.variant)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableHeader, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableHeader, {
     headers: props.headers
   }), props.customTableBody || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableBody, {
     items: props.items
@@ -81039,13 +81162,19 @@ var Students = function Students(props) {
       state = _useReducer2[0],
       dispatch = _useReducer2[1];
 
-  var tableHeaders = ['First Name', 'Last Name', 'Username', 'Created At', 'Updated At', 'Actions'];
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {// get(url, {}, res => {
-    //   dispatch({type: "SUCCESS_FETCH", data: res.data})
-    // }, () => {
-    //   dispatch({type: "ERROR_FETCH"})
-    //   alert('Something went wrong. Please try again')
-    // })
+  var tableHeaders = ['Student Number', 'First Name', 'Last Name', 'Username', 'Created At', 'Updated At', 'Actions'];
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
+      dispatch({
+        type: "SUCCESS_FETCH",
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_FETCH"
+      });
+      alert('Something went wrong. Please try again');
+    });
   }, []);
 
   var handleOpenModal = function handleOpenModal(id) {
@@ -81233,11 +81362,11 @@ var TableBody = function TableBody(_ref) {
     var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY');
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.student_no), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: 'update',
-      text: 'View',
+      text: 'View Grades',
       onClick: function onClick() {
         return handleOpenModal(d.id);
       }

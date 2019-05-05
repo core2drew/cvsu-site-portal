@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AJAXAdminPortalController extends Controller
 {
@@ -233,5 +234,15 @@ class AJAXAdminPortalController extends Controller
         }
 
         return abort(500);
+    }
+
+    public function getStudents(Request $request) {
+        $response = DB::table('users')
+        ->whereNull('deleted_at')
+        ->whereNotNull('student_no')
+        ->where('type', '=', 'student')
+        ->latest()
+        ->paginate(15);
+        return response()->json($response);
     }
 }

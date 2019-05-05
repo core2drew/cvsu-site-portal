@@ -12,15 +12,15 @@ import './style.scss'
 const Students = props => {
   const url = '/ajax/portal/students'
   const [state, dispatch] = useReducer(Reducer, initialState)
-  const tableHeaders = ['First Name', 'Last Name', 'Username', 'Created At', 'Updated At', 'Actions']
+  const tableHeaders = ['Student Number', 'First Name', 'Last Name', 'Username', 'Created At', 'Updated At', 'Actions']
 
   useEffect(() => {
-    // get(url, {}, res => {
-    //   dispatch({type: "SUCCESS_FETCH", data: res.data})
-    // }, () => {
-    //   dispatch({type: "ERROR_FETCH"})
-    //   alert('Something went wrong. Please try again')
-    // })
+    get(url, {}, res => {
+      dispatch({type: "SUCCESS_FETCH", data: res.data})
+    }, () => {
+      dispatch({type: "ERROR_FETCH"})
+      alert('Something went wrong. Please try again')
+    })
   },[])
 
   const handleOpenModal = id => {
@@ -96,10 +96,6 @@ const Students = props => {
     <Context.Provider value={{ state, dispatch, handleOpenModal, handleAdd, handleDelete, handleUpdate }}>
     <div id="Students">
       <Preloader variant={'fixed'} isActive={state.isLoading}/>
-      {/* <Button 
-        text="Add New"
-        onClick={() => handleOpenModal()}
-      /> */}
       <Table headers={tableHeaders} hasData={!!state.data.length} customTableBody={<TableBody data={state.data}/>} />
       <FormModal />
     </div>

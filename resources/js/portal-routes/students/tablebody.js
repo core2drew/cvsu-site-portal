@@ -17,13 +17,14 @@ const TableBody = ({ data }) => {
 
           return (
             <tr key={Uuid()}>
+              <td>{d.student_no}</td>
               <td>{d.first_name}</td>
               <td>{d.last_name}</td>
               <td>{d.username}</td>
               <td>{created_at}</td>
               <td>{updated_at}</td>
               <td className="actions">
-                <Button variant={'update'} text={'View'} onClick={() => handleOpenModal(d.id)}/>
+                <Button variant={'update'} text={'View Grades'} onClick={() => handleOpenModal(d.id)}/>
                 <Button variant={'delete danger'} text={'Delete'} onClick={() => handleDelete(d.id)}/>
               </td>
             </tr>

@@ -12,7 +12,7 @@ use Crypt;
 class AJAXPortalController extends Controller
 {
     public function getPortalUser(Request $request) {
-        return response()->json($request->session()->get('user'));
+        return response()->json(Session::get('user'));
     }
 
     function updateUserSession($id) {
@@ -199,7 +199,8 @@ class AJAXPortalController extends Controller
             'student_no' => $studentNo,
             'username' => $username,
             'password' => Crypt::encrypt($password),
-            'first_name' => $firstName, 
+            'first_name' => $firstName,
+            'type' => 'student',
             'last_name' => $lastName,
             'created_at' => $created_at, 
             'updated_at' => $updated_at
@@ -216,9 +217,9 @@ class AJAXPortalController extends Controller
     }
 
     public function getStudentInfo(Request $request) {
-        $studentNo = $request->session()->get('user')->student_no;
-        $firstName = $request->session()->get('user')->first_name;
-        $lastName = $request->session()->get('user')->last_name;
+        $studentNo = Session::get('user')->student_no;
+        $firstName = Session::get('user')->first_name;
+        $lastName = Session::get('user')->last_name;
         $schoolYears = $this->getSchoolYears($studentNo);
         $semesters = $this->getSemesters($studentNo);
         $grades = $this->getStudentGrades($studentNo, $schoolYears, $semesters);

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Crypt;
 use Log;
+use Session;
 
 class AJAXLoginController extends Controller
 {
@@ -31,7 +32,7 @@ class AJAXLoginController extends Controller
         }
   
         if(!empty($user) && $user->id){
-          $request->session()->put('user', $user);
+          Session::put('user', $user);
           return response()->json([
             'id' => $user->id
           ]);

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'cvsu-font-icon';
-  src:  url('fonts/cvsu-font-icon.eot?aazq74');
-  src:  url('fonts/cvsu-font-icon.eot?aazq74#iefix') format('embedded-opentype'),
-    url('fonts/cvsu-font-icon.ttf?aazq74') format('truetype'),
-    url('fonts/cvsu-font-icon.woff?aazq74') format('woff'),
-    url('fonts/cvsu-font-icon.svg?aazq74#cvsu-font-icon') format('svg');
+  src:  url('fonts/cvsu-font-icon.eot?mdgyfy');
+  src:  url('fonts/cvsu-font-icon.eot?mdgyfy#iefix') format('embedded-opentype'),
+    url('fonts/cvsu-font-icon.ttf?mdgyfy') format('truetype'),
+    url('fonts/cvsu-font-icon.woff?mdgyfy') format('woff'),
+    url('fonts/cvsu-font-icon.svg?mdgyfy#cvsu-font-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -44,6 +44,9 @@
 }
 .icon-caret-right:before {
   content: "\e902";
+}
+.icon-caret-down:before {
+  content: "\e908";
 }
 .icon-lock:before {
   content: "\e903";

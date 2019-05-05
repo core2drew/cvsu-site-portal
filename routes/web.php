@@ -200,6 +200,13 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
+        // Students Table
+        Route::get("/students", [
+            "as" => "ajax.portal.students",
+            "uses" => "AJAXAdminPortalController@getStudents",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
         // Student Sign Up
         Route::post('/signup', [
             "as" => "ajax.portal.student.signup",
