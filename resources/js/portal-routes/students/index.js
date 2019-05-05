@@ -96,7 +96,28 @@ const Students = props => {
     <Context.Provider value={{ state, dispatch, handleOpenModal, handleAdd, handleDelete, handleUpdate }}>
     <div id="Students">
       <Preloader variant={'fixed'} isActive={state.isLoading}/>
-      <Table headers={tableHeaders} hasData={!!state.data.length} customTableBody={<TableBody data={state.data}/>} />
+      <Table 
+        headers={tableHeaders} 
+        hasFilter={true}
+        filterSearchBy={[
+          {
+            label: 'Student No.',
+            value: 'student_no'
+          },
+          {
+            label: 'First Name',
+            value: 'first_name'
+          },
+          {
+            label: 'Last Name',
+            value: 'last_name'
+          }
+        ]}
+        hasData={!!state.data.length} 
+        customTableBody={
+          <TableBody data={state.data}/>
+        }
+      />
       <FormModal />
     </div>
     </Context.Provider>

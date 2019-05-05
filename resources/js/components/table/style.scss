@@ -5,6 +5,14 @@
   > .search-filter {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+    > .searchby {
+      min-width: 150px;
+    }
+    > .searchby, 
+    >.search {
+      margin-right: 10px;
+    }
   }
   > table {
     width: 100%;

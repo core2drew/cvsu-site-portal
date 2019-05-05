@@ -24,7 +24,7 @@ const Items = ({ items, handleSelectItem }) => {
   )
 }
 
-const Dropdown = ({ placeHolder, items, onChange }) => {
+const Dropdown = ({ placeHolder, items, onChange, variant }) => {
   const [isActive, setIsActive] = useState(false)
   const [selectedLabel, setSelectedLabel] = useState('')
   const [selectedValue, setSelectedValue] = useState('')
@@ -50,9 +50,12 @@ const Dropdown = ({ placeHolder, items, onChange }) => {
   return (
     <div
       className={
-        classname('dropdown', {
-        '-active': isActive
-        })
+        classname(
+          'dropdown', 
+          variant, {
+            '-active': isActive
+          }
+        )
       }
     >
       <label 
@@ -77,6 +80,7 @@ const Dropdown = ({ placeHolder, items, onChange }) => {
 
 Dropdown.defaultProps = {
   placeHolder: '',
+  variant: '',
   items: []
 }
 

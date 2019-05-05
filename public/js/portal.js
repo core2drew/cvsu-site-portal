@@ -624,7 +624,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".dropdown {\n  position: relative;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  cursor: pointer;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.dropdown.-active {\n  -webkit-border-bottom-left-radius: 0;\n     -moz-border-radius-bottomleft: 0;\n          border-bottom-left-radius: 0;\n  -webkit-border-bottom-right-radius: 0;\n     -moz-border-radius-bottomright: 0;\n          border-bottom-right-radius: 0;\n}\n.dropdown.-active > .items {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.dropdown > .selected {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  padding: 10px 40px 10px 20px;\n  cursor: pointer;\n}\n.dropdown > .selected.-placeholder {\n  color: #828282;\n}\n.dropdown > .selected > i[class*=icon] {\n  position: absolute;\n  font-size: 8px;\n  right: 15px;\n  color: #828282;\n}\n.dropdown > .items {\n  display: none;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  position: absolute;\n  width: 100%;\n  left: -1px;\n  top: 36px;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-border-bottom-left-radius: 4px;\n     -moz-border-radius-bottomleft: 4px;\n          border-bottom-left-radius: 4px;\n  -webkit-border-bottom-right-radius: 4px;\n     -moz-border-radius-bottomright: 4px;\n          border-bottom-right-radius: 4px;\n}\n.dropdown > .items > .item {\n  padding: 10px;\n  cursor: pointer;\n}\n.dropdown > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
+exports.push([module.i, ".dropdown {\n  position: relative;\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -moz-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n  cursor: pointer;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.dropdown.-active {\n  -webkit-border-bottom-left-radius: 0;\n     -moz-border-radius-bottomleft: 0;\n          border-bottom-left-radius: 0;\n  -webkit-border-bottom-right-radius: 0;\n     -moz-border-radius-bottomright: 0;\n          border-bottom-right-radius: 0;\n}\n.dropdown.-active > .items {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.dropdown > .selected {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  padding: 10px 40px 10px 20px;\n  cursor: pointer;\n}\n.dropdown > .selected.-placeholder {\n  color: #828282;\n}\n.dropdown > .selected > i[class*=icon] {\n  position: absolute;\n  font-size: 8px;\n  right: 15px;\n  color: #828282;\n}\n.dropdown > .items {\n  display: none;\n  background-color: #fff;\n  border: 1px solid #D5D7E3;\n  position: absolute;\n  width: 100%;\n  left: -1px;\n  top: 36px;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-border-bottom-left-radius: 4px;\n     -moz-border-radius-bottomleft: 4px;\n          border-bottom-left-radius: 4px;\n  -webkit-border-bottom-right-radius: 4px;\n     -moz-border-radius-bottomright: 4px;\n          border-bottom-right-radius: 4px;\n}\n.dropdown > .items > .item {\n  padding: 10px;\n  cursor: pointer;\n}\n.dropdown > .items > .item:hover {\n  background-color: #329B58;\n  color: #fff;\n}", ""]);
 
 // exports
 
@@ -738,7 +738,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".table-container {\n  border-bottom: 2px solid #329B58;\n}\n.table-container > .search-filter {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}\n.table-container > .no-data {\n  min-height: 200px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 20px;\n}", ""]);
+exports.push([module.i, ".table-container {\n  border-bottom: 2px solid #329B58;\n}\n.table-container > .search-filter {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-bottom: 10px;\n}\n.table-container > .search-filter > .searchby {\n  min-width: 150px;\n}\n.table-container > .search-filter > .searchby,\n.table-container > .search-filter > .search {\n  margin-right: 10px;\n}\n.table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}\n.table-container > .no-data {\n  min-height: 200px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 20px;\n}", ""]);
 
 // exports
 
@@ -78391,7 +78391,8 @@ var Items = function Items(_ref) {
 var Dropdown = function Dropdown(_ref2) {
   var placeHolder = _ref2.placeHolder,
       items = _ref2.items,
-      onChange = _ref2.onChange;
+      onChange = _ref2.onChange,
+      variant = _ref2.variant;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -78426,7 +78427,7 @@ var Dropdown = function Dropdown(_ref2) {
     };
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('dropdown', {
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('dropdown', variant, {
       '-active': isActive
     })
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -78447,6 +78448,7 @@ var Dropdown = function Dropdown(_ref2) {
 
 Dropdown.defaultProps = {
   placeHolder: '',
+  variant: '',
   items: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (Dropdown);
@@ -78900,20 +78902,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var Components_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/dropdown */ "./resources/js/components/dropdown/index.js");
 /* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
-var SearchFilter = function SearchFilter() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+
+
+var SearchFilter = function SearchFilter(_ref) {
+  var isVisible = _ref.isVisible,
+      filterSearchBy = _ref.filterSearchBy;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      searchBy = _useState2[0],
+      setSearchBy = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      search = _useState4[0],
+      setSearch = _useState4[1];
+
+  return isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "search-filter"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_dropdown__WEBPACK_IMPORTED_MODULE_1__["default"], {
     placeHolder: 'Search By',
+    items: filterSearchBy,
+    variant: 'searchby',
     onChange: function onChange(value) {
-      return console.log(value);
+      return setSearchBy(value);
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    variant: 'search'
+    variant: 'search',
+    placeholder: 'Search',
+    value: search,
+    onChange: function onChange(e) {
+      return setSearch(e.target.value);
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: 'Search'
   }));
 };
 
@@ -78978,7 +79012,9 @@ var Table = function Table(props) {
     id: props.id,
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('table-container', props.variant)
   }, props.customFilterAction || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_filter_action__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    handleFilter: props.handleFilter
+    isVisible: props.hasFilter,
+    handleFilter: props.handleFilter,
+    filterSearchBy: props.filterSearchBy
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableHeader, {
     headers: props.headers
   }), props.customTableBody || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableBody, {
@@ -78993,7 +79029,9 @@ Table.defaultProps = {
   items: [],
   customTableBody: null,
   hasData: false,
-  customFilterAction: null
+  customFilterAction: null,
+  hasFilter: false,
+  filterSearchBy: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (Table);
 
@@ -81366,6 +81404,17 @@ var Students = function Students(props) {
     isActive: state.isLoading
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
     headers: tableHeaders,
+    hasFilter: true,
+    filterSearchBy: [{
+      label: 'Student No.',
+      value: 'student_no'
+    }, {
+      label: 'First Name',
+      value: 'first_name'
+    }, {
+      label: 'Last Name',
+      value: 'last_name'
+    }],
     hasData: !!state.data.length,
     customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_8__["default"], {
       data: state.data

@@ -33,7 +33,14 @@ const TableBody = props => (
 
 const Table = props => (
   <div id={props.id} className={classname('table-container', props.variant)}>
-    {props.customFilterAction || <FilterAction handleFilter={props.handleFilter}/>}
+    {
+      props.customFilterAction || 
+      <FilterAction 
+        isVisible={props.hasFilter} 
+        handleFilter={props.handleFilter} 
+        filterSearchBy={props.filterSearchBy}
+      />
+    }
     <table>
       <TableHeader headers={props.headers}/>
       {props.customTableBody || <TableBody items={props.items} />}
@@ -53,7 +60,9 @@ Table.defaultProps = {
   items: [],
   customTableBody: null,
   hasData: false,
-  customFilterAction: null
+  customFilterAction: null,
+  hasFilter: false,
+  filterSearchBy: []
 }
 
 export default Table
