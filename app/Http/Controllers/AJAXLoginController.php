@@ -16,10 +16,9 @@ class AJAXLoginController extends Controller
       $loginFormPassword = $request->get('password');
 
       $response = DB::table('users')
-                  ->select('id', 'password')
-                  ->where('username', '=', $loginFormUsername)
+                  ->whereRaw("BINARY username = '$loginFormUsername'")
                   ->first();
-
+      
       if($response && $loginFormUsername) {
         $password = Crypt::decrypt($response->password);
       
