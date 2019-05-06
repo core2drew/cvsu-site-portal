@@ -88,11 +88,13 @@ const AcademicCalendar = () => {
     <Context.Provider value={{ state, dispatch, url, handleDelete, handleAdd, handleOpenModal, handleUpdate }}>
       <div id="AcademicCalendar">
         <Preloader variant={'fixed'} isActive={state.isLoading}/>
-        <Button 
-          text="Add New"
-          onClick={() => handleOpenModal()}
+        <Table 
+          headers={tableHeaders} 
+          hasData={!!state.data.length} 
+          customTableBody={<TableBody data={state.data}/>}
+          hasAdd={true}
+          handleAdd={() => handleOpenModal()}
         />
-        <Table headers={tableHeaders} hasData={!!state.data.length} customTableBody={<TableBody data={state.data}/>} />
         <FormModal />
       </div>
     </Context.Provider>

@@ -80243,17 +80243,16 @@ var AcademicCalendar = function AcademicCalendar() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_5__["default"], {
     variant: 'fixed',
     isActive: state.isLoading
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    text: "Add New",
-    onClick: function onClick() {
-      return handleOpenModal();
-    }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_3__["default"], {
     headers: tableHeaders,
     hasData: !!state.data.length,
     customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_9__["default"], {
       data: state.data
-    })
+    }),
+    hasAdd: true,
+    handleAdd: function handleAdd() {
+      return handleOpenModal();
+    }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
 };
 
