@@ -247,13 +247,13 @@ class AJAXAdminPortalController extends Controller
             ->whereNotNull('student_no')
             ->where('type', '=', 'student')
             ->where("$searchBy", "like", "$search%")
-            ->paginate(1);
+            ->paginate(15);
         } else {
             $response = DB::table('users')
             ->whereNull('deleted_at')
             ->whereNotNull('student_no')
             ->where('type', '=', 'student')
-            ->paginate(1);
+            ->paginate(15);
         }
         return response()->json($response);
     }
