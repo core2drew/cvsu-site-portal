@@ -2,8 +2,7 @@ import React from 'react'
 import Uuid from 'uuid/v4'
 import classname from 'classnames'
 import Dropdown from 'Components/dropdown'
-import FilterAction from './filter-action'
-import Pagination from './pagination'
+import Actions from './actions'
 import './style.scss'
 
 const TableHeader = props => (
@@ -32,25 +31,39 @@ const TableBody = props => (
   </tbody>
 )
 
-const Table = props => (
-  <div id={props.id} className={classname('table-container', props.variant)}>
-    <div className="actions">
-      {
-        props.customFilterAction || 
-        <FilterAction 
-          isVisible={props.hasFilter} 
-          handleSearch={props.handleSearch} 
-          filterSearchBy={props.filterSearchBy}
-        />
-      }
-      <Pagination />
-    </div>
+const Table = (
+  { 
+    id, 
+    variant, 
+    headers, 
+    customTableBody, 
+    items, 
+    hasData, 
+    customFilterAction, 
+    hasFilter, 
+    handleSearch, 
+    filterSearchBy, 
+    hasAdd, 
+    addText, 
+    handleAdd 
+  }
+) => (
+  <div id={id} className={classname('table-container', variant)}>
+    <Actions
+      customFilterAction={customFilterAction} 
+      hasFilter={hasFilter} 
+      handleSearch={handleSearch} 
+      filterSearchBy={filterSearchBy}
+      hasAdd={hasAdd}
+      addText={addText}
+      handleAdd={handleAdd}
+    />
     <table>
-      <TableHeader headers={props.headers}/>
-      {props.customTableBody || <TableBody items={props.items} />}
+      <TableHeader headers={headers}/>
+      {customTableBody || <TableBody items={items} />}
     </table>
     {
-      props.hasData || (
+      hasData || (
         <div className="no-data">
           No data available
         </div>
@@ -67,7 +80,10 @@ Table.defaultProps = {
   customFilterAction: null,
   hasFilter: false,
   filterSearchBy: [],
-  handleSearch: () => false
+  handleSearch: () => false,
+  hasAdd: false,
+  addText: 'Add New',
+  handleAdd: () => false
 }
 
 export default Table

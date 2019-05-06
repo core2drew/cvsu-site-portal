@@ -1,7 +1,6 @@
 import React, { useEffect, useReducer, useRef, useState } from 'react'
 import { get, post } from 'Utils'
 import Table from 'Components/table'
-import Button from 'Components/button'
 import Preloader from 'Components/preloader'
 import TableBody from './tablebody'
 import AnnouncementReducer, { initialState } from 'Reducers/announcements'
@@ -71,13 +70,13 @@ const Announcements = () => {
     >
       <div id="Announcements">
         <Preloader variant={'fixed'} isActive={state.isLoading}/>
-        <Button 
-          text="Add New"
-          onClick={
-            () => dispatch({type: 'OPEN_MODAL'})
-          }
+        <Table 
+          headers={tableHeaders} 
+          hasData={!!state.data.length} 
+          customTableBody={<TableBody data={state.data}/>}
+          hasAdd={true}
+          handleAdd={() => dispatch({type: 'OPEN_MODAL'})}
         />
-        <Table headers={tableHeaders} hasData={!!state.data.length} customTableBody={<TableBody data={state.data}/>}/>
         <FormModal />
       </div>
     </AnnouncementsContext.Provider>
