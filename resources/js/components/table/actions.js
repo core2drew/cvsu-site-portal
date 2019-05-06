@@ -12,7 +12,7 @@ const Actions = (
     hasPagination, 
     hasAdd, 
     addText, 
-    handleAdd 
+    handleAdd
   }
 ) => (
   <div className="actions">

@@ -5,6 +5,7 @@ import Preloader from 'Components/preloader'
 import TableBody from './tablebody'
 import AnnouncementReducer, { initialState } from 'Reducers/announcements'
 import AnnouncementsContext from 'Context/announcements'
+import TableContext from 'Context/table'
 import FormModal from './form-modal'
 import './style.scss'
 
@@ -16,6 +17,15 @@ const Announcements = () => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
   const tableHeaders = ['Title', 'Created At', 'Updated At', 'Actions']
+
+  useEffect(() => {
+    get(url, {}, res => {
+      dispatch({type: "SUCCESS_FETCH", data: res.data})
+    }, () => {
+      dispatch({type: "ERROR_FETCH"})
+      alert('Something went wrong. Please try again')
+    })
+  },[])
 
   const handleDelete = id => {
     dispatch({type: 'DELETING'})
@@ -41,14 +51,24 @@ const Announcements = () => {
     editorRef.current.setData(content)
   }
 
-  useEffect(() => {
-    get(url, {}, res => {
-      dispatch({type: "SUCCESS_FETCH", data: res.data})
-    }, () => {
+  const handleChangePage = action => {
+    dispatch({type: "FETCHING"})
+    get(
+      action === 'next' ? state.nextPageUrl : state.prevPageUrl, 
+      { searchBy, search }, 
+      res => {
+        dispatch({
+          type: "SUCCESS_FETCH", 
+          data: res.data,
+          nextPageUrl: res.next_page_url,
+          prevPageUrl: res.prev_page_url
+        })
+      }, 
+      () => {
       dispatch({type: "ERROR_FETCH"})
       alert('Something went wrong. Please try again')
     })
-  },[])
+  }
 
   return (
     <AnnouncementsContext.Provider
@@ -70,13 +90,15 @@ const Announcements = () => {
     >
       <div id="Announcements">
         <Preloader variant={'fixed'} isActive={state.isLoading}/>
-        <Table 
-          headers={tableHeaders} 
-          hasData={!!state.data.length} 
-          customTableBody={<TableBody data={state.data}/>}
-          hasAdd={true}
-          handleAdd={() => dispatch({type: 'OPEN_MODAL'})}
-        />
+        <TableContext.Provider value={{ handleChangePage, state }}>
+          <Table 
+            headers={tableHeaders} 
+            hasData={!!state.data.length} 
+            customTableBody={<TableBody data={state.data}/>}
+            hasAdd={true}
+            handleAdd={() => dispatch({type: 'OPEN_MODAL'})}
+          />
+        </TableContext.Provider>
         <FormModal />
       </div>
     </AnnouncementsContext.Provider>

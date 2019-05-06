@@ -45,7 +45,8 @@ const Table = (
     filterSearchBy, 
     hasAdd, 
     addText, 
-    handleAdd 
+    handleAdd,
+    hasPagination
   }
 ) => (
   <div id={id} className={classname('table-container', variant)}>
@@ -57,6 +58,7 @@ const Table = (
       hasAdd={hasAdd}
       addText={addText}
       handleAdd={handleAdd}
+      hasPagination={hasPagination}
     />
     <table>
       <TableHeader headers={headers}/>
@@ -83,7 +85,8 @@ Table.defaultProps = {
   handleSearch: () => false,
   hasAdd: false,
   addText: 'Add New',
-  handleAdd: () => false
+  handleAdd: () => false,
+  hasPagination: false
 }
 
 export default Table

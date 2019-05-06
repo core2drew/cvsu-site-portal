@@ -4,7 +4,10 @@ const initialState = {
   isUpdateModal: false,
   modalHeaderTitle: 'New User',
   data: [],
-  selectedId: null
+  selectedId: null,
+  nextPageUrl: null,
+  prevPageUrl: null,
+  currentPage: null,
 }
 
 const reducer = (state, action) => {
@@ -24,13 +27,19 @@ const reducer = (state, action) => {
         ...state,
         isLoading: false,
         isUpdateModal: false,
-        data: action.data
+        data: action.data,
+        nextPageUrl: action.nextPageUrl,
+        prevPageUrl: action.prevPageUrl,
+        currentPage: action.currentPage
       }
     case 'SUCCESS_DELETE':
       return {
         ...state,
         isLoading: false,
-        data: action.data
+        data: action.data,
+        nextPageUrl: action.nextPageUrl,
+        prevPageUrl: action.prevPageUrl,
+        currentPage: action.currentPage
       }
     case 'SUCCESS_UPDATE':
       return {
@@ -38,7 +47,10 @@ const reducer = (state, action) => {
         isLoading: false,
         isModalActive: false,
         isUpdateModal: false,
-        data: action.data
+        data: action.data,
+        nextPageUrl: action.nextPageUrl,
+        prevPageUrl: action.prevPageUrl,
+        currentPage: action.currentPage
       }
     case 'SUCCESS_SAVE':
       return {
@@ -46,7 +58,10 @@ const reducer = (state, action) => {
         isLoading: false,
         isModalActive: false,
         isUpdateModal: false,
-        data: action.data
+        data: action.data,
+        nextPageUrl: action.nextPageUrl,
+        prevPageUrl: action.prevPageUrl,
+        currentPage: action.currentPage
       }
 
     case 'ERROR_SAVE':

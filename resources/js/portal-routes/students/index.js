@@ -3,7 +3,8 @@ import { get, post } from 'Utils'
 import Table from 'Components/table'
 import Preloader from 'Components/preloader'
 import Button from 'Components/button'
-import Context from 'Context/students'
+import StudentContext from 'Context/students'
+import TableContext from 'Context/table'
 import Reducer, { initialState } from 'Reducers/students'
 import FormModal from './form-modal'
 import TableBody from './tablebody'
@@ -16,7 +17,13 @@ const Students = props => {
 
   useEffect(() => {
     get(url, {}, res => {
-      dispatch({type: "SUCCESS_FETCH", data: res.data})
+      dispatch({
+        type: "SUCCESS_FETCH", 
+        data: res.data,
+        currentPage: res.current_page,
+        nextPageUrl: res.next_page_url,
+        prevPageUrl: res.prev_page_url
+      })
     }, () => {
       dispatch({type: "ERROR_FETCH"})
       alert('Something went wrong. Please try again')
@@ -45,7 +52,13 @@ const Students = props => {
         alert(res.message)
         return
       }
-      dispatch({type: 'SUCCESS_SAVE', data: res.data})
+      dispatch({
+        type: 'SUCCESS_SAVE', 
+        data: res.data,
+        currentPage: res.current_page,
+        nextPageUrl: res.next_page_url,
+        prevPageUrl: res.prev_page_url
+      })
     },
     () => {
       dispatch({type: "ERROR_SAVE"})
@@ -60,9 +73,13 @@ const Students = props => {
       { 
         id
       }, 
-      res => dispatch(
-        {type: 'SUCCESS_DELETE', data: res.data}
-      ),
+      res => dispatch({
+        type: 'SUCCESS_DELETE', 
+        data: res.data,
+        currentPage: res.current_page,
+        nextPageUrl: res.next_page_url,
+        prevPageUrl: res.prev_page_url
+      }),
       () => {
         dispatch({type: "ERROR_DELETE"})
         alert('Something went wrong. Please try again')
@@ -82,7 +99,13 @@ const Students = props => {
           alert(res.message)
           return
         }
-        dispatch({type: 'SUCCESS_UPDATE', data: res.data})
+        dispatch({
+          type: 'SUCCESS_UPDATE', 
+          data: res.data,
+          currentPage: res.current_page,
+          nextPageUrl: res.next_page_url,
+          prevPageUrl: res.prev_page_url
+        })
       },
       () => {
         dispatch({type: "ERROR_UPDATE"})
@@ -98,7 +121,37 @@ const Students = props => {
       url, 
       { searchBy, search }, 
       res => {
-        dispatch({type: "SUCCESS_FETCH", data: res.data})
+        dispatch({
+          type: "SUCCESS_FETCH", 
+          data: res.data,
+          searchBy,
+          search,
+          currentPage: res.current_page,
+          nextPageUrl: res.next_page_url,
+          prevPageUrl: res.prev_page_url
+        })
+      }, 
+      () => {
+      dispatch({type: "ERROR_FETCH"})
+      alert('Something went wrong. Please try again')
+    })
+  }
+
+  const handleChangePage = (action, searchBy, search, currentPage) => {
+    dispatch({type: "FETCHING"})
+    let page = action === 'next' ? ++currentPage : --currentPage
+    console.log(page)
+    get(
+      url, 
+      { searchBy, search, page }, 
+      res => {
+        dispatch({
+          type: "SUCCESS_FETCH", 
+          data: res.data,
+          currentPage: res.current_page,
+          nextPageUrl: res.next_page_url,
+          prevPageUrl: res.prev_page_url
+        })
       }, 
       () => {
       dispatch({type: "ERROR_FETCH"})
@@ -107,35 +160,38 @@ const Students = props => {
   }
 
   return (
-    <Context.Provider value={{ state, dispatch, handleOpenModal, handleAdd, handleDelete, handleUpdate }}>
+    <StudentContext.Provider value={{ state, dispatch, handleOpenModal, handleAdd, handleDelete, handleUpdate }}>
     <div id="Students">
       <Preloader variant={'fixed'} isActive={state.isLoading}/>
-      <Table 
-        headers={tableHeaders} 
-        hasFilter={true}
-        filterSearchBy={[
-          {
-            label: 'Student No.',
-            value: 'student_no'
-          },
-          {
-            label: 'First Name',
-            value: 'first_name'
-          },
-          {
-            label: 'Last Name',
-            value: 'last_name'
+      <TableContext.Provider value={{ handleChangePage, state }}>
+        <Table 
+          headers={tableHeaders} 
+          hasFilter={true}
+          filterSearchBy={[
+            {
+              label: 'Student No.',
+              value: 'student_no'
+            },
+            {
+              label: 'First Name',
+              value: 'first_name'
+            },
+            {
+              label: 'Last Name',
+              value: 'last_name'
+            }
+          ]}
+          hasData={!!state.data.length}
+          handleSearch={handleSearch}
+          hasPagination={true}
+          customTableBody={
+            <TableBody data={state.data}/>
           }
-        ]}
-        hasData={!!state.data.length}
-        handleSearch={handleSearch}
-        customTableBody={
-          <TableBody data={state.data}/>
-        }
-      />
+        />
+      </TableContext.Provider>
       <FormModal />
     </div>
-    </Context.Provider>
+    </StudentContext.Provider>
   )
 }
 
