@@ -738,7 +738,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".table-container {\n  border-bottom: 2px solid #329B58;\n}\n.table-container > .search-filter {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-bottom: 10px;\n}\n.table-container > .search-filter > .searchby {\n  min-width: 150px;\n}\n.table-container > .search-filter > .searchby,\n.table-container > .search-filter > .search {\n  margin-right: 10px;\n}\n.table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}\n.table-container > .no-data {\n  min-height: 200px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 20px;\n}", ""]);
+exports.push([module.i, ".table-container {\n  border-bottom: 2px solid #329B58;\n}\n.table-container > .actions {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-bottom: 5px;\n}\n.table-container > .actions > .filteractions {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.table-container > .actions > .filteractions > .searchby {\n  min-width: 150px;\n}\n.table-container > .actions > .filteractions > .searchby,\n.table-container > .actions > .filteractions > .search {\n  margin-right: 10px;\n}\n.table-container > .actions > .pagination {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-left: auto;\n}\n.table-container > .actions > .pagination > .page {\n  background-color: #329B58;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 8px;\n  cursor: pointer;\n  -webkit-border-radius: 4px;\n     -moz-border-radius: 4px;\n          border-radius: 4px;\n}\n.table-container > .actions > .pagination > .page.-prev {\n  margin-right: 3px;\n}\n.table-container > .actions > .pagination > .page > i[class*=icon] {\n  color: #fff;\n}\n.table-container > table {\n  width: 100%;\n}\n.table-container > table > thead {\n  background-color: #329B58;\n  color: #fff;\n}\n.table-container > table > thead > tr > th {\n  padding: 10px;\n  text-align: left;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: normal;\n  font-family: rubikmedium;\n}\n.table-container > table > tbody {\n  background-color: #fff;\n}\n.table-container > table > tbody > tr > td {\n  padding: 5px;\n}\n.table-container > .no-data {\n  min-height: 200px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n     -moz-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: #efefef;\n  font-size: 20px;\n}", ""]);
 
 // exports
 
@@ -78916,7 +78916,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var SearchFilter = function SearchFilter(_ref) {
+var FilterActions = function FilterActions(_ref) {
   var isVisible = _ref.isVisible,
       filterSearchBy = _ref.filterSearchBy,
       handleSearch = _ref.handleSearch;
@@ -78932,7 +78932,7 @@ var SearchFilter = function SearchFilter(_ref) {
       setSearch = _useState4[1];
 
   return isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "search-filter"
+    className: "filteractions"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_dropdown__WEBPACK_IMPORTED_MODULE_1__["default"], {
     placeHolder: 'Search By',
     items: filterSearchBy,
@@ -78955,7 +78955,7 @@ var SearchFilter = function SearchFilter(_ref) {
   }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (SearchFilter);
+/* harmony default export */ __webpack_exports__["default"] = (FilterActions);
 
 /***/ }),
 
@@ -78976,8 +78976,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var Components_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/dropdown */ "./resources/js/components/dropdown/index.js");
 /* harmony import */ var _filter_action__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./filter-action */ "./resources/js/components/table/filter-action.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/table/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pagination */ "./resources/js/components/table/pagination.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/table/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -79015,11 +79017,13 @@ var Table = function Table(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: props.id,
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('table-container', props.variant)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "actions"
   }, props.customFilterAction || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_filter_action__WEBPACK_IMPORTED_MODULE_4__["default"], {
     isVisible: props.hasFilter,
     handleSearch: props.handleSearch,
     filterSearchBy: props.filterSearchBy
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableHeader, {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pagination__WEBPACK_IMPORTED_MODULE_5__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableHeader, {
     headers: props.headers
   }), props.customTableBody || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableBody, {
     items: props.items
@@ -79041,6 +79045,39 @@ Table.defaultProps = {
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (Table);
+
+/***/ }),
+
+/***/ "./resources/js/components/table/pagination.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/table/pagination.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Components_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/icon */ "./resources/js/components/icon/index.js");
+
+
+
+var Pagination = function Pagination() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pagination"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "page -prev"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: 'left-chevron'
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "page -next"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    icon: 'right-chevron'
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Pagination);
 
 /***/ }),
 

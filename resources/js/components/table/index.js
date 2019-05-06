@@ -3,6 +3,7 @@ import Uuid from 'uuid/v4'
 import classname from 'classnames'
 import Dropdown from 'Components/dropdown'
 import FilterAction from './filter-action'
+import Pagination from './pagination'
 import './style.scss'
 
 const TableHeader = props => (
@@ -33,14 +34,17 @@ const TableBody = props => (
 
 const Table = props => (
   <div id={props.id} className={classname('table-container', props.variant)}>
-    {
-      props.customFilterAction || 
-      <FilterAction 
-        isVisible={props.hasFilter} 
-        handleSearch={props.handleSearch} 
-        filterSearchBy={props.filterSearchBy}
-      />
-    }
+    <div className="actions">
+      {
+        props.customFilterAction || 
+        <FilterAction 
+          isVisible={props.hasFilter} 
+          handleSearch={props.handleSearch} 
+          filterSearchBy={props.filterSearchBy}
+        />
+      }
+      <Pagination />
+    </div>
     <table>
       <TableHeader headers={props.headers}/>
       {props.customTableBody || <TableBody items={props.items} />}

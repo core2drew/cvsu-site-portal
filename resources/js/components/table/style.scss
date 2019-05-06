@@ -1,17 +1,39 @@
-@import '../../../sass/variables';
+@import '~Sass/variables';
 
 .table-container {
   border-bottom: 2px solid $green-1;
-  > .search-filter {
+  > .actions {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    > .searchby {
-      min-width: 150px;
+    margin-bottom: 5px;
+    > .filteractions {
+      display: flex;
+      align-items: center;
+      > .searchby {
+        min-width: 150px;
+      }
+      > .searchby, 
+      >.search {
+        margin-right: 10px;
+      }
     }
-    > .searchby, 
-    >.search {
-      margin-right: 10px;
+    > .pagination {
+      display: flex;
+      margin-left: auto;
+      > .page {
+        background-color: $green-1;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      > .page.-prev {
+        margin-right: 3px;
+      }
+      > .page > i[class*=icon] {
+        color: #fff;
+      }
     }
   }
   > table {
