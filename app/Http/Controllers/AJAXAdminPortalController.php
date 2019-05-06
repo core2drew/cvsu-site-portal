@@ -237,12 +237,26 @@ class AJAXAdminPortalController extends Controller
     }
 
     public function getStudents(Request $request) {
-        $response = DB::table('users')
-        ->whereNull('deleted_at')
-        ->whereNotNull('student_no')
-        ->where('type', '=', 'student')
-        ->latest()
-        ->paginate(15);
+        $searchBy = $request->get('searchBy');
+        $search = $request->get('search');
+        $response = [];
+
+        if($searchBy && $search) {
+            $response = DB::table('users')
+            ->whereNull('deleted_at')
+            ->whereNotNull('student_no')
+            ->where('type', '=', 'student')
+            ->where("$searchBy", "like", "$search%")
+            ->latest()
+            ->paginate(15);
+        } else {
+            $response = DB::table('users')
+            ->whereNull('deleted_at')
+            ->whereNotNull('student_no')
+            ->where('type', '=', 'student')
+            ->latest()
+            ->paginate(15);
+        }
         return response()->json($response);
     }
 }

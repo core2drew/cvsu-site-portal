@@ -78918,7 +78918,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var SearchFilter = function SearchFilter(_ref) {
   var isVisible = _ref.isVisible,
-      filterSearchBy = _ref.filterSearchBy;
+      filterSearchBy = _ref.filterSearchBy,
+      handleSearch = _ref.handleSearch;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
@@ -78947,7 +78948,10 @@ var SearchFilter = function SearchFilter(_ref) {
       return setSearch(e.target.value);
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: 'Search'
+    text: 'Search',
+    onClick: function onClick() {
+      return searchBy && search && handleSearch(searchBy, search);
+    }
   }));
 };
 
@@ -79013,7 +79017,7 @@ var Table = function Table(props) {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('table-container', props.variant)
   }, props.customFilterAction || react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_filter_action__WEBPACK_IMPORTED_MODULE_4__["default"], {
     isVisible: props.hasFilter,
-    handleFilter: props.handleFilter,
+    handleSearch: props.handleSearch,
     filterSearchBy: props.filterSearchBy
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TableHeader, {
     headers: props.headers
@@ -79031,7 +79035,10 @@ Table.defaultProps = {
   hasData: false,
   customFilterAction: null,
   hasFilter: false,
-  filterSearchBy: []
+  filterSearchBy: [],
+  handleSearch: function handleSearch() {
+    return false;
+  }
 };
 /* harmony default export */ __webpack_exports__["default"] = (Table);
 
@@ -81388,6 +81395,26 @@ var Students = function Students(props) {
     }, 'PATCH');
   };
 
+  var handleSearch = function handleSearch(searchBy, search) {
+    dispatch({
+      type: "FETCHING"
+    });
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {
+      searchBy: searchBy,
+      search: search
+    }, function (res) {
+      dispatch({
+        type: "SUCCESS_FETCH",
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_FETCH"
+      });
+      alert('Something went wrong. Please try again');
+    });
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_students__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
     value: {
       state: state,
@@ -81416,6 +81443,7 @@ var Students = function Students(props) {
       value: 'last_name'
     }],
     hasData: !!state.data.length,
+    handleSearch: handleSearch,
     customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_8__["default"], {
       data: state.data
     })

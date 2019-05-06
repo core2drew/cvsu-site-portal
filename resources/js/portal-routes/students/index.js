@@ -92,6 +92,20 @@ const Students = props => {
     )
   }
 
+  const handleSearch = (searchBy, search) => {
+    dispatch({type: "FETCHING"})
+    get(
+      url, 
+      { searchBy, search }, 
+      res => {
+        dispatch({type: "SUCCESS_FETCH", data: res.data})
+      }, 
+      () => {
+      dispatch({type: "ERROR_FETCH"})
+      alert('Something went wrong. Please try again')
+    })
+  }
+
   return (
     <Context.Provider value={{ state, dispatch, handleOpenModal, handleAdd, handleDelete, handleUpdate }}>
     <div id="Students">
@@ -113,7 +127,8 @@ const Students = props => {
             value: 'last_name'
           }
         ]}
-        hasData={!!state.data.length} 
+        hasData={!!state.data.length}
+        handleSearch={handleSearch}
         customTableBody={
           <TableBody data={state.data}/>
         }

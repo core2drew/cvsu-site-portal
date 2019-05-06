@@ -37,7 +37,7 @@ const Table = props => (
       props.customFilterAction || 
       <FilterAction 
         isVisible={props.hasFilter} 
-        handleFilter={props.handleFilter} 
+        handleSearch={props.handleSearch} 
         filterSearchBy={props.filterSearchBy}
       />
     }
@@ -62,7 +62,8 @@ Table.defaultProps = {
   hasData: false,
   customFilterAction: null,
   hasFilter: false,
-  filterSearchBy: []
+  filterSearchBy: [],
+  handleSearch: () => false
 }
 
 export default Table
