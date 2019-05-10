@@ -80171,19 +80171,31 @@ var Facilities = function Facilities() {
   }, "University Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Canteen",
     sliderImages: ["/storage/facilities/front.jpg"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
+    description: "Is a place where food is provided in a college or other organization. It also plays a vital role in healthy foods and creating a school culture of healthy eating."
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "Canteen",
+    title: "Library",
     sliderImages: ["/storage/facilities/front.jpg"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
+    description: "It provide a flexible space with a wide and inclusive range of resources to support learning and teaching throughout the school."
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "Canteen",
+    title: "Clinic",
     sliderImages: ["/storage/facilities/front.jpg"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
+    description: "To provide education and counseling in a variety of health and wellness topics, to serve as a medical resource and To provide emergency care for illness or injury while at school."
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "Canteen",
+    title: "Classroom",
     sliderImages: ["/storage/facilities/front.jpg"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet \n            commodo ligula at scelerisque. Nulla suscipit, neque vel bibendum tincidunt, \n            ipsum elit ultricies nibh, in vulputate lorem risus auctor nulla. Nullam \n            tortor lectus, suscipit a eros ut, imperdiet posuere dolor. Pellentesque \n            gravida non mauris eget ultricies. Pellentesque auctor tortor vitae risus \n            rhoncus ullamcorper. Aenean fringilla dapibus dui, vel ultrices dui pretium \n            varius."
+    description: "It provides a space where learning can take place uninterrupted by outside distractions."
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Information Desk",
+    sliderImages: ["/storage/facilities/front.jpg"],
+    description: "It aims to help students make the very best of their time and it can  provide a high-quality information and enquiry service which is accessible to all students."
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "IT Department",
+    sliderImages: ["/storage/facilities/front.jpg"],
+    description: "It handles all the technological issues that arise."
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_facility__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Science Lab",
+    sliderImages: ["/storage/facilities/front.jpg"],
+    description: "It is a facility that provides controlled conditions in which scientific research, experiments and measurement may be performed."
   }))));
 };
 
