@@ -26,15 +26,15 @@ Route::group([
 });
 
 Route::group([
-    "as" => "auth", 
+    "as" => "auth",
     "prefix" => "auth"
 ], function() {
     Route::get("/login", [
-        "as" => "login", 
+        "as" => "login",
         "uses" => "LoginController@index"
     ]);
     Route::get("/logout", [
-        "as" => "logut", 
+        "as" => "logut",
         "uses" => "LoginController@logout"
     ]);
 });
@@ -85,13 +85,13 @@ Route::group([
             "as" => "ajax.portal.dean-message",
             "uses" => "AJAXPortalController@getDeanMessage"
         ]);
-        
+
         Route::post("/dean-message", [
             "as" => "ajax.portal.add.dean-message",
             "uses" => "AJAXAdminPortalController@addDeanMessage",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
-        
+
         //Announcements
         Route::get("/announcements", [
             "as" => "ajax.portal.announcements",
@@ -145,36 +145,36 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
-        // Requirements 
+        // Requirements
         Route::get("/requirements", [
             "as" => "ajax.portal.requirements",
             "uses" => "AJAXPortalController@getRequirements"
         ]);
-        
+
         Route::post("/requirements", [
             "as" => "ajax.portal.add.requirements",
             "uses" => "AJAXAdminPortalController@addRequirements",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
-        // Retention Policies 
+        // Retention Policies
          Route::get("/retention-policies", [
             "as" => "ajax.portal.retention-policies",
             "uses" => "AJAXPortalController@getRetentionPolicies"
         ]);
-        
+
         Route::post("/retention-policies", [
             "as" => "ajax.portal.add.retention-policies",
             "uses" => "AJAXAdminPortalController@addRetentionPolicies",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
-         // Course Offered 
+         // Course Offered
          Route::get("/course-offered", [
             "as" => "ajax.portal.course-offered",
             "uses" => "AJAXPortalController@getCourseOffered"
         ]);
-        
+
         Route::post("/course-offered", [
             "as" => "ajax.portal.add.course-offered",
             "uses" => "AJAXAdminPortalController@addCourseOffered",
@@ -207,12 +207,18 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
+        Route::delete('/students', [
+            "as" => "ajax.portal.delete.students",
+            "uses" => "AJAXAdminPortalController@deleteStudent",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
         // Student Sign Up
         Route::post('/signup', [
             "as" => "ajax.portal.student.signup",
             "uses" => "AJAXPortalController@studentSignup",
         ]);
-        
+
         // Student Info
         Route::get('/student', [
             "as" => "ajax.portal.student",

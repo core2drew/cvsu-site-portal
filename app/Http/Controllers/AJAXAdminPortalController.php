@@ -23,9 +23,9 @@ class AJAXAdminPortalController extends Controller
 
         $response = DB::table('announcements')
         ->insert([
-            'title' => $title, 
-            'content' => $content, 
-            'created_at' => $created_at, 
+            'title' => $title,
+            'content' => $content,
+            'created_at' => $created_at,
             'updated_at' => $updated_at
         ]);
 
@@ -48,8 +48,8 @@ class AJAXAdminPortalController extends Controller
         $response = DB::table('announcements')
         ->where('id', '=', $id)
         ->update([
-            'title' => $title, 
-            'content' => $content, 
+            'title' => $title,
+            'content' => $content,
             'updated_at' => now()
         ]);
 
@@ -90,10 +90,10 @@ class AJAXAdminPortalController extends Controller
 
         $response = DB::table('academic_calendar')
         ->insert([
-            'activity' => $activity, 
+            'activity' => $activity,
             'from' => $from,
-            'to' => $to, 
-            'created_at' => $created_at, 
+            'to' => $to,
+            'created_at' => $created_at,
             'updated_at' => $updated_at
         ]);
 
@@ -106,7 +106,7 @@ class AJAXAdminPortalController extends Controller
         }
 
         return abort(500);
-    } 
+    }
 
     // Academic Calendar
     public function updateAcademicCalendar(Request $request) {
@@ -119,9 +119,9 @@ class AJAXAdminPortalController extends Controller
         $response = DB::table('academic_calendar')
         ->where('id', '=', $id)
         ->update([
-            'activity' => $activity, 
-            'from' => $from, 
-            'to' => $to, 
+            'activity' => $activity,
+            'from' => $from,
+            'to' => $to,
             'updated_at' => $updated_at
         ]);
 
@@ -200,11 +200,11 @@ class AJAXAdminPortalController extends Controller
 
         $response = DB::table('users')
         ->insert([
-            'first_name' => $firstName, 
+            'first_name' => $firstName,
             'last_name' => $lastName,
-            'username' => $username, 
+            'username' => $username,
             'password' => Crypt::encrypt($password),
-            'created_at' => now(), 
+            'created_at' => now(),
             'updated_at' => now()
         ]);
 
@@ -247,6 +247,7 @@ class AJAXAdminPortalController extends Controller
             ->whereNotNull('student_no')
             ->where('type', '=', 'student')
             ->where("$searchBy", "like", "$search%")
+            ->latest()
             ->paginate(15);
         } else {
             $response = DB::table('users')
@@ -256,5 +257,24 @@ class AJAXAdminPortalController extends Controller
             ->paginate(15);
         }
         return response()->json($response);
+    }
+
+    public function deleteStudent(Request $request) {
+        $id = $request->get('id');
+        $response = DB::table('users')
+        ->where('id', '=', $id)
+        ->update(['deleted_at' => now()]);
+
+        if($response) {
+            $response = DB::table('users')
+            ->whereNull('deleted_at')
+            ->whereNotNull('student_no')
+            ->where('type', '=', 'student')
+            ->latest()
+            ->paginate(15);
+            return response()->json($response);
+        }
+
+        return abort(500);
     }
 }
