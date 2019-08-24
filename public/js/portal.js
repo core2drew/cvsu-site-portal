@@ -81730,21 +81730,21 @@ var TableBody = function TableBody(_ref) {
       handleOpenModal = _useContext.handleOpenModal;
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
-    var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format('MMMM DD, YYYY');
-    var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format('MMMM DD, YYYY');
+    var created_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.created_at).local().format("MMMM DD, YYYY");
+    var updated_at = moment__WEBPACK_IMPORTED_MODULE_1___default.a.utc(d.updated_at).local().format("MMMM DD, YYYY");
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.student_no), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, updated_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      variant: 'update',
-      text: 'View Grades',
+      variant: "update",
+      text: "Update",
       onClick: function onClick() {
         return handleOpenModal(d.id);
       }
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      variant: 'delete -danger',
-      text: 'Delete',
+      variant: "delete -danger",
+      text: "Delete",
       onClick: function onClick() {
         return handleDelete(d.id);
       }
