@@ -1,25 +1,26 @@
 @import "~Sass/variables";
 
 #Home {
-  > .grid.container {
-    max-width: 1200px;
-    margin-top: 20px;
+    > .grid.container {
+        max-width: 1200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        grid-template-columns: 750px auto;
+        grid-column-gap: 20px;
+    }
     margin-bottom: 20px;
-    grid-template-columns: 750px auto;
-    grid-column-gap: 20px;
-  }
 }
 
 #Home > .grid.container > .section {
-  > .header{
-    font-size: 16px;
-    font-family: rubikmedium;
-    text-transform: uppercase;
-  }
+    > .header {
+        font-size: 16px;
+        font-family: rubikmedium;
+        text-transform: uppercase;
+    }
 }
 
 #Home > .grid.container > #AcademicCalendar {
-  grid-row-start: 1;
-  grid-column-start: 2;
-  grid-row-end: 3;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 3;
 }

@@ -22,8 +22,8 @@ const Facility = props => {
                             />
                         ))}
                     </div>
-                    <p className="section title">{props.title}</p>
-                    <p>{props.description}</p>
+                    {/* <p className="section title">{props.title}</p> */}
+                    {/* <p>{props.description}</p> */}
                 </div>
             </Modal>
             <div className="facility">

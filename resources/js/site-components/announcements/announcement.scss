@@ -1,22 +1,29 @@
-@import '../../../sass/variables';
+@import "../../../sass/variables";
 
 .announcement {
-  background-color: #fff;
-  padding: 17px 20px;
-  border: 1px solid $gray-1;
-  box-shadow: $global-box-shadow;
-  > .header {
-    > .title {
-      font-family: rubikmedium;
-      font-size: 14px;
-      margin-bottom: 0;
-    } 
-    > .post-date {
-      margin-top: 5px;
+    background-color: #fff;
+    padding: 17px 20px;
+    border: 1px solid $gray-1;
+    box-shadow: $global-box-shadow;
+    max-height: 400px;
+    > .header {
+        > .title {
+            font-family: rubikmedium;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        > .post-date {
+            margin-top: 5px;
+        }
     }
-  }
-  > .message {
-    line-height: 1.5;
-    margin-bottom: 0;
-  }
+    > .message {
+        line-height: 1.5;
+        margin-bottom: 0;
+        max-height: 400px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    > .view-more {
+        cursor: pointer;
+    }
 }
