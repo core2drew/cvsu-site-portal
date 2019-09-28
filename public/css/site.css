@@ -1,3 +1,7 @@
+#Home {
+  margin-bottom: 20px;
+}
+
 #Home > .grid.container {
   max-width: 1200px;
   margin-top: 20px;
