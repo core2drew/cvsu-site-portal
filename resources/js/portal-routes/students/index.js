@@ -8,6 +8,7 @@ import TableContext from "Context/table";
 import Reducer, { initialState } from "Reducers/students";
 import FormModal from "./form-modal";
 import TableBody from "./tablebody";
+import AddNewStudentModal from "./add-new-student-modal";
 import "./style.scss";
 
 const Students = props => {
@@ -176,6 +177,12 @@ const Students = props => {
         );
     };
 
+    const handleOpenAddNewModal = () => {
+        dispatch({ type: "OPEN_ADD_NEW_STUDENT_MODAL" });
+    };
+
+    const handleAddStudent = () => {};
+
     return (
         <StudentContext.Provider
             value={{
@@ -184,7 +191,9 @@ const Students = props => {
                 handleOpenModal,
                 handleAdd,
                 handleDelete,
-                handleUpdate
+                handleUpdate,
+                handleOpenAddNewModal,
+                handleAddStudent
             }}
         >
             <div id="Students">
@@ -193,6 +202,8 @@ const Students = props => {
                     <Table
                         headers={tableHeaders}
                         hasFilter={true}
+                        hasAdd={true}
+                        handleAdd={handleOpenAddNewModal}
                         filterSearchBy={[
                             {
                                 label: "Student No.",
@@ -214,6 +225,7 @@ const Students = props => {
                     />
                 </TableContext.Provider>
                 <FormModal />
+                <AddNewStudentModal />
             </div>
         </StudentContext.Provider>
     );

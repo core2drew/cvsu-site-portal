@@ -2,10 +2,10 @@
 
 .announcement {
     background-color: #fff;
-    padding: 17px 20px;
     border: 1px solid $gray-1;
     box-shadow: $global-box-shadow;
-    max-height: 400px;
+    max-height: initial;
+    position: relative;
     > .header {
         > .title {
             font-family: rubikmedium;
@@ -13,17 +13,52 @@
             margin-bottom: 0;
         }
         > .post-date {
-            margin-top: 5px;
+            margin-top: 0;
+            text-align: right;
         }
+        padding: 20px 20px 0;
     }
     > .message {
-        line-height: 1.5;
-        margin-bottom: 0;
-        max-height: 400px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        padding: 0 20px 0;
     }
     > .view-more {
         cursor: pointer;
+        display: block;
+        margin: auto;
+        text-align: center;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        background-color: $green-1;
+        color: white;
+        padding: 10px;
+    }
+    .fade {
+        display: none;
+    }
+}
+
+.announcement.view-more {
+    max-height: 400px;
+    > .fade {
+        display: block;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            #ffffff 60%
+        );
+        height: 100px;
+        margin-top: -100px;
+        position: relative;
+    }
+
+    > .message {
+        max-height: 330px;
+        overflow: hidden;
+    }
+
+    > .view-more {
+        position: absolute;
+        margin-bottom: 0;
     }
 }

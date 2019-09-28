@@ -1,67 +1,71 @@
 @import "~Sass/variables";
-@import '~Sass/site/home';
-@import '~Sass/site/about';
-@import '~Sass/site/facilities';
-@import '~Sass/site/admission';
-@import '~Sass/site/contactus';
+@import "~Sass/site/home";
+@import "~Sass/site/about";
+@import "~Sass/site/facilities";
+@import "~Sass/site/admission";
+@import "~Sass/site/contactus";
 
 body {
-  background-color: $green-3;
+    background-color: $green-3;
 }
 
 #App {
-  position: relative;
-  min-height: 100%;
-  height: 100%;
+    position: relative;
+    min-height: 100%;
+    height: 100%;
 
-  > .wrapper {
-    min-height: calc(100% - 128px);
-  }
+    > .wrapper {
+        min-height: calc(100% - 128px);
+        margin-bottom: 20px;
+    }
 }
 
 .container {
-  min-height: 100%;
-  max-width: 960px;
-  width: 100%;
-  margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+    min-height: 100%;
+    max-width: 960px;
+    width: 100%;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 
-  &.grid {
-    display: grid;
-  }
+    &.grid {
+        display: grid;
+    }
 }
 
-#Home, #About, #Facilities, #Admission, #ContactUs {
-  height: 100%;
-  .section.header {
-    font-size: 20px;
-    &:after {
-      display: block;
-      content: "";
-      border-bottom: solid 3px $green-1;
-      width: 100px;
-      margin-top: 8px;
+#Home,
+#About,
+#Facilities,
+#Admission,
+#ContactUs {
+    height: 100%;
+    .section.header {
+        font-size: 20px;
+        &:after {
+            display: block;
+            content: "";
+            border-bottom: solid 3px $green-1;
+            width: 100px;
+            margin-top: 8px;
+        }
     }
-  }
-  > .container {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  > .grid.container {
-    grid-gap: 15px;
-    > .grid-item {
-      background-color: #fff;
-      padding: 20px;
+    > .container {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-  }
+    > .grid.container {
+        grid-gap: 15px;
+        > .grid-item {
+            background-color: #fff;
+            padding: 20px;
+        }
+    }
 }
-
 
 #SideQuickLinks,
 #SideAnnouncements {
-  .section.header {
-    font-size: 17px;
-    margin-top: 0;
-  }
+    .section.header {
+        font-size: 17px;
+        margin-top: 0;
+    }
 }

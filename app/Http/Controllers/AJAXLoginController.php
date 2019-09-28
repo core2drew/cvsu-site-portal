@@ -12,24 +12,24 @@ class AJAXLoginController extends Controller
 {
     public function index(Request $request) {
       $user = null;
-      $loginFormUsername = $request->get('username');
-      $loginFormPassword = $request->get('password');
+      $formEmail = $request->get('email');
+      $formPassword = $request->get('password');
 
       $response = DB::table('users')
-                  ->whereRaw("BINARY username = '$loginFormUsername'")
+                  ->whereRaw("BINARY email = '$formEmail'")
                   ->first();
-      
-      if($response && $loginFormUsername) {
+
+      if($response && $formEmail) {
         $password = Crypt::decrypt($response->password);
-      
-        if($loginFormPassword === $password) {
+
+        if($formPassword === $password) {
           $user = DB::table('users')
           ->whereNull('users.deleted_at')
-          ->select("id", "username", "student_no", "type", "profile_image", "first_name", "last_name", 'is_admin')
+          ->select("id", "email", "student_no", "type", "profile_image", "first_name", "last_name", 'is_admin')
           ->where('id', '=', $response->id)
           ->first();
         }
-  
+
         if(!empty($user) && $user->id){
           Session::put('user', $user);
           return response()->json([
