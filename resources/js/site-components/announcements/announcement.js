@@ -30,7 +30,7 @@ const Announcement = ({ id, title, slug, content, created_at }) => {
             />
             <div className="fade"></div>
             <span className="view-more" onClick={toggleViewMore}>
-                {hasViewMore ? "View More" : "Hide"}
+                {hasViewMore ? "View More" : "View Less"}
             </span>
         </div>
     );

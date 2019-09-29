@@ -1,8 +1,9 @@
 const initialState = {
     isLoading: true,
     isModalActive: false,
-    isAddNewStudentModalActive: false,
+    isInviteStudentModalActive: false,
     isUpdateModal: false,
+    inviteStudentHeader: "Invite Student",
     modalHeaderTitle: "New User",
     data: [],
     selectedId: null,
@@ -86,7 +87,7 @@ const reducer = (state, action) => {
                 ...state,
                 isModalActive: false,
                 isUpdateModal: false,
-                isAddNewStudentModalActive: false
+                isInviteStudentModalActive: false
             };
         case "OPEN_UPDATE_MODAL":
             return {
@@ -99,7 +100,7 @@ const reducer = (state, action) => {
         case "OPEN_ADD_NEW_STUDENT_MODAL":
             return {
                 ...state,
-                isAddNewStudentModalActive: true
+                isInviteStudentModalActive: true
             };
         default:
             return state;

@@ -4,16 +4,16 @@ import Input from "Components/input";
 import Modal from "Components/modal";
 import Context from "Context/students";
 
-const AddNewStudentModal = () => {
+const InviteStudent = () => {
     const [studentNo, setStudentNo] = useState("");
     const [email, setEmail] = useState("");
     const { state, dispatch, handleAddNewStudent } = useContext(Context);
     return (
         <Modal
-            isActive={state.isAddNewStudentModalActive}
+            isActive={state.isInviteStudentModalActive}
             handleClose={() => dispatch({ type: "CLOSE_MODAL" })}
         >
-            <h2 className="section header">{state.modalHeaderTitle}</h2>
+            <h2 className="section header">{state.inviteStudentHeader}</h2>
             <Input
                 label={"Student Number"}
                 onChange={e => setStudentNo(e.target.value)}
@@ -25,7 +25,7 @@ const AddNewStudentModal = () => {
                 value={email}
             />
             <Button
-                text="Invite Student"
+                text="Invite"
                 onClick={() =>
                     handleUpdate(
                         state.selectedId,
@@ -39,4 +39,4 @@ const AddNewStudentModal = () => {
     );
 };
 
-export default AddNewStudentModal;
+export default InviteStudent;

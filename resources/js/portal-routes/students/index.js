@@ -8,7 +8,7 @@ import TableContext from "Context/table";
 import Reducer, { initialState } from "Reducers/students";
 import FormModal from "./form-modal";
 import TableBody from "./tablebody";
-import AddNewStudentModal from "./add-new-student-modal";
+import InviteStudent from "./invite-student-modal";
 import "./style.scss";
 
 const Students = props => {
@@ -203,6 +203,7 @@ const Students = props => {
                         headers={tableHeaders}
                         hasFilter={true}
                         hasAdd={true}
+                        addText={"Invite Student"}
                         handleAdd={handleOpenAddNewModal}
                         filterSearchBy={[
                             {
@@ -225,7 +226,7 @@ const Students = props => {
                     />
                 </TableContext.Provider>
                 <FormModal />
-                <AddNewStudentModal />
+                <InviteStudent />
             </div>
         </StudentContext.Provider>
     );
