@@ -97,6 +97,10 @@
                 color: inherit;
             }
 
+            > .item.active {
+                background-color: $green-2;
+            }
+
             > .item:hover {
                 background-color: $green-2;
             }

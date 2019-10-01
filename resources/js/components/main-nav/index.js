@@ -17,7 +17,7 @@ const MainNav = () => (
                 <NavLink className="item" to="/about">
                     About
                 </NavLink>
-                <NavLink className="item">
+                <NavLink className="item" to="/admission">
                     Admission
                     <ul className="sub-menu">
                         <NavLink to="/admission/requirements" className="item">
