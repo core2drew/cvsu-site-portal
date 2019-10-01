@@ -10,10 +10,13 @@
 |
 */
 
-Route::get('/{route?}', [
+Route::get('/{route?}/{admission?}', [
     "as" => "site",
     "uses" => "SiteController@index"
-])->where('route', '(about|admission|facilities|contact-us|activate)');
+])->where([
+    'route' => '(about|admission|facilities|contact-us|activate)',
+    'admission' => '(requirements|retention-policies|course-offered)'
+]);
 
 Route::group([
     "as" => "portal",

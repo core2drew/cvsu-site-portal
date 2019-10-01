@@ -17,19 +17,22 @@ const MainNav = () => (
                 <NavLink className="item" to="/about">
                     About
                 </NavLink>
-                <NavLink className="item" to="/admission">
+                <NavLink className="item">
                     Admission
                     <ul className="sub-menu">
-                        <NavLink to="/admission#Requirements" className="item">
+                        <NavLink to="/admission/requirements" className="item">
                             Requirements
                         </NavLink>
                         <NavLink
-                            to="/admission#RetentionPolicies"
+                            to="/admission/retention-policies"
                             className="item"
                         >
                             Retention Policies
                         </NavLink>
-                        <NavLink to="/admission#CourseOffered" className="item">
+                        <NavLink
+                            to="/admission/course-offered"
+                            className="item"
+                        >
                             Course Offered
                         </NavLink>
                     </ul>
