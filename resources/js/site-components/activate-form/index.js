@@ -1,37 +1,16 @@
 import React, { useState } from "react";
+import useForm from "Hooks/useForm";
 import classnames from "classnames";
 import Input from "Components/input";
 import Button from "Components/button";
 
 const ActivateForm = () => {
-    const [password, setPassword] = useState({
-        value: undefined,
-        error: false
+    const { fields, handleChange } = useForm({
+        password: { value: "" },
+        confirmPassword: { value: "" }
     });
-    const [confirmPassword, setConfirmPassword] = useState({
-        value: undefined,
-        error: false
-    });
-
-    const validateForm = () => {
-        setPassword({
-            ...password,
-            error: !password.value
-        });
-
-        setConfirmPassword({
-            ...confirmPassword,
-            error: !confirmPassword.value
-        });
-
-        // if (password.value !== confirmPassword.value) {
-        //     alert("Password does not match");
-        // }
-    };
-
-    const handleSubmit = () => {
-        validateForm();
-    };
+    console.log(fields);
+    const handleSubmit = () => {};
 
     return (
         <div id="ActivateForm">
@@ -49,36 +28,26 @@ const ActivateForm = () => {
                     <strong>Name:</strong> Sandro Calupe
                 </div>
                 <Input
+                    required
                     label={"Password"}
                     type="password"
-                    value={password.value}
+                    value={fields.password.value || ""}
                     variant={classnames({
-                        error: password.error
+                        error: !!fields.password.error
                     })}
                     name="password"
-                    onChange={e =>
-                        setPassword({
-                            ...password,
-                            value: e.target.value,
-                            error: !e.target.value
-                        })
-                    }
+                    onChange={handleChange}
                 />
                 <Input
+                    required
                     label={"Confirm Password"}
                     type="password"
                     name="confirmPassword"
-                    value={confirmPassword.value}
+                    value={fields.confirmPassword.value || ""}
                     variant={classnames({
-                        error: confirmPassword.error
+                        error: !!fields.confirmPassword.error
                     })}
-                    onChange={e =>
-                        setConfirmPassword({
-                            ...confirmPassword,
-                            value: e.target.value,
-                            error: !e.target.value
-                        })
-                    }
+                    onChange={handleChange}
                 />
                 <Button variant="submit" text="Submit" onClick={handleSubmit} />
             </div>

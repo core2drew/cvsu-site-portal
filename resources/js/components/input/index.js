@@ -12,9 +12,11 @@ const Input = props => (
             onChange={props.onChange}
             value={props.value}
         />
-        <span class="required-corner">
-            <Icon icon="asterisk" />
-        </span>
+        {props.hasOwnProperty("required") ? (
+            <span className="required-corner">
+                <Icon icon="asterisk" />
+            </span>
+        ) : null}
     </div>
 );
 
