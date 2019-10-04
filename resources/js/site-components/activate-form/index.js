@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import useInput from "Hooks/useInput";
 import classnames from "classnames";
 import Input from "Components/input";
@@ -26,28 +26,33 @@ const ActivateForm = () => {
         required: true
     });
 
-    const [errorMessage, setErrorMessage] = useState("");
-
     const validateForm = () => {
-        setErrorMessage("");
-        setPasswordError(false);
-        setConfirmPasswordError(false);
+        setPasswordError({ isError: false });
+        setConfirmPasswordError({ isError: false });
 
         // Empty
         if (!password || !confirmPassword) {
-            setPasswordError(!password);
-            setConfirmPasswordError(!confirmPassword);
+            setPasswordError({
+                isError: true
+            });
+            setConfirmPasswordError({
+                isError: true
+            });
             return false;
         }
         // Minlength
         if (password.length < 8) {
-            setPasswordError(password.length < 8);
+            setPasswordError({
+                isError: true
+            });
             return false;
         }
         // Not Equal
         if (password !== confirmPassword) {
-            setConfirmPasswordError(true);
-            setErrorMessage("Password and confirm password does not match.");
+            setConfirmPasswordError({
+                isError: true,
+                message: "Password and confirm password does not match."
+            });
             return false;
         }
 
@@ -86,7 +91,7 @@ const ActivateForm = () => {
                     value={password}
                     onChange={onChangePassword}
                     variant={classnames({
-                        error: !!passwordError
+                        error: !!passwordError.isError
                     })}
                 />
                 <Input
@@ -96,12 +101,10 @@ const ActivateForm = () => {
                     value={confirmPassword}
                     onChange={onChangeConfirmPassword}
                     variant={classnames({
-                        error: !!confirmPasswordError
+                        error: !!confirmPasswordError.isError
                     })}
+                    errorMessage={confirmPasswordError.message}
                 />
-                {errorMessage && (
-                    <p className="error-message">{errorMessage}</p>
-                )}
                 <Button variant="submit" text="Submit" onClick={handleSubmit} />
             </div>
         </div>

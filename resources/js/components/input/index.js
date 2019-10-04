@@ -15,6 +15,11 @@ const Input = props => (
         {props.footNote && (
             <small className="foot-note">{props.footNote}</small>
         )}
+        {props.errorMessage && (
+            <small className="foot-note error-message">
+                {props.errorMessage}
+            </small>
+        )}
         {props.hasOwnProperty("required") ? (
             <span className="required-corner">
                 <Icon icon="asterisk" />

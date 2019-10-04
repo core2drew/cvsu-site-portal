@@ -39,6 +39,11 @@
         font-style: italic;
         color: #aaa;
     }
+    > .error-message {
+        font-size: 11px;
+        color: $red-1;
+        font-style: normal;
+    }
     input,
     .required-corner {
         transition: 0.3s all;
@@ -55,5 +60,9 @@
         > .icon {
             color: #fff;
         }
+    }
+
+    > input:focus ~ .foot-note.error-message {
+        display: none;
     }
 }
