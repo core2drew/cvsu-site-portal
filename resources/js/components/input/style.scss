@@ -33,7 +33,12 @@
             right: -9px;
         }
     }
-
+    > .foot-note {
+        display: block;
+        margin-top: 5px;
+        font-style: italic;
+        color: #aaa;
+    }
     input,
     .required-corner {
         transition: 0.3s all;
@@ -41,10 +46,10 @@
 }
 
 .input.error {
-    > input {
+    > input:not(:focus) {
         border: 1px solid $red-1;
     }
-    > .required-corner {
+    > input:not(:focus) ~ .required-corner {
         border-top-color: $red-1;
         border-right-color: $red-1;
         > .icon {

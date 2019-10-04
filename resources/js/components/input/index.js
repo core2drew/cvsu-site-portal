@@ -12,6 +12,9 @@ const Input = props => (
             onChange={props.onChange}
             value={props.value}
         />
+        {props.footNote && (
+            <small className="foot-note">{props.footNote}</small>
+        )}
         {props.hasOwnProperty("required") ? (
             <span className="required-corner">
                 <Icon icon="asterisk" />
