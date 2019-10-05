@@ -6,13 +6,17 @@ import Modal from "Components/modal";
 import Context from "Context/students";
 import jwt from "jwt-simple";
 import classnames from "classnames";
+import { post } from "Utils";
 
 const InviteStudent = () => {
+    const url = "/ajax/portal/invite/student";
+    const { state, dispatch, handleAddNewStudent } = useContext(Context);
     const {
         value: studentNo,
         onChange: onChangeStudentNo,
         error: studentNoError,
-        setError: setStudentNoError
+        setError: setStudentNoError,
+        reset: resetStudentNo
     } = useInput({
         initialValue: "",
         required: true
@@ -21,14 +25,61 @@ const InviteStudent = () => {
         value: email,
         onChange: onChangeEmail,
         error: emailError,
-        setError: setEmailError
+        setError: setEmailError,
+        reset: resetEmail
     } = useInput({
         initialValue: "",
         required: true,
         email: true
     });
 
-    const { state, dispatch, handleAddNewStudent } = useContext(Context);
+    const validateForm = () => {
+        // Empty
+        if (!studentNo || !email) {
+            setStudentNoError({
+                isError: !studentNo
+            });
+            setEmailError({
+                isError: !email
+            });
+
+            return false;
+        }
+        if (emailError.isError || studentNoError.isError) {
+            return false;
+        }
+        resetForm();
+        return true;
+    };
+
+    const resetForm = () => {
+        resetStudentNo();
+        resetEmail();
+    };
+
+    const handleInvite = () => {
+        const isValid = validateForm();
+        if (isValid) {
+            post(
+                url,
+                { studentNo, email },
+                res => {
+                    if (res.status > 200) {
+                        dispatch({ type: "ERROR_SAVE" });
+                        alert(res.message);
+                        return;
+                    }
+                    dispatch({ type: "SUCCESS_INVITE" });
+                },
+                () => {
+                    dispatch({ type: "ERROR_FETCH" });
+                    alert("Something went wrong. Please try again");
+                }
+            );
+            return;
+        }
+    };
+
     return (
         <Modal
             isActive={state.isInviteStudentModalActive}
@@ -54,17 +105,7 @@ const InviteStudent = () => {
                 })}
                 errorMessage={emailError.message}
             />
-            <Button
-                text="Invite"
-                onClick={() =>
-                    handleAddNewStudent(
-                        state.selectedId,
-                        first_name,
-                        last_name,
-                        username
-                    )
-                }
-            />
+            <Button text="Invite" onClick={handleInvite} />
         </Modal>
     );
 };

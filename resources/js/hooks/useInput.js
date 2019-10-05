@@ -40,7 +40,15 @@ const useInput = ({ initialValue, required, minLength, email }) => {
             });
         }
     };
-    return { value, onChange, error, setError };
+
+    const reset = () => {
+        setValue(""),
+            setError({
+                isError: false,
+                message: ""
+            });
+    };
+    return { value, onChange, error, setError, reset };
 };
 
 export default useInput;

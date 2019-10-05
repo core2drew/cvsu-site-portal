@@ -191,12 +191,6 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
-        Route::post("/users", [
-            "as" => "ajax.portal.add.users",
-            "uses" => "AJAXAdminPortalController@addUser",
-            "middleware" => ["check.session", "check.isadmin"]
-        ]);
-
         Route::delete("/users", [
             "as" => "ajax.portal.delete.users",
             "uses" => "AJAXAdminPortalController@deleteUser",
@@ -207,6 +201,12 @@ Route::group([
         Route::get("/students", [
             "as" => "ajax.portal.students",
             "uses" => "AJAXAdminPortalController@getStudents",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
+        Route::post("/invite/student", [
+            "as" => "ajax.portal.invite.student",
+            "uses" => "AJAXAdminPortalController@inviteStudent",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 

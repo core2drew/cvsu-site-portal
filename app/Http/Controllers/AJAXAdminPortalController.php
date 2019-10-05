@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Log;
 
 class AJAXAdminPortalController extends Controller
 {
@@ -259,6 +260,35 @@ class AJAXAdminPortalController extends Controller
         return response()->json($response);
     }
 
+    public function inviteStudent(Request $request) {
+        $studentNo = $request->get('studentNo');
+        $email = $request->get('email');
+        $isStudentExists = $this->checkStudentNo($studentNo);
+        $isUserExists = $this->checkUserStudentNo($studentNo);
+        if(!$isStudentExists) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Invalid student number.'
+            ]);
+        }
+
+        if($isUserExists) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Student number is already registered.'
+            ]);
+        }
+
+
+        return response()->json([
+            'status' => 200,
+            'message' => "Invite has been sent $email."
+        ]);
+
+        return abort(500);
+
+    }
+
     public function deleteStudent(Request $request) {
         $id = $request->get('id');
         $response = DB::table('users')
@@ -276,5 +306,19 @@ class AJAXAdminPortalController extends Controller
         }
 
         return abort(500);
+    }
+
+    private function checkUserStudentNo($studentNo) {
+        $response = DB::table('users')
+                    ->whereNull('users.deleted_at')
+                    ->where('student_no', '=', $studentNo)
+                    ->first();
+        return $response;
+    }
+    private function checkStudentNo($studentNo) {
+        $response = DB::table('studentinfo')
+                    ->where('StudentNumber', '=', $studentNo)
+                    ->first();
+        return $response;
     }
 }

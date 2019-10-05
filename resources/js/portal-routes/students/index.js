@@ -181,7 +181,9 @@ const Students = props => {
         dispatch({ type: "OPEN_ADD_NEW_STUDENT_MODAL" });
     };
 
-    const handleAddStudent = () => {};
+    const handleAddNewStudent = ({ studentNo, email }) => {
+        console.log(studentNo, email);
+    };
 
     return (
         <StudentContext.Provider
@@ -193,7 +195,7 @@ const Students = props => {
                 handleDelete,
                 handleUpdate,
                 handleOpenAddNewModal,
-                handleAddStudent
+                handleAddNewStudent
             }}
         >
             <div id="Students">

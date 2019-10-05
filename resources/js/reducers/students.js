@@ -64,7 +64,11 @@ const reducer = (state, action) => {
                 prevPageUrl: action.prevPageUrl,
                 currentPage: action.currentPage
             };
-
+        case "SUCCESS_INVITE":
+            return {
+                ...state,
+                isInviteStudentModalActive: false
+            };
         case "ERROR_SAVE":
         case "ERROR_FETCH":
         case "ERROR_UPDATE":

@@ -38,8 +38,8 @@ class AJAXPortalController extends Controller
         $response = DB::table('users')
         ->where('id', '=', $id)
         ->update([
-            'first_name' => $firstName, 
-            'last_name' => $lastName, 
+            'first_name' => $firstName,
+            'last_name' => $lastName,
             'username' => $username,
             'updated_at' => now()
         ]);
@@ -84,7 +84,7 @@ class AJAXPortalController extends Controller
         $imageExt = $image->getClientOriginalExtension();
         $profileImage =  now()->timestamp.".$imageExt";
         $path = Storage::disk('public')->putFileAs("profile-images", $image, $profileImage);
- 
+
         $response = DB::table('users')
         ->where('id', '=', $id)
         ->update([
@@ -152,7 +152,7 @@ class AJAXPortalController extends Controller
         $response = DB::table('retention_policies_content')->latest()->first();
         return response()->json($response);
     }
-    
+
     public function getCourseOffered(Request $request) {
         $response = DB::table('course_offered_content')->latest()->first();
         return response()->json($response);
@@ -193,7 +193,7 @@ class AJAXPortalController extends Controller
         $lastName = $isVerifiedStudentNo->LastName;
         $created_at = now();
         $updated_at = now();
-        
+
         $response = DB::table('users')
         ->insert([
             'student_no' => $studentNo,
@@ -202,10 +202,10 @@ class AJAXPortalController extends Controller
             'first_name' => $firstName,
             'type' => 'student',
             'last_name' => $lastName,
-            'created_at' => $created_at, 
+            'created_at' => $created_at,
             'updated_at' => $updated_at
         ]);
-        
+
         if($response) {
             return response()->json([
                 'status' => 200,
@@ -242,11 +242,11 @@ class AJAXPortalController extends Controller
             ->groupBy('Schoolyear')
             ->orderBy('Schoolyear', 'asc')
             ->get();
-        
+
         foreach($schoolYears as $schoolYear) {
             $response[] = $schoolYear->Schoolyear;
         }
-        
+
         return $response;
     }
 
