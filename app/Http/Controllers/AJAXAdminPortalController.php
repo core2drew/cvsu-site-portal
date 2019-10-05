@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Log;
+use Illuminate\Support\Facades\Crypt;
 
 class AJAXAdminPortalController extends Controller
 {
@@ -280,9 +281,15 @@ class AJAXAdminPortalController extends Controller
         }
 
 
+        $encrypted = Crypt::encrypt([
+            'studentNo' => $studentNo,
+            'email' => $email
+        ]);
+
         return response()->json([
             'status' => 200,
-            'message' => "Invite has been sent $email."
+            'message' => "Invite has been sent $email.",
+            'token' => $encrypted
         ]);
 
         return abort(500);

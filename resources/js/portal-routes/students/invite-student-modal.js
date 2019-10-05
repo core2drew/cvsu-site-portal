@@ -4,7 +4,6 @@ import Button from "Components/button";
 import Input from "Components/input";
 import Modal from "Components/modal";
 import Context from "Context/students";
-import jwt from "jwt-simple";
 import classnames from "classnames";
 import { post } from "Utils";
 
@@ -81,10 +80,15 @@ const InviteStudent = () => {
         }
     };
 
+    const handleClose = () => {
+        resetForm();
+        dispatch({ type: "CLOSE_MODAL" });
+    };
+
     return (
         <Modal
             isActive={state.isInviteStudentModalActive}
-            handleClose={() => dispatch({ type: "CLOSE_MODAL" })}
+            handleClose={handleClose}
         >
             <h2 className="section header">{state.inviteStudentHeader}</h2>
             <Input

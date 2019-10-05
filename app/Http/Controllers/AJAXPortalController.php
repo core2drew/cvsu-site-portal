@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Contracts\Encryption\DecryptException;
 use Session;
 use Log;
 use Crypt;
@@ -304,5 +305,18 @@ class AJAXPortalController extends Controller
                     ->where('StudentNumber', '=', $studentNo)
                     ->first();
         return $response;
+    }
+
+    public function verifyToken(Request $request) {
+        try {
+            $token = $request->get('token');
+            $data = Crypt::decrypt($token);
+            return response()->json($data);
+        } catch(DecryptException $e) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Invalid token.'
+            ]);
+        }
     }
 }

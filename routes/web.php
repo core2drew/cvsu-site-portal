@@ -58,6 +58,12 @@ Route::group([
         "prefix" => "portal",
     ], function() {
 
+        //Verify Token
+        Route::get('/verify/token', [
+            "as" => "ajax.portal.user",
+            "uses" => "AJAXPortalController@verifyToken",
+        ]);
+
         // User
         Route::get("/user", [
             "as" => "ajax.portal.user",
