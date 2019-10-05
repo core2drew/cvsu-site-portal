@@ -57,9 +57,10 @@ const InviteStudent = () => {
         resetEmail();
     };
 
-    const handleInvite = () => {
+    const handleValidateInvite = () => {
         const isValid = validateForm();
         if (isValid) {
+            // Validate Info
             post(
                 url,
                 { studentNo, email },
@@ -69,7 +70,7 @@ const InviteStudent = () => {
                         alert(res.message);
                         return;
                     }
-                    dispatch({ type: "SUCCESS_INVITE" });
+                    // Call invite end point
                 },
                 () => {
                     dispatch({ type: "ERROR_FETCH" });
@@ -105,7 +106,7 @@ const InviteStudent = () => {
                 })}
                 errorMessage={emailError.message}
             />
-            <Button text="Invite" onClick={handleInvite} />
+            <Button text="Invite" onClick={handleValidateInvite} />
         </Modal>
     );
 };

@@ -9,6 +9,7 @@ import Reducer, { initialState } from "Reducers/students";
 import FormModal from "./form-modal";
 import TableBody from "./tablebody";
 import InviteStudent from "./invite-student-modal";
+import Toast from "Components/toast";
 import "./style.scss";
 
 const Students = props => {
@@ -200,6 +201,7 @@ const Students = props => {
         >
             <div id="Students">
                 <Preloader variant={"fixed"} isActive={state.isLoading} />
+                <Toast />
                 <TableContext.Provider value={{ handleChangePage, state }}>
                     <Table
                         headers={tableHeaders}
