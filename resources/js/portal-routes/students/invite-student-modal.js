@@ -1,12 +1,33 @@
 import React, { useState, useEffect, useContext } from "react";
+import useInput from "Hooks/useInput";
 import Button from "Components/button";
 import Input from "Components/input";
 import Modal from "Components/modal";
 import Context from "Context/students";
+import jwt from "jwt-simple";
+import classnames from "classnames";
 
 const InviteStudent = () => {
-    const [studentNo, setStudentNo] = useState("");
-    const [email, setEmail] = useState("");
+    const {
+        value: studentNo,
+        onChange: onChangeStudentNo,
+        error: studentNoError,
+        setError: setStudentNoError
+    } = useInput({
+        initialValue: "",
+        required: true
+    });
+    const {
+        value: email,
+        onChange: onChangeEmail,
+        error: emailError,
+        setError: setEmailError
+    } = useInput({
+        initialValue: "",
+        required: true,
+        email: true
+    });
+
     const { state, dispatch, handleAddNewStudent } = useContext(Context);
     return (
         <Modal
@@ -15,19 +36,28 @@ const InviteStudent = () => {
         >
             <h2 className="section header">{state.inviteStudentHeader}</h2>
             <Input
+                required
                 label={"Student Number"}
-                onChange={e => setStudentNo(e.target.value)}
+                onChange={onChangeStudentNo}
                 value={studentNo}
+                variant={classnames({
+                    error: studentNoError.isError
+                })}
             />
             <Input
+                required
                 label={"Email"}
-                onChange={e => setEmail(e.target.value)}
+                onChange={onChangeEmail}
                 value={email}
+                variant={classnames({
+                    error: emailError.isError
+                })}
+                errorMessage={emailError.message}
             />
             <Button
                 text="Invite"
                 onClick={() =>
-                    handleUpdate(
+                    handleAddNewStudent(
                         state.selectedId,
                         first_name,
                         last_name,
