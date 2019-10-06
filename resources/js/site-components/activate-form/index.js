@@ -5,7 +5,7 @@ import Input from "Components/input";
 import Button from "Components/button";
 import "./style.scss";
 
-const ActivateForm = () => {
+const ActivateForm = ({ StudentNumber, FirstName, LastName }) => {
     const {
         value: password,
         onChange: onChangePassword,
@@ -78,10 +78,10 @@ const ActivateForm = () => {
             </div>
             <div className="form">
                 <div className="student-no">
-                    <strong>Student No:</strong> 123456789
+                    <strong>Student No:</strong> {StudentNumber}
                 </div>
                 <div className="student-name">
-                    <strong>Name:</strong> Sandro Calupe
+                    <strong>Name:</strong> {LastName}, {FirstName}
                 </div>
                 <Input
                     footNote="Minimum 8 characters."

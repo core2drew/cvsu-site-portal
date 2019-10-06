@@ -313,10 +313,7 @@ class AJAXPortalController extends Controller
             $data = Crypt::decrypt($token);
             return response()->json($data);
         } catch(DecryptException $e) {
-            return response()->json([
-                'status' => 400,
-                'message' => 'Invalid token.'
-            ]);
+            abort(404);
         }
     }
 }

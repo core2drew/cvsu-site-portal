@@ -1,0 +1,18 @@
+#ErrorMessage {
+    > .container.grid {
+        grid-gap: 1rem;
+        grid-template-rows: repeat(3, 250px);
+
+        > .title-container {
+            grid-row: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        > .title-container > .message {
+            margin: 0;
+        }
+    }
+}

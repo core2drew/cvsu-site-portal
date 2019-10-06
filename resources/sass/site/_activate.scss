@@ -1,21 +1,6 @@
-.header {
-    margin-bottom: 20px;
-    > .title {
-        margin-bottom: 0;
-    }
-    > .message {
-        margin: 0;
-    }
-}
-
-.form {
-    > .student-no,
-    > .student-name {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-    > .input {
-        margin-bottom: 10px;
-        max-width: 300px;
+#Activate {
+    > .container.grid {
+        grid-gap: 1rem;
+        grid-template-rows: repeat(3, 250px);
     }
 }

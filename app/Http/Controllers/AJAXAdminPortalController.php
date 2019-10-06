@@ -264,8 +264,10 @@ class AJAXAdminPortalController extends Controller
     public function inviteStudent(Request $request) {
         $studentNo = $request->get('studentNo');
         $email = $request->get('email');
+
         $isStudentExists = $this->checkStudentNo($studentNo);
         $isUserExists = $this->checkUserStudentNo($studentNo);
+
         if(!$isStudentExists) {
             return response()->json([
                 'status' => 400,
@@ -281,10 +283,23 @@ class AJAXAdminPortalController extends Controller
         }
 
 
-        $encrypted = Crypt::encrypt([
-            'studentNo' => $studentNo,
-            'email' => $email
+        $studentDetails = DB::table('studentinfo')
+        ->select('StudentNumber', 'FirstName', 'LastName')
+        ->where('StudentNumber', '=', $studentNo)
+        ->first();
+
+        $response = DB::table('users')
+        ->insert([
+            'student_no' => $studentNo,
+            'first_name' => $studentDetails->FirstName,
+            'last_name' => $studentDetails->LastName,
+            'email' => $email,
+            'is_await' => 1,
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
+
+        $encrypted = Crypt::encrypt($studentDetails);
 
         return response()->json([
             'status' => 200,
