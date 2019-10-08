@@ -16,12 +16,12 @@ class AJAXLoginController extends Controller
       $formPassword = $request->get('password');
 
       $response = DB::table('users')
+                  ->whereNull('users.deleted_at')
                   ->whereRaw("BINARY email = '$formEmail'")
                   ->first();
 
       if($response && $formEmail) {
         $password = Crypt::decrypt($response->password);
-
         if($formPassword === $password) {
           $user = DB::table('users')
           ->whereNull('users.deleted_at')
