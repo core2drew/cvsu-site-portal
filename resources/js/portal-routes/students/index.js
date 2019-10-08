@@ -29,6 +29,7 @@ const Students = props => {
     }, []);
 
     const initTable = () => {
+        dispatch({ type: "FETCHING" });
         get(
             url,
             {},
