@@ -68,10 +68,16 @@ const ActivateForm = ({ StudentNumber, FirstName, LastName }) => {
             return;
         }
 
-        post(url, {
-            studentNo: StudentNumber,
-            password
-        });
+        post(
+            url,
+            {
+                studentNo: StudentNumber,
+                password
+            },
+            () => {
+                window.location.replace("/auth/login");
+            }
+        );
     };
 
     return (

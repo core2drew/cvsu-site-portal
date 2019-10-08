@@ -69,7 +69,6 @@ const InviteStudent = () => {
                         alert(res.message);
                         return;
                     }
-                    // Call invite end point
                 },
                 () => {
                     dispatch({ type: "ERROR_FETCH" });

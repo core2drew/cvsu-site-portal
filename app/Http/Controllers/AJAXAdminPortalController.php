@@ -267,6 +267,7 @@ class AJAXAdminPortalController extends Controller
 
         $isStudentExists = $this->checkStudentNo($studentNo);
         $isUserExists = $this->checkUserStudentNo($studentNo);
+        $isEmailExists = $this->checkUserEmail($email);
 
         if(!$isStudentExists) {
             return response()->json([
@@ -279,6 +280,13 @@ class AJAXAdminPortalController extends Controller
             return response()->json([
                 'status' => 400,
                 'message' => 'Student number is already registered.'
+            ]);
+        }
+
+        if($isEmailExists) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Email is already registered.'
             ]);
         }
 
@@ -342,6 +350,13 @@ class AJAXAdminPortalController extends Controller
         $response = DB::table('studentinfo')
                     ->where('StudentNumber', '=', $studentNo)
                     ->first();
+        return $response;
+    }
+    private function checkUserEmail($email) {
+        $response = DB::table('users')
+                ->whereNull('users.deleted_at')
+                ->where('email', '=', $email)
+                ->first();
         return $response;
     }
 }
