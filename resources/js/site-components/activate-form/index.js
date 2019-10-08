@@ -3,9 +3,11 @@ import useInput from "Hooks/useInput";
 import classnames from "classnames";
 import Input from "Components/input";
 import Button from "Components/button";
+import { post } from "Utils";
 import "./style.scss";
 
 const ActivateForm = ({ StudentNumber, FirstName, LastName }) => {
+    const url = "/ajax/portal/activate-account";
     const {
         value: password,
         onChange: onChangePassword,
@@ -65,7 +67,11 @@ const ActivateForm = ({ StudentNumber, FirstName, LastName }) => {
             console.log("Invalid Form");
             return;
         }
-        console.log("Submitted");
+
+        post(url, {
+            studentNo: StudentNumber,
+            password
+        });
     };
 
     return (

@@ -311,9 +311,41 @@ class AJAXPortalController extends Controller
         try {
             $token = $request->get('token');
             $data = Crypt::decrypt($token);
-            return response()->json($data);
+
+            $studentNo = $data->StudentNumber;
+            $response = DB::table('users')
+            ->where('student_no', '=', $studentNo)
+            ->where('is_await', '=', 1)
+            ->whereNull('users.deleted_at')
+            ->first();
+
+            if($response) {
+                return response()->json($data);
+            }
+            return abort(403);
         } catch(DecryptException $e) {
-            abort(404);
+            abort(403);
         }
+    }
+
+    public function activateAccount(Request $request) {
+        $studentNo = $request->get('studentNo');
+        $password = $request->get('password');
+        $updated_at = now();
+
+        $response = DB::table('users')
+        ->where('student_no', '=', $studentNo)
+        ->update([
+            'is_await' => 0,
+            'password' => Crypt::encrypt($password),
+            'updated_at' => $updated_at
+        ]);
+
+        if($response) {
+            return response()->json([
+                'status' => 200
+            ]);
+        }
+        return abort(500);
     }
 }

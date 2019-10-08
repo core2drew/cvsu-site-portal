@@ -247,7 +247,7 @@ class AJAXAdminPortalController extends Controller
             $response = DB::table('users')
             ->whereNull('deleted_at')
             ->whereNotNull('student_no')
-            ->where('type', '=', 'student')
+            ->where('type', '=', 'STUDENT')
             ->where("$searchBy", "like", "$search%")
             ->latest()
             ->paginate(15);
@@ -295,6 +295,7 @@ class AJAXAdminPortalController extends Controller
             'last_name' => $studentDetails->LastName,
             'email' => $email,
             'is_await' => 1,
+            'type' => 'STUDENT',
             'created_at' => now(),
             'updated_at' => now()
         ]);

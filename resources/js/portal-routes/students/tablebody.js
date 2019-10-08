@@ -3,13 +3,14 @@ import moment from "moment";
 import Button from "Components/button";
 import Uuid from "uuid/v4";
 import StudentContext from "Context/students";
-
+import Pill from "Components/pill";
 const TableBody = ({ data }) => {
     const { handleDelete, handleOpenModal } = useContext(StudentContext);
 
     return (
         <tbody>
             {data.map(d => {
+                const isAwait = !!d.is_await;
                 // let created_at = moment
                 //     .utc(d.created_at)
                 //     .local()
@@ -21,7 +22,10 @@ const TableBody = ({ data }) => {
 
                 return (
                     <tr key={Uuid()}>
-                        <td>{d.student_no}</td>
+                        <td>
+                            <p className="student_no">{d.student_no}</p>
+                            {isAwait && <Pill>Awaiting invite response</Pill>}
+                        </td>
                         <td>{d.email}</td>
                         <td>{d.first_name}</td>
                         <td>{d.last_name}</td>

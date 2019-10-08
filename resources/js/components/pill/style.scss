@@ -1,0 +1,14 @@
+@import "~Sass/variables";
+
+.pill {
+    background-color: $gray-2;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 5px 12px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    font-style: italic;
+}

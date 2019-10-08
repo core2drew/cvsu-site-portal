@@ -64,6 +64,12 @@ Route::group([
             "uses" => "AJAXPortalController@verifyToken",
         ]);
 
+        // Activate Account
+        Route::post('/activate-account', [
+            "as" => "ajax.portal.activate.account",
+            "uses" => "AJAXPortalController@activateAccount",
+        ]);
+
         // User
         Route::get("/user", [
             "as" => "ajax.portal.user",
