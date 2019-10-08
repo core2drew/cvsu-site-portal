@@ -37,6 +37,12 @@ const App = () => {
         );
     };
 
+    const handleOnKeyPress = e => {
+        if (e.charCode === 13) {
+            handleLogin();
+        }
+    };
+
     return (
         <React.Fragment>
             <h1 id="Greet">Welcome to CvSU Portal</h1>
@@ -46,11 +52,13 @@ const App = () => {
                 <Input
                     value={email}
                     onChange={e => setEmail(e.target.value)}
+                    onKeyPress={handleOnKeyPress}
                     label="Email"
                 />
                 <Input
                     value={password}
                     onChange={e => setPassword(e.target.value)}
+                    onKeyPress={handleOnKeyPress}
                     label="Password"
                     type={"password"}
                 />
