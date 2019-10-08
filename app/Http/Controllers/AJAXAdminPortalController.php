@@ -256,6 +256,7 @@ class AJAXAdminPortalController extends Controller
             ->whereNull('deleted_at')
             ->whereNotNull('student_no')
             ->where('type', '=', 'student')
+            ->latest()
             ->paginate(15);
         }
         return response()->json($response);

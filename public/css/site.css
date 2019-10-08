@@ -78,7 +78,7 @@
   font-size: 23px;
   min-width: 23px;
   margin-right: 10px;
-  color: #2D8548;
+  color: #2d8548;
 }
 
 #Activate > .container.grid {
@@ -87,7 +87,7 @@
 }
 
 body {
-  background-color: #F5FFF4;
+  background-color: #f5fff4;
 }
 
 #App {
@@ -139,7 +139,7 @@ body {
 #ContactUs .section.header:after {
   display: block;
   content: "";
-  border-bottom: solid 3px #329B58;
+  border-bottom: solid 3px #329b58;
   width: 100px;
   margin-top: 8px;
 }

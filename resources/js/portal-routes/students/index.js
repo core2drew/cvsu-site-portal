@@ -14,6 +14,7 @@ import "./style.scss";
 
 const Students = props => {
     const url = "/ajax/portal/students";
+    const inviteUrl = "/ajax/portal/invite/student";
     const [state, dispatch] = useReducer(Reducer, initialState);
     const tableHeaders = [
         "Student Number",
@@ -24,6 +25,10 @@ const Students = props => {
     ];
 
     useEffect(() => {
+        initTable();
+    }, []);
+
+    const initTable = () => {
         get(
             url,
             {},
@@ -41,7 +46,7 @@ const Students = props => {
                 alert("Something went wrong. Please try again");
             }
         );
-    }, []);
+    };
 
     const handleOpenModal = id => {
         if (id) {
@@ -178,12 +183,28 @@ const Students = props => {
         );
     };
 
-    const handleOpenAddNewModal = () => {
-        dispatch({ type: "OPEN_ADD_NEW_STUDENT_MODAL" });
+    const handleOpenInviteStudentModal = () => {
+        dispatch({ type: "OPEN_INVITE_STUDENT_MODAL" });
     };
 
-    const handleAddNewStudent = ({ studentNo, email }) => {
-        console.log(studentNo, email);
+    const handleInvitation = ({ studentNo, email }) => {
+        post(
+            inviteUrl,
+            { studentNo, email },
+            res => {
+                if (res.status > 200) {
+                    dispatch({ type: "ERROR_SAVE" });
+                    alert(res.message);
+                    return;
+                }
+                dispatch({ type: "CLOSE_MODAL" });
+                initTable();
+            },
+            () => {
+                dispatch({ type: "ERROR_FETCH" });
+                alert("Something went wrong. Please try again");
+            }
+        );
     };
 
     return (
@@ -195,20 +216,20 @@ const Students = props => {
                 handleAdd,
                 handleDelete,
                 handleUpdate,
-                handleOpenAddNewModal,
-                handleAddNewStudent
+                handleOpenInviteStudentModal,
+                handleInvitation
             }}
         >
             <div id="Students">
                 <Preloader variant={"fixed"} isActive={state.isLoading} />
-                <Toast />
+                <Toast>Invite sent.</Toast>
                 <TableContext.Provider value={{ handleChangePage, state }}>
                     <Table
                         headers={tableHeaders}
                         hasFilter={true}
                         hasAdd={true}
                         addText={"Invite Student"}
-                        handleAdd={handleOpenAddNewModal}
+                        handleAdd={handleOpenInviteStudentModal}
                         filterSearchBy={[
                             {
                                 label: "Student No.",

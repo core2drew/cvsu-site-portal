@@ -9,7 +9,7 @@ import { post } from "Utils";
 
 const InviteStudent = () => {
     const url = "/ajax/portal/invite/student";
-    const { state, dispatch, handleAddNewStudent } = useContext(Context);
+    const { state, dispatch, handleInvitation } = useContext(Context);
     const {
         value: studentNo,
         onChange: onChangeStudentNo,
@@ -47,7 +47,6 @@ const InviteStudent = () => {
         if (emailError.isError || studentNoError.isError) {
             return false;
         }
-        resetForm();
         return true;
     };
 
@@ -59,22 +58,7 @@ const InviteStudent = () => {
     const handleValidateInvite = () => {
         const isValid = validateForm();
         if (isValid) {
-            // Validate Info
-            post(
-                url,
-                { studentNo, email },
-                res => {
-                    if (res.status > 200) {
-                        dispatch({ type: "ERROR_SAVE" });
-                        alert(res.message);
-                        return;
-                    }
-                },
-                () => {
-                    dispatch({ type: "ERROR_FETCH" });
-                    alert("Something went wrong. Please try again");
-                }
-            );
+            handleInvitation({ studentNo, email });
             return;
         }
     };

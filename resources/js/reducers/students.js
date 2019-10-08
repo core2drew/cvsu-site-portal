@@ -101,7 +101,7 @@ const reducer = (state, action) => {
                 modalHeaderTitle: "Update User",
                 selectedId: action.id
             };
-        case "OPEN_ADD_NEW_STUDENT_MODAL":
+        case "OPEN_INVITE_STUDENT_MODAL":
             return {
                 ...state,
                 isInviteStudentModalActive: true
