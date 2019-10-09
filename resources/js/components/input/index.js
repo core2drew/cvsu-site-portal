@@ -4,12 +4,23 @@ import Icon from "Components/icon";
 import "./style.scss";
 
 const Input = props => (
-    <div id={props.id} className={classname("input", props.variant)}>
+    <div
+        id={props.id}
+        className={classname(
+            "input",
+            {
+                error: props.error
+            },
+            props.variant
+        )}
+    >
         {props.label && <label className="label">{props.label}</label>}
         <input
             type={props.type}
             placeholder={props.placeholder}
-            onChange={props.onChange}
+            onChange={e => {
+                props.onChange(e.target.value, props.name);
+            }}
             onKeyPress={props.onKeyPress}
             value={props.value}
         />

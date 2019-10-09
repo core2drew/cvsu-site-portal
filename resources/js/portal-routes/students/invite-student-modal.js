@@ -1,70 +1,28 @@
-import React, { useState, useEffect, useContext } from "react";
-import useInput from "Hooks/useInput";
+import React, { useContext } from "react";
+import useForm from "Hooks/useForm";
 import Button from "Components/button";
 import Input from "Components/input";
 import Modal from "Components/modal";
 import Context from "Context/students";
-import classnames from "classnames";
-import { post } from "Utils";
-
+import inviteStudentInitialFields from "./inviteStudentInitialFields";
 const InviteStudent = () => {
-    const url = "/ajax/portal/invite/student";
     const { state, dispatch, handleInvitation } = useContext(Context);
-    const {
-        value: studentNo,
-        onChange: onChangeStudentNo,
-        error: studentNoError,
-        setError: setStudentNoError,
-        reset: resetStudentNo
-    } = useInput({
-        initialValue: "",
-        required: true
-    });
-    const {
-        value: email,
-        onChange: onChangeEmail,
-        error: emailError,
-        setError: setEmailError,
-        reset: resetEmail
-    } = useInput({
-        initialValue: "",
-        required: true,
-        email: true
-    });
 
-    const validateForm = () => {
-        // Empty
-        if (!studentNo || !email) {
-            setStudentNoError({
-                isError: !studentNo
-            });
-            setEmailError({
-                isError: !email
-            });
-
-            return false;
-        }
-        if (emailError.isError || studentNoError.isError) {
-            return false;
-        }
-        return true;
+    const handleValidateInvite = ({ studentNo, email }) => {
+        const { value: studentNoValue } = studentNo;
+        const { value: emailValue } = email;
+        handleInvitation({ studentNoValue, emailValue });
     };
 
-    const resetForm = () => {
-        resetStudentNo();
-        resetEmail();
-    };
-
-    const handleValidateInvite = () => {
-        const isValid = validateForm();
-        if (isValid) {
-            handleInvitation({ studentNo, email });
-            return;
-        }
-    };
+    const [fields, setFieldValue, submitForm, setFieldValues, reset] = useForm(
+        inviteStudentInitialFields,
+        {},
+        handleValidateInvite
+    );
+    const { studentNo, email } = fields;
 
     const handleClose = () => {
-        resetForm();
+        reset();
         dispatch({ type: "CLOSE_MODAL" });
     };
 
@@ -77,23 +35,21 @@ const InviteStudent = () => {
             <Input
                 required
                 label={"Student Number"}
-                onChange={onChangeStudentNo}
-                value={studentNo}
-                variant={classnames({
-                    error: studentNoError.isError
-                })}
+                onChange={setFieldValue}
+                value={studentNo.value}
+                name="studentNo"
+                error={studentNo.error.status}
             />
             <Input
                 required
                 label={"Email"}
-                onChange={onChangeEmail}
-                value={email}
-                variant={classnames({
-                    error: emailError.isError
-                })}
-                errorMessage={emailError.message}
+                onChange={setFieldValue}
+                value={email.value}
+                name="email"
+                error={email.error.status}
+                errorMessage={email.error.message}
             />
-            <Button text="Invite" onClick={handleValidateInvite} />
+            <Button text="Invite" onClick={submitForm} />
         </Modal>
     );
 };
