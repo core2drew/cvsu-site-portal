@@ -9,12 +9,12 @@
     }
     > .table-container {
         > table {
-            > thead > tr > th:nth-child(2) {
-                width: 17%;
+            > thead > tr > th:nth-child(1) {
+                width: 15%;
             }
             > thead > tr > th:nth-child(3),
             > thead > tr > th:nth-child(4) {
-                width: 14%;
+                width: 20%;
             }
 
             > thead > tr > th:last-child {
