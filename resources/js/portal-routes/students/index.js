@@ -15,6 +15,7 @@ import "./style.scss";
 const Students = props => {
     const url = "/ajax/portal/students";
     const inviteUrl = "/ajax/portal/invite/student";
+    const resendInviteUrl = "/ajax/portal/resend/invite/student";
     const [state, dispatch] = useReducer(Reducer, initialState);
     const tableHeaders = [
         "Student Number",
@@ -209,17 +210,37 @@ const Students = props => {
         );
     };
 
+    const handleResendInvitation = ({ studentNo, email }) => {
+        post(
+            resendInviteUrl,
+            { studentNo, email },
+            res => {
+                if (res.status > 200) {
+                    dispatch({ type: "ERROR_SAVE" });
+                    alert(res.message);
+                    return;
+                }
+                dispatch({ type: "CLOSE_MODAL" });
+                initTable();
+            },
+            () => {
+                dispatch({ type: "ERROR_FETCH" });
+                alert("Something went wrong. Please try again");
+            }
+        );
+    };
+
     return (
         <StudentContext.Provider
             value={{
                 state,
                 dispatch,
                 handleOpenModal,
-                handleAdd,
                 handleDelete,
                 handleUpdate,
                 handleOpenInviteStudentModal,
-                handleInvitation
+                handleInvitation,
+                handleResendInvitation
             }}
         >
             <div id="Students">

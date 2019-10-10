@@ -5,7 +5,11 @@ import Uuid from "uuid/v4";
 import StudentContext from "Context/students";
 import Pill from "Components/pill";
 const TableBody = ({ data }) => {
-    const { handleDelete, handleOpenModal } = useContext(StudentContext);
+    const {
+        handleDelete,
+        handleOpenModal,
+        handleResendInvitation
+    } = useContext(StudentContext);
 
     return (
         <tbody>
@@ -32,12 +36,16 @@ const TableBody = ({ data }) => {
                         <td className="actions">
                             <Button
                                 variant={"update"}
-                                text={"Update"}
-                                onClick={() => handleOpenModal(d.id)}
+                                text={isAwait ? "Resend" : "Update"}
+                                onClick={() =>
+                                    isAwait
+                                        ? handleResendInvitation(d.id, d.email)
+                                        : handleOpenModal(d.id)
+                                }
                             />
                             <Button
                                 variant={"delete -danger"}
-                                text={"Delete"}
+                                text={isAwait ? "Revoke" : "Delete"}
                                 onClick={() => handleDelete(d.id)}
                             />
                         </td>

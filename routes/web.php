@@ -240,6 +240,12 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
+        Route::post('/resend/invite/student', [
+            "as" => "ajax.portal.resend.invite.student",
+            "uses" => "AJAXAdminPortalController@resendInviteStudent",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
         // Student Sign Up
         Route::post('/signup', [
             "as" => "ajax.portal.student.signup",

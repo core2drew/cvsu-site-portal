@@ -313,12 +313,31 @@ class AJAXAdminPortalController extends Controller
 
         return response()->json([
             'status' => 200,
-            'message' => "Invite has been sent $email.",
+            'message' => "Invite has been sent to $email.",
             'token' => $encrypted
         ]);
 
         return abort(500);
+    }
 
+    public function resendInviteStudent(Request $request) {
+        $studentNo = $request->get('studentNo');
+        $email = $request->get('email');
+
+        $studentDetails = DB::table('studentinfo')
+        ->select('StudentNumber', 'FirstName', 'LastName')
+        ->where('StudentNumber', '=', $studentNo)
+        ->first();
+
+        $encrypted = Crypt::encrypt($studentDetails);
+
+        return response()->json([
+            'status' => 200,
+            'message' => "Invite has been resend to $email.",
+            'token' => $encrypted
+        ]);
+
+        return abort(500);
     }
 
     public function deleteentsent(Request $request) {
