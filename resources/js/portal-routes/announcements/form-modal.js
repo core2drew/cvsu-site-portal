@@ -70,7 +70,7 @@ const FormModal = () => {
                 variant="title"
                 label="Title"
                 value={title}
-                onChange={e => setTitle(e.target.value)}
+                onChange={value => setTitle(value)}
             />
             <CKEditor
                 id="Editor"
