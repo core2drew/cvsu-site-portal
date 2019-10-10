@@ -91,7 +91,8 @@ const reducer = (state, action) => {
                 ...state,
                 isModalActive: false,
                 isUpdateModal: false,
-                isInviteStudentModalActive: false
+                isInviteStudentModalActive: false,
+                selectedId: null
             };
         case "OPEN_UPDATE_MODAL":
             return {

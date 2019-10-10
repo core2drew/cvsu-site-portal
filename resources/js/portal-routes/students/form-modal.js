@@ -1,65 +1,63 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import Modal from "Components/modal";
 import Button from "Components/button";
 import Input from "Components/input";
 import Context from "Context/students";
-
+import useForm from "Hooks/useForm";
+import studentFormInitialFields from "./studentFormInitialFields";
 const FormModal = () => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const { state, dispatch, handleAdd, handleUpdate } = useContext(Context);
+    const { state, dispatch, handleUpdate } = useContext(Context);
+
+    const submitForm = ({ id, firstName, lastName }) => {
+        handleUpdate(id, firstName, lastName);
+    };
+
+    const [fields, setFieldValue, submit, setFieldValues, reset] = useForm(
+        studentFormInitialFields,
+        {},
+        submitForm
+    );
+
+    const { firstName, lastName } = fields;
 
     useEffect(() => {
         if (state.selectedId) {
-            const { first_name, last_name, username } = state.data.filter(
+            const { first_name, last_name } = state.data.filter(
                 d => d.id === state.selectedId
             )[0];
-            setFirstName(first_name);
-            setLastName(last_name);
-            setUsername(username);
+            setFieldValues({
+                firstName: first_name,
+                lastName: last_name
+            });
         }
     }, [state.selectedId]);
 
+    const handleClose = () => {
+        reset();
+        dispatch({ type: "CLOSE_MODAL" });
+    };
+
     return (
-        <Modal
-            isActive={state.isModalActive}
-            handleClose={() => dispatch({ type: "CLOSE_MODAL" })}
-        >
+        <Modal isActive={state.isModalActive} handleClose={handleClose}>
             <h2 className="section header">{state.modalHeaderTitle}</h2>
             <Input
                 label={"First Name"}
-                onChange={e => setFirstName(e.target.value)}
-                value={firstName}
+                name="firstName"
+                onChange={setFieldValue}
+                value={firstName.value}
+                required
+                error={firstName.error.status}
             />
             <Input
                 label={"Last Name"}
-                onChange={e => setLastName(e.target.value)}
-                value={lastName}
+                name="lastName"
+                onChange={setFieldValue}
+                value={lastName.value}
+                required
+                error={lastName.error.status}
             />
-            <Input
-                label={"Username"}
-                onChange={e => setUsername(e.target.value)}
-                value={username}
-            />
-            <Input
-                label={"Password"}
-                onChange={e => setPassword(e.target.value)}
-                value={password}
-                type={"password"}
-            />
-            <Button
-                text="Update"
-                onClick={() =>
-                    handleUpdate(
-                        state.selectedId,
-                        first_name,
-                        last_name,
-                        username
-                    )
-                }
-            />
+
+            <Button text="Update" onClick={submit} />
         </Modal>
     );
 };

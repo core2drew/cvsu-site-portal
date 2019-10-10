@@ -51,13 +51,13 @@ const App = () => {
                 <h3 className="title">Log In</h3>
                 <Input
                     value={email}
-                    onChange={e => setEmail(e.target.value)}
+                    onChange={value => setEmail(value)}
                     onKeyPress={handleOnKeyPress}
                     label="Email"
                 />
                 <Input
                     value={password}
-                    onChange={e => setPassword(e.target.value)}
+                    onChange={value => setPassword(value)}
                     onKeyPress={handleOnKeyPress}
                     label="Password"
                     type={"password"}

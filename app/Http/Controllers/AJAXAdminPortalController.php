@@ -321,7 +321,7 @@ class AJAXAdminPortalController extends Controller
 
     }
 
-    public function deleteStudent(Request $request) {
+    public function deleteentsent(Request $request) {
         $id = $request->get('id');
         $response = DB::table('users')
         ->where('id', '=', $id)

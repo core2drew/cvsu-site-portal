@@ -209,6 +209,12 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
+        Route::patch('/user/password', [
+            "as" => "ajax.portal.update.user.password",
+            "uses" => "AJAXPortalController@updateUsertPassword",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
         // Students Table
         Route::get("/students", [
             "as" => "ajax.portal.students",
@@ -216,15 +222,21 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
-        Route::post("/invite/student", [
-            "as" => "ajax.portal.invite.student",
-            "uses" => "AJAXAdminPortalController@inviteStudent",
+        Route::patch('/students', [
+            "as" => "ajax.portal.update.students",
+            "uses" => "AJAXPortalController@updateStudents",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
         Route::delete('/students', [
             "as" => "ajax.portal.delete.students",
             "uses" => "AJAXAdminPortalController@deleteStudent",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
+        Route::post("/invite/student", [
+            "as" => "ajax.portal.invite.student",
+            "uses" => "AJAXAdminPortalController@inviteStudent",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 

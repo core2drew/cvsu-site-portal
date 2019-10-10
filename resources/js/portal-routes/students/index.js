@@ -34,6 +34,7 @@ const Students = props => {
             url,
             {},
             res => {
+                console.log(res);
                 dispatch({
                     type: "SUCCESS_FETCH",
                     data: res.data,
@@ -111,11 +112,11 @@ const Students = props => {
         );
     };
 
-    const handleUpdate = (id, firstName, lastName, username, password) => {
+    const handleUpdate = (id, firstName, lastName) => {
         dispatch({ type: "UPDATING" });
         post(
             url,
-            { id, firstName, lastName, username, password },
+            { id, firstName, lastName },
             res => {
                 if (res.status > 200) {
                     dispatch({ type: "ERROR_SAVE" });
