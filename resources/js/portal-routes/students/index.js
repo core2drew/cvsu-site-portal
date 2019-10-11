@@ -2,7 +2,6 @@ import React, { useReducer, useEffect } from "react";
 import { get, post } from "Utils";
 import Table from "Components/table";
 import Preloader from "Components/preloader";
-import Button from "Components/button";
 import StudentContext from "Context/students";
 import TableContext from "Context/table";
 import Reducer, { initialState } from "Reducers/students";
@@ -16,6 +15,7 @@ const Students = props => {
     const url = "/ajax/portal/students";
     const inviteUrl = "/ajax/portal/invite/student";
     const resendInviteUrl = "/ajax/portal/resend/invite/student";
+
     const [state, dispatch] = useReducer(Reducer, initialState);
     const tableHeaders = [
         "Student Number",

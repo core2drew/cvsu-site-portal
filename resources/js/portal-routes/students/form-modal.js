@@ -8,8 +8,11 @@ import studentFormInitialFields from "./studentFormInitialFields";
 const FormModal = () => {
     const { state, dispatch, handleUpdate } = useContext(Context);
 
-    const submitForm = ({ id, firstName, lastName }) => {
-        handleUpdate(id, firstName, lastName);
+    const submitForm = ({ firstName, lastName }) => {
+        const id = state.selectedId;
+        const firstNameVal = firstName.value;
+        const lastNameVal = lastName.value;
+        handleUpdate(id, firstNameVal, lastNameVal);
     };
 
     const [fields, setFieldValue, submit, setFieldValues, reset] = useForm(

@@ -185,41 +185,41 @@ class AJAXAdminPortalController extends Controller
         return response()->json($response);
     }
 
-    public function addUser(Request $request) {
-        $firstName = $request->get('firstName');
-        $lastName = $request->get('lastName');
-        $username = $request->get('username');
-        $password = $request->get('password');
+    // public function addUser(Request $request) {
+    //     $firstName = $request->get('firstName');
+    //     $lastName = $request->get('lastName');
+    //     $username = $request->get('username');
+    //     $password = $request->get('password');
 
-        $isUsernameExist = $this->checkUsername($username);
+    //     $isUsernameExist = $this->checkUsername($username);
 
-        if($isUsernameExist) {
-            return response()->json([
-                'status' => 400,
-                'message' => 'Username already exists. Please change it and try again.'
-            ]);
-        }
+    //     if($isUsernameExist) {
+    //         return response()->json([
+    //             'status' => 400,
+    //             'message' => 'Username already exists. Please change it and try again.'
+    //         ]);
+    //     }
 
-        $response = DB::table('users')
-        ->insert([
-            'first_name' => $firstName,
-            'last_name' => $lastName,
-            'username' => $username,
-            'password' => Crypt::encrypt($password),
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
+    //     $response = DB::table('users')
+    //     ->insert([
+    //         'first_name' => $firstName,
+    //         'last_name' => $lastName,
+    //         'username' => $username,
+    //         'password' => Crypt::encrypt($password),
+    //         'created_at' => now(),
+    //         'updated_at' => now()
+    //     ]);
 
-        if($response) {
-            $response = DB::table('users')
-            ->whereNull('users.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
-        }
+    //     if($response) {
+    //         $response = DB::table('users')
+    //         ->whereNull('users.deleted_at')
+    //         ->latest()
+    //         ->paginate(15);
+    //         return response()->json($response);
+    //     }
 
-        return abort(500);
-    }
+    //     return abort(500);
+    // }
 
     public function deleteUser(Request $request) {
         $id = $request->get('id');
@@ -262,6 +262,27 @@ class AJAXAdminPortalController extends Controller
         return response()->json($response);
     }
 
+    public function updateStudents(Request $request) {
+        $id = $request->get('id');
+        $firstName = $request->get('firstName');
+        $lastName = $request->get('lastName');
+        $response = DB::table('users')->where('id', '=', $id)
+        ->update(['first_name' => $firstName, 'last_name' => $lastName]);
+
+        if($response) {
+            $response = DB::table('users')
+            ->whereNull('deleted_at')
+            ->whereNotNull('student_no')
+            ->where('type', '=', 'student')
+            ->latest()
+            ->paginate(15);
+            return response()->json($response);
+        }
+
+        return abort(500);
+    }
+
+    // Student Invitation
     public function inviteStudent(Request $request) {
         $studentNo = $request->get('studentNo');
         $email = $request->get('email');
@@ -340,7 +361,7 @@ class AJAXAdminPortalController extends Controller
         return abort(500);
     }
 
-    public function deleteentsent(Request $request) {
+    public function deleteStudent(Request $request) {
         $id = $request->get('id');
         $response = DB::table('users')
         ->where('id', '=', $id)

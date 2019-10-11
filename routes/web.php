@@ -224,7 +224,7 @@ Route::group([
 
         Route::patch('/students', [
             "as" => "ajax.portal.update.students",
-            "uses" => "AJAXPortalController@updateStudents",
+            "uses" => "AJAXAdminPortalController@updateStudents",
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
