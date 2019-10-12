@@ -12,6 +12,7 @@ import "./style.scss";
 const Users = () => {
     const url = "/ajax/portal/users";
     const inviteUrl = "/ajax/portal/invite/user";
+    const resendInviteUrl = "/ajax/portal/resend/invite/user";
     const [state, dispatch] = useReducer(Reducer, initialState);
     const tableHeaders = ["Email", "First Name", "Last Name", "Actions"];
 
@@ -67,13 +68,39 @@ const Users = () => {
         );
     };
 
+    const handleResendInvitation = ({ firstName, lastName, email }) => {
+        dispatch({ type: "SAVING" });
+        post(
+            resendInviteUrl,
+            {
+                email,
+                firstName,
+                lastName
+            },
+            res => {
+                if (res.status > 200) {
+                    dispatch({ type: "ERROR_SAVE" });
+                    alert(res.message);
+                    return;
+                }
+                dispatch({ type: "CLOSE_MODAL" });
+                initUser();
+            },
+            () => {
+                dispatch({ type: "ERROR_SAVE" });
+                alert("Something went wrong. Please try again");
+            }
+        );
+    };
+
     return (
         <Context.Provider
             value={{
                 state,
                 dispatch,
                 handleOpenModal,
-                handleInvite
+                handleInvite,
+                handleResendInvitation
             }}
         >
             <div id="Users">

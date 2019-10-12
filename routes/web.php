@@ -83,6 +83,12 @@ Route::group([
             "middleware" => ["check.session", "check.isadmin"]
         ]);
 
+        Route::post('/resend/invite/user', [
+            "as" => "ajax.portal.resend.invite.user",
+            "uses" => "AJAXAdminPortalController@resendInviteUser",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
+
         Route::patch("/user", [
             "as" => "ajax.portal.update.user",
             "uses" => "AJAXPortalController@updatePortalUser",

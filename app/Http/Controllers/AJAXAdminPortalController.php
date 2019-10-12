@@ -190,7 +190,7 @@ class AJAXAdminPortalController extends Controller
         $firstName = $request->get('firstName');
         $lastName = $request->get('lastName');
         $email = $request->get('email');
-
+        $userDetails = [];
         $isEmailExists = $this->checkUserEmail($email);
 
         if($isEmailExists) {
@@ -211,11 +211,16 @@ class AJAXAdminPortalController extends Controller
             'updated_at' => now()
         ]);
 
-        if($response) {
-            $userDetails = DB::table('users')
-            ->select('first_name', "last_name", "id")
-            ->where('email', '=', $email)
-            ->first();
+        $user = DB::table('users')
+        ->where('email', '=', $email)
+        ->whereNull('users.deleted_at')
+        ->first();
+
+        if($user) {
+            $userDetails['firstName'] = $user->first_name;
+            $userDetails['lastName'] = $user->last_name;
+            $userDetails['email'] = $user->email;
+            $userDetails['id'] = $user->id;
 
             $encrypted = Crypt::encrypt($userDetails);
             return response()->json([
@@ -223,7 +228,33 @@ class AJAXAdminPortalController extends Controller
                 'message' => "Invite has been sent to $email.",
                 'token' => $encrypted
             ]);
+        }
 
+        return abort(500);
+    }
+
+    public function resendInviteUser(Request $request) {
+        $firstName = $request->get('firstName');
+        $lastName = $request->get('lastName');
+        $email = $request->get('email');
+        $userDetails = [];
+
+        $user = DB::table('users')
+        ->where('email', '=', $email)
+        ->whereNull('users.deleted_at')
+        ->first();
+
+        if($user) {
+            $userDetails['firstName'] = $user->first_name;
+            $userDetails['lastName'] = $user->last_name;
+            $userDetails['email'] = $user->email;
+            $userDetails['id'] = $user->id;
+            $encrypted = Crypt::encrypt($userDetails);
+            return response()->json([
+                'status' => 200,
+                'message' => "Invite has been resend to $email.",
+                'token' => $encrypted
+            ]);
         }
 
         return abort(500);
@@ -294,6 +325,7 @@ class AJAXAdminPortalController extends Controller
     public function inviteStudent(Request $request) {
         $studentNo = $request->get('studentNo');
         $email = $request->get('email');
+        $userDetails = [];
 
         $isStudentExists = $this->checkStudentNo($studentNo);
         $isUserExists = $this->checkUserStudentNo($studentNo);
@@ -320,12 +352,6 @@ class AJAXAdminPortalController extends Controller
             ]);
         }
 
-
-        $studentDetails = DB::table('studentinfo')
-        ->select('StudentNumber', 'FirstName', 'LastName')
-        ->where('StudentNumber', '=', $studentNo)
-        ->first();
-
         $response = DB::table('users')
         ->insert([
             'student_no' => $studentNo,
@@ -340,13 +366,17 @@ class AJAXAdminPortalController extends Controller
 
         if($response) {
             $user = DB::table('users')
-            ->select('id')
+            ->where('student_no', "=" , $studentNo)
             ->latest()
             ->first();
 
-            $studentDetails->id = $user->id;
+            $userDetails['studentNo'] =  $user->student_no;
+            $userDetails['firstName'] = $user->first_name;
+            $userDetails['lastName'] = $user->last_name;
+            $userDetails['email'] = $user->email;
+            $userDetails['id'] = $user->id;
 
-            $encrypted = Crypt::encrypt($studentDetails);
+            $encrypted = Crypt::encrypt($userDetails);
 
             return response()->json([
                 'status' => 200,
@@ -363,15 +393,20 @@ class AJAXAdminPortalController extends Controller
         $studentNo = $request->get('studentNo');
         $email = $request->get('email');
         $id = $request->get('id');
+        $userDetails = [];
 
-        $studentDetails = DB::table('studentinfo')
-        ->select('StudentNumber', 'FirstName', 'LastName')
-        ->where('StudentNumber', '=', $studentNo)
+        $user = DB::table('users')
+        ->where('student_no', "=" , $studentNo)
+        ->latest()
         ->first();
+        if($user) {
+            $userDetails['studentNo'] =  $user->student_no;
+            $userDetails['firstName'] = $user->first_name;
+            $userDetails['lastName'] = $user->last_name;
+            $userDetails['email'] = $user->email;
+            $userDetails['id'] = $user->id;
 
-        if($studentDetails) {
-            $studentDetails->id = $id;
-            $encrypted = Crypt::encrypt($studentDetails);
+            $encrypted = Crypt::encrypt($userDetails);
 
             return response()->json([
                 'status' => 200,

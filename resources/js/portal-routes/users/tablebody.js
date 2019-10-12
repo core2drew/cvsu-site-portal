@@ -4,7 +4,9 @@ import Uuid from "uuid/v4";
 import AcademicCalendarContext from "Context/users";
 import Pill from "Components/pill";
 const TableBody = ({ data }) => {
-    const { handleDelete } = useContext(AcademicCalendarContext);
+    const { handleDelete, handleResendInvitation } = useContext(
+        AcademicCalendarContext
+    );
     return (
         <tbody>
             {data.map(d => {
@@ -18,6 +20,19 @@ const TableBody = ({ data }) => {
                         <td>{d.first_name}</td>
                         <td>{d.last_name}</td>
                         <td className="actions">
+                            {isAwait && (
+                                <Button
+                                    variant={"update"}
+                                    text={"Resend"}
+                                    onClick={() =>
+                                        handleResendInvitation({
+                                            email: d.email,
+                                            firstName: d.first_name,
+                                            lastName: d.last_name
+                                        })
+                                    }
+                                ></Button>
+                            )}
                             <Button
                                 variant={"delete -danger"}
                                 text={isAwait ? "Revoke" : "Delete"}

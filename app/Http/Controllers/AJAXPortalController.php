@@ -313,12 +313,14 @@ class AJAXPortalController extends Controller
             $token = $request->get('token');
             $data = Crypt::decrypt($token);
             Log::info(json_encode($data));
-            $userId = $data->id;
+            $userId = $data['id'];
+            Log::info($userId);
             $response = DB::table('users')
             ->where('id', '=', $userId)
             ->where('is_await', '=', 1)
             ->whereNull('users.deleted_at')
             ->first();
+            Log::info(json_encode($response));
             if($response) {
                 return response()->json($data);
             }

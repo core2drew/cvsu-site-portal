@@ -6,7 +6,7 @@ import Button from "Components/button";
 import { post } from "Utils";
 import "./style.scss";
 
-const ActivateForm = ({ StudentNumber, FirstName, LastName }) => {
+const ActivateForm = ({ studentNo, firstName, lastName }) => {
     const url = "/ajax/portal/activate-account";
     const {
         value: password,
@@ -71,7 +71,7 @@ const ActivateForm = ({ StudentNumber, FirstName, LastName }) => {
         post(
             url,
             {
-                studentNo: StudentNumber,
+                studentNo,
                 password
             },
             () => {
@@ -89,11 +89,14 @@ const ActivateForm = ({ StudentNumber, FirstName, LastName }) => {
                 </p>
             </div>
             <div className="form">
-                <div className="student-no">
-                    <strong>Student No:</strong> {StudentNumber}
-                </div>
+                {studentNo && (
+                    <div className="student-no">
+                        <strong>Student No:</strong> {studentNo}
+                    </div>
+                )}
+
                 <div className="student-name">
-                    <strong>Name:</strong> {LastName}, {FirstName}
+                    <strong>Name:</strong> {firstName} {lastName}
                 </div>
                 <Input
                     footNote="Minimum 8 characters."
