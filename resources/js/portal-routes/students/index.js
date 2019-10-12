@@ -210,7 +210,7 @@ const Students = props => {
         );
     };
 
-    const handleResendInvitation = ({ studentNo, email }) => {
+    const handleResendInvitation = (studentNo, email) => {
         post(
             resendInviteUrl,
             { studentNo, email },
