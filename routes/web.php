@@ -25,7 +25,7 @@ Route::group([
 ], function() {
     Route::get("/{route?}", [
         "uses" => "PortalController@index",
-    ])->where('route', '(dean-message|announcements|academic-calendar|requirements|retention-policies|course-offered|students)');
+    ])->where('route', '(dean-message|announcements|academic-calendar|requirements|retention-policies|course-offered|students|users)');
 });
 
 Route::group([
@@ -75,6 +75,12 @@ Route::group([
             "as" => "ajax.portal.user",
             "uses" => "AJAXPortalController@getPortalUser",
             "middleware" => "check.session"
+        ]);
+
+        Route::post("/invite/user", [
+            "as" => "ajax.portal.invite.user",
+            "uses" => "AJAXAdminPortalController@inviteUser",
+            "middleware" => ["check.session", "check.isadmin"]
         ]);
 
         Route::patch("/user", [

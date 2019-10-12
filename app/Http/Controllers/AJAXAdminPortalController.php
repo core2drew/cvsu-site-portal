@@ -179,47 +179,49 @@ class AJAXAdminPortalController extends Controller
     // Users
     public function getUsers(Request $request) {
         $response = DB::table('users')
+        ->where('is_admin', "=", 1)
         ->whereNull('users.deleted_at')
         ->latest()
         ->paginate(15);
         return response()->json($response);
     }
 
-    // public function addUser(Request $request) {
-    //     $firstName = $request->get('firstName');
-    //     $lastName = $request->get('lastName');
-    //     $username = $request->get('username');
-    //     $password = $request->get('password');
+    public function inviteUser(Request $request) {
+        $firstName = $request->get('firstName');
+        $lastName = $request->get('lastName');
+        $email = $request->get('email');
 
-    //     $isUsernameExist = $this->checkUsername($username);
+        $isEmailExists = $this->checkUserEmail($email);
 
-    //     if($isUsernameExist) {
-    //         return response()->json([
-    //             'status' => 400,
-    //             'message' => 'Username already exists. Please change it and try again.'
-    //         ]);
-    //     }
+        if($isEmailExists) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Email is already registered.'
+            ]);
+        }
 
-    //     $response = DB::table('users')
-    //     ->insert([
-    //         'first_name' => $firstName,
-    //         'last_name' => $lastName,
-    //         'username' => $username,
-    //         'password' => Crypt::encrypt($password),
-    //         'created_at' => now(),
-    //         'updated_at' => now()
-    //     ]);
+        $response = DB::table('users')
+        ->insert([
+            'first_name' => $firstName,
+            'last_name' => $lastName,
+            'email' => $email,
+            'is_admin' => 1,
+            'is_await' => 1,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
 
-    //     if($response) {
-    //         $response = DB::table('users')
-    //         ->whereNull('users.deleted_at')
-    //         ->latest()
-    //         ->paginate(15);
-    //         return response()->json($response);
-    //     }
+        if($response) {
+            $response = DB::table('users')
+            ->where('is_admin', "=", 1)
+            ->whereNull('users.deleted_at')
+            ->latest()
+            ->paginate(15);
+            return response()->json($response);
+        }
 
-    //     return abort(500);
-    // }
+        return abort(500);
+    }
 
     public function deleteUser(Request $request) {
         $id = $request->get('id');
