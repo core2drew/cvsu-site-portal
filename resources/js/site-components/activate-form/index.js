@@ -1,84 +1,65 @@
 import React from "react";
 import useInput from "Hooks/useInput";
-import classnames from "classnames";
 import Input from "Components/input";
 import Button from "Components/button";
 import { post } from "Utils";
+import useForm from "Hooks/useForm";
+import activateFormInitialFields from "./activateFormInitialFields";
 import "./style.scss";
 
-const ActivateForm = ({ studentNo, firstName, lastName }) => {
+const ActivateForm = ({ studentNo, firstName, lastName, id }) => {
     const url = "/ajax/portal/activate-account";
-    const {
-        value: password,
-        onChange: onChangePassword,
-        error: passwordError,
-        setError: setPasswordError
-    } = useInput({
-        initialValue: "",
-        required: true,
-        minLength: 8
-    });
-    const {
-        value: confirmPassword,
-        onChange: onChangeConfirmPassword,
-        error: confirmPasswordError,
-        setError: setConfirmPasswordError
-    } = useInput({
-        initialValue: "",
-        required: true
-    });
-
-    const validateForm = () => {
-        setPasswordError({ isError: false });
-        setConfirmPasswordError({ isError: false });
-
-        // Empty
-        if (!password || !confirmPassword) {
-            setPasswordError({
-                isError: true
-            });
-            setConfirmPasswordError({
-                isError: true
-            });
-            return false;
-        }
-        // Minlength
-        if (password.length < 8) {
-            setPasswordError({
-                isError: true
-            });
-            return false;
-        }
-        // Not Equal
-        if (password !== confirmPassword) {
-            setConfirmPasswordError({
-                isError: true,
-                message: "Password and confirm password does not match."
-            });
-            return false;
-        }
-
-        return true;
-    };
 
     const handleSubmit = () => {
-        const isValid = validateForm();
-        if (!isValid) {
-            console.log("Invalid Form");
-            return;
-        }
-
         post(
             url,
             {
-                studentNo,
-                password
+                id,
+                password: password.value
             },
             () => {
                 window.location.replace("/auth/login");
             }
         );
     };
+
+    const validatePassword = (value, fields) => {
+        if (value.length < 8) {
+            return {
+                status: true,
+                message: ""
+            };
+        }
+
+        return {
+            status: false,
+            message: ""
+        };
+    };
+
+    const validateConfirmPassword = (value, fields) => {
+        if (value !== fields.password.value) {
+            return {
+                status: true,
+                message: "Password and confirm password does not match."
+            };
+        }
+        return {
+            status: false,
+            message: ""
+        };
+    };
+
+    const [fields, setFieldValue, submit] = useForm(
+        activateFormInitialFields,
+        {
+            password: validatePassword,
+            confirmPassword: validateConfirmPassword
+        },
+        handleSubmit
+    );
+
+    const { password, confirmPassword } = fields;
 
     return (
         <div id="ActivateForm">
@@ -102,25 +83,23 @@ const ActivateForm = ({ studentNo, firstName, lastName }) => {
                     footNote="Minimum 8 characters."
                     required
                     label={"Password"}
+                    name="password"
                     type="password"
-                    value={password}
-                    onChange={onChangePassword}
-                    variant={classnames({
-                        error: !!passwordError.isError
-                    })}
+                    value={password.value}
+                    error={password.error.status}
+                    onChange={setFieldValue}
                 />
                 <Input
                     required
                     label={"Confirm Password"}
                     type="password"
-                    value={confirmPassword}
-                    onChange={onChangeConfirmPassword}
-                    variant={classnames({
-                        error: !!confirmPasswordError.isError
-                    })}
-                    errorMessage={confirmPasswordError.message}
+                    name="confirmPassword"
+                    value={confirmPassword.value}
+                    error={confirmPassword.error.status}
+                    errorMessage={confirmPassword.error.message}
+                    onChange={setFieldValue}
                 />
-                <Button variant="submit" text="Submit" onClick={handleSubmit} />
+                <Button variant="submit" text="Submit" onClick={submit} />
             </div>
         </div>
     );

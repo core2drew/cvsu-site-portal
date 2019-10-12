@@ -331,12 +331,12 @@ class AJAXPortalController extends Controller
     }
 
     public function activateAccount(Request $request) {
-        $studentNo = $request->get('studentNo');
+        $id = $request->get('id');
         $password = $request->get('password');
         $updated_at = now();
 
         $response = DB::table('users')
-        ->where('student_no', '=', $studentNo)
+        ->where('id', '=', $id)
         ->update([
             'is_await' => 0,
             'password' => Crypt::encrypt($password),

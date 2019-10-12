@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Log;
 use Illuminate\Support\Facades\Crypt;
+use Session;
 
 class AJAXAdminPortalController extends Controller
 {
@@ -178,8 +179,10 @@ class AJAXAdminPortalController extends Controller
 
     // Users
     public function getUsers(Request $request) {
+        $currentUser = Session::get('user');
         $response = DB::table('users')
         ->where('is_admin', "=", 1)
+        ->where("id" , "!=", $currentUser->id)
         ->whereNull('users.deleted_at')
         ->latest()
         ->paginate(15);
