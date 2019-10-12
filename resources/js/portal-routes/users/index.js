@@ -15,7 +15,7 @@ const Users = () => {
     const [state, dispatch] = useReducer(Reducer, initialState);
     const tableHeaders = ["Email", "First Name", "Last Name", "Actions"];
 
-    useEffect(() => {
+    const initUser = () => {
         get(
             url,
             {},
@@ -27,6 +27,10 @@ const Users = () => {
                 alert("Something went wrong. Please try again");
             }
         );
+    };
+
+    useEffect(() => {
+        initUser();
     }, []);
 
     const handleOpenModal = id => {
@@ -53,7 +57,8 @@ const Users = () => {
                     alert(res.message);
                     return;
                 }
-                dispatch({ type: "SUCCESS_SAVE", data: res.data });
+                dispatch({ type: "CLOSE_MODAL" });
+                initUser();
             },
             () => {
                 dispatch({ type: "ERROR_SAVE" });

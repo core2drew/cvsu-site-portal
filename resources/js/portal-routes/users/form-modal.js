@@ -8,18 +8,6 @@ import userFormInitialFields from "./userFormInitialFields";
 
 const FormModal = () => {
     const { state, dispatch, handleInvite } = useContext(Context);
-
-    // useEffect(() => {
-    //     if (state.selectedId) {
-    //         const { first_name, last_name, username } = state.data.filter(
-    //             d => d.id === state.selectedId
-    //         )[0];
-    //         setFirstName(first_name);
-    //         setLastName(last_name);
-    //         setUsername(username);
-    //     }
-    // }, [state.selectedId]);
-
     const [fields, setFieldValue, submit, setFieldsValue, reset] = useForm(
         userFormInitialFields,
         {},
@@ -61,7 +49,13 @@ const FormModal = () => {
                 error={lastName.error.status}
                 errorMessage={lastName.error.message}
             />
-            <Button text="Invite" onClick={submit} />
+            <Button
+                text="Invite"
+                onClick={() => {
+                    submit();
+                    reset();
+                }}
+            />
         </Modal>
     );
 };

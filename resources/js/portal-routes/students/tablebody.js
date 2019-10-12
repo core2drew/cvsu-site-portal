@@ -39,7 +39,11 @@ const TableBody = ({ data }) => {
                                 text={isAwait ? "Resend" : "Update"}
                                 onClick={() =>
                                     isAwait
-                                        ? handleResendInvitation(d.id, d.email)
+                                        ? handleResendInvitation(
+                                              d.student_no,
+                                              d.email,
+                                              d.id
+                                          )
                                         : handleOpenModal(d.id)
                                 }
                             />

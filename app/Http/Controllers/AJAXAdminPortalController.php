@@ -212,12 +212,18 @@ class AJAXAdminPortalController extends Controller
         ]);
 
         if($response) {
-            $response = DB::table('users')
-            ->where('is_admin', "=", 1)
-            ->whereNull('users.deleted_at')
-            ->latest()
-            ->paginate(15);
-            return response()->json($response);
+            $userDetails = DB::table('users')
+            ->select('first_name', "last_name", "id")
+            ->where('email', '=', $email)
+            ->first();
+
+            $encrypted = Crypt::encrypt($userDetails);
+            return response()->json([
+                'status' => 200,
+                'message' => "Invite has been sent to $email.",
+                'token' => $encrypted
+            ]);
+
         }
 
         return abort(500);
@@ -332,13 +338,23 @@ class AJAXAdminPortalController extends Controller
             'updated_at' => now()
         ]);
 
-        $encrypted = Crypt::encrypt($studentDetails);
+        if($response) {
+            $user = DB::table('users')
+            ->select('id')
+            ->latest()
+            ->first();
 
-        return response()->json([
-            'status' => 200,
-            'message' => "Invite has been sent to $email.",
-            'token' => $encrypted
-        ]);
+            $studentDetails->id = $user->id;
+
+            $encrypted = Crypt::encrypt($studentDetails);
+
+            return response()->json([
+                'status' => 200,
+                'message' => "Invite has been sent to $email.",
+                'token' => $encrypted
+            ]);
+        }
+
 
         return abort(500);
     }
@@ -346,19 +362,23 @@ class AJAXAdminPortalController extends Controller
     public function resendInviteStudent(Request $request) {
         $studentNo = $request->get('studentNo');
         $email = $request->get('email');
+        $id = $request->get('id');
 
         $studentDetails = DB::table('studentinfo')
         ->select('StudentNumber', 'FirstName', 'LastName')
         ->where('StudentNumber', '=', $studentNo)
         ->first();
 
-        $encrypted = Crypt::encrypt($studentDetails);
+        if($studentDetails) {
+            $studentDetails->id = $id;
+            $encrypted = Crypt::encrypt($studentDetails);
 
-        return response()->json([
-            'status' => 200,
-            'message' => "Invite has been resend to $email.",
-            'token' => $encrypted
-        ]);
+            return response()->json([
+                'status' => 200,
+                'message' => "Invite has been resend to $email.",
+                'token' => $encrypted
+            ]);
+        }
 
         return abort(500);
     }

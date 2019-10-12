@@ -210,10 +210,10 @@ const Students = props => {
         );
     };
 
-    const handleResendInvitation = (studentNo, email) => {
+    const handleResendInvitation = (studentNo, email, id) => {
         post(
             resendInviteUrl,
-            { studentNo, email },
+            { studentNo, email, id },
             res => {
                 if (res.status > 200) {
                     dispatch({ type: "ERROR_SAVE" });
