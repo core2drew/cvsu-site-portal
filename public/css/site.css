@@ -18,6 +18,31 @@
   grid-row-end: 3;
 }
 
+#About > .grid.container > #MissionVision {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+}
+
+#About > .grid.container > #MissionVision > #Mission {
+  margin-right: 15px;
+}
+
+#About > .grid.container > #MissionVision > #Mission,
+#About > .grid.container > #MissionVision > #Vision {
+  padding: 20px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #fff;
+}
+
 #SideAnnouncements {
   top: 309px;
 }

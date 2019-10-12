@@ -1,12 +1,24 @@
 @import "~Sass/variables";
 
 #About {
-  > .grid.container {
-    > #History {
+    > .grid.container {
+        > #History {
+        }
+        > #MissionVision {
+            padding: 0;
+            display: flex;
+            background-color: transparent;
+            > #Mission {
+                margin-right: 15px;
+            }
+            > #Mission,
+            > #Vision {
+                padding: 20px;
+                flex: 1;
+                background-color: #fff;
+            }
+        }
+        > #Hymn {
+        }
     }
-    > #MissionVision {
-    }
-    > #Hymn {
-    }
-  }
 }
