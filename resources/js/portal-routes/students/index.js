@@ -35,7 +35,6 @@ const Students = props => {
             url,
             {},
             res => {
-                console.log(res);
                 dispatch({
                     type: "SUCCESS_FETCH",
                     data: res.data,
