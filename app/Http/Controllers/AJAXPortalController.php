@@ -18,7 +18,7 @@ class AJAXPortalController extends Controller
 
     function updateUserSession($id) {
         $response = DB::table('users')
-        ->select("id", "profile_image", "first_name", "last_name", "username", "type", "is_admin")
+        ->select("id", "profile_image", "first_name", "last_name", "email", "type", "is_admin")
         ->where('id', '=', $id)
         ->first();
 
@@ -31,15 +31,18 @@ class AJAXPortalController extends Controller
         $id = $request->get('id');
         $firstName = $request->get('firstName');
         $lastName = $request->get('lastName');
+        $email = $request->get('email');
 
         $firstName = !empty($firstName) ? $firstName : Session::get('user')->first_name;
         $lastName = !empty($lastName) ? $lastName : Session::get('user')->last_name;
+        $email =  !empty($email) ? $email : Session::get('user')->email;
 
         $response = DB::table('users')
         ->where('id', '=', $id)
         ->update([
             'first_name' => $firstName,
             'last_name' => $lastName,
+            'email' => $email,
             'updated_at' => now()
         ]);
 

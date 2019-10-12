@@ -1,98 +1,153 @@
-import React, { useState, useContext, useEffect } from 'react'
-import { post } from 'Utils'
-import Modal from 'Components/modal'
-import Input from 'Components/input'
-import Button from 'Components/button'
-import CurrentUser from 'Context/current-user'
-import './style.scss'
+import React, { useState, useContext, useEffect } from "react";
+import { post } from "Utils";
+import Modal from "Components/modal";
+import Input from "Components/input";
+import Button from "Components/button";
+import CurrentUser from "Context/current-user";
+import useForm from "Hooks/useForm";
+import accountInitialFields from "./accountInitialFields";
+import passwordInitialFields from "./passwordInitialFields";
+import "./style.scss";
 
 const AccountModal = ({ isActive, handleClose }) => {
-  const [username, setUsername] = useState('')
-  const [currentPassword, setCurrentPassword] = useState('')
-  const [newPassword, setNewPassword] = useState('')
-  const [verifyPassword, setVerifyPassword] = useState('')
-  const context = useContext(CurrentUser)
+    const context = useContext(CurrentUser);
 
-  useEffect(() => {
-    setUsername(context.username)
-  }, [context, isActive])
+    useEffect(() => {
+        setAccountField(context.email, "email");
+    }, [context, isActive]);
 
-  const handleUpdateUsername = () => {
-    if(!username) {
-      alert('Username is required')
-      return 
-    }
-    post(
-      '/ajax/portal/user', {
-        id:context.id,
-        username
-      },
-      () => window.location.reload(),
-      () => alert('Something went wrong.'),
-      'PATCH'
-    )
-  }
+    const handleUpdateEmail = () => {
+        post(
+            "/ajax/portal/user",
+            {
+                id: context.id,
+                email: email.value
+            },
+            () => window.location.reload(),
+            () => alert("Something went wrong."),
+            "PATCH"
+        );
+    };
 
-  const clearPasswordFields = () => {
-    setCurrentPassword('')
-    setNewPassword('')
-    setVerifyPassword('')
-  }
+    const handleUpdatePassword = () => {
+        post(
+            "/ajax/portal/user/update-password",
+            {
+                id: context.id,
+                currentPassword: currentPassword.value,
+                newPassword: newPassword.value
+            },
+            res => {
+                if (res.message) {
+                    alert(res.message);
+                    return;
+                }
+                alert("Password changed.");
+                handleClose();
+                resetPasswordField();
+            },
+            () => alert("Something went wrong."),
+            "PATCH"
+        );
+    };
 
-  const handleUpdatePassword = () => {
-    if(!currentPassword) {
-      alert('Current password is required')
-      return
-    }
-    
-    if(!newPassword || !verifyPassword) {
-      alert('New password and verify password is required')
-      return 
-    }
-
-    if(newPassword !== verifyPassword) {
-      alert('Password does not match')
-      return 
-    }
-
-    post(
-      '/ajax/portal/user/update-password', {
-        id:context.id,
-        currentPassword,
-        newPassword
-      },
-      res => {
-        if(res.message) {
-          alert(res.message)
-          return
+    const validateVerifyPassword = (value, fields) => {
+        if (
+            value !== fields.newPassword.value &&
+            fields.newPassword.value !== ""
+        ) {
+            return {
+                status: true,
+                message: "New password and verify password does not match."
+            };
         }
-        alert('Password changed.')
-        handleClose()
-        clearPasswordFields()
-      },
-      () => alert('Something went wrong.'),
-      'PATCH'
-    )
-  }
-  
+        return { status: false, message: "" };
+    };
 
-  return (
-    <Modal id="AccountModal" isActive={isActive} handleClose={handleClose}>
-      <h3 className="section header">Account</h3>
-      <div className="fields">
-        <Input label={'Username'} value={username} onChange={e => setUsername(e.target.value)} />
-        <Button text={'Update Username'} onClick={handleUpdateUsername}/>
-      </div>
-      <div className="fields change-password">
-        <strong>Change Password</strong>
-        <Input label={'Current Password'} value={currentPassword} onChange={e => setCurrentPassword(e.target.value)} type={'password'} />
-        <Input label={'New Password'} value={newPassword} onChange={e => setNewPassword(e.target.value)} type={'password'} />
-        <Input label={'Verify Password'} value={verifyPassword} onChange={e => setVerifyPassword(e.target.value)} type={'password'} />
-        <Button text={'Update Password'} onClick={handleUpdatePassword}/>
-      </div>
-    </Modal>
-  )
-}
+    const [accountFields, setAccountField, submitAccountForm] = useForm(
+        accountInitialFields,
+        {},
+        handleUpdateEmail
+    );
 
+    const [
+        passwordFields,
+        setPasswordField,
+        submitPasswordField,
+        setPasswordFields,
+        resetPasswordField
+    ] = useForm(
+        passwordInitialFields,
+        {
+            verifyPassword: validateVerifyPassword
+        },
+        handleUpdatePassword
+    );
 
-export default AccountModal
+    const { email } = accountFields;
+    const { currentPassword, newPassword, verifyPassword } = passwordFields;
+
+    const handleCloseModal = () => {
+        resetPasswordField();
+        handleClose();
+    };
+
+    return (
+        <Modal
+            id="AccountModal"
+            isActive={isActive}
+            handleClose={handleCloseModal}
+        >
+            <h3 className="section header">Account</h3>
+            <div className="fields">
+                <Input
+                    label={"Email"}
+                    name="email"
+                    value={email.value}
+                    onChange={setAccountField}
+                    required
+                    error={email.error.status}
+                    errorMessage={email.error.message}
+                />
+                <Button text={"Update Email"} onClick={submitAccountForm} />
+            </div>
+            <div className="fields change-password">
+                <strong>Change Password</strong>
+                <Input
+                    label={"Current Password"}
+                    name="currentPassword"
+                    required
+                    value={currentPassword.value}
+                    onChange={setPasswordField}
+                    type={"password"}
+                    error={currentPassword.error.status}
+                />
+                <Input
+                    label={"New Password"}
+                    name="newPassword"
+                    required
+                    value={newPassword.value}
+                    onChange={setPasswordField}
+                    type={"password"}
+                    error={newPassword.error.status}
+                />
+                <Input
+                    label={"Verify Password"}
+                    name="verifyPassword"
+                    required
+                    value={verifyPassword.value}
+                    onChange={setPasswordField}
+                    type={"password"}
+                    error={verifyPassword.error.status}
+                    errorMessage={verifyPassword.error.message}
+                />
+                <Button
+                    text={"Update Password"}
+                    onClick={submitPasswordField}
+                />
+            </div>
+        </Modal>
+    );
+};
+
+export default AccountModal;

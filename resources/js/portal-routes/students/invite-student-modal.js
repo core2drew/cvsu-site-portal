@@ -8,10 +8,9 @@ import inviteStudentInitialFields from "./inviteStudentInitialFields";
 const InviteStudent = () => {
     const { state, dispatch, handleInvitation } = useContext(Context);
 
-    const handleValidateInvite = ({ studentNo, email }) => {
-        const { value: studentNoValue } = studentNo;
-        const { value: emailValue } = email;
-        handleInvitation({ studentNoValue, emailValue });
+    const handleValidateInvite = value => {
+        const { studentNo, email } = value;
+        handleInvitation({ studentNo: studentNo.value, email: email.value });
     };
 
     const [fields, setFieldValue, submitForm, setFieldValues, reset] = useForm(
