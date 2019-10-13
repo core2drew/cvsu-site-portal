@@ -355,39 +355,44 @@ class AJAXAdminPortalController extends Controller
             ]);
         }
 
-        $response = DB::table('users')
-        ->insert([
-            'student_no' => $studentNo,
-            'first_name' => $studentDetails->FirstName,
-            'last_name' => $studentDetails->LastName,
-            'email' => $email,
-            'is_await' => 1,
-            'type' => 'STUDENT',
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
+        $studentInfo = DB::table('studentinfo')
+        ->where('StudentNumber', "=" , $studentNo)
+        ->first();
 
-        if($response) {
+        if($studentInfo) {
+            $response = DB::table('users')
+            ->insert([
+                'student_no' => $studentNo,
+                'first_name' => $studentInfo->FirstName,
+                'last_name' => $studentInfo->LastName,
+                'email' => $email,
+                'is_await' => 1,
+                'type' => 'STUDENT',
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
+
             $user = DB::table('users')
             ->where('student_no', "=" , $studentNo)
             ->latest()
             ->first();
 
-            $userDetails['studentNo'] =  $user->student_no;
-            $userDetails['firstName'] = $user->first_name;
-            $userDetails['lastName'] = $user->last_name;
-            $userDetails['email'] = $user->email;
-            $userDetails['id'] = $user->id;
+            if($response) {
+                $userDetails['studentNo'] =  $user->student_no;
+                $userDetails['firstName'] = $user->first_name;
+                $userDetails['lastName'] = $user->last_name;
+                $userDetails['email'] = $user->email;
+                $userDetails['id'] = $user->id;
 
-            $encrypted = Crypt::encrypt($userDetails);
+                $encrypted = Crypt::encrypt($userDetails);
 
-            return response()->json([
-                'status' => 200,
-                'message' => "Invite has been sent to $email.",
-                'token' => $encrypted
-            ]);
+                return response()->json([
+                    'status' => 200,
+                    'message' => "Invite has been sent to $email.",
+                    'token' => $encrypted
+                ]);
+            }
         }
-
 
         return abort(500);
     }
