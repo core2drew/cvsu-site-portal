@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Modal from "Components/modal";
 import "./style.scss";
 
@@ -8,6 +8,18 @@ const Facility = props => {
     const handleCloseModal = () => setIsModalActive(false);
 
     const handleOpenModal = () => setIsModalActive(true);
+
+    const initCarousel = useCallback(() => {
+        $(document).ready(function() {
+            $(".facility-slider.owl-carousel").owlCarousel({
+                items: 1
+            });
+        });
+    });
+
+    useEffect(() => {
+        initCarousel();
+    }, []);
 
     return (
         <React.Fragment>
