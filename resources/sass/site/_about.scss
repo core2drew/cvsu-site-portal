@@ -2,23 +2,22 @@
 
 #About {
     > .grid.container {
-        > #History {
-        }
-        > #MissionVision {
-            padding: 0;
-            display: flex;
-            background-color: transparent;
-            > #Mission {
-                margin-right: 15px;
+        grid-template-columns: 750px auto;
+        > .grid-item {
+            > #MissionVision {
+                padding: 0;
+                display: flex;
+                background-color: transparent;
+                > #Mission {
+                    margin-right: 15px;
+                }
+                > #Mission,
+                > #Vision {
+                    padding: 20px;
+                    flex: 1;
+                    background-color: #fff;
+                }
             }
-            > #Mission,
-            > #Vision {
-                padding: 20px;
-                flex: 1;
-                background-color: #fff;
-            }
-        }
-        > #Hymn {
         }
     }
 }

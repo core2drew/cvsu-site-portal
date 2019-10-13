@@ -18,7 +18,11 @@
   grid-row-end: 3;
 }
 
-#About > .grid.container > #MissionVision {
+#About > .grid.container {
+  grid-template-columns: 750px auto;
+}
+
+#About > .grid.container > .grid-item > #MissionVision {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -28,12 +32,12 @@
   background-color: transparent;
 }
 
-#About > .grid.container > #MissionVision > #Mission {
+#About > .grid.container > .grid-item > #MissionVision > #Mission {
   margin-right: 15px;
 }
 
-#About > .grid.container > #MissionVision > #Mission,
-#About > .grid.container > #MissionVision > #Vision {
+#About > .grid.container > .grid-item > #MissionVision > #Mission,
+#About > .grid.container > .grid-item > #MissionVision > #Vision {
   padding: 20px;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -55,6 +59,9 @@
   background-color: #fff;
   max-height: 110px;
   padding: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
 }
 
 #SideQuickLinks > .title {
