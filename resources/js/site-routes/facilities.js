@@ -1,6 +1,6 @@
 import React from "react";
 import Facility from "SiteComponents/facility";
-
+import SideLinks from "SiteComponents/sidelinks";
 const Facilities = () => (
     <div id="Facilities">
         <div className="container grid">
@@ -56,22 +56,7 @@ const Facilities = () => (
                     description={`It is a facility that provides controlled conditions in which scientific research, experiments and measurement may be performed.`}
                 />
             </div>
-            <div id="SideQuickLinks">
-                <h2 className="title">Quick Links</h2>
-                <ul className="links">
-                    <li className="item">
-                        <a href="/admission/requirements">Requirements</a>
-                    </li>
-                    <li className="item">
-                        <a href="/admission/retention-policies">
-                            Retention Policies
-                        </a>
-                    </li>
-                    <li className="item">
-                        <a href="/admission/course-offered">Course Offered</a>
-                    </li>
-                </ul>
-            </div>
+            <SideLinks />
         </div>
     </div>
 );

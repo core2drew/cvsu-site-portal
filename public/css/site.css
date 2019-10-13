@@ -55,28 +55,6 @@
   top: 309px;
 }
 
-#SideQuickLinks {
-  background-color: #fff;
-  max-height: 110px;
-  padding: 20px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 15px;
-}
-
-#SideQuickLinks > .title {
-  margin-top: 0;
-}
-
-#SideQuickLinks > .links {
-  padding-left: 15px;
-}
-
-#SideQuickLinks > .links > .item > a {
-  color: #2d8548;
-  text-decoration: none;
-}
-
 #Admission > .container.grid {
   grid-template-columns: 750px auto;
 }

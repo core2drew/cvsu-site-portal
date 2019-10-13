@@ -1,0 +1,24 @@
+@import "~Sass/variables";
+
+#SideLinks {
+    background-color: #fff;
+    max-height: 150px;
+    padding: 20px;
+    position: sticky;
+    top: 15px;
+    > .links-container {
+        &:nth-last-child(n + 2) {
+            margin-bottom: 20px;
+        }
+        > .title {
+            margin-top: 0;
+        }
+        > .links {
+            padding-left: 15px;
+        }
+        > .links > .item > a {
+            color: $green-2;
+            text-decoration: none;
+        }
+    }
+}
