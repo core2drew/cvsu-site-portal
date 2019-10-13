@@ -45,32 +45,34 @@ const App = () => {
 
     return (
         <React.Fragment>
-            <h1 id="Greet">Welcome to CvSU Portal</h1>
-            <div id="Login">
-                <Preloader isActive={isLoading} variant={"fixed"} />
-                <h3 className="title">Log In</h3>
-                <Input
-                    value={email}
-                    onChange={value => setEmail(value)}
-                    onKeyPress={handleOnKeyPress}
-                    label="Email"
-                />
-                <Input
-                    value={password}
-                    onChange={value => setPassword(value)}
-                    onKeyPress={handleOnKeyPress}
-                    label="Password"
-                    type={"password"}
-                />
+            <div className="login-container">
+                <h1 id="Greet">Welcome to CvSU Portal</h1>
+                <div id="Login">
+                    <Preloader isActive={isLoading} variant={"fixed"} />
+                    <h3 className="title">Log In</h3>
+                    <Input
+                        value={email}
+                        onChange={value => setEmail(value)}
+                        onKeyPress={handleOnKeyPress}
+                        label="Email"
+                    />
+                    <Input
+                        value={password}
+                        onChange={value => setPassword(value)}
+                        onKeyPress={handleOnKeyPress}
+                        label="Password"
+                        type={"password"}
+                    />
 
-                <Button text={"Log In"} onClick={handleLogin} />
-                <div className="footer">
-                    {/* <Button
+                    <Button text={"Log In"} onClick={handleLogin} />
+                    <div className="footer">
+                        {/* <Button
                         text={"Sign up"}
                         variant={"-tertiary"}
                         onClick={() => setSignUpModalActive(true)}
                     /> */}
-                    {/* <Button text={'Forget Password'} variant={'tertiary'} />  */}
+                        {/* <Button text={'Forget Password'} variant={'tertiary'} />  */}
+                    </div>
                 </div>
             </div>
             {/* <SignUpModal isActive={isSignUpModalActive} handleClose={() => setSignUpModalActive(false)}/> */}
