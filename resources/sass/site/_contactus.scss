@@ -1,49 +1,56 @@
 @import "~Sass/variables";
 
 #ContactUs {
-  > .container {
-    > #ContactInfo {
-      grid-gap: 15px;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      padding: 15px;
-      background-color: #fff;
-      > .section.header {
-        grid-column: 1 / 6;
-      }
+    > .container {
+        .mapouter {
+            margin-bottom: 10px;
+            > .title {
+                margin-bottom: 5px;
+            }
+        }
 
-      > .contact-form {
-        grid-column: 1 / 4;
-      }
+        > #ContactInfo {
+            grid-gap: 15px;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            padding: 15px;
+            background-color: #fff;
+            > .section.header {
+                grid-column: 1 / 6;
+            }
 
-      > .contact-form > .input,
-      > .contact-form > .textarea {
-        margin-bottom: 15px;
-      }
+            > .contact-form {
+                grid-column: 1 / 4;
+            }
 
-      > .contact-form > #Send {
-        padding-left: 30px;
-        padding-right: 30px;
-      }
+            > .contact-form > .input,
+            > .contact-form > .textarea {
+                margin-bottom: 15px;
+            }
 
-      > .contact-details {
-        grid-column: 4 / 6;
-        margin-bottom: 20px;
-      }
-      > .contact-details > .detail {
-        display: flex;
-        align-items: center;
-      }
+            > .contact-form > #Send {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
 
-      > .contact-details > .detail:nth-last-child(n + 2) {
-        margin-bottom: 25px;
-      }
+            > .contact-details {
+                grid-column: 4 / 6;
+                margin-bottom: 20px;
+            }
+            > .contact-details > .detail {
+                display: flex;
+                align-items: center;
+            }
 
-      > .contact-details > .detail > i[class*=icon] {
-        font-size: 23px;
-        min-width: 23px;
-        margin-right: 10px;
-        color: $green-2;
-      }
+            > .contact-details > .detail:nth-last-child(n + 2) {
+                margin-bottom: 25px;
+            }
+
+            > .contact-details > .detail > i[class*="icon"] {
+                font-size: 23px;
+                min-width: 23px;
+                margin-right: 10px;
+                color: $green-2;
+            }
+        }
     }
-  }
 }

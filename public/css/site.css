@@ -43,13 +43,43 @@
   background-color: #fff;
 }
 
+#Facilities > .grid.container {
+  grid-template-columns: 750px auto;
+}
+
 #SideAnnouncements {
   top: 309px;
 }
 
 #SideQuickLinks {
-  top: 117px;
-  max-height: 140px;
+  background-color: #fff;
+  max-height: 110px;
+  padding: 20px;
+}
+
+#SideQuickLinks > .title {
+  margin-top: 0;
+}
+
+#SideQuickLinks > .links {
+  padding-left: 15px;
+}
+
+#SideQuickLinks > .links > .item > a {
+  color: #2d8548;
+  text-decoration: none;
+}
+
+#Admission > .container.grid {
+  grid-template-columns: 750px auto;
+}
+
+#ContactUs > .container .mapouter {
+  margin-bottom: 10px;
+}
+
+#ContactUs > .container .mapouter > .title {
+  margin-bottom: 5px;
 }
 
 #ContactUs > .container > #ContactInfo {
@@ -130,7 +160,7 @@ body {
 
 .container {
   min-height: 100%;
-  max-width: 960px;
+  max-width: 1020px;
   width: 100%;
   margin: auto;
   padding-left: 20px;

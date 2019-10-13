@@ -1,9 +1,11 @@
 @import "~Sass/variables";
 
 // Components
-@import './site/components/side-announcements';
-@import './site/components/side-quicklinks';
+@import "./site/components/side-announcements";
+@import "./site/components/side-quicklinks";
 
 #Admission {
-  
+    > .container.grid {
+        grid-template-columns: 750px auto;
+    }
 }
