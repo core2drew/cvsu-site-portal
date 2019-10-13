@@ -7,9 +7,9 @@ import Icon from "Components/icon";
 const ContactUs = () => (
     <div id="ContactUs">
         <div className="container">
-            <div class="mapouter">
-                <h1 class="title">We are here.</h1>
-                <div class="gmap_canvas">
+            <div className="mapouter">
+                <h1 className="title">We are here.</h1>
+                <div className="gmap_canvas">
                     <iframe
                         width="100%"
                         height="500"
