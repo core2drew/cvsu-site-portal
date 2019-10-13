@@ -4,9 +4,14 @@ const AVP = () => {
     return (
         <div id="AVP">
             <h3 className="section header">CvSU 2018 - AVP</h3>
-            <video controls>
-                <source src="/video/AVP2018.mp4" type="video/mp4" />
-            </video>
+            <iframe
+                src="https://player.vimeo.com/video/366066501"
+                width="100%"
+                height="480"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+            ></iframe>
         </div>
     );
 };
