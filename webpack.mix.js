@@ -1,5 +1,4 @@
 const mix = require("laravel-mix");
-const DotEnv = require("dotenv-webpack");
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -42,8 +41,7 @@ mix.webpackConfig({
             ),
             Hooks: path.resolve(__dirname, "resources/js/hooks/")
         }
-    },
-    plugins: [new DotEnv()]
+    }
 });
 
 mix.react("resources/js/site.js", "public/js")
