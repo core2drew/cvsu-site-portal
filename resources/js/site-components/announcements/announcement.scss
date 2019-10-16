@@ -6,6 +6,7 @@
     box-shadow: $global-box-shadow;
     max-height: initial;
     position: relative;
+    overflow: hidden;
     > .header {
         > .title {
             font-family: rubikmedium;
