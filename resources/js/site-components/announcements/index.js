@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Uuid from "uuid/v4";
-import Button from "Components/button";
 import { get } from "Utils";
 import Announcement from "./announcement";
 import { NavLink } from "react-router-dom";
 import "./style.scss";
 
-const Announcements = () => {
+const Announcements = props => {
     const [announcements, setAnnouncements] = useState([]);
     const [hasViewMore, setHasViewMore] = useState(false);
 
     useEffect(() => {
         get(
-            "/ajax/portal/limited/announcements",
-            {},
+            "/ajax/portal/announcements",
+            { limit: props.limit },
             ({ data, next_page_url }) => {
                 if (next_page_url) {
                     setHasViewMore(true);
@@ -25,7 +24,7 @@ const Announcements = () => {
 
     return (
         <div id="Announcements" className="section">
-            <p className="section header">Latest Announcements</p>
+            {props.title && <p className="section header">{props.title}</p>}
             {announcements.map(announcement => (
                 <Announcement {...announcement} key={Uuid()} />
             ))}

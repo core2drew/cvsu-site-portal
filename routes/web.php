@@ -14,7 +14,7 @@ Route::get('/{route?}/{admission?}', [
     "as" => "site",
     "uses" => "SiteController@index"
 ])->where([
-    'route' => '(about|admission|facilities|contact-us|activate)',
+    'route' => '(about|admission|facilities|contact-us|activate|announcements)',
     'admission' => '(requirements|retention-policies|course-offered)'
 ]);
 
@@ -25,7 +25,7 @@ Route::group([
 ], function() {
     Route::get("/{route?}", [
         "uses" => "PortalController@index",
-    ])->where('route', '(dean-message|announcements|academic-calendar|requirements|retention-policies|course-offered|students|users)');
+    ])->where('route', '(dean-message|academic-calendar|requirements|retention-policies|course-offered|students|users)');
 });
 
 Route::group([

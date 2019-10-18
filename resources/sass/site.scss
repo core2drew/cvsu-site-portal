@@ -5,6 +5,7 @@
 @import "~Sass/site/admission";
 @import "~Sass/site/contactus";
 @import "~Sass/site/activate";
+@import "~Sass/site/announcements";
 
 body {
     background-color: $green-3;
@@ -38,7 +39,8 @@ body {
 #About,
 #Facilities,
 #Admission,
-#ContactUs {
+#ContactUs,
+#Announcements {
     height: 100%;
     .section.header {
         font-size: 20px;

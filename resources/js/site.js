@@ -15,6 +15,7 @@ import TopNav from "Components/top-nav";
 import MainNav from "Components/main-nav";
 import Footer from "Components/footer";
 import Activate from "SiteRoutes/activate";
+import AnnouncementsPage from "SiteRoutes/announcements";
 
 const App = () => (
     <Router>
@@ -34,6 +35,7 @@ const App = () => (
                     to="/admission/requirements"
                 />
                 <Route path="/admission/:subpath" component={Admission} />
+                <Route path="/announcements" component={AnnouncementsPage} />
             </Switch>
         </div>
         <Footer />

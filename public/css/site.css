@@ -126,6 +126,10 @@
   grid-template-rows: repeat(3, 250px);
 }
 
+#Announcements > .grid.container {
+  grid-template-columns: 750px auto;
+}
+
 body {
   background-color: #f5fff4;
 }
@@ -160,7 +164,8 @@ body {
 #About,
 #Facilities,
 #Admission,
-#ContactUs {
+#ContactUs,
+#Announcements {
   height: 100%;
 }
 
@@ -168,7 +173,8 @@ body {
 #About .section.header,
 #Facilities .section.header,
 #Admission .section.header,
-#ContactUs .section.header {
+#ContactUs .section.header,
+#Announcements .section.header {
   font-size: 20px;
 }
 
@@ -176,7 +182,8 @@ body {
 #About .section.header:after,
 #Facilities .section.header:after,
 #Admission .section.header:after,
-#ContactUs .section.header:after {
+#ContactUs .section.header:after,
+#Announcements .section.header:after {
   display: block;
   content: "";
   border-bottom: solid 3px #329b58;
@@ -188,7 +195,8 @@ body {
 #About > .container,
 #Facilities > .container,
 #Admission > .container,
-#ContactUs > .container {
+#ContactUs > .container,
+#Announcements > .container {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -197,7 +205,8 @@ body {
 #About > .grid.container,
 #Facilities > .grid.container,
 #Admission > .grid.container,
-#ContactUs > .grid.container {
+#ContactUs > .grid.container,
+#Announcements > .grid.container {
   grid-gap: 15px;
 }
 
@@ -205,7 +214,8 @@ body {
 #About > .grid.container > .grid-item,
 #Facilities > .grid.container > .grid-item,
 #Admission > .grid.container > .grid-item,
-#ContactUs > .grid.container > .grid-item {
+#ContactUs > .grid.container > .grid-item,
+#Announcements > .grid.container > .grid-item {
   background-color: #fff;
   padding: 20px;
 }
