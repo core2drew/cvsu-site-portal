@@ -9,7 +9,7 @@ const AVP = () => {
                 height="480"
                 src="https://www.youtube.com/embed/WxqCPfvWHsw"
                 frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allow="encrypted-media"
                 allowFullScreen
             ></iframe>
         </div>
