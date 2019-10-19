@@ -72902,7 +72902,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81549,7 +81549,7 @@ function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArra
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -81561,19 +81561,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var DeanMessage = function DeanMessage() {
-  var url = '/ajax/portal/dean-message';
+  var url = "/ajax/portal/dean-message";
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
       _useState2 = _slicedToArray(_useState, 2),
       isLoading = _useState2[0],
       setIsLoading = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
       _useState4 = _slicedToArray(_useState3, 2),
       initialMessage = _useState4[0],
       setInitialMessage = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
       _useState6 = _slicedToArray(_useState5, 2),
       message = _useState6[0],
       setMessage = _useState6[1];
@@ -81586,9 +81586,9 @@ var DeanMessage = function DeanMessage() {
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
       message: message
     }, function () {
-      return alert('Message Save');
+      return alert("Message Save");
     }, function () {
-      return alert('Something went wrong');
+      return alert("Something went wrong");
     });
   };
 
@@ -81598,23 +81598,24 @@ var DeanMessage = function DeanMessage() {
       setInitialMessage(res.message);
       setIsLoading(false);
     }, function () {
-      alert('Something went wrong. Please try again');
+      alert("Something went wrong. Please try again");
       setIsLoading(false);
     });
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "DeanMessage"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    variant: 'fixed',
+    variant: "fixed",
     isActive: isLoading
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_ckeditor__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "Editor",
     onChange: handleEditor,
     value: message,
-    initialValue: initialMessage
+    initialValue: initialMessage,
+    height: 500
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "Save",
-    text: 'Save',
+    text: "Save",
     onClick: handleSave
   }));
 };
