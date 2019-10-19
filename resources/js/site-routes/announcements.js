@@ -6,6 +6,7 @@ const AnnouncementsPage = () => {
         <div id="Announcements">
             <div className="container grid">
                 <div className="grid-item">
+                    <p className="section header">Announcements</p>
                     <Announcements />
                 </div>
                 <SideLinks />
