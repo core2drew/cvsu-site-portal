@@ -8,9 +8,9 @@ const AVP = () => {
                 src="https://player.vimeo.com/video/366066501"
                 width="100%"
                 height="480"
-                frameborder="0"
+                frameBorder="0"
                 allow="autoplay; fullscreen"
-                allowfullscreen
+                allowFullScreen
             ></iframe>
         </div>
     );
