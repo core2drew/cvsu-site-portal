@@ -80001,11 +80001,11 @@ var AVP = function AVP() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "section header"
   }, "CvSU 2018 - AVP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-    src: "https://player.vimeo.com/video/366066501",
     width: "100%",
     height: "480",
+    src: "https://www.youtube.com/embed/WxqCPfvWHsw",
     frameBorder: "0",
-    allow: "autoplay; fullscreen",
+    allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
     allowFullScreen: true
   }));
 };
