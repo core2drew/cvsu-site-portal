@@ -15,10 +15,8 @@ const ContactUs = () => (
                         height="500"
                         id="gmap_canvas"
                         src="https://maps.google.com/maps?q=Cvsu%20Cavite%20city&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0"
+                        frameBorder="0"
                         scrolling="no"
-                        marginheight="0"
-                        marginwidth="0"
                     ></iframe>
                 </div>
             </div>
@@ -38,12 +36,12 @@ const ContactUs = () => (
                         +63 (46) 481-1990
                     </div>
                 </div>
-                <div className="contact-form">
+                {/* <div className="contact-form">
                     <Input label={"Full name"} />
                     <Input label={"Email Address"} />
-                    <Textarea label={"Inquiry / Message"} />
+                    <Textarea label={"Inquiry / Message"} onChange={}/>
                     <Button id="Send" text={"Send"} />
-                </div>
+                </div> */}
             </div>
         </div>
     </div>
