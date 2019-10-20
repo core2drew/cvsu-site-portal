@@ -72902,7 +72902,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82275,6 +82275,9 @@ var Students = function Students(props) {
   var handleInvitation = function handleInvitation(_ref) {
     var studentNo = _ref.studentNo,
         email = _ref.email;
+    dispatch({
+      type: "INVITING"
+    });
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(inviteUrl, {
       studentNo: studentNo,
       email: email
@@ -82288,7 +82291,7 @@ var Students = function Students(props) {
       }
 
       dispatch({
-        type: "CLOSE_MODAL"
+        type: "SUCCESS_INVITE"
       });
       initTable();
     }, function () {
@@ -82441,6 +82444,13 @@ var InviteStudent = function InviteStudent() {
     });
   };
 
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    console.log(state.isInviteStudentModalActive);
+
+    if (!state.isInviteStudentModalActive) {
+      reset();
+    }
+  }, [state.isInviteStudentModalActive]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
     isActive: state.isInviteStudentModalActive,
     handleClose: handleClose
@@ -83429,6 +83439,7 @@ var reducer = function reducer(state, action) {
     case "SAVING":
     case "UPDATING":
     case "DELETING":
+    case "INVITING":
       return _objectSpread({}, state, {
         isLoading: true
       });
@@ -83476,6 +83487,7 @@ var reducer = function reducer(state, action) {
 
     case "SUCCESS_INVITE":
       return _objectSpread({}, state, {
+        isLoading: false,
         isInviteStudentModalActive: false
       });
 

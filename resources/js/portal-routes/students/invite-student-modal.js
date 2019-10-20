@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import useForm from "Hooks/useForm";
 import Button from "Components/button";
 import Input from "Components/input";
@@ -24,6 +24,13 @@ const InviteStudent = () => {
         reset();
         dispatch({ type: "CLOSE_MODAL" });
     };
+
+    useEffect(() => {
+        console.log(state.isInviteStudentModalActive);
+        if (!state.isInviteStudentModalActive) {
+            reset();
+        }
+    }, [state.isInviteStudentModalActive]);
 
     return (
         <Modal

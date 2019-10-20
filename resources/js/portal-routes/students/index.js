@@ -190,6 +190,7 @@ const Students = props => {
     };
 
     const handleInvitation = ({ studentNo, email }) => {
+        dispatch({ type: "INVITING" });
         post(
             inviteUrl,
             { studentNo, email },
@@ -199,7 +200,7 @@ const Students = props => {
                     alert(res.message);
                     return;
                 }
-                dispatch({ type: "CLOSE_MODAL" });
+                dispatch({ type: "SUCCESS_INVITE" });
                 initTable();
             },
             () => {

@@ -18,6 +18,7 @@ const reducer = (state, action) => {
         case "SAVING":
         case "UPDATING":
         case "DELETING":
+        case "INVITING":
             return {
                 ...state,
                 isLoading: true
@@ -67,6 +68,7 @@ const reducer = (state, action) => {
         case "SUCCESS_INVITE":
             return {
                 ...state,
+                isLoading: false,
                 isInviteStudentModalActive: false
             };
         case "ERROR_SAVE":

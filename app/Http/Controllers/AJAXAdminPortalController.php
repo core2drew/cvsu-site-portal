@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Log;
 use Illuminate\Support\Facades\Crypt;
-use Illuminate\Support\Facades\Mail;
+use Mail;
 use App\Mail\InviteStudent;
 use Session;
 
@@ -361,20 +361,19 @@ class AJAXAdminPortalController extends Controller
         ->where('StudentNumber', "=" , $studentNo)
         ->first();
 
-        return Mail::to($email)->send(new InviteStudent($studentNo, "", 123));
-
         if($studentInfo) {
-            // $response = DB::table('users')
-            // ->insert([
-            //     'student_no' => $studentNo,
-            //     'first_name' => $studentInfo->FirstName,
-            //     'last_name' => $studentInfo->LastName,
-            //     'email' => $email,
-            //     'is_await' => 1,
-            //     'type' => 'STUDENT',
-            //     'created_at' => now(),
-            //     'updated_at' => now()
-            // ]);
+            $response = DB::table('users')
+            ->insert([
+                'student_no' => $studentNo,
+                'first_name' => $studentInfo->FirstName,
+                'last_name' => $studentInfo->LastName,
+                'email' => $email,
+                'is_await' => 1,
+                'type' => 'STUDENT',
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
+
             $user = DB::table('users')
             ->where('student_no', "=" , $studentNo)
             ->latest()
@@ -388,10 +387,11 @@ class AJAXAdminPortalController extends Controller
                 $userDetails['id'] = $user->id;
 
                 $encrypted = Crypt::encrypt($userDetails);
-                $studentNo = $user->student_no;
-                $fullName = $user->first_name . ' ' . $user->last_name;
 
-                Mail::to($user->email)->send(new InviteStudent($studentNo, $fullName, $encrypted));
+                $fullName = $user->first_name . ' ' . $user->last_name;
+                $studentNo = $user->student_no;
+                $activationLink = config('app.url').'/activate?token='.$encrypted;
+                $this->sendInvitation($email, $fullName, $studentNo, $activationLink);
 
                 return response()->json([
                     'status' => 200,
@@ -471,5 +471,15 @@ class AJAXAdminPortalController extends Controller
                 ->where('email', '=', $email)
                 ->first();
         return $response;
+    }
+
+    private function sendInvitation($email, $fullName, $studentNo, $activationLink) {
+        $fullName = strtolower($fullName);
+        $fullName = ucwords($fullName);
+        return Mail::send('email-template.invite-student', compact('fullName', 'studentNo', 'activationLink') , function ($msg) use($email) {
+            $msg->subject('CvSU-CC Portal Invite');
+            $msg->from('info@cvsu-cc.com', 'CvSU-CC Info Portal (Do not reply)');
+            $msg->to($email);
+        });
     }
 }
