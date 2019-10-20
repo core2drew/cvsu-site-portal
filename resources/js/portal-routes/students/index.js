@@ -201,6 +201,7 @@ const Students = props => {
                     return;
                 }
                 dispatch({ type: "SUCCESS_INVITE" });
+                alert("Invite has been sent");
                 initTable();
             },
             () => {
@@ -211,6 +212,7 @@ const Students = props => {
     };
 
     const handleResendInvitation = (studentNo, email, id) => {
+        dispatch({ type: "INVITING" });
         post(
             resendInviteUrl,
             { studentNo, email, id },
@@ -220,7 +222,8 @@ const Students = props => {
                     alert(res.message);
                     return;
                 }
-                dispatch({ type: "CLOSE_MODAL" });
+                dispatch({ type: "SUCCESS_INVITE" });
+                alert("Invite has been resent.");
                 initTable();
             },
             () => {

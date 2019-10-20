@@ -227,11 +227,14 @@ class AJAXAdminPortalController extends Controller
             $userDetails['email'] = $user->email;
             $userDetails['id'] = $user->id;
 
-            $encrypted = Crypt::encrypt($userDetails);
+            $token = Crypt::encrypt($userDetails);
+            $fullName = $user->first_name . ' ' . $user->last_name;
+            $this->sendInvitation($email, $fullName, $token);
+
             return response()->json([
                 'status' => 200,
                 'message' => "Invite has been sent to $email.",
-                'token' => $encrypted
+                'token' => $token
             ]);
         }
 
@@ -254,11 +257,15 @@ class AJAXAdminPortalController extends Controller
             $userDetails['lastName'] = $user->last_name;
             $userDetails['email'] = $user->email;
             $userDetails['id'] = $user->id;
-            $encrypted = Crypt::encrypt($userDetails);
+
+            $token = Crypt::encrypt($userDetails);
+            $fullName = $user->first_name . ' ' . $user->last_name;
+            $this->sendInvitation($email, $fullName, $token);
+
             return response()->json([
                 'status' => 200,
                 'message' => "Invite has been resend to $email.",
-                'token' => $encrypted
+                'token' => $token
             ]);
         }
 
@@ -386,17 +393,14 @@ class AJAXAdminPortalController extends Controller
                 $userDetails['email'] = $user->email;
                 $userDetails['id'] = $user->id;
 
-                $encrypted = Crypt::encrypt($userDetails);
-
+                $token = Crypt::encrypt($userDetails);
                 $fullName = $user->first_name . ' ' . $user->last_name;
-                $studentNo = $user->student_no;
-                $activationLink = config('app.url').'/activate?token='.$encrypted;
-                $this->sendInvitation($email, $fullName, $studentNo, $activationLink);
+                $this->sendInvitation($email, $fullName, $token);
 
                 return response()->json([
                     'status' => 200,
                     'message' => "Invite has been sent to $email.",
-                    'token' => $encrypted
+                    'token' => $token
                 ]);
             }
         }
@@ -421,12 +425,14 @@ class AJAXAdminPortalController extends Controller
             $userDetails['email'] = $user->email;
             $userDetails['id'] = $user->id;
 
-            $encrypted = Crypt::encrypt($userDetails);
+            $token = Crypt::encrypt($userDetails);
+            $fullName = $user->first_name . ' ' . $user->last_name;
+            $this->sendInvitation($email, $fullName, $token);
 
             return response()->json([
                 'status' => 200,
                 'message' => "Invite has been resend to $email.",
-                'token' => $encrypted
+                'token' => $token
             ]);
         }
 
@@ -473,10 +479,11 @@ class AJAXAdminPortalController extends Controller
         return $response;
     }
 
-    private function sendInvitation($email, $fullName, $studentNo, $activationLink) {
+    private function sendInvitation($email, $fullName, $token) {
         $fullName = strtolower($fullName);
         $fullName = ucwords($fullName);
-        return Mail::send('email-template.invite-student', compact('fullName', 'studentNo', 'activationLink') , function ($msg) use($email) {
+        $activationLink = config('app.url').'/activate?token='.$token;
+        return Mail::send('email-template.invite', compact('fullName', 'activationLink') , function ($msg) use($email) {
             $msg->subject('CvSU-CC Portal Invite');
             $msg->from('info@cvsu-cc.com', 'CvSU-CC Info Portal (Do not reply)');
             $msg->to($email);

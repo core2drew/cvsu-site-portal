@@ -16,6 +16,12 @@ const FormModal = () => {
 
     const { email, firstName, lastName } = fields;
 
+    useEffect(() => {
+        if (!state.isModalActive) {
+            reset();
+        }
+    }, [state.isModalActive]);
+
     return (
         <Modal
             isActive={state.isModalActive}

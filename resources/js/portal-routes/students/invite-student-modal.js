@@ -26,7 +26,6 @@ const InviteStudent = () => {
     };
 
     useEffect(() => {
-        console.log(state.isInviteStudentModalActive);
         if (!state.isInviteStudentModalActive) {
             reset();
         }

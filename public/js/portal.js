@@ -82293,6 +82293,7 @@ var Students = function Students(props) {
       dispatch({
         type: "SUCCESS_INVITE"
       });
+      alert("Invite has been sent");
       initTable();
     }, function () {
       dispatch({
@@ -82303,6 +82304,9 @@ var Students = function Students(props) {
   };
 
   var handleResendInvitation = function handleResendInvitation(studentNo, email, id) {
+    dispatch({
+      type: "INVITING"
+    });
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(resendInviteUrl, {
       studentNo: studentNo,
       email: email,
@@ -82317,8 +82321,9 @@ var Students = function Students(props) {
       }
 
       dispatch({
-        type: "CLOSE_MODAL"
+        type: "SUCCESS_INVITE"
       });
+      alert("Invite has been resent.");
       initTable();
     }, function () {
       dispatch({
@@ -82445,8 +82450,6 @@ var InviteStudent = function InviteStudent() {
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    console.log(state.isInviteStudentModalActive);
-
     if (!state.isInviteStudentModalActive) {
       reset();
     }
@@ -82693,6 +82696,11 @@ var FormModal = function FormModal() {
   var email = fields.email,
       firstName = fields.firstName,
       lastName = fields.lastName;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (!state.isModalActive) {
+      reset();
+    }
+  }, [state.isModalActive]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
     isActive: state.isModalActive,
     handleClose: function handleClose() {
@@ -82824,7 +82832,7 @@ var Users = function Users() {
 
   var handleInvite = function handleInvite(values) {
     dispatch({
-      type: "SAVING"
+      type: "INVITING"
     });
     var firstName = values.firstName,
         lastName = values.lastName,
@@ -82843,8 +82851,9 @@ var Users = function Users() {
       }
 
       dispatch({
-        type: "CLOSE_MODAL"
+        type: "SUCCESS_INVITE"
       });
+      alert("Invite has been resent.");
       initUser();
     }, function () {
       dispatch({
@@ -82859,7 +82868,7 @@ var Users = function Users() {
         lastName = _ref.lastName,
         email = _ref.email;
     dispatch({
-      type: "SAVING"
+      type: "INVITING"
     });
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(resendInviteUrl, {
       email: email,
@@ -82875,8 +82884,9 @@ var Users = function Users() {
       }
 
       dispatch({
-        type: "CLOSE_MODAL"
+        type: "SUCCESS_INVITE"
       });
+      alert("Invite has been sent.");
       initUser();
     }, function () {
       dispatch({
@@ -83556,35 +83566,36 @@ var initialState = {
   isLoading: true,
   isModalActive: false,
   isUpdateModal: false,
-  modalHeaderTitle: 'New User',
+  modalHeaderTitle: "New User",
   data: [],
   selectedId: null
 };
 
 var reducer = function reducer(state, action) {
   switch (action.type) {
-    case 'FETCHING':
-    case 'SAVING':
-    case 'UPDATING':
-    case 'DELETING':
+    case "FETCHING":
+    case "SAVING":
+    case "UPDATING":
+    case "DELETING":
+    case "INVITING":
       return _objectSpread({}, state, {
         isLoading: true
       });
 
-    case 'SUCCESS_FETCH':
+    case "SUCCESS_FETCH":
       return _objectSpread({}, state, {
         isLoading: false,
         isUpdateModal: false,
         data: action.data
       });
 
-    case 'SUCCESS_DELETE':
+    case "SUCCESS_DELETE":
       return _objectSpread({}, state, {
         isLoading: false,
         data: action.data
       });
 
-    case 'SUCCESS_UPDATE':
+    case "SUCCESS_UPDATE":
       return _objectSpread({}, state, {
         isLoading: false,
         isModalActive: false,
@@ -83592,7 +83603,7 @@ var reducer = function reducer(state, action) {
         data: action.data
       });
 
-    case 'SUCCESS_SAVE':
+    case "SUCCESS_SAVE":
       return _objectSpread({}, state, {
         isLoading: false,
         isModalActive: false,
@@ -83600,33 +83611,39 @@ var reducer = function reducer(state, action) {
         data: action.data
       });
 
-    case 'ERROR_SAVE':
-    case 'ERROR_FETCH':
-    case 'ERROR_UPDATE':
-    case 'ERROR_DELETE':
+    case "SUCCESS_INVITE":
+      return _objectSpread({}, state, {
+        isLoading: false,
+        isModalActive: false
+      });
+
+    case "ERROR_SAVE":
+    case "ERROR_FETCH":
+    case "ERROR_UPDATE":
+    case "ERROR_DELETE":
       return _objectSpread({}, state, {
         isLoading: false
       });
 
-    case 'OPEN_MODAL':
+    case "OPEN_MODAL":
       return _objectSpread({}, state, {
         isModalActive: true,
         isUpdateModal: false,
-        modalHeaderTitle: 'New User',
+        modalHeaderTitle: "New User",
         selectedId: null
       });
 
-    case 'CLOSE_MODAL':
+    case "CLOSE_MODAL":
       return _objectSpread({}, state, {
         isModalActive: false,
         isUpdateModal: false
       });
 
-    case 'OPEN_UPDATE_MODAL':
+    case "OPEN_UPDATE_MODAL":
       return _objectSpread({}, state, {
         isModalActive: true,
         isUpdateModal: true,
-        modalHeaderTitle: 'Update User',
+        modalHeaderTitle: "Update User",
         selectedId: action.id
       });
 

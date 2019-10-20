@@ -43,7 +43,7 @@ const Users = () => {
     };
 
     const handleInvite = values => {
-        dispatch({ type: "SAVING" });
+        dispatch({ type: "INVITING" });
         const { firstName, lastName, email } = values;
         post(
             inviteUrl,
@@ -58,7 +58,8 @@ const Users = () => {
                     alert(res.message);
                     return;
                 }
-                dispatch({ type: "CLOSE_MODAL" });
+                dispatch({ type: "SUCCESS_INVITE" });
+                alert("Invite has been resent.");
                 initUser();
             },
             () => {
@@ -69,7 +70,7 @@ const Users = () => {
     };
 
     const handleResendInvitation = ({ firstName, lastName, email }) => {
-        dispatch({ type: "SAVING" });
+        dispatch({ type: "INVITING" });
         post(
             resendInviteUrl,
             {
@@ -83,7 +84,8 @@ const Users = () => {
                     alert(res.message);
                     return;
                 }
-                dispatch({ type: "CLOSE_MODAL" });
+                dispatch({ type: "SUCCESS_INVITE" });
+                alert("Invite has been sent.");
                 initUser();
             },
             () => {
