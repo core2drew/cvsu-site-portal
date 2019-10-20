@@ -1,8 +1,10 @@
 #MissionVision {
-  > #Mission,
-  > #Vision {
-    > p {
-      line-height: 1.4;
+    > #Mission,
+    > #Vision {
+        > p {
+            line-height: 1.4;
+            text-indent: 25px;
+            text-align: justify;
+        }
     }
-  }
 }

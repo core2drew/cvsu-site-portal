@@ -966,7 +966,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#MissionVision > #Mission > p,\n#MissionVision > #Vision > p {\n  line-height: 1.4;\n}", ""]);
+exports.push([module.i, "#MissionVision > #Mission > p,\n#MissionVision > #Vision > p {\n  line-height: 1.4;\n  text-indent: 25px;\n  text-align: justify;\n}", ""]);
 
 // exports
 
@@ -72864,7 +72864,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

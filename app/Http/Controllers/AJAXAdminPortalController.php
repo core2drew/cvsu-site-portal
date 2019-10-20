@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Log;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\InviteStudent;
 use Session;
 
 class AJAXAdminPortalController extends Controller
@@ -359,25 +361,26 @@ class AJAXAdminPortalController extends Controller
         ->where('StudentNumber', "=" , $studentNo)
         ->first();
 
-        if($studentInfo) {
-            $response = DB::table('users')
-            ->insert([
-                'student_no' => $studentNo,
-                'first_name' => $studentInfo->FirstName,
-                'last_name' => $studentInfo->LastName,
-                'email' => $email,
-                'is_await' => 1,
-                'type' => 'STUDENT',
-                'created_at' => now(),
-                'updated_at' => now()
-            ]);
+        return Mail::to($email)->send(new InviteStudent($studentNo, "", 123));
 
+        if($studentInfo) {
+            // $response = DB::table('users')
+            // ->insert([
+            //     'student_no' => $studentNo,
+            //     'first_name' => $studentInfo->FirstName,
+            //     'last_name' => $studentInfo->LastName,
+            //     'email' => $email,
+            //     'is_await' => 1,
+            //     'type' => 'STUDENT',
+            //     'created_at' => now(),
+            //     'updated_at' => now()
+            // ]);
             $user = DB::table('users')
             ->where('student_no', "=" , $studentNo)
             ->latest()
             ->first();
 
-            if($response) {
+            if($user) {
                 $userDetails['studentNo'] =  $user->student_no;
                 $userDetails['firstName'] = $user->first_name;
                 $userDetails['lastName'] = $user->last_name;
@@ -385,6 +388,10 @@ class AJAXAdminPortalController extends Controller
                 $userDetails['id'] = $user->id;
 
                 $encrypted = Crypt::encrypt($userDetails);
+                $studentNo = $user->student_no;
+                $fullName = $user->first_name . ' ' . $user->last_name;
+
+                Mail::to($user->email)->send(new InviteStudent($studentNo, $fullName, $encrypted));
 
                 return response()->json([
                     'status' => 200,
