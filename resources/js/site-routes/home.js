@@ -11,7 +11,7 @@ const Home = () => {
             <div className="container grid">
                 <DeanMessage />
                 <AcademicCalendar />
-                <Announcements limit={1} title="Latest Announcements" />
+                <Announcements limit={3} title="Latest Announcements" />
             </div>
         </div>
     );
