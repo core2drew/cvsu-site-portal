@@ -72864,7 +72864,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80003,7 +80003,7 @@ var AVP = function AVP() {
   }, "CvSU 2018 - AVP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
     width: "100%",
     height: "480",
-    src: "https://www.youtube.com/embed/WxqCPfvWHsw",
+    src: "videos/AVP2018.mp4",
     frameBorder: "0",
     allow: "encrypted-media",
     allowFullScreen: true
