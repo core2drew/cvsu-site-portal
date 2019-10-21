@@ -7,7 +7,7 @@ const AVP = () => {
             <iframe
                 width="100%"
                 height="480"
-                src="https://www.youtube.com/embed/WxqCPfvWHsw"
+                src="videos/AVP2018.mp4"
                 frameBorder="0"
                 allow="encrypted-media"
                 allowFullScreen
