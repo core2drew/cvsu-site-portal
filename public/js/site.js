@@ -72864,7 +72864,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79270,101 +79270,6 @@ var useForm = function useForm() {
 
 /***/ }),
 
-/***/ "./resources/js/hooks/useInput.js":
-/*!****************************************!*\
-  !*** ./resources/js/hooks/useInput.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-var useInput = function useInput(_ref) {
-  var initialValue = _ref.initialValue,
-      required = _ref.required,
-      minLength = _ref.minLength,
-      email = _ref.email;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(initialValue),
-      _useState2 = _slicedToArray(_useState, 2),
-      value = _useState2[0],
-      setValue = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
-    isError: false,
-    message: ""
-  }),
-      _useState4 = _slicedToArray(_useState3, 2),
-      error = _useState4[0],
-      setError = _useState4[1];
-
-  var validateEmail = function validateEmail(email) {
-    var regex = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/);
-    return !regex.test(email);
-  };
-
-  var onChange = function onChange(e) {
-    var value = e.target.value;
-    setValue(value);
-    setError({
-      isError: false,
-      message: ""
-    });
-
-    if (required && !value) {
-      setError({
-        isError: true
-      });
-    }
-
-    if (value.length < minLength) {
-      setError({
-        isError: true
-      });
-    }
-
-    if (email) {
-      var isError = validateEmail(value);
-      var message = isError ? "Invalid email format." : "";
-      setError({
-        isError: isError,
-        message: message
-      });
-    }
-  };
-
-  var reset = function reset() {
-    setValue(""), setError({
-      isError: false,
-      message: ""
-    });
-  };
-
-  return {
-    value: value,
-    onChange: onChange,
-    error: error,
-    setError: setError,
-    reset: reset
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (useInput);
-
-/***/ }),
-
 /***/ "./resources/js/site-components/academic-calendar/activities/index.js":
 /*!****************************************************************************!*\
   !*** ./resources/js/site-components/academic-calendar/activities/index.js ***!
@@ -79613,14 +79518,13 @@ var activateFormInitialFields = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Hooks_useInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Hooks/useInput */ "./resources/js/hooks/useInput.js");
-/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
-/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
-/* harmony import */ var Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Hooks/useForm */ "./resources/js/hooks/useForm.js");
-/* harmony import */ var _activateFormInitialFields__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./activateFormInitialFields */ "./resources/js/site-components/activate-form/activateFormInitialFields.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/activate-form/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Hooks_useForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Hooks/useForm */ "./resources/js/hooks/useForm.js");
+/* harmony import */ var _activateFormInitialFields__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./activateFormInitialFields */ "./resources/js/site-components/activate-form/activateFormInitialFields.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/activate-form/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_6__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -79628,7 +79532,6 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 
 
 
@@ -79646,7 +79549,7 @@ var ActivateForm = function ActivateForm(_ref) {
   var url = "/ajax/portal/activate-account";
 
   var handleSubmit = function handleSubmit() {
-    Object(Utils__WEBPACK_IMPORTED_MODULE_4__["post"])(url, {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_3__["post"])(url, {
       id: id,
       password: password.value
     }, function () {
@@ -79682,7 +79585,7 @@ var ActivateForm = function ActivateForm(_ref) {
     };
   };
 
-  var _useForm = Object(Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__["default"])(_activateFormInitialFields__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  var _useForm = Object(Hooks_useForm__WEBPACK_IMPORTED_MODULE_4__["default"])(_activateFormInitialFields__WEBPACK_IMPORTED_MODULE_5__["default"], {
     password: validatePassword,
     confirmPassword: validateConfirmPassword
   }, handleSubmit),
@@ -79707,7 +79610,7 @@ var ActivateForm = function ActivateForm(_ref) {
     className: "student-no"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Student No:"), " ", studentNo), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "student-name"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Name:"), " ", firstName, " ", lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Name:"), " ", firstName, " ", lastName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_1__["default"], {
     footNote: "Minimum 8 characters.",
     required: true,
     label: "Password",
@@ -79716,7 +79619,7 @@ var ActivateForm = function ActivateForm(_ref) {
     value: password.value,
     error: password.error.status,
     onChange: setFieldValue
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_1__["default"], {
     required: true,
     label: "Confirm Password",
     type: "password",
@@ -79725,7 +79628,7 @@ var ActivateForm = function ActivateForm(_ref) {
     error: confirmPassword.error.status,
     errorMessage: confirmPassword.error.message,
     onChange: setFieldValue
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     variant: "submit",
     text: "Submit",
     onClick: submit

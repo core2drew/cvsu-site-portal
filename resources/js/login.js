@@ -7,7 +7,7 @@ import Preloader from "Components/preloader";
 import SignUpModal from "LoginComponents/signup-modal";
 
 const App = () => {
-    // const [isSignUpModalActive, setSignUpModalActive] = useState(false);
+    const [isSignUpModalActive, setSignUpModalActive] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -66,16 +66,19 @@ const App = () => {
 
                     <Button text={"Log In"} onClick={handleLogin} />
                     <div className="footer">
-                        {/* <Button
-                        text={"Sign up"}
-                        variant={"-tertiary"}
-                        onClick={() => setSignUpModalActive(true)}
-                    /> */}
+                        <Button
+                            text={"Sign up"}
+                            variant={"-tertiary"}
+                            onClick={() => setSignUpModalActive(true)}
+                        />
                         {/* <Button text={'Forget Password'} variant={'tertiary'} />  */}
                     </div>
                 </div>
             </div>
-            {/* <SignUpModal isActive={isSignUpModalActive} handleClose={() => setSignUpModalActive(false)}/> */}
+            <SignUpModal
+                isActive={isSignUpModalActive}
+                handleClose={() => setSignUpModalActive(false)}
+            />
         </React.Fragment>
     );
 };

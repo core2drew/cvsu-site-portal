@@ -44174,6 +44174,159 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/hooks/useForm.js":
+/*!***************************************!*\
+  !*** ./resources/js/hooks/useForm.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+var useForm = function useForm() {
+  var initialValues = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var validators = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var submitCallback = arguments.length > 2 ? arguments[2] : undefined;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(initialValues),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+
+  var setFieldValue = function setFieldValue(newValue, name) {
+    setValue(_objectSpread({}, value, _defineProperty({}, name, _objectSpread({}, value[name], {
+      value: newValue,
+      error: validateField(newValue, name)
+    }))));
+  };
+
+  var setFieldValues = function setFieldValues(newValues) {
+    var toSetValues = {};
+
+    for (var i in newValues) {
+      if (value.hasOwnProperty(i)) {
+        toSetValues = _objectSpread({}, toSetValues, _defineProperty({}, i, _objectSpread({}, value[i], {
+          value: newValues[i],
+          error: validateField(newValues[i], i)
+        })));
+      }
+    }
+
+    setValue(_objectSpread({}, value, toSetValues));
+  };
+
+  var validateField = function validateField(newValue, name) {
+    var error = {
+      status: false,
+      message: ""
+    };
+
+    if (value[name].required) {
+      error = newValue ? {
+        status: false,
+        message: ""
+      } : {
+        status: true,
+        message: ""
+      };
+
+      if (error.status) {
+        return error;
+      }
+    }
+
+    if (value[name].email) {
+      error = validateEmail(newValue) ? {
+        status: false,
+        message: ""
+      } : {
+        status: true,
+        message: "Invalid email format."
+      };
+
+      if (error.status) {
+        return error;
+      }
+    }
+
+    if (validators.hasOwnProperty(name)) {
+      return validators[name](newValue, value);
+    }
+
+    return error;
+  };
+
+  var validateEmail = function validateEmail(email) {
+    var regex = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/);
+    return regex.test(email);
+  };
+
+  var submit = function submit() {
+    var errors = {};
+    var isFormValid = true;
+
+    for (var fieldName in value) {
+      errors[fieldName] = validateField(value[fieldName].value, fieldName);
+    }
+
+    var newValue = value;
+
+    for (var _fieldName in errors) {
+      if (errors[_fieldName].status) {
+        isFormValid = false;
+      }
+
+      newValue = _objectSpread({}, newValue, _defineProperty({}, _fieldName, _objectSpread({}, newValue[_fieldName], {
+        error: _objectSpread({}, errors[_fieldName])
+      })));
+    }
+
+    if (isFormValid) {
+      submitCallback(value);
+    } else {
+      setValue(newValue);
+    }
+  };
+
+  var reset = function reset() {
+    var toSetValues = {};
+
+    for (var i in value) {
+      toSetValues = _objectSpread({}, toSetValues, _defineProperty({}, i, _objectSpread({}, value[i], {
+        value: "",
+        error: {
+          status: false,
+          message: ""
+        }
+      })));
+    }
+
+    setValue(_objectSpread({}, value, toSetValues));
+  };
+
+  return [value, setFieldValue, submit, setFieldValues, reset];
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (useForm);
+
+/***/ }),
+
 /***/ "./resources/js/login-components/signup-modal/index.js":
 /*!*************************************************************!*\
   !*** ./resources/js/login-components/signup-modal/index.js ***!
@@ -44189,15 +44342,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
 /* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./resources/js/login-components/signup-modal/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Hooks/useForm */ "./resources/js/hooks/useForm.js");
+/* harmony import */ var _signupInitialFields__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./signupInitialFields */ "./resources/js/login-components/signup-modal/signupInitialFields.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./resources/js/login-components/signup-modal/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_7__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -44210,55 +44367,8 @@ var SignUpModal = function SignUpModal(_ref) {
   var isActive = _ref.isActive,
       handleClose = _ref.handleClose;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState2 = _slicedToArray(_useState, 2),
-      studentNo = _useState2[0],
-      setStudentNo = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState4 = _slicedToArray(_useState3, 2),
-      username = _useState4[0],
-      setUsername = _useState4[1];
-
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState6 = _slicedToArray(_useState5, 2),
-      password = _useState6[0],
-      setPassword = _useState6[1];
-
-  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState8 = _slicedToArray(_useState7, 2),
-      confirmPassword = _useState8[0],
-      setConfirmPassword = _useState8[1];
-
-  var clearFields = function clearFields() {
-    setStudentNo('');
-    setUsername('');
-    setPassword('');
-    setConfirmPassword('');
-  };
-
   var handleSignUp = function handleSignUp() {
-    if (!studentNo) {
-      alert('Student number is required');
-      return;
-    }
-
-    if (!username) {
-      alert('Username is required');
-      return;
-    }
-
-    if (!password || !confirmPassword) {
-      alert('Password and confirm password is required');
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      alert('Password and confirm password does not match');
-      return;
-    }
-
-    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])('/ajax/portal/signup', {
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])("/ajax/portal/signup", {
       studentNo: studentNo,
       username: username,
       password: password,
@@ -44271,12 +44381,55 @@ var SignUpModal = function SignUpModal(_ref) {
 
       handleClose();
       alert(res.message);
-      clearFields();
+      reset();
     }, function () {
-      return alert('Something went wrong');
+      return alert("Something went wrong");
     });
   };
 
+  var validatePassword = function validatePassword(value, fields) {
+    if (value.length < 8) {
+      return {
+        status: true,
+        message: ""
+      };
+    }
+
+    return {
+      status: false,
+      message: ""
+    };
+  };
+
+  var validateConfirmPassword = function validateConfirmPassword(value, fields) {
+    if (value !== fields.password.value) {
+      return {
+        status: true,
+        message: "Password and confirm password does not match."
+      };
+    }
+
+    return {
+      status: false,
+      message: ""
+    };
+  };
+
+  var _useForm = Object(Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__["default"])(_signupInitialFields__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    password: validatePassword,
+    confirmPassword: validateConfirmPassword
+  }, handleSignUp),
+      _useForm2 = _slicedToArray(_useForm, 5),
+      fields = _useForm2[0],
+      setFieldValue = _useForm2[1],
+      submitForm = _useForm2[2],
+      setFieldValues = _useForm2[3],
+      reset = _useForm2[4];
+
+  var studentNo = fields.studentNo,
+      email = fields.email,
+      password = fields.password,
+      confirmPassword = fields.confirmPassword;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "SignUpModal",
     isActive: isActive,
@@ -44286,38 +44439,91 @@ var SignUpModal = function SignUpModal(_ref) {
   }, "Sign up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "fields"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: 'Student Number',
-    value: studentNo,
-    onChange: function onChange(e) {
-      return setStudentNo(e.target.value);
-    }
+    required: true,
+    name: "studentNo",
+    label: "Student Number",
+    value: studentNo.value,
+    onChange: setFieldValue,
+    error: studentNo.error.status
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: 'Username',
-    value: username,
-    onChange: function onChange(e) {
-      return setUsername(e.target.value);
-    }
+    required: true,
+    label: "Email",
+    name: "email",
+    value: email.value,
+    onChange: setFieldValue,
+    error: email.error.status
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: 'Password',
-    value: password,
-    onChange: function onChange(e) {
-      return setPassword(e.target.value);
-    },
-    type: "password"
+    required: true,
+    label: "Password",
+    name: "password",
+    type: "password",
+    value: password.value,
+    onChange: setFieldValue,
+    error: password.error.status
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: 'Confirm Password',
-    value: confirmPassword,
-    onChange: function onChange(e) {
-      return setConfirmPassword(e.target.value);
-    },
-    type: "password"
+    required: true,
+    label: "Confirm Passowrd",
+    name: "confirmPassword",
+    type: "password",
+    value: confirmPassword.value,
+    onChange: setFieldValue,
+    error: confirmPassword.error.status,
+    errorMessage: confirmPassword.error.message
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: "Sign Up",
-    onClick: handleSignUp
+    onClick: submitForm
   })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SignUpModal);
+
+/***/ }),
+
+/***/ "./resources/js/login-components/signup-modal/signupInitialFields.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/login-components/signup-modal/signupInitialFields.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var signupInitialFields = {
+  studentNo: {
+    value: "",
+    error: {
+      status: false,
+      message: ""
+    },
+    required: true
+  },
+  email: {
+    value: "",
+    error: {
+      status: false,
+      message: ""
+    },
+    required: true,
+    email: true
+  },
+  password: {
+    value: "",
+    error: {
+      status: false,
+      message: ""
+    },
+    required: true
+  },
+  confirmPassword: {
+    value: "",
+    error: {
+      status: false,
+      message: ""
+    },
+    required: true
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (signupInitialFields);
 
 /***/ }),
 
@@ -44386,21 +44592,25 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var App = function App() {
-  // const [isSignUpModalActive, setSignUpModalActive] = useState(false);
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
-      email = _useState2[0],
-      setEmail = _useState2[1];
+      isSignUpModalActive = _useState2[0],
+      setSignUpModalActive = _useState2[1];
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
       _useState4 = _slicedToArray(_useState3, 2),
-      password = _useState4[0],
-      setPassword = _useState4[1];
+      email = _useState4[0],
+      setEmail = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
       _useState6 = _slicedToArray(_useState5, 2),
-      isLoading = _useState6[0],
-      setIsLoading = _useState6[1];
+      password = _useState6[0],
+      setPassword = _useState6[1];
+
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      isLoading = _useState8[0],
+      setIsLoading = _useState8[1];
 
   var handleLogin = function handleLogin() {
     if (!email || !password) {
@@ -44463,7 +44673,18 @@ var App = function App() {
     onClick: handleLogin
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer"
-  }))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: "Sign up",
+    variant: "-tertiary",
+    onClick: function onClick() {
+      return setSignUpModalActive(true);
+    }
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginComponents_signup_modal__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    isActive: isSignUpModalActive,
+    handleClose: function handleClose() {
+      return setSignUpModalActive(false);
+    }
+  }));
 };
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById("App"));

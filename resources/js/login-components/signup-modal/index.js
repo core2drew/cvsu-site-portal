@@ -1,73 +1,111 @@
-import React, { useState } from 'react'
-import { post } from 'Utils'
-import Button from 'Components/button'
-import Modal from 'Components/modal'
-import Input from 'Components/input'
-import './style.scss'
+import React from "react";
+import { post } from "Utils";
+import Button from "Components/button";
+import Modal from "Components/modal";
+import Input from "Components/input";
+import useForm from "Hooks/useForm";
+import signupInitialFields from "./signupInitialFields";
+import "./style.scss";
 
 const SignUpModal = ({ isActive, handleClose }) => {
-  
-  const [studentNo, setStudentNo] = useState('')
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
+    const handleSignUp = () => {
+        post(
+            "/ajax/portal/signup",
+            { studentNo, username, password, confirmPassword },
+            res => {
+                if (res.status > 200) {
+                    alert(res.message);
+                    return;
+                }
+                handleClose();
+                alert(res.message);
+                reset();
+            },
+            () => alert("Something went wrong")
+        );
+    };
 
-  const clearFields = () => {
-    setStudentNo('')
-    setUsername('')
-    setPassword('')
-    setConfirmPassword('')
-  }
-
-  const handleSignUp = () => {
-    if(!studentNo) {
-      alert('Student number is required')
-      return
-    }
-
-    if(!username) {
-      alert('Username is required')
-      return
-    }
-
-    if(!password || !confirmPassword) {
-      alert('Password and confirm password is required')
-      return
-    }
-
-    if(password !== confirmPassword) {
-      alert('Password and confirm password does not match')
-      return 
-    }
-
-    post(
-      '/ajax/portal/signup', 
-      { studentNo, username, password, confirmPassword },
-      res => {
-        if(res.status > 200) {
-          alert(res.message)
-          return
+    const validatePassword = (value, fields) => {
+        if (value.length < 8) {
+            return {
+                status: true,
+                message: ""
+            };
         }
-        handleClose()
-        alert(res.message)
-        clearFields()
-      },
-      () => alert('Something went wrong'),
-    )
-  }
 
-  return (
-    <Modal id="SignUpModal" isActive={isActive} handleClose={handleClose}>
-      <h3 className="section header">Sign up</h3>
-      <div className="fields">
-        <Input label={'Student Number'} value={studentNo} onChange={e => setStudentNo(e.target.value)} />
-        <Input label={'Username'} value={username} onChange={e => setUsername(e.target.value)} />
-        <Input label={'Password'} value={password} onChange={e => setPassword(e.target.value)} type={"password"} />
-        <Input label={'Confirm Password'} value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} type={"password"} />
-        <Button text='Sign Up' onClick={handleSignUp}/>
-      </div>
-    </Modal>
-  )
-}
+        return {
+            status: false,
+            message: ""
+        };
+    };
 
-export default SignUpModal
+    const validateConfirmPassword = (value, fields) => {
+        if (value !== fields.password.value) {
+            return {
+                status: true,
+                message: "Password and confirm password does not match."
+            };
+        }
+        return {
+            status: false,
+            message: ""
+        };
+    };
+
+    const [fields, setFieldValue, submitForm, setFieldValues, reset] = useForm(
+        signupInitialFields,
+        {
+            password: validatePassword,
+            confirmPassword: validateConfirmPassword
+        },
+        handleSignUp
+    );
+
+    const { studentNo, email, password, confirmPassword } = fields;
+
+    return (
+        <Modal id="SignUpModal" isActive={isActive} handleClose={handleClose}>
+            <h3 className="section header">Sign up</h3>
+            <div className="fields">
+                <Input
+                    required
+                    name="studentNo"
+                    label={"Student Number"}
+                    value={studentNo.value}
+                    onChange={setFieldValue}
+                    error={studentNo.error.status}
+                />
+                <Input
+                    required
+                    label={"Email"}
+                    name="email"
+                    value={email.value}
+                    onChange={setFieldValue}
+                    error={email.error.status}
+                />
+                <Input
+                    required
+                    label={"Password"}
+                    name="password"
+                    type="password"
+                    value={password.value}
+                    onChange={setFieldValue}
+                    error={password.error.status}
+                />
+                <Input
+                    required
+                    label={"Confirm Passowrd"}
+                    name="confirmPassword"
+                    type="password"
+                    value={confirmPassword.value}
+                    onChange={setFieldValue}
+                    error={confirmPassword.error.status}
+                    errorMessage={confirmPassword.error.message}
+                />
+                <Button text="Sign Up" onClick={submitForm} />
+            </div>
+        </Modal>
+    );
+};
+
+export default SignUpModal;
