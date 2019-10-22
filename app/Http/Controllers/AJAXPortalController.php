@@ -155,11 +155,11 @@ class AJAXPortalController extends Controller
 
     public function studentSignup(Request $request) {
         $studentNo = $request->get('studentNo');
-        $username = $request->get('username');
+        $email = $request->get('email');
         $password = $request->get('password');
         $firstName = null;
         $lastName = null;
-        $isUsernameExist = $this->checkUsername($username);
+        $isUserEmailExist = $this->checkUserEmail($email);
         $isStudentNoExist = $this->checkStudentNo($studentNo);
         $isVerifiedStudentNo = $this->verifyStudentNo($studentNo);
 
@@ -177,10 +177,10 @@ class AJAXPortalController extends Controller
             ]);
         }
 
-        if($isUsernameExist) {
+        if($isUserEmailExist) {
             return response()->json([
                 'status' => 400,
-                'message' => 'Username already exists. Please change it and try again.'
+                'message' => 'Email already exists. Please change it and try again.'
             ]);
         }
 
@@ -192,7 +192,7 @@ class AJAXPortalController extends Controller
         $response = DB::table('users')
         ->insert([
             'student_no' => $studentNo,
-            'username' => $username,
+            'email' => $email,
             'password' => Crypt::encrypt($password),
             'first_name' => $firstName,
             'type' => 'student',
@@ -298,6 +298,14 @@ class AJAXPortalController extends Controller
         $response = DB::table('studentinfo')
                     ->where('StudentNumber', '=', $studentNo)
                     ->first();
+        return $response;
+    }
+
+    private function checkUserEmail($email) {
+        $response = DB::table('users')
+                ->whereNull('users.deleted_at')
+                ->where('email', '=', $email)
+                ->first();
         return $response;
     }
 

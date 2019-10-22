@@ -11,7 +11,11 @@ const SignUpModal = ({ isActive, handleClose }) => {
     const handleSignUp = () => {
         post(
             "/ajax/portal/signup",
-            { studentNo, username, password, confirmPassword },
+            {
+                studentNo: studentNo.value,
+                email: email.value,
+                password: password.value
+            },
             res => {
                 if (res.status > 200) {
                     alert(res.message);
@@ -64,7 +68,14 @@ const SignUpModal = ({ isActive, handleClose }) => {
     const { studentNo, email, password, confirmPassword } = fields;
 
     return (
-        <Modal id="SignUpModal" isActive={isActive} handleClose={handleClose}>
+        <Modal
+            id="SignUpModal"
+            isActive={isActive}
+            handleClose={() => {
+                handleClose();
+                reset();
+            }}
+        >
             <h3 className="section header">Sign up</h3>
             <div className="fields">
                 <Input

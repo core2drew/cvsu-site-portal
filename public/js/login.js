@@ -44365,21 +44365,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var SignUpModal = function SignUpModal(_ref) {
   var isActive = _ref.isActive,
-      handleClose = _ref.handleClose;
+      _handleClose = _ref.handleClose;
 
   var handleSignUp = function handleSignUp() {
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])("/ajax/portal/signup", {
-      studentNo: studentNo,
-      username: username,
-      password: password,
-      confirmPassword: confirmPassword
+      studentNo: studentNo.value,
+      email: email.value,
+      password: password.value
     }, function (res) {
       if (res.status > 200) {
         alert(res.message);
         return;
       }
 
-      handleClose();
+      _handleClose();
+
       alert(res.message);
       reset();
     }, function () {
@@ -44433,7 +44433,11 @@ var SignUpModal = function SignUpModal(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "SignUpModal",
     isActive: isActive,
-    handleClose: handleClose
+    handleClose: function handleClose() {
+      _handleClose();
+
+      reset();
+    }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "section header"
   }, "Sign up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
