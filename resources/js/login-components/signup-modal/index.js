@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { post } from "Utils";
 import Button from "Components/button";
 import Modal from "Components/modal";
 import Input from "Components/input";
 import useForm from "Hooks/useForm";
+import Preloader from "Components/preloader";
 import signupInitialFields from "./signupInitialFields";
 import "./style.scss";
 
 const SignUpModal = ({ isActive, handleClose }) => {
+    const [isLoading, setIsLoading] = useState(false);
     const handleSignUp = () => {
+        setIsLoading(true);
         post(
             "/ajax/portal/signup",
             {
@@ -17,6 +20,7 @@ const SignUpModal = ({ isActive, handleClose }) => {
                 password: password.value
             },
             res => {
+                setIsLoading(false);
                 if (res.status > 200) {
                     alert(res.message);
                     return;
@@ -76,6 +80,7 @@ const SignUpModal = ({ isActive, handleClose }) => {
                 reset();
             }}
         >
+            <Preloader isActive={isLoading} variant={"fixed"} />
             <h3 className="section header">Sign up</h3>
             <div className="fields">
                 <Input

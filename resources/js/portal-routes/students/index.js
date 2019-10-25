@@ -253,7 +253,7 @@ const Students = props => {
                     <Table
                         headers={tableHeaders}
                         hasFilter={true}
-                        hasAdd={true}
+                        hasAdd={false}
                         addText={"Invite Student"}
                         handleAdd={handleOpenInviteStudentModal}
                         filterSearchBy={[

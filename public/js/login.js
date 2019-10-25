@@ -44343,9 +44343,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
 /* harmony import */ var Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Hooks/useForm */ "./resources/js/hooks/useForm.js");
-/* harmony import */ var _signupInitialFields__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./signupInitialFields */ "./resources/js/login-components/signup-modal/signupInitialFields.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "./resources/js/login-components/signup-modal/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var _signupInitialFields__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./signupInitialFields */ "./resources/js/login-components/signup-modal/signupInitialFields.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.scss */ "./resources/js/login-components/signup-modal/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_8__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -44363,16 +44364,25 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var SignUpModal = function SignUpModal(_ref) {
   var isActive = _ref.isActive,
       _handleClose = _ref.handleClose;
 
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isLoading = _useState2[0],
+      setIsLoading = _useState2[1];
+
   var handleSignUp = function handleSignUp() {
+    setIsLoading(true);
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])("/ajax/portal/signup", {
       studentNo: studentNo.value,
       email: email.value,
       password: password.value
     }, function (res) {
+      setIsLoading(false);
+
       if (res.status > 200) {
         alert(res.message);
         return;
@@ -44415,7 +44425,7 @@ var SignUpModal = function SignUpModal(_ref) {
     };
   };
 
-  var _useForm = Object(Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__["default"])(_signupInitialFields__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  var _useForm = Object(Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__["default"])(_signupInitialFields__WEBPACK_IMPORTED_MODULE_7__["default"], {
     password: validatePassword,
     confirmPassword: validateConfirmPassword
   }, handleSignUp),
@@ -44438,7 +44448,10 @@ var SignUpModal = function SignUpModal(_ref) {
 
       reset();
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    isActive: isLoading,
+    variant: "fixed"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "section header"
   }, "Sign up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "fields"

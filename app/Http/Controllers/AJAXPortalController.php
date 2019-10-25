@@ -9,6 +9,7 @@ use Illuminate\Contracts\Encryption\DecryptException;
 use Session;
 use Log;
 use Crypt;
+use Mail;
 
 class AJAXPortalController extends Controller
 {
@@ -195,6 +196,7 @@ class AJAXPortalController extends Controller
             'email' => $email,
             'password' => Crypt::encrypt($password),
             'first_name' => $firstName,
+            'is_await' => 1,
             'type' => 'student',
             'last_name' => $lastName,
             'created_at' => $created_at,
@@ -202,6 +204,15 @@ class AJAXPortalController extends Controller
         ]);
 
         if($response) {
+            $user = DB::table('users')
+            ->where('email', '=', $email)
+            ->whereNull('users.deleted_at')
+            ->first();
+
+            $userDetails['id'] = $user->id;
+            $token = Crypt::encrypt($userDetails);
+            $this->sendConfirmation($email, $studentNo, $token);
+
             return response()->json([
                 'status' => 200,
                 'message' => 'You have been successfully registered!'
@@ -313,15 +324,12 @@ class AJAXPortalController extends Controller
         try {
             $token = $request->get('token');
             $data = Crypt::decrypt($token);
-            Log::info(json_encode($data));
             $userId = $data['id'];
-            Log::info($userId);
             $response = DB::table('users')
             ->where('id', '=', $userId)
             ->where('is_await', '=', 1)
             ->whereNull('users.deleted_at')
             ->first();
-            Log::info(json_encode($response));
             if($response) {
                 return response()->json($data);
             }
@@ -350,5 +358,32 @@ class AJAXPortalController extends Controller
             ]);
         }
         return abort(500);
+    }
+
+    public function confirmAccount(Request $request) {
+        $id = $request->get('id');
+        $response = DB::table('users')
+        ->where('id', '=', $id)
+        ->update([
+            'is_await' => 0,
+            'updated_at' =>  now()
+        ]);
+        if($response) {
+            return response()->json([
+                'status' => 200
+            ]);
+        }
+        return abort(500);
+    }
+
+    private function sendConfirmation($email, $fullName, $token) {
+        $fullName = strtolower($fullName);
+        $fullName = ucwords($fullName);
+        $link = config('app.url').'/confirm-account?token='.$token;
+        return Mail::send('email-template.confirmation', compact('fullName', 'link') , function ($msg) use($email) {
+            $msg->subject('CvSU-CC Portal Confirmation');
+            $msg->from('info@cvsu-cc.com', 'CvSU-CC Info Portal (Do not reply)');
+            $msg->to($email);
+        });
     }
 }

@@ -79947,6 +79947,47 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/site-components/confirmation/index.js":
+/*!************************************************************!*\
+  !*** ./resources/js/site-components/confirmation/index.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+
+
+
+var Confirmation = function Confirmation(_ref) {
+  var id = _ref.id;
+  var url = "/ajax/portal/confirm-account";
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    console.log(id);
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      id: id
+    });
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Confirmation"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "title"
+  }, "Your account has been activated."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/auth/login"
+  }, "Click here to login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "message"
+  }, "If you have question please contact the administrator.")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Confirmation);
+
+/***/ }),
+
 /***/ "./resources/js/site-components/course-offered/index.js":
 /*!**************************************************************!*\
   !*** ./resources/js/site-components/course-offered/index.js ***!
@@ -80949,6 +80990,104 @@ var AnnouncementsPage = function AnnouncementsPage() {
 
 /***/ }),
 
+/***/ "./resources/js/site-routes/confirmation.js":
+/*!**************************************************!*\
+  !*** ./resources/js/site-routes/confirmation.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var SiteComponents_confirmation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! SiteComponents/confirmation */ "./resources/js/site-components/confirmation/index.js");
+/* harmony import */ var SiteComponents_error_message__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/error-message */ "./resources/js/site-components/error-message/index.js");
+/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+var ConfirmationPage = function ConfirmationPage(_ref) {
+  var location = _ref.location;
+  var query = new URLSearchParams(location.search);
+  var token = query.get("token");
+  var url = "/ajax/portal/verify/token";
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
+      _useState2 = _slicedToArray(_useState, 2),
+      isValid = _useState2[0],
+      setIsValid = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      userInfo = _useState4[0],
+      setUserInfo = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
+      _useState6 = _slicedToArray(_useState5, 2),
+      isLoading = _useState6[0],
+      setIsLoading = _useState6[1];
+
+  var verifyToken = function verifyToken() {
+    if (!token) {
+      return window.location.replace("/");
+    }
+
+    Object(Utils__WEBPACK_IMPORTED_MODULE_4__["get"])(url, {
+      token: token
+    }, function (res) {
+      setIsValid(true);
+      setIsLoading(false);
+      setUserInfo(res);
+    }, function () {
+      setIsLoading(false);
+    });
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    verifyToken();
+  }, []);
+
+  var render = function render() {
+    if (isLoading || !userInfo) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        isActive: isLoading,
+        variant: "fixed"
+      });
+    }
+
+    if (!isLoading && !isValid) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_error_message__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        title: "Oops, Your access has been denied."
+      });
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_confirmation__WEBPACK_IMPORTED_MODULE_1__["default"], userInfo);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Confirmation"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container grid"
+  }, render()));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ConfirmationPage);
+
+/***/ }),
+
 /***/ "./resources/js/site-routes/contactus.js":
 /*!***********************************************!*\
   !*** ./resources/js/site-routes/contactus.js ***!
@@ -81135,6 +81274,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! Components/footer */ "./resources/js/components/footer/index.js");
 /* harmony import */ var SiteRoutes_activate__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! SiteRoutes/activate */ "./resources/js/site-routes/activate.js");
 /* harmony import */ var SiteRoutes_announcements__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! SiteRoutes/announcements */ "./resources/js/site-routes/announcements.js");
+/* harmony import */ var SiteRoutes_confirmation__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! SiteRoutes/confirmation */ "./resources/js/site-routes/confirmation.js");
+
 
 
 
@@ -81168,6 +81309,9 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/activate",
     component: SiteRoutes_activate__WEBPACK_IMPORTED_MODULE_11__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/confirm-account",
+    component: SiteRoutes_confirmation__WEBPACK_IMPORTED_MODULE_13__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
     from: "/admission",
     exact: true,

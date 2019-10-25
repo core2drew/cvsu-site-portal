@@ -14,7 +14,7 @@ Route::get('/{route?}/{admission?}', [
     "as" => "site",
     "uses" => "SiteController@index"
 ])->where([
-    'route' => '(about|admission|facilities|contact-us|activate|announcements)',
+    'route' => '(about|admission|facilities|contact-us|activate|announcements|confirm-account)',
     'admission' => '(requirements|retention-policies|course-offered)'
 ]);
 
@@ -68,6 +68,12 @@ Route::group([
         Route::post('/activate-account', [
             "as" => "ajax.portal.activate.account",
             "uses" => "AJAXPortalController@activateAccount",
+        ]);
+
+        // Confirm Account
+        Route::post('/confirm-account', [
+            "as" => "ajax.portal.confirm.account",
+            "uses" => "AJAXPortalController@confirmAccount"
         ]);
 
         // User

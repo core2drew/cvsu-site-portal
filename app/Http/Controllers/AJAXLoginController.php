@@ -25,6 +25,7 @@ class AJAXLoginController extends Controller
         if($formPassword === $password) {
           $user = DB::table('users')
           ->whereNull('users.deleted_at')
+          ->where('is_await', "!=", 1)
           ->select("id", "email", "student_no", "type", "profile_image", "first_name", "last_name", 'is_admin')
           ->where('id', '=', $response->id)
           ->first();

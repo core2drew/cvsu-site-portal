@@ -16,6 +16,7 @@ import MainNav from "Components/main-nav";
 import Footer from "Components/footer";
 import Activate from "SiteRoutes/activate";
 import AnnouncementsPage from "SiteRoutes/announcements";
+import Confirmation from "SiteRoutes/confirmation";
 
 const App = () => (
     <Router>
@@ -25,10 +26,10 @@ const App = () => (
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/about" component={About} />
-
                 <Route path="/facilities" component={Facilities} />
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/activate" component={Activate} />
+                <Route path="/confirm-account" component={Confirmation} />
                 <Redirect
                     from="/admission"
                     exact
