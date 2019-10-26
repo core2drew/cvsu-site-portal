@@ -79902,12 +79902,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var AVP = function AVP() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "AVP"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    id: "AVP",
+    className: "section"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "section header"
   }, "CvSU 2018 - AVP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
     width: "100%",
-    height: "480",
+    height: "250",
     src: "videos/AVP2018.mp4",
     frameBorder: "0",
     allow: "encrypted-media",
@@ -80801,9 +80802,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var SiteComponents_history__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! SiteComponents/history */ "./resources/js/site-components/history/index.js");
 /* harmony import */ var SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
 /* harmony import */ var SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/hymn */ "./resources/js/site-components/hymn/index.js");
-/* harmony import */ var SiteComponents_avp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/avp */ "./resources/js/site-components/avp/index.js");
-/* harmony import */ var SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! SiteComponents/sidelinks */ "./resources/js/site-components/sidelinks/index.js");
-
+/* harmony import */ var SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/sidelinks */ "./resources/js/site-components/sidelinks/index.js");
 
 
 
@@ -80817,7 +80816,7 @@ var About = function About() {
     className: "container grid"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grid-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_avp__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -81231,6 +81230,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var SiteComponents_dean_message__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/dean-message */ "./resources/js/site-components/dean-message/index.js");
 /* harmony import */ var SiteComponents_academic_calendar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/academic-calendar */ "./resources/js/site-components/academic-calendar/index.js");
 /* harmony import */ var SiteComponents_announcements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/announcements */ "./resources/js/site-components/announcements/index.js");
+/* harmony import */ var SiteComponents_avp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! SiteComponents/avp */ "./resources/js/site-components/avp/index.js");
+
 
 
 
@@ -81242,10 +81243,10 @@ var Home = function Home() {
     id: "Home"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hero__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_dean_message__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_academic_calendar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_announcements__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_dean_message__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_announcements__WEBPACK_IMPORTED_MODULE_4__["default"], {
     limit: 3,
     title: "Latest Announcements"
-  })));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_avp__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_academic_calendar__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
