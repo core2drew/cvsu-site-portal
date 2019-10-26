@@ -79906,14 +79906,16 @@ var AVP = function AVP() {
     className: "section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "section header"
-  }, "CvSU 2018 - AVP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+  }, "CvSU 2018 - AVP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
     width: "100%",
     height: "250",
+    controls: true,
+    preload: "none",
+    poster: "/images/avp_poster.jpg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
     src: "videos/AVP2018.mp4",
-    frameBorder: "0",
-    allow: "encrypted-media",
-    allowFullScreen: true
-  }));
+    type: "video/mp4"
+  }), "Your browser does not support the video tag."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AVP);

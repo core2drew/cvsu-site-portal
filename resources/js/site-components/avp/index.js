@@ -4,14 +4,16 @@ const AVP = () => {
     return (
         <div id="AVP" className="section">
             <p className="section header">CvSU 2018 - AVP</p>
-            <iframe
+            <video
                 width="100%"
                 height="250"
-                src="videos/AVP2018.mp4"
-                frameBorder="0"
-                allow="encrypted-media"
-                allowFullScreen
-            ></iframe>
+                controls
+                preload="none"
+                poster="/images/avp_poster.jpg"
+            >
+                <source src="videos/AVP2018.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
         </div>
     );
 };

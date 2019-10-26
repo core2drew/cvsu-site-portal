@@ -107,6 +107,7 @@ const SignUpModal = ({ isActive, handleClose }) => {
                     value={password.value}
                     onChange={setFieldValue}
                     error={password.error.status}
+                    footNote="Minimum 8 characters."
                 />
                 <Input
                     required

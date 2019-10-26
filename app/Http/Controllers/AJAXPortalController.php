@@ -246,7 +246,7 @@ class AJAXPortalController extends Controller
             ->select('Schoolyear')
             ->where('StudentNumber', '=', $studentNo)
             ->groupBy('Schoolyear')
-            ->orderBy('Schoolyear', 'asc')
+            ->orderBy('Schoolyear', 'desc')
             ->get();
 
         foreach($schoolYears as $schoolYear) {
