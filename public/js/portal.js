@@ -78926,6 +78926,7 @@ var Input = function Input(props) {
   }, props.label && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "label"
   }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    disabled: props.disabled,
     type: props.type,
     placeholder: props.placeholder,
     onChange: function onChange(e) {
@@ -78950,7 +78951,8 @@ Input.defaultProps = {
   placeholder: "",
   value: "",
   type: "text",
-  label: ""
+  label: "",
+  disabled: false
 };
 /* harmony default export */ __webpack_exports__["default"] = (Input);
 
@@ -80062,6 +80064,7 @@ var AccountModal = function AccountModal(_ref) {
   }, "Account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "fields"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    disabled: true,
     label: "Email",
     name: "email",
     value: email.value,
@@ -80069,9 +80072,6 @@ var AccountModal = function AccountModal(_ref) {
     required: true,
     error: email.error.status,
     errorMessage: email.error.message
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    text: "Update Email",
-    onClick: submitAccountForm
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "fields change-password"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Change Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -82627,14 +82627,8 @@ var TableBody = function TableBody(_ref) {
     }, d.student_no), isAwait && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_pill__WEBPACK_IMPORTED_MODULE_5__["default"], null, "Awaiting invite response")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      variant: "update",
-      text: isAwait ? "Resend" : "Update",
-      onClick: function onClick() {
-        return isAwait ? handleResendInvitation(d.student_no, d.email, d.id) : handleOpenModal(d.id);
-      }
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: "delete -danger",
-      text: isAwait ? "Revoke" : "Delete",
+      text: "Delete",
       onClick: function onClick() {
         return handleDelete(d.id);
       }

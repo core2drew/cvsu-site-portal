@@ -43965,6 +43965,7 @@ var Input = function Input(props) {
   }, props.label && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "label"
   }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    disabled: props.disabled,
     type: props.type,
     placeholder: props.placeholder,
     onChange: function onChange(e) {
@@ -43989,7 +43990,8 @@ Input.defaultProps = {
   placeholder: "",
   value: "",
   type: "text",
-  label: ""
+  label: "",
+  disabled: false
 };
 /* harmony default export */ __webpack_exports__["default"] = (Input);
 

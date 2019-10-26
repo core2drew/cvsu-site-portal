@@ -34,7 +34,7 @@ const TableBody = ({ data }) => {
                         <td>{d.first_name}</td>
                         <td>{d.last_name}</td>
                         <td className="actions">
-                            <Button
+                            {/* <Button
                                 variant={"update"}
                                 text={isAwait ? "Resend" : "Update"}
                                 onClick={() =>
@@ -46,10 +46,10 @@ const TableBody = ({ data }) => {
                                           )
                                         : handleOpenModal(d.id)
                                 }
-                            />
+                            /> */}
                             <Button
                                 variant={"delete -danger"}
-                                text={isAwait ? "Revoke" : "Delete"}
+                                text={"Delete"}
                                 onClick={() => handleDelete(d.id)}
                             />
                         </td>
