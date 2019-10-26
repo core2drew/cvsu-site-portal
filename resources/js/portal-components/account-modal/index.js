@@ -101,6 +101,7 @@ const AccountModal = ({ isActive, handleClose }) => {
             <h3 className="section header">Account</h3>
             <div className="fields">
                 <Input
+                    disabled={true}
                     label={"Email"}
                     name="email"
                     value={email.value}
@@ -109,7 +110,7 @@ const AccountModal = ({ isActive, handleClose }) => {
                     error={email.error.status}
                     errorMessage={email.error.message}
                 />
-                <Button text={"Update Email"} onClick={submitAccountForm} />
+                {/* <Button text={"Update Email"} onClick={submitAccountForm} /> */}
             </div>
             <div className="fields change-password">
                 <strong>Change Password</strong>
