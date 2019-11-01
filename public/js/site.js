@@ -840,6 +840,25 @@ exports.push([module.i, "#AVP > video {\n  width: 100%;\n}", ""]);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/core-values/style.scss":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/site-components/core-values/style.scss ***!
+  \****************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#CoreValues > .values {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: space-evenly;\n  -webkit-justify-content: space-evenly;\n     -moz-box-pack: space-evenly;\n      -ms-flex-pack: space-evenly;\n          justify-content: space-evenly;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/dean-message/style.scss":
 /*!*****************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/site-components/dean-message/style.scss ***!
@@ -79071,11 +79090,11 @@ var TopNav = function TopNav(props) {
     className: "breaker"
   }, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "detail"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Telephone No.:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "+63 (46) 481-1990")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Telephone No.:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "+63 431-3570")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "breaker"
   }, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "detail"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "info@cvsu-cc.com")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "cvsuccc@yahoo.com")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     id: "Portal",
     onClick: function onClick() {
       return window.location.href = "/portal";
@@ -79993,6 +80012,66 @@ var Confirmation = function Confirmation(_ref) {
 
 /***/ }),
 
+/***/ "./resources/js/site-components/core-values/index.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/site-components/core-values/index.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/core-values/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var CoreValues = function CoreValues() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "CoreValues"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "section header"
+  }, "Core Values"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "values"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Truth"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Excellence"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Service")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CoreValues);
+
+/***/ }),
+
+/***/ "./resources/js/site-components/core-values/style.scss":
+/*!*************************************************************!*\
+  !*** ./resources/js/site-components/core-values/style.scss ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/site-components/core-values/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/site-components/course-offered/index.js":
 /*!**************************************************************!*\
   !*** ./resources/js/site-components/course-offered/index.js ***!
@@ -80805,6 +80884,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! SiteComponents/mission-vision */ "./resources/js/site-components/mission-vision/index.js");
 /* harmony import */ var SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! SiteComponents/hymn */ "./resources/js/site-components/hymn/index.js");
 /* harmony import */ var SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! SiteComponents/sidelinks */ "./resources/js/site-components/sidelinks/index.js");
+/* harmony import */ var SiteComponents_core_values__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! SiteComponents/core-values */ "./resources/js/site-components/core-values/index.js");
+
 
 
 
@@ -80818,7 +80899,7 @@ var About = function About() {
     className: "container grid"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grid-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_core_values__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
