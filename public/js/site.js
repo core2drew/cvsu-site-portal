@@ -72883,7 +72883,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81225,11 +81225,11 @@ var ContactUs = function ContactUs() {
     className: "detail"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
     icon: "close-envelope"
-  }), "info@cvsu-cc.com"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), "cvsuccc@yahoo.com"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "detail"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
     icon: "phone"
-  }), "+63 (46) 481-1990")))));
+  }), "+63 431-3570")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ContactUs);
