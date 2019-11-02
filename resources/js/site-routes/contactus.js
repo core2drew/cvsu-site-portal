@@ -29,11 +29,11 @@ const ContactUs = () => (
                     </div>
                     <div className="detail">
                         <Icon icon={"close-envelope"} />
-                        info@cvsu-cc.com
+                        cvsuccc@yahoo.com
                     </div>
                     <div className="detail">
                         <Icon icon={"phone"} />
-                        +63 (46) 481-1990
+                        +63 431-3570
                     </div>
                 </div>
                 {/* <div className="contact-form">
