@@ -72902,7 +72902,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80772,15 +80772,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Reducers_academic_calendar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Reducers/academic-calendar */ "./resources/js/reducers/academic-calendar.js");
 /* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/academic-calendar/form-modal.js");
 /* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/academic-calendar/tablebody.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/academic-calendar/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var Context_table__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! Context/table */ "./resources/js/contexts/table.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/academic-calendar/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_11__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -80807,7 +80809,10 @@ var AcademicCalendar = function AcademicCalendar() {
     Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])(url, {}, function (res) {
       dispatch({
         type: "SUCCESS_FETCH",
-        data: res.data
+        data: res.data,
+        currentPage: res.current_page,
+        nextPageUrl: res.next_page_url,
+        prevPageUrl: res.prev_page_url
       });
     }, function () {
       dispatch({
@@ -80841,7 +80846,10 @@ var AcademicCalendar = function AcademicCalendar() {
     }, function (res) {
       return dispatch({
         type: "SUCCESS_SAVE",
-        data: res.data
+        data: res.data,
+        currentPage: res.current_page,
+        nextPageUrl: res.next_page_url,
+        prevPageUrl: res.prev_page_url
       });
     }, function () {
       dispatch({
@@ -80860,7 +80868,10 @@ var AcademicCalendar = function AcademicCalendar() {
     }, function (res) {
       return dispatch({
         type: "SUCCESS_DELETE",
-        data: res.data
+        data: res.data,
+        currentPage: res.current_page,
+        nextPageUrl: res.next_page_url,
+        prevPageUrl: res.prev_page_url
       });
     }, function () {
       dispatch({
@@ -80884,7 +80895,10 @@ var AcademicCalendar = function AcademicCalendar() {
     }, function (res) {
       return dispatch({
         type: "SUCCESS_UPDATE",
-        data: res.data
+        data: res.data,
+        currentPage: res.current_page,
+        nextPageUrl: res.next_page_url,
+        prevPageUrl: res.prev_page_url
       });
     }, function () {
       dispatch({
@@ -80892,6 +80906,30 @@ var AcademicCalendar = function AcademicCalendar() {
       });
       alert("Something went wrong. Please try again");
     }, "PATCH");
+  };
+
+  var handleChangePage = function handleChangePage(action, searchBy, search, currentPage) {
+    dispatch({
+      type: "FETCHING"
+    });
+    console.log(currentPage);
+    var page = action === "next" ? ++currentPage : --currentPage;
+    Object(Utils__WEBPACK_IMPORTED_MODULE_2__["get"])(url, {
+      page: page
+    }, function (res) {
+      dispatch({
+        type: "SUCCESS_FETCH",
+        data: res.data,
+        currentPage: res.current_page,
+        nextPageUrl: res.next_page_url,
+        prevPageUrl: res.prev_page_url
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_FETCH"
+      });
+      alert("Something went wrong. Please try again");
+    });
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_academic_calendar__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
@@ -80903,6 +80941,11 @@ var AcademicCalendar = function AcademicCalendar() {
       handleAdd: handleAdd,
       handleOpenModal: handleOpenModal,
       handleUpdate: handleUpdate
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_table__WEBPACK_IMPORTED_MODULE_10__["default"].Provider, {
+    value: {
+      handleChangePage: handleChangePage,
+      state: state
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "AcademicCalendar"
@@ -80919,8 +80962,9 @@ var AcademicCalendar = function AcademicCalendar() {
     addText: "Add New Activity",
     handleAdd: function handleAdd() {
       return handleOpenModal();
-    }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
+    },
+    hasPagination: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_8__["default"], null))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AcademicCalendar);
@@ -83208,60 +83252,72 @@ var initialState = {
   isLoading: true,
   isModalActive: false,
   isUpdateModal: false,
-  modalHeaderTitle: 'New Activity',
+  modalHeaderTitle: "New Activity",
   data: [],
-  selectedId: null
+  selectedId: null,
+  nextPageUrl: null,
+  prevPageUrl: null,
+  currentPage: null
 };
 
 var reducer = function reducer(state, action) {
   switch (action.type) {
-    case 'FETCHING':
-    case 'SAVING':
-    case 'UPDATING':
-    case 'DELETING':
+    case "FETCHING":
+    case "SAVING":
+    case "UPDATING":
+    case "DELETING":
       return _objectSpread({}, state, {
         isLoading: true,
-        isModalActive: false
+        isModalActive: false,
+        nextPageUrl: action.nextPageUrl,
+        prevPageUrl: action.prevPageUrl,
+        currentPage: action.currentPage
       });
 
-    case 'SUCCESS_FETCH':
-    case 'SUCCESS_SAVE':
-    case 'SUCCESS_UPDATE':
-    case 'SUCCESS_DELETE':
+    case "SUCCESS_FETCH":
+    case "SUCCESS_SAVE":
+    case "SUCCESS_UPDATE":
+    case "SUCCESS_DELETE":
       return _objectSpread({}, state, {
         isLoading: false,
         isUpdateModal: false,
-        data: action.data
+        data: action.data,
+        nextPageUrl: action.nextPageUrl,
+        prevPageUrl: action.prevPageUrl,
+        currentPage: action.currentPage
       });
 
-    case 'ERROR_SAVE':
-    case 'ERROR_FETCH':
-    case 'ERROR_UPDATE':
-    case 'ERROR_DELETE':
+    case "ERROR_SAVE":
+    case "ERROR_FETCH":
+    case "ERROR_UPDATE":
+    case "ERROR_DELETE":
       return _objectSpread({}, state, {
         isLoading: false,
-        isUpdateModal: false
+        isUpdateModal: false,
+        nextPageUrl: action.nextPageUrl,
+        prevPageUrl: action.prevPageUrl,
+        currentPage: action.currentPage
       });
 
-    case 'OPEN_MODAL':
+    case "OPEN_MODAL":
       return _objectSpread({}, state, {
         isModalActive: true,
         isUpdateModal: false,
-        modalHeaderTitle: 'New Activity',
+        modalHeaderTitle: "New Activity",
         selectedId: null
       });
 
-    case 'CLOSE_MODAL':
+    case "CLOSE_MODAL":
       return _objectSpread({}, state, {
         isModalActive: false,
         isUpdateModal: false
       });
 
-    case 'OPEN_UPDATE_MODAL':
+    case "OPEN_UPDATE_MODAL":
       return _objectSpread({}, state, {
         isModalActive: true,
         isUpdateModal: true,
-        modalHeaderTitle: 'Update Activity',
+        modalHeaderTitle: "Update Activity",
         selectedId: action.id
       });
 

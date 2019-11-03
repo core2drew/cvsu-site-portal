@@ -8,6 +8,7 @@ import Context from "Context/academic-calendar";
 import Reducer, { initialState } from "Reducers/academic-calendar";
 import FormModal from "./form-modal";
 import TableBody from "./tablebody";
+import TableContext from "Context/table";
 import "./style.scss";
 
 const AcademicCalendar = () => {
@@ -26,7 +27,13 @@ const AcademicCalendar = () => {
             url,
             {},
             res => {
-                dispatch({ type: "SUCCESS_FETCH", data: res.data });
+                dispatch({
+                    type: "SUCCESS_FETCH",
+                    data: res.data,
+                    currentPage: res.current_page,
+                    nextPageUrl: res.next_page_url,
+                    prevPageUrl: res.prev_page_url
+                });
             },
             () => {
                 dispatch({ type: "ERROR_FETCH" });
@@ -52,7 +59,14 @@ const AcademicCalendar = () => {
                 from: moment(startDate).format("YYYY-MM-DD"),
                 to: moment(endDate).format("YYYY-MM-DD")
             },
-            res => dispatch({ type: "SUCCESS_SAVE", data: res.data }),
+            res =>
+                dispatch({
+                    type: "SUCCESS_SAVE",
+                    data: res.data,
+                    currentPage: res.current_page,
+                    nextPageUrl: res.next_page_url,
+                    prevPageUrl: res.prev_page_url
+                }),
             () => {
                 dispatch({ type: "ERROR_SAVE" });
                 alert("Something went wrong. Please try again");
@@ -67,7 +81,15 @@ const AcademicCalendar = () => {
             {
                 id
             },
-            res => dispatch({ type: "SUCCESS_DELETE", data: res.data }),
+
+            res =>
+                dispatch({
+                    type: "SUCCESS_DELETE",
+                    data: res.data,
+                    currentPage: res.current_page,
+                    nextPageUrl: res.next_page_url,
+                    prevPageUrl: res.prev_page_url
+                }),
             () => {
                 dispatch({ type: "ERROR_DELETE" });
                 alert("Something went wrong. Please try again");
@@ -83,12 +105,42 @@ const AcademicCalendar = () => {
         post(
             url,
             { id, activity, from, to },
-            res => dispatch({ type: "SUCCESS_UPDATE", data: res.data }),
+            res =>
+                dispatch({
+                    type: "SUCCESS_UPDATE",
+                    data: res.data,
+                    currentPage: res.current_page,
+                    nextPageUrl: res.next_page_url,
+                    prevPageUrl: res.prev_page_url
+                }),
             () => {
                 dispatch({ type: "ERROR_UPDATE" });
                 alert("Something went wrong. Please try again");
             },
             "PATCH"
+        );
+    };
+
+    const handleChangePage = (action, searchBy, search, currentPage) => {
+        dispatch({ type: "FETCHING" });
+        console.log(currentPage);
+        let page = action === "next" ? ++currentPage : --currentPage;
+        get(
+            url,
+            { page },
+            res => {
+                dispatch({
+                    type: "SUCCESS_FETCH",
+                    data: res.data,
+                    currentPage: res.current_page,
+                    nextPageUrl: res.next_page_url,
+                    prevPageUrl: res.prev_page_url
+                });
+            },
+            () => {
+                dispatch({ type: "ERROR_FETCH" });
+                alert("Something went wrong. Please try again");
+            }
         );
     };
 
@@ -104,18 +156,21 @@ const AcademicCalendar = () => {
                 handleUpdate
             }}
         >
-            <div id="AcademicCalendar">
-                <Preloader variant={"fixed"} isActive={state.isLoading} />
-                <Table
-                    headers={tableHeaders}
-                    hasData={!!state.data.length}
-                    customTableBody={<TableBody data={state.data} />}
-                    hasAdd={true}
-                    addText={"Add New Activity"}
-                    handleAdd={() => handleOpenModal()}
-                />
-                <FormModal />
-            </div>
+            <TableContext.Provider value={{ handleChangePage, state }}>
+                <div id="AcademicCalendar">
+                    <Preloader variant={"fixed"} isActive={state.isLoading} />
+                    <Table
+                        headers={tableHeaders}
+                        hasData={!!state.data.length}
+                        customTableBody={<TableBody data={state.data} />}
+                        hasAdd={true}
+                        addText={"Add New Activity"}
+                        handleAdd={() => handleOpenModal()}
+                        hasPagination={true}
+                    />
+                    <FormModal />
+                </div>
+            </TableContext.Provider>
         </Context.Provider>
     );
 };
