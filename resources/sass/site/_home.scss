@@ -6,7 +6,6 @@
         margin-top: 20px;
         margin-bottom: 20px;
         grid-template-columns: 750px auto;
-        grid-template-rows: repeat(10, 70px);
         grid-column-gap: 20px;
     }
 }
@@ -19,23 +18,12 @@
     }
 }
 
-#Home > .grid.container > #DeanMessage {
+#Home > .grid.container > .main {
     grid-row-start: 1;
     grid-column-start: 1;
 }
 
-#Home > .grid.container > #Announcements {
-    grid-row-start: 7;
-    grid-column: span 1;
-    grid-row-end: none;
-}
-
-#Home > .grid.container > #AVP {
+#Home > .grid.container > .sidebar {
     grid-row-start: 1;
-    grid-column-start: 2;
-}
-
-#Home > .grid.container > #AcademicCalendar {
-    grid-row-start: 5;
     grid-column-start: 2;
 }

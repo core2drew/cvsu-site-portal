@@ -111,7 +111,7 @@ const SignUpModal = ({ isActive, handleClose }) => {
                 />
                 <Input
                     required
-                    label={"Confirm Passowrd"}
+                    label={"Confirm Password"}
                     name="confirmPassword"
                     type="password"
                     value={confirmPassword.value}

@@ -44482,7 +44482,7 @@ var SignUpModal = function SignUpModal(_ref) {
     footNote: "Minimum 8 characters."
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     required: true,
-    label: "Confirm Passowrd",
+    label: "Confirm Password",
     name: "confirmPassword",
     type: "password",
     value: confirmPassword.value,
