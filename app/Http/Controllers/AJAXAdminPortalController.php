@@ -273,6 +273,7 @@ class AJAXAdminPortalController extends Controller
     }
 
     public function deleteUser(Request $request) {
+        $currentUser = Session::get('user');
         $id = $request->get('id');
         $response = DB::table('users')
         ->where('id', '=', $id)
@@ -280,6 +281,8 @@ class AJAXAdminPortalController extends Controller
 
         if($response) {
             $response = DB::table('users')
+            ->where('is_admin', "=", 1)
+            ->where("id" , "!=", $currentUser->id)
             ->whereNull('users.deleted_at')
             ->latest()
             ->paginate(15);

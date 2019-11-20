@@ -72902,7 +72902,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82839,6 +82839,7 @@ var Users = function Users() {
 
   var initUser = function initUser() {
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
+      console.log(res.data);
       dispatch({
         type: "SUCCESS_FETCH",
         data: res.data
@@ -82934,13 +82935,44 @@ var Users = function Users() {
     });
   };
 
+  var handleDelete = function handleDelete(id) {
+    dispatch({
+      type: "DELETING"
+    });
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
+      id: id
+    }, function (res) {
+      console.log(res);
+
+      if (res.status > 200) {
+        dispatch({
+          type: "ERROR_DELETE"
+        });
+        alert(res.message);
+        return;
+      }
+
+      dispatch({
+        type: "SUCCESS_DELETE",
+        data: res.data
+      });
+      alert("User has been deleted.");
+    }, function () {
+      dispatch({
+        type: "ERROR_DELETE"
+      });
+      alert("Something went wrong. Please try again");
+    }, "DELETE");
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_users__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
     value: {
       state: state,
       dispatch: dispatch,
       handleOpenModal: handleOpenModal,
       handleInvite: handleInvite,
-      handleResendInvitation: handleResendInvitation
+      handleResendInvitation: handleResendInvitation,
+      handleDelete: handleDelete
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Users"
@@ -82954,7 +82986,7 @@ var Users = function Users() {
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
     headers: tableHeaders,
-    hasData: !!state.data.length,
+    hasData: state.data && !!state.data.length,
     customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_8__["default"], {
       data: state.data
     })

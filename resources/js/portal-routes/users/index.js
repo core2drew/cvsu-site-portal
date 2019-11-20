@@ -21,6 +21,7 @@ const Users = () => {
             url,
             {},
             res => {
+                console.log(res.data);
                 dispatch({ type: "SUCCESS_FETCH", data: res.data });
             },
             () => {
@@ -95,6 +96,31 @@ const Users = () => {
         );
     };
 
+    const handleDelete = id => {
+        dispatch({ type: "DELETING" });
+        post(
+            url,
+            {
+                id
+            },
+            res => {
+                console.log(res);
+                if (res.status > 200) {
+                    dispatch({ type: "ERROR_DELETE" });
+                    alert(res.message);
+                    return;
+                }
+                dispatch({ type: "SUCCESS_DELETE", data: res.data });
+                alert("User has been deleted.");
+            },
+            () => {
+                dispatch({ type: "ERROR_DELETE" });
+                alert("Something went wrong. Please try again");
+            },
+            "DELETE"
+        );
+    };
+
     return (
         <Context.Provider
             value={{
@@ -102,7 +128,8 @@ const Users = () => {
                 dispatch,
                 handleOpenModal,
                 handleInvite,
-                handleResendInvitation
+                handleResendInvitation,
+                handleDelete
             }}
         >
             <div id="Users">
@@ -110,7 +137,7 @@ const Users = () => {
                 <Button text="Invite User" onClick={() => handleOpenModal()} />
                 <Table
                     headers={tableHeaders}
-                    hasData={!!state.data.length}
+                    hasData={state.data && !!state.data.length}
                     customTableBody={<TableBody data={state.data} />}
                 />
                 <FormModal />
