@@ -2,7 +2,7 @@
 
 #SideLinks {
     background-color: #fff;
-    max-height: 150px;
+    max-height: 570px;
     padding: 20px;
     position: sticky;
     top: 15px;
@@ -20,5 +20,9 @@
             color: $green-2;
             text-decoration: none;
         }
+    }
+
+    #Mission,
+    #Vision {
     }
 }

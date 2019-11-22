@@ -10,7 +10,7 @@ const Home = () => {
         <div id="Home">
             <Hero />
             <div className="container grid">
-                <div class="main">
+                <div className="main">
                     <DeanMessage />
                     <Announcements limit={3} title="Latest Announcements" />
                 </div>

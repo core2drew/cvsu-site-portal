@@ -1004,7 +1004,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#SideLinks {\n  background-color: #fff;\n  max-height: 150px;\n  padding: 20px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 15px;\n}\n#SideLinks > .links-container:nth-last-child(n+2) {\n  margin-bottom: 20px;\n}\n#SideLinks > .links-container > .title {\n  margin-top: 0;\n}\n#SideLinks > .links-container > .links {\n  padding-left: 15px;\n}\n#SideLinks > .links-container > .links > .item > a {\n  color: #2d8548;\n  text-decoration: none;\n}", ""]);
+exports.push([module.i, "#SideLinks {\n  background-color: #fff;\n  max-height: 570px;\n  padding: 20px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 15px;\n}\n#SideLinks > .links-container:nth-last-child(n+2) {\n  margin-bottom: 20px;\n}\n#SideLinks > .links-container > .title {\n  margin-top: 0;\n}\n#SideLinks > .links-container > .links {\n  padding-left: 15px;\n}\n#SideLinks > .links-container > .links > .item > a {\n  color: #2d8548;\n  text-decoration: none;\n}", ""]);
 
 // exports
 
@@ -72883,7 +72883,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80832,7 +80832,19 @@ var SideLinks = function SideLinks() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/forms/application_form.pdf",
     target: "_blank"
-  }, "Application Form")))));
+  }, "Application Form")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Mission"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "title"
+  }, "Mission"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "content"
+  }, "Cavite State University shall provide excellent, equitable and relevant educational opportunities in the arts, sciences and technology through quality instruction and responsive research and development activities. It shall produce professional, skilled and morally upright individuals for global competitiveness.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Vision"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "title"
+  }, "Vision"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "content"
+  }, "The premier university in historic Cavite recognized for excellence in the development of globally competitive and morally upright individuals")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SideLinks);
@@ -80899,7 +80911,7 @@ var About = function About() {
     className: "container grid"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grid-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_mission_vision__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_core_values__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_history__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_core_values__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hymn__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -81327,7 +81339,7 @@ var Home = function Home() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_hero__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container grid"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "main"
+    className: "main"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_dean_message__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_announcements__WEBPACK_IMPORTED_MODULE_4__["default"], {
     limit: 3,
     title: "Latest Announcements"

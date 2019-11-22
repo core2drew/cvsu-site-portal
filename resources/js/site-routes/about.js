@@ -9,7 +9,7 @@ const About = () => (
         <div className="container grid">
             <div className="grid-item">
                 <History />
-                <MissionVision />
+                {/* <MissionVision /> */}
                 <CoreValues />
                 <Hymn />
             </div>

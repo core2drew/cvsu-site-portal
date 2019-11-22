@@ -26,6 +26,10 @@
   grid-template-columns: 750px auto;
 }
 
+#About > .grid.container > .grid-item > #History {
+  text-align: justify;
+}
+
 #About > .grid.container > .grid-item > #MissionVision {
   padding: 0;
   display: -webkit-box;
@@ -164,15 +168,6 @@ body {
   display: grid;
 }
 
-#Home,
-#About,
-#Facilities,
-#Admission,
-#ContactUs,
-#Announcements {
-  height: 100%;
-}
-
 #Home .section.header,
 #About .section.header,
 #Facilities .section.header,
@@ -222,6 +217,14 @@ body {
 #Announcements > .grid.container > .grid-item {
   background-color: #fff;
   padding: 20px;
+}
+
+#About,
+#Facilities,
+#Admission,
+#ContactUs,
+#Announcement {
+  height: 100%;
 }
 
 #SideQuickLinks .section.header,
