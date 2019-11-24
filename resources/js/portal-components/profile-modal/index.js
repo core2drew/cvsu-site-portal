@@ -86,11 +86,13 @@ const ProfileModal = ({ isActive, handleClose }) => {
                     label={"First Name"}
                     value={firstName}
                     onChange={value => setFirstName(value)}
+                    disabled
                 />
                 <Input
                     label={"Last Name"}
                     value={lastName}
                     onChange={value => setLastName(value)}
+                    disabled
                 />
                 <Button text="Update Profile" onClick={handleUpdate} />
             </div>

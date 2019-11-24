@@ -80417,13 +80417,15 @@ var ProfileModal = function ProfileModal(_ref) {
     value: firstName,
     onChange: function onChange(value) {
       return setFirstName(value);
-    }
+    },
+    disabled: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     label: "Last Name",
     value: lastName,
     onChange: function onChange(value) {
       return setLastName(value);
-    }
+    },
+    disabled: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: "Update Profile",
     onClick: handleUpdate
