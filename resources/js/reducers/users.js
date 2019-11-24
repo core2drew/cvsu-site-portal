@@ -33,6 +33,7 @@ const reducer = (state, action) => {
                 ...state,
                 isLoading: false,
                 isConfirmDeleteActive: false,
+                deleteUserId: null,
                 data: action.data
             };
         case "SUCCESS_UPDATE":

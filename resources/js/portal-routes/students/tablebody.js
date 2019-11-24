@@ -8,7 +8,8 @@ const TableBody = ({ data }) => {
     const {
         handleDelete,
         handleOpenModal,
-        handleResendInvitation
+        handleResendInvitation,
+        confirmDelete
     } = useContext(StudentContext);
 
     return (
@@ -50,7 +51,7 @@ const TableBody = ({ data }) => {
                             <Button
                                 variant={"delete -danger"}
                                 text={"Delete"}
-                                onClick={() => handleDelete(d.id)}
+                                onClick={() => confirmDelete(d.id)}
                             />
                         </td>
                     </tr>

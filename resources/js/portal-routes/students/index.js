@@ -9,6 +9,7 @@ import FormModal from "./form-modal";
 import TableBody from "./tablebody";
 import InviteStudent from "./invite-student-modal";
 import Toast from "Components/toast";
+import ConfirmModal from "Components/confirm-modal";
 import "./style.scss";
 
 const Students = props => {
@@ -233,17 +234,25 @@ const Students = props => {
         );
     };
 
+    const confirmDelete = id => {
+        dispatch({ type: "SHOW_CONFIRM_DELETE", id });
+    };
+
+    const closeConfirmDelete = () => {
+        dispatch({ type: "CLOSE_CONFIRM_DELETE" });
+    };
+
     return (
         <StudentContext.Provider
             value={{
                 state,
                 dispatch,
                 handleOpenModal,
-                handleDelete,
                 handleUpdate,
                 handleOpenInviteStudentModal,
                 handleInvitation,
-                handleResendInvitation
+                handleResendInvitation,
+                confirmDelete
             }}
         >
             <div id="Students">
@@ -277,6 +286,16 @@ const Students = props => {
                     />
                 </TableContext.Provider>
                 <FormModal />
+                <ConfirmModal
+                    title="Confirm Delete Student"
+                    close={closeConfirmDelete}
+                    isActive={state.isConfirmDeleteActive}
+                    confirm={() => {
+                        handleDelete(state.deleteStudentId);
+                    }}
+                >
+                    <p>Are you sure you want to delete this student?</p>
+                </ConfirmModal>
                 <InviteStudent />
             </div>
         </StudentContext.Provider>

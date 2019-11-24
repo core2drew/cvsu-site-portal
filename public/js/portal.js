@@ -78609,10 +78609,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modal */ "./resources/js/components/modal/index.js");
 /* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
-/* harmony import */ var Context_users__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Context/users */ "./resources/js/contexts/users.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/confirm-modal/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
-
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/confirm-modal/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -78621,23 +78619,13 @@ __webpack_require__.r(__webpack_exports__);
 var ConfirmModal = function ConfirmModal(_ref) {
   var title = _ref.title,
       confirm = _ref.confirm,
-      children = _ref.children;
-
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_users__WEBPACK_IMPORTED_MODULE_3__["default"]),
-      state = _useContext.state,
-      dispatch = _useContext.dispatch,
-      handleDelete = _useContext.handleDelete;
-
-  var handleClose = function handleClose() {
-    dispatch({
-      type: "CLOSE_CONFIRM_DELETE"
-    });
-  };
-
+      close = _ref.close,
+      children = _ref.children,
+      isActive = _ref.isActive;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
     variant: "confirm-delete-modal",
-    isActive: state.isConfirmDeleteActive,
-    handleClose: handleClose
+    isActive: isActive,
+    handleClose: close
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "section header"
   }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -78646,13 +78634,11 @@ var ConfirmModal = function ConfirmModal(_ref) {
     className: "action"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: "Yes",
-    onClick: function onClick() {
-      handleDelete(state.deleteUserId);
-    }
+    onClick: confirm
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: "No",
     variant: "-danger",
-    onClick: handleClose
+    onClick: close
   })));
 };
 
@@ -82216,8 +82202,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/students/tablebody.js");
 /* harmony import */ var _invite_student_modal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./invite-student-modal */ "./resources/js/portal-routes/students/invite-student-modal.js");
 /* harmony import */ var Components_toast__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! Components/toast */ "./resources/js/components/toast/index.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/students/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var Components_confirm_modal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! Components/confirm-modal */ "./resources/js/components/confirm-modal/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/students/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_12__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -82225,6 +82212,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -82492,16 +82480,29 @@ var Students = function Students(props) {
     });
   };
 
+  var confirmDelete = function confirmDelete(id) {
+    dispatch({
+      type: "SHOW_CONFIRM_DELETE",
+      id: id
+    });
+  };
+
+  var closeConfirmDelete = function closeConfirmDelete() {
+    dispatch({
+      type: "CLOSE_CONFIRM_DELETE"
+    });
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_students__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
     value: {
       state: state,
       dispatch: dispatch,
       handleOpenModal: handleOpenModal,
-      handleDelete: handleDelete,
       handleUpdate: handleUpdate,
       handleOpenInviteStudentModal: handleOpenInviteStudentModal,
       handleInvitation: handleInvitation,
-      handleResendInvitation: handleResendInvitation
+      handleResendInvitation: handleResendInvitation,
+      confirmDelete: confirmDelete
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Students"
@@ -82535,7 +82536,14 @@ var Students = function Students(props) {
     customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_8__["default"], {
       data: state.data
     })
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_invite_student_modal__WEBPACK_IMPORTED_MODULE_9__["default"], null)));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_confirm_modal__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    title: "Confirm Delete Student",
+    close: closeConfirmDelete,
+    isActive: state.isConfirmDeleteActive,
+    confirm: function confirm() {
+      handleDelete(state.deleteStudentId);
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Are you sure you want to delete this student?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_invite_student_modal__WEBPACK_IMPORTED_MODULE_9__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Students);
@@ -82767,7 +82775,8 @@ var TableBody = function TableBody(_ref) {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_students__WEBPACK_IMPORTED_MODULE_4__["default"]),
       handleDelete = _useContext.handleDelete,
       handleOpenModal = _useContext.handleOpenModal,
-      handleResendInvitation = _useContext.handleResendInvitation;
+      handleResendInvitation = _useContext.handleResendInvitation,
+      confirmDelete = _useContext.confirmDelete;
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
     var isAwait = !!d.is_await; // let created_at = moment
@@ -82789,7 +82798,7 @@ var TableBody = function TableBody(_ref) {
       variant: "delete -danger",
       text: "Delete",
       onClick: function onClick() {
-        return handleDelete(d.id);
+        return confirmDelete(d.id);
       }
     })));
   }));
@@ -83042,7 +83051,6 @@ var Users = function Users() {
       dispatch({
         type: "SUCCESS_INVITE"
       });
-      alert("Invite has been sent.");
       initUser();
     }, function () {
       dispatch({
@@ -83059,6 +83067,12 @@ var Users = function Users() {
     });
   };
 
+  var closeConfirmDelete = function closeConfirmDelete() {
+    dispatch({
+      type: "CLOSE_CONFIRM_DELETE"
+    });
+  };
+
   var handleDelete = function handleDelete(id) {
     dispatch({
       type: "DELETING"
@@ -83070,7 +83084,6 @@ var Users = function Users() {
         dispatch({
           type: "ERROR_DELETE"
         });
-        alert(res.message);
         return;
       }
 
@@ -83113,7 +83126,12 @@ var Users = function Users() {
       data: state.data
     })
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_confirm_modal__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    title: "Confirm Delete User"
+    title: "Confirm Delete User",
+    close: closeConfirmDelete,
+    isActive: state.isConfirmDeleteActive,
+    confirm: function confirm() {
+      handleDelete(state.deleteUserId);
+    }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Are you sure you want to delete this users?"))));
 };
 
@@ -83646,7 +83664,9 @@ var initialState = {
   selectedId: null,
   nextPageUrl: null,
   prevPageUrl: null,
-  currentPage: null
+  currentPage: null,
+  isConfirmDeleteActive: false,
+  deleteStudentId: null
 };
 
 var reducer = function reducer(state, action) {
@@ -83676,7 +83696,9 @@ var reducer = function reducer(state, action) {
         data: action.data,
         nextPageUrl: action.nextPageUrl,
         prevPageUrl: action.prevPageUrl,
-        currentPage: action.currentPage
+        currentPage: action.currentPage,
+        isConfirmDeleteActive: false,
+        deleteStudentId: null
       });
 
     case "SUCCESS_UPDATE":
@@ -83744,6 +83766,18 @@ var reducer = function reducer(state, action) {
         isInviteStudentModalActive: true
       });
 
+    case "SHOW_CONFIRM_DELETE":
+      return _objectSpread({}, state, {
+        isConfirmDeleteActive: true,
+        deleteStudentId: action.id
+      });
+
+    case "CLOSE_CONFIRM_DELETE":
+      return _objectSpread({}, state, {
+        isConfirmDeleteActive: false,
+        deleteStudentId: null
+      });
+
     default:
       return state;
   }
@@ -83801,6 +83835,7 @@ var reducer = function reducer(state, action) {
       return _objectSpread({}, state, {
         isLoading: false,
         isConfirmDeleteActive: false,
+        deleteUserId: null,
         data: action.data
       });
 

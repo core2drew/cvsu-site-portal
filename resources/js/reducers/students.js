@@ -9,7 +9,9 @@ const initialState = {
     selectedId: null,
     nextPageUrl: null,
     prevPageUrl: null,
-    currentPage: null
+    currentPage: null,
+    isConfirmDeleteActive: false,
+    deleteStudentId: null
 };
 
 const reducer = (state, action) => {
@@ -41,7 +43,9 @@ const reducer = (state, action) => {
                 data: action.data,
                 nextPageUrl: action.nextPageUrl,
                 prevPageUrl: action.prevPageUrl,
-                currentPage: action.currentPage
+                currentPage: action.currentPage,
+                isConfirmDeleteActive: false,
+                deleteStudentId: null
             };
         case "SUCCESS_UPDATE":
             return {
@@ -108,6 +112,18 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 isInviteStudentModalActive: true
+            };
+        case "SHOW_CONFIRM_DELETE":
+            return {
+                ...state,
+                isConfirmDeleteActive: true,
+                deleteStudentId: action.id
+            };
+        case "CLOSE_CONFIRM_DELETE":
+            return {
+                ...state,
+                isConfirmDeleteActive: false,
+                deleteStudentId: null
             };
         default:
             return state;

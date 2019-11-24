@@ -87,7 +87,6 @@ const Users = () => {
                     return;
                 }
                 dispatch({ type: "SUCCESS_INVITE" });
-                alert("Invite has been sent.");
                 initUser();
             },
             () => {
@@ -101,6 +100,10 @@ const Users = () => {
         dispatch({ type: "SHOW_CONFIRM_DELETE", id });
     };
 
+    const closeConfirmDelete = () => {
+        dispatch({ type: "CLOSE_CONFIRM_DELETE" });
+    };
+
     const handleDelete = id => {
         dispatch({ type: "DELETING" });
         post(
@@ -111,7 +114,6 @@ const Users = () => {
             res => {
                 if (res.status > 200) {
                     dispatch({ type: "ERROR_DELETE" });
-                    alert(res.message);
                     return;
                 }
                 dispatch({ type: "SUCCESS_DELETE", data: res.data });
@@ -145,7 +147,14 @@ const Users = () => {
                     customTableBody={<TableBody data={state.data} />}
                 />
                 <FormModal />
-                <ConfirmModal title="Confirm Delete User">
+                <ConfirmModal
+                    title="Confirm Delete User"
+                    close={closeConfirmDelete}
+                    isActive={state.isConfirmDeleteActive}
+                    confirm={() => {
+                        handleDelete(state.deleteUserId);
+                    }}
+                >
                     <p>Are you sure you want to delete this users?</p>
                 </ConfirmModal>
             </div>
