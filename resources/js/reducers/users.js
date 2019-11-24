@@ -3,6 +3,8 @@ const initialState = {
     isModalActive: false,
     isUpdateModal: false,
     modalHeaderTitle: "New User",
+    isConfirmDeleteActive: false,
+    deleteUserId: null,
     data: [],
     selectedId: null
 };
@@ -30,6 +32,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 isLoading: false,
+                isConfirmDeleteActive: false,
                 data: action.data
             };
         case "SUCCESS_UPDATE":
@@ -85,6 +88,18 @@ const reducer = (state, action) => {
                 isUpdateModal: true,
                 modalHeaderTitle: "Update User",
                 selectedId: action.id
+            };
+        case "SHOW_CONFIRM_DELETE":
+            return {
+                ...state,
+                isConfirmDeleteActive: true,
+                deleteUserId: action.id
+            };
+        case "CLOSE_CONFIRM_DELETE":
+            return {
+                ...state,
+                isConfirmDeleteActive: false,
+                deleteUserId: null
             };
         default:
             return state;

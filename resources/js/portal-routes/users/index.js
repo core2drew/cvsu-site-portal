@@ -7,6 +7,7 @@ import Context from "Context/users";
 import Reducer, { initialState } from "Reducers/users";
 import FormModal from "./form-modal";
 import TableBody from "./tablebody";
+import ConfirmModal from "Components/confirm-modal";
 import "./style.scss";
 
 const Users = () => {
@@ -96,6 +97,10 @@ const Users = () => {
         );
     };
 
+    const confirmDelete = id => {
+        dispatch({ type: "SHOW_CONFIRM_DELETE", id });
+    };
+
     const handleDelete = id => {
         dispatch({ type: "DELETING" });
         post(
@@ -104,14 +109,12 @@ const Users = () => {
                 id
             },
             res => {
-                console.log(res);
                 if (res.status > 200) {
                     dispatch({ type: "ERROR_DELETE" });
                     alert(res.message);
                     return;
                 }
                 dispatch({ type: "SUCCESS_DELETE", data: res.data });
-                alert("User has been deleted.");
             },
             () => {
                 dispatch({ type: "ERROR_DELETE" });
@@ -129,7 +132,8 @@ const Users = () => {
                 handleOpenModal,
                 handleInvite,
                 handleResendInvitation,
-                handleDelete
+                handleDelete,
+                confirmDelete
             }}
         >
             <div id="Users">
@@ -141,6 +145,9 @@ const Users = () => {
                     customTableBody={<TableBody data={state.data} />}
                 />
                 <FormModal />
+                <ConfirmModal title="Confirm Delete User">
+                    <p>Are you sure you want to delete this users?</p>
+                </ConfirmModal>
             </div>
         </Context.Provider>
     );

@@ -593,6 +593,25 @@ exports.push([module.i, ".button {\n  -webkit-transition: background-color 0.2s;
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/confirm-modal/style.scss":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/confirm-modal/style.scss ***!
+  \*************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".confirm-delete-modal .modal-body {\n  font-size: 16px;\n}\n.confirm-delete-modal .action {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n     -moz-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/datepicker/style.scss":
 /*!**********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/components/datepicker/style.scss ***!
@@ -72902,7 +72921,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -78577,6 +78596,100 @@ CKEditor.defaultProps = {
 
 /***/ }),
 
+/***/ "./resources/js/components/confirm-modal/index.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/confirm-modal/index.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Context_users__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Context/users */ "./resources/js/contexts/users.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./resources/js/components/confirm-modal/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+var ConfirmModal = function ConfirmModal(_ref) {
+  var title = _ref.title,
+      confirm = _ref.confirm,
+      children = _ref.children;
+
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_users__WEBPACK_IMPORTED_MODULE_3__["default"]),
+      state = _useContext.state,
+      dispatch = _useContext.dispatch,
+      handleDelete = _useContext.handleDelete;
+
+  var handleClose = function handleClose() {
+    dispatch({
+      type: "CLOSE_CONFIRM_DELETE"
+    });
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    variant: "confirm-delete-modal",
+    isActive: state.isConfirmDeleteActive,
+    handleClose: handleClose
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section header"
+  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-body"
+  }, children), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "action"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "Yes",
+    onClick: function onClick() {
+      handleDelete(state.deleteUserId);
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "No",
+    variant: "-danger",
+    onClick: handleClose
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ConfirmModal);
+
+/***/ }),
+
+/***/ "./resources/js/components/confirm-modal/style.scss":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/confirm-modal/style.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/components/confirm-modal/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/datepicker/index.js":
 /*!*****************************************************!*\
   !*** ./resources/js/components/datepicker/index.js ***!
@@ -82804,8 +82917,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Reducers_users__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Reducers/users */ "./resources/js/reducers/users.js");
 /* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/users/form-modal.js");
 /* harmony import */ var _tablebody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tablebody */ "./resources/js/portal-routes/users/tablebody.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/users/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var Components_confirm_modal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! Components/confirm-modal */ "./resources/js/components/confirm-modal/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/users/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_10__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -82813,6 +82927,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -82935,6 +83050,13 @@ var Users = function Users() {
     });
   };
 
+  var confirmDelete = function confirmDelete(id) {
+    dispatch({
+      type: "SHOW_CONFIRM_DELETE",
+      id: id
+    });
+  };
+
   var handleDelete = function handleDelete(id) {
     dispatch({
       type: "DELETING"
@@ -82942,8 +83064,6 @@ var Users = function Users() {
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(url, {
       id: id
     }, function (res) {
-      console.log(res);
-
       if (res.status > 200) {
         dispatch({
           type: "ERROR_DELETE"
@@ -82956,7 +83076,6 @@ var Users = function Users() {
         type: "SUCCESS_DELETE",
         data: res.data
       });
-      alert("User has been deleted.");
     }, function () {
       dispatch({
         type: "ERROR_DELETE"
@@ -82972,7 +83091,8 @@ var Users = function Users() {
       handleOpenModal: handleOpenModal,
       handleInvite: handleInvite,
       handleResendInvitation: handleResendInvitation,
-      handleDelete: handleDelete
+      handleDelete: handleDelete,
+      confirmDelete: confirmDelete
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Users"
@@ -82990,7 +83110,9 @@ var Users = function Users() {
     customTableBody: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tablebody__WEBPACK_IMPORTED_MODULE_8__["default"], {
       data: state.data
     })
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null)));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_confirm_modal__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    title: "Confirm Delete User"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Are you sure you want to delete this users?"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Users);
@@ -83053,7 +83175,7 @@ var TableBody = function TableBody(_ref) {
   var data = _ref.data;
 
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_users__WEBPACK_IMPORTED_MODULE_3__["default"]),
-      handleDelete = _useContext.handleDelete,
+      confirmDelete = _useContext.confirmDelete,
       handleResendInvitation = _useContext.handleResendInvitation;
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
@@ -83078,7 +83200,7 @@ var TableBody = function TableBody(_ref) {
       variant: "delete -danger",
       text: isAwait ? "Revoke" : "Delete",
       onClick: function onClick() {
-        return handleDelete(d.id);
+        return confirmDelete(d.id);
       }
     })));
   }));
@@ -83649,6 +83771,8 @@ var initialState = {
   isModalActive: false,
   isUpdateModal: false,
   modalHeaderTitle: "New User",
+  isConfirmDeleteActive: false,
+  deleteUserId: null,
   data: [],
   selectedId: null
 };
@@ -83674,6 +83798,7 @@ var reducer = function reducer(state, action) {
     case "SUCCESS_DELETE":
       return _objectSpread({}, state, {
         isLoading: false,
+        isConfirmDeleteActive: false,
         data: action.data
       });
 
@@ -83727,6 +83852,18 @@ var reducer = function reducer(state, action) {
         isUpdateModal: true,
         modalHeaderTitle: "Update User",
         selectedId: action.id
+      });
+
+    case "SHOW_CONFIRM_DELETE":
+      return _objectSpread({}, state, {
+        isConfirmDeleteActive: true,
+        deleteUserId: action.id
+      });
+
+    case "CLOSE_CONFIRM_DELETE":
+      return _objectSpread({}, state, {
+        isConfirmDeleteActive: false,
+        deleteUserId: null
       });
 
     default:

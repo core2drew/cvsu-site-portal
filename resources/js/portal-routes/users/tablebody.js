@@ -4,7 +4,7 @@ import Uuid from "uuid/v4";
 import UserContext from "Context/users";
 import Pill from "Components/pill";
 const TableBody = ({ data }) => {
-    const { handleDelete, handleResendInvitation } = useContext(UserContext);
+    const { confirmDelete, handleResendInvitation } = useContext(UserContext);
     return (
         <tbody>
             {data.map(d => {
@@ -34,7 +34,7 @@ const TableBody = ({ data }) => {
                             <Button
                                 variant={"delete -danger"}
                                 text={isAwait ? "Revoke" : "Delete"}
-                                onClick={() => handleDelete(d.id)}
+                                onClick={() => confirmDelete(d.id)}
                             />
                         </td>
                     </tr>
