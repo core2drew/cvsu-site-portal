@@ -8,14 +8,18 @@ const TableBody = ({ data }) => {
     const {
         handleDelete,
         handleOpenModal,
-        handleResendInvitation,
+        handleInvitation,
         confirmDelete
     } = useContext(StudentContext);
 
     return (
         <tbody>
             {data.map(d => {
+                const studentNo = d.student_no;
+                const email = d.email;
+                const id = d.id;
                 const isAwait = !!d.is_await;
+                const isConfirm = !!d.is_confirm;
                 // let created_at = moment
                 //     .utc(d.created_at)
                 //     .local()
@@ -28,30 +32,33 @@ const TableBody = ({ data }) => {
                 return (
                     <tr key={Uuid()}>
                         <td>
-                            <p className="student_no">{d.student_no}</p>
-                            {isAwait && <Pill>Awaiting invite response</Pill>}
+                            <p className="student_no">{studentNo}</p>
+                            {!isConfirm && <Pill>Awaiting confirmation</Pill>}
+                            {isConfirm && isAwait && (
+                                <Pill>Awaiting activition</Pill>
+                            )}
                         </td>
-                        <td>{d.email}</td>
+                        <td>{email}</td>
                         <td>{d.first_name}</td>
                         <td>{d.last_name}</td>
                         <td className="actions">
-                            {/* <Button
+                            <Button
+                                isVisible={isAwait || !isConfirm}
                                 variant={"update"}
-                                text={isAwait ? "Resend" : "Update"}
+                                text={!isConfirm ? "Confirm" : "Resend"}
                                 onClick={() =>
-                                    isAwait
-                                        ? handleResendInvitation(
-                                              d.student_no,
-                                              d.email,
-                                              d.id
-                                          )
-                                        : handleOpenModal(d.id)
+                                    handleInvitation({
+                                        studentNo,
+                                        email,
+                                        is_confirm: isConfirm,
+                                        id
+                                    })
                                 }
-                            /> */}
+                            />
                             <Button
                                 variant={"delete -danger"}
                                 text={"Delete"}
-                                onClick={() => confirmDelete(d.id)}
+                                onClick={() => confirmDelete(id)}
                             />
                         </td>
                     </tr>

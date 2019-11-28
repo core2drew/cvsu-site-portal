@@ -337,88 +337,135 @@ class AJAXAdminPortalController extends Controller
     }
 
     // Student Invitation
+    // public function inviteStudent(Request $request) {
+    //     $studentNo = $request->get('studentNo');
+    //     $email = $request->get('email');
+    //     $userDetails = [];
+
+    //     $isStudentExists = $this->checkStudentNo($studentNo);
+    //     $isUserExists = $this->checkUserStudentNo($studentNo);
+    //     $isEmailExists = $this->checkUserEmail($email);
+
+    //     if(!$isStudentExists) {
+    //         return response()->json([
+    //             'status' => 400,
+    //             'message' => 'Invalid student number.'
+    //         ]);
+    //     }
+
+    //     if($isUserExists) {
+    //         return response()->json([
+    //             'status' => 400,
+    //             'message' => 'Student number is already registered.'
+    //         ]);
+    //     }
+
+    //     if($isEmailExists) {
+    //         return response()->json([
+    //             'status' => 400,
+    //             'message' => 'Email is already registered.'
+    //         ]);
+    //     }
+
+    //     $studentInfo = DB::table('studentinfo')
+    //     ->where('StudentNumber', "=" , $studentNo)
+    //     ->first();
+
+    //     if($studentInfo) {
+    //         $response = DB::table('users')
+    //         ->insert([
+    //             'student_no' => $studentNo,
+    //             'first_name' => $studentInfo->FirstName,
+    //             'last_name' => $studentInfo->LastName,
+    //             'email' => $email,
+    //             'is_await' => 1,
+    //             'type' => 'STUDENT',
+    //             'created_at' => now(),
+    //             'updated_at' => now()
+    //         ]);
+
+    //         $user = DB::table('users')
+    //         ->where('student_no', "=" , $studentNo)
+    //         ->latest()
+    //         ->first();
+
+    //         if($user) {
+    //             $userDetails['studentNo'] =  $user->student_no;
+    //             $userDetails['firstName'] = $user->first_name;
+    //             $userDetails['lastName'] = $user->last_name;
+    //             $userDetails['email'] = $user->email;
+    //             $userDetails['id'] = $user->id;
+
+    //             $token = Crypt::encrypt($userDetails);
+    //             $fullName = $user->first_name . ' ' . $user->last_name;
+    //             $this->sendInvitation($email, $fullName, $token);
+
+    //             return response()->json([
+    //                 'status' => 200,
+    //                 'message' => "Invite has been sent to $email.",
+    //                 'token' => $token
+    //             ]);
+    //         }
+    //     }
+
+    //     return abort(500);
+    // }
+
+    // public function resendInviteStudent(Request $request) {
+    //     $studentNo = $request->get('studentNo');
+    //     $email = $request->get('email');
+    //     $id = $request->get('id');
+    //     $userDetails = [];
+
+    //     $user = DB::table('users')
+    //     ->where('student_no', "=" , $studentNo)
+    //     ->latest()
+    //     ->first();
+    //     if($user) {
+    //         $userDetails['studentNo'] =  $user->student_no;
+    //         $userDetails['firstName'] = $user->first_name;
+    //         $userDetails['lastName'] = $user->last_name;
+    //         $userDetails['email'] = $user->email;
+    //         $userDetails['id'] = $user->id;
+
+    //         $token = Crypt::encrypt($userDetails);
+    //         $fullName = $user->first_name . ' ' . $user->last_name;
+    //         $this->sendInvitation($email, $fullName, $token);
+
+    //         return response()->json([
+    //             'status' => 200,
+    //             'message' => "Invite has been resend to $email.",
+    //             'token' => $token
+    //         ]);
+    //     }
+
+    //     return abort(500);
+    // }
+
+    // Send Confirmation
     public function inviteStudent(Request $request) {
+        $id = $request->get('id');
         $studentNo = $request->get('studentNo');
         $email = $request->get('email');
+        $isConfirmed = $request->get('is_confirm');
         $userDetails = [];
 
-        $isStudentExists = $this->checkStudentNo($studentNo);
-        $isUserExists = $this->checkUserStudentNo($studentNo);
-        $isEmailExists = $this->checkUserEmail($email);
-
-        if(!$isStudentExists) {
-            return response()->json([
-                'status' => 400,
-                'message' => 'Invalid student number.'
-            ]);
-        }
-
-        if($isUserExists) {
-            return response()->json([
-                'status' => 400,
-                'message' => 'Student number is already registered.'
-            ]);
-        }
-
-        if($isEmailExists) {
-            return response()->json([
-                'status' => 400,
-                'message' => 'Email is already registered.'
-            ]);
-        }
-
-        $studentInfo = DB::table('studentinfo')
-        ->where('StudentNumber', "=" , $studentNo)
-        ->first();
-
-        if($studentInfo) {
+        if(!$isConfirmed) {
+            // Update is_confirm column of selected student_no
             $response = DB::table('users')
-            ->insert([
-                'student_no' => $studentNo,
-                'first_name' => $studentInfo->FirstName,
-                'last_name' => $studentInfo->LastName,
-                'email' => $email,
-                'is_await' => 1,
-                'type' => 'STUDENT',
-                'created_at' => now(),
-                'updated_at' => now()
-            ]);
+            ->whereNull('deleted_at')
+            ->where('student_no', '=', $studentNo)
+            ->where('id', '=', $id)
+            ->update(['is_confirm' => 1]);
 
-            $user = DB::table('users')
-            ->where('student_no', "=" , $studentNo)
-            ->latest()
-            ->first();
-
-            if($user) {
-                $userDetails['studentNo'] =  $user->student_no;
-                $userDetails['firstName'] = $user->first_name;
-                $userDetails['lastName'] = $user->last_name;
-                $userDetails['email'] = $user->email;
-                $userDetails['id'] = $user->id;
-
-                $token = Crypt::encrypt($userDetails);
-                $fullName = $user->first_name . ' ' . $user->last_name;
-                $this->sendInvitation($email, $fullName, $token);
-
-                return response()->json([
-                    'status' => 200,
-                    'message' => "Invite has been sent to $email.",
-                    'token' => $token
-                ]);
+            if(!$response) {
+                return abort(500);
             }
         }
 
-        return abort(500);
-    }
-
-    public function resendInviteStudent(Request $request) {
-        $studentNo = $request->get('studentNo');
-        $email = $request->get('email');
-        $id = $request->get('id');
-        $userDetails = [];
-
         $user = DB::table('users')
         ->where('student_no', "=" , $studentNo)
+        ->where('id', '=', $id)
         ->latest()
         ->first();
         if($user) {
@@ -434,12 +481,16 @@ class AJAXAdminPortalController extends Controller
 
             return response()->json([
                 'status' => 200,
-                'message' => "Invite has been resend to $email.",
+                'message' => "Invite has been to $email.",
                 'token' => $token
             ]);
         }
 
         return abort(500);
+    }
+
+    public function resendInvitation(Request $request) {
+
     }
 
     public function deleteStudent(Request $request) {

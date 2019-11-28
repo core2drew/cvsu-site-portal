@@ -82421,13 +82421,17 @@ var Students = function Students(props) {
 
   var handleInvitation = function handleInvitation(_ref) {
     var studentNo = _ref.studentNo,
-        email = _ref.email;
+        email = _ref.email,
+        is_confirm = _ref.is_confirm,
+        id = _ref.id;
     dispatch({
       type: "INVITING"
     });
     Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])(inviteUrl, {
       studentNo: studentNo,
-      email: email
+      email: email,
+      is_confirm: is_confirm,
+      id: id
     }, function (res) {
       if (res.status > 200) {
         dispatch({
@@ -82775,11 +82779,15 @@ var TableBody = function TableBody(_ref) {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_students__WEBPACK_IMPORTED_MODULE_4__["default"]),
       handleDelete = _useContext.handleDelete,
       handleOpenModal = _useContext.handleOpenModal,
-      handleResendInvitation = _useContext.handleResendInvitation,
+      handleInvitation = _useContext.handleInvitation,
       confirmDelete = _useContext.confirmDelete;
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, data.map(function (d) {
-    var isAwait = !!d.is_await; // let created_at = moment
+    var studentNo = d.student_no;
+    var email = d.email;
+    var id = d.id;
+    var isAwait = !!d.is_await;
+    var isConfirm = !!d.is_confirm; // let created_at = moment
     //     .utc(d.created_at)
     //     .local()
     //     .format("MMMM DD, YYYY");
@@ -82792,13 +82800,25 @@ var TableBody = function TableBody(_ref) {
       key: uuid_v4__WEBPACK_IMPORTED_MODULE_3___default()()
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "student_no"
-    }, d.student_no), isAwait && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_pill__WEBPACK_IMPORTED_MODULE_5__["default"], null, "Awaiting invite response")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    }, studentNo), !isConfirm && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_pill__WEBPACK_IMPORTED_MODULE_5__["default"], null, "Awaiting confirmation"), isConfirm && isAwait && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_pill__WEBPACK_IMPORTED_MODULE_5__["default"], null, "Awaiting activition")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, d.last_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       className: "actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      isVisible: isAwait || !isConfirm,
+      variant: "update",
+      text: !isConfirm ? "Confirm" : "Resend",
+      onClick: function onClick() {
+        return handleInvitation({
+          studentNo: studentNo,
+          email: email,
+          is_confirm: isConfirm,
+          id: id
+        });
+      }
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
       variant: "delete -danger",
       text: "Delete",
       onClick: function onClick() {
-        return confirmDelete(d.id);
+        return confirmDelete(id);
       }
     })));
   }));

@@ -389,8 +389,10 @@ class AJAXPortalController extends Controller
         try {
             $token = $request->get('token');
             $data = Crypt::decrypt($token);
+            $studentNo = $data['studentNo'];
             $userId = $data['id'];
             $response = DB::table('users')
+            ->where('student_no', '=', $studentNo)
             ->where('id', '=', $userId)
             ->where('is_await', '=', 1)
             ->whereNull('users.deleted_at')

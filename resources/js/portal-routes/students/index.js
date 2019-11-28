@@ -190,11 +190,11 @@ const Students = props => {
         dispatch({ type: "OPEN_INVITE_STUDENT_MODAL" });
     };
 
-    const handleInvitation = ({ studentNo, email }) => {
+    const handleInvitation = ({ studentNo, email, is_confirm, id }) => {
         dispatch({ type: "INVITING" });
         post(
             inviteUrl,
-            { studentNo, email },
+            { studentNo, email, is_confirm, id },
             res => {
                 if (res.status > 200) {
                     dispatch({ type: "ERROR_SAVE" });
