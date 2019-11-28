@@ -25,7 +25,7 @@ Route::group([
 ], function() {
     Route::get("/{route?}", [
         "uses" => "PortalController@index",
-    ])->where('route', '(dean-message|academic-calendar|requirements|retention-policies|course-offered|students|users)');
+    ])->where('route', '(dean-message|academic-calendar|requirements|retention-policies|course-offered|students|users|facilities)');
 });
 
 Route::group([
@@ -268,6 +268,12 @@ Route::group([
         Route::post('/signup', [
             "as" => "ajax.portal.student.signup",
             "uses" => "AJAXPortalController@studentSignup",
+        ]);
+
+        // Student Sign Up Request
+        Route::post('/signup/request', [
+            "as" => "ajax.portal.student.signup.request",
+            "uses" => "AJAXPortalController@studentSignUpRequest"
         ]);
 
         // Student Info

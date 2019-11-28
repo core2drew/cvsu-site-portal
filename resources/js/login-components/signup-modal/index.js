@@ -33,6 +33,31 @@ const SignUpModal = ({ isActive, handleClose }) => {
         );
     };
 
+    const handleSignUpRequest = () => {
+        console.log("test");
+        setIsLoading(true);
+        post(
+            "/ajax/portal/signup/request",
+            {
+                studentNo: studentNo.value,
+                email: email.value,
+                firstName: firstName.value,
+                lastName: lastName.value
+            },
+            res => {
+                setIsLoading(false);
+                if (res.status > 200) {
+                    alert(res.message);
+                    return;
+                }
+                handleClose();
+                alert(res.message);
+                reset();
+            },
+            () => alert("Something went wrong")
+        );
+    };
+
     const validatePassword = (value, fields) => {
         if (value.length < 8) {
             return {
@@ -63,13 +88,13 @@ const SignUpModal = ({ isActive, handleClose }) => {
     const [fields, setFieldValue, submitForm, setFieldValues, reset] = useForm(
         signupInitialFields,
         {
-            password: validatePassword,
-            confirmPassword: validateConfirmPassword
+            // password: validatePassword,
+            // confirmPassword: validateConfirmPassword
         },
-        handleSignUp
+        handleSignUpRequest
     );
 
-    const { studentNo, email, password, confirmPassword } = fields;
+    const { studentNo, email, firstName, lastName } = fields;
 
     return (
         <Modal
@@ -101,6 +126,22 @@ const SignUpModal = ({ isActive, handleClose }) => {
                 />
                 <Input
                     required
+                    label={"First Name"}
+                    name="firstName"
+                    value={firstName.value}
+                    onChange={setFieldValue}
+                    error={firstName.error.status}
+                />
+                <Input
+                    required
+                    label={"Last Name"}
+                    name="lastName"
+                    value={lastName.value}
+                    onChange={setFieldValue}
+                    error={lastName.error.status}
+                />
+                {/* <Input
+                    required
                     label={"Password"}
                     name="password"
                     type="password"
@@ -118,8 +159,8 @@ const SignUpModal = ({ isActive, handleClose }) => {
                     onChange={setFieldValue}
                     error={confirmPassword.error.status}
                     errorMessage={confirmPassword.error.message}
-                />
-                <Button text="Sign Up" onClick={submitForm} />
+                /> */}
+                <Button text="Request" onClick={submitForm} />
             </div>
         </Modal>
     );

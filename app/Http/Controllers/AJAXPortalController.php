@@ -161,7 +161,7 @@ class AJAXPortalController extends Controller
         $firstName = null;
         $lastName = null;
         $isUserEmailExist = $this->checkUserEmail($email);
-        $isStudentNoExist = $this->checkStudentNo($studentNo);
+        $isStudentExist = $this->checkStudentNo($studentNo);
         $isVerifiedStudentNo = $this->verifyStudentNo($studentNo);
 
         if(!$isVerifiedStudentNo) {
@@ -171,7 +171,7 @@ class AJAXPortalController extends Controller
             ]);
         }
 
-        if($isStudentNoExist) {
+        if($isStudentExist) {
             return response()->json([
                 'status' => 400,
                 'message' => 'Student number already registered.'
@@ -204,18 +204,83 @@ class AJAXPortalController extends Controller
         ]);
 
         if($response) {
-            $user = DB::table('users')
-            ->where('email', '=', $email)
-            ->whereNull('users.deleted_at')
-            ->first();
+            // $user = DB::table('users')
+            // ->where('email', '=', $email)
+            // ->whereNull('users.deleted_at')
+            // ->first();
 
-            $userDetails['id'] = $user->id;
-            $token = Crypt::encrypt($userDetails);
-            $this->sendConfirmation($email, $studentNo, $token);
+            // $userDetails['id'] = $user->id;
+            // $token = Crypt::encrypt($userDetails);
+            // $this->sendConfirmation($email, $studentNo, $token);
 
             return response()->json([
                 'status' => 200,
                 'message' => 'You have been successfully registered!'
+            ]);
+        }
+
+        return abort(500);
+    }
+
+    public function studentSignUpRequest(Request $request) {
+        $studentNo = $request->get('studentNo');
+        $email = $request->get('email');
+        $firstName = $request->get('firstName');
+        $lastName = $request->get('lastName');
+
+        $isUserEmailExist = $this->checkUserEmail($email);
+        $isStudentExist = $this->checkStudentNo($studentNo);
+        $isVerifiedStudentNo = $this->verifyStudentNo($studentNo);
+
+        if(!$isVerifiedStudentNo) {
+            return  response()->json([
+                'status' => 400,
+                'message' => 'Student number does not exists. Please change it and try again.'
+            ]);
+        }
+
+        if($isStudentExist) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Student number already registered.'
+            ]);
+        }
+
+        if($isUserEmailExist) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Email already exists. Please change it and try again.'
+            ]);
+        }
+
+        $created_at = now();
+        $updated_at = now();
+
+        $response = DB::table('users')
+        ->insert([
+            'student_no' => $studentNo,
+            'email' => $email,
+            'first_name' => $firstName,
+            'last_name' => $lastName,
+            'is_await' => 1,
+            'type' => 'student',
+            'created_at' => $created_at,
+            'updated_at' => $updated_at
+        ]);
+
+        if($response) {
+            // $user = DB::table('users')
+            // ->where('email', '=', $email)
+            // ->whereNull('users.deleted_at')
+            // ->first();
+
+            // $userDetails['id'] = $user->id;
+            // $token = Crypt::encrypt($userDetails);
+            // $this->sendConfirmation($email, $studentNo, $token);
+
+            return response()->json([
+                'status' => 200,
+                'message' => 'You will receive an email after admin verified your request. Thank you'
             ]);
         }
 

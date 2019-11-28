@@ -44399,6 +44399,31 @@ var SignUpModal = function SignUpModal(_ref) {
     });
   };
 
+  var handleSignUpRequest = function handleSignUpRequest() {
+    console.log("test");
+    setIsLoading(true);
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["post"])("/ajax/portal/signup/request", {
+      studentNo: studentNo.value,
+      email: email.value,
+      firstName: firstName.value,
+      lastName: lastName.value
+    }, function (res) {
+      setIsLoading(false);
+
+      if (res.status > 200) {
+        alert(res.message);
+        return;
+      }
+
+      _handleClose();
+
+      alert(res.message);
+      reset();
+    }, function () {
+      return alert("Something went wrong");
+    });
+  };
+
   var validatePassword = function validatePassword(value, fields) {
     if (value.length < 8) {
       return {
@@ -44427,10 +44452,7 @@ var SignUpModal = function SignUpModal(_ref) {
     };
   };
 
-  var _useForm = Object(Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__["default"])(_signupInitialFields__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    password: validatePassword,
-    confirmPassword: validateConfirmPassword
-  }, handleSignUp),
+  var _useForm = Object(Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__["default"])(_signupInitialFields__WEBPACK_IMPORTED_MODULE_7__["default"], {}, handleSignUpRequest),
       _useForm2 = _slicedToArray(_useForm, 5),
       fields = _useForm2[0],
       setFieldValue = _useForm2[1],
@@ -44440,8 +44462,8 @@ var SignUpModal = function SignUpModal(_ref) {
 
   var studentNo = fields.studentNo,
       email = fields.email,
-      password = fields.password,
-      confirmPassword = fields.confirmPassword;
+      firstName = fields.firstName,
+      lastName = fields.lastName;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
     id: "SignUpModal",
     isActive: isActive,
@@ -44473,24 +44495,20 @@ var SignUpModal = function SignUpModal(_ref) {
     error: email.error.status
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     required: true,
-    label: "Password",
-    name: "password",
-    type: "password",
-    value: password.value,
+    label: "First Name",
+    name: "firstName",
+    value: firstName.value,
     onChange: setFieldValue,
-    error: password.error.status,
-    footNote: "Minimum 8 characters."
+    error: firstName.error.status
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
     required: true,
-    label: "Confirm Password",
-    name: "confirmPassword",
-    type: "password",
-    value: confirmPassword.value,
+    label: "Last Name",
+    name: "lastName",
+    value: lastName.value,
     onChange: setFieldValue,
-    error: confirmPassword.error.status,
-    errorMessage: confirmPassword.error.message
+    error: lastName.error.status
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: "Sign Up",
+    text: "Request",
     onClick: submitForm
   })));
 };
@@ -44526,7 +44544,17 @@ var signupInitialFields = {
     required: true,
     email: true
   },
-  password: {
+  // password: {
+  //     value: "",
+  //     error: { status: false, message: "" },
+  //     required: true
+  // },
+  // confirmPassword: {
+  //     value: "",
+  //     error: { status: false, message: "" },
+  //     required: true
+  // },
+  firstName: {
     value: "",
     error: {
       status: false,
@@ -44534,7 +44562,7 @@ var signupInitialFields = {
     },
     required: true
   },
-  confirmPassword: {
+  lastName: {
     value: "",
     error: {
       status: false,

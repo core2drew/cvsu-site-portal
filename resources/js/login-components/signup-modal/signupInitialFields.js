@@ -10,12 +10,22 @@ const signupInitialFields = {
         required: true,
         email: true
     },
-    password: {
+    // password: {
+    //     value: "",
+    //     error: { status: false, message: "" },
+    //     required: true
+    // },
+    // confirmPassword: {
+    //     value: "",
+    //     error: { status: false, message: "" },
+    //     required: true
+    // },
+    firstName: {
         value: "",
         error: { status: false, message: "" },
         required: true
     },
-    confirmPassword: {
+    lastName: {
         value: "",
         error: { status: false, message: "" },
         required: true
