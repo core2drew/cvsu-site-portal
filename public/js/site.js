@@ -72883,7 +72883,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80797,10 +80797,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./resources/js/site-components/sidelinks/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var SideLinks = function SideLinks() {
+
+var SideLinks = function SideLinks(_ref) {
+  var location = _ref.location;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      pathname = _useState2[0],
+      setPathname = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    setPathname(location.pathname);
+  }, []);
+
+  var handleScrollTo = function handleScrollTo(e) {
+    var scrollTo = e.target.dataset.scrollto;
+    var scrollToElem = document.getElementsByName(scrollTo).item(0);
+    var offsetTop = scrollToElem.offsetTop - 50;
+    $("html, body").scrollTop(offsetTop);
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "SideLinks"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -80813,7 +80839,17 @@ var SideLinks = function SideLinks() {
     className: "item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/admission/requirements"
-  }, "Requirements")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Requirements")), pathname.includes("requirements") && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    "data-scrollto": "entrance-exam",
+    onClick: handleScrollTo
+  }, "Entrance Exam")), pathname.includes("requirements") && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    "data-scrollto": "admission",
+    onClick: handleScrollTo
+  }, "Admission")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/admission/retention-policies"
@@ -81038,7 +81074,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Admission = function Admission(_ref) {
-  var match = _ref.match;
+  var match = _ref.match,
+      location = _ref.location;
   var params = match.params;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "Admission"
@@ -81046,7 +81083,9 @@ var Admission = function Admission(_ref) {
     className: "container grid"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grid-item"
-  }, params.subpath === "requirements" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_requirements__WEBPACK_IMPORTED_MODULE_1__["default"], null), params.subpath === "retention-policies" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_retention_policies__WEBPACK_IMPORTED_MODULE_2__["default"], null), params.subpath === "course-offered" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_course_offered__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }, params.subpath === "requirements" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_requirements__WEBPACK_IMPORTED_MODULE_1__["default"], null), params.subpath === "retention-policies" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_retention_policies__WEBPACK_IMPORTED_MODULE_2__["default"], null), params.subpath === "course-offered" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_course_offered__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SiteComponents_sidelinks__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    location: location
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Admission);

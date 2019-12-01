@@ -3,7 +3,7 @@ import Requirements from "SiteComponents/requirements";
 import RetentionPolicies from "SiteComponents/retention-policies";
 import CourseOffered from "SiteComponents/course-offered";
 import SideLinks from "SiteComponents/sidelinks";
-const Admission = ({ match }) => {
+const Admission = ({ match, location }) => {
     const { params } = match;
     return (
         <div id="Admission">
@@ -15,7 +15,7 @@ const Admission = ({ match }) => {
                     )}
                     {params.subpath === "course-offered" && <CourseOffered />}
                 </div>
-                <SideLinks />
+                <SideLinks location={location} />
             </div>
         </div>
     );

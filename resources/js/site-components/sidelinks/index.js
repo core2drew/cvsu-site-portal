@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
-const SideLinks = () => {
+const SideLinks = ({ location }) => {
+    const [pathname, setPathname] = useState("");
+    useEffect(() => {
+        setPathname(location.pathname);
+    }, []);
+
+    const handleScrollTo = e => {
+        const scrollTo = e.target.dataset.scrollto;
+        const scrollToElem = document.getElementsByName(scrollTo).item(0);
+        const offsetTop = scrollToElem.offsetTop - 50;
+        $("html, body").scrollTop(offsetTop);
+    };
+
     return (
         <div id="SideLinks">
             <div className="links-container">
@@ -9,6 +21,26 @@ const SideLinks = () => {
                     <li className="item">
                         <a href="/admission/requirements">Requirements</a>
                     </li>
+                    {pathname.includes("requirements") && (
+                        <li className="item">
+                            <a
+                                data-scrollto="entrance-exam"
+                                onClick={handleScrollTo}
+                            >
+                                Entrance Exam
+                            </a>
+                        </li>
+                    )}
+                    {pathname.includes("requirements") && (
+                        <li className="item">
+                            <a
+                                data-scrollto="admission"
+                                onClick={handleScrollTo}
+                            >
+                                Admission
+                            </a>
+                        </li>
+                    )}
                     <li className="item">
                         <a href="/admission/retention-policies">
                             Retention Policies
