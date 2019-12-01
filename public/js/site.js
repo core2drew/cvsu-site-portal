@@ -1004,7 +1004,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#SideLinks {\n  background-color: #fff;\n  max-height: 570px;\n  padding: 20px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 15px;\n}\n#SideLinks > .links-container:nth-last-child(n+2) {\n  margin-bottom: 20px;\n}\n#SideLinks > .links-container > .title {\n  margin-top: 0;\n}\n#SideLinks > .links-container > .links {\n  padding-left: 15px;\n}\n#SideLinks > .links-container > .links > .item > a {\n  color: #2d8548;\n  text-decoration: none;\n}", ""]);
+exports.push([module.i, "#SideLinks {\n  background-color: #fff;\n  max-height: 570px;\n  padding: 20px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 15px;\n}\n#SideLinks > .links-container:nth-last-child(n+2) {\n  margin-bottom: 20px;\n}\n#SideLinks > .links-container > .title {\n  margin-top: 0;\n}\n#SideLinks > .links-container > .links {\n  padding-left: 15px;\n}\n#SideLinks > .links-container > .links > .item > a {\n  color: #2d8548;\n  text-decoration: none;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
