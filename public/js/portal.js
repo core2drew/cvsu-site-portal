@@ -700,7 +700,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".modal {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: none;\n  top: 0;\n  left: 0;\n  z-index: 4;\n  overflow: auto;\n}\n.modal.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.modal .content {\n  margin: auto;\n  background-color: #fff;\n  position: relative;\n  padding: 20px;\n  min-width: 500px;\n}\n.modal .content > .close {\n  position: absolute;\n  cursor: pointer;\n  right: 10px;\n  top: 10px;\n}", ""]);
+exports.push([module.i, ".modal {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: none;\n  top: 0;\n  left: 0;\n  z-index: 5;\n  overflow: auto;\n}\n.modal.active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.modal .content {\n  margin: auto;\n  background-color: #fff;\n  position: relative;\n  padding: 20px;\n  min-width: 500px;\n}\n.modal .content > .close {\n  position: absolute;\n  cursor: pointer;\n  right: 10px;\n  top: 10px;\n}", ""]);
 
 // exports
 
@@ -948,6 +948,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "#DeanMessage {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n     -moz-box-orient: vertical;\n     -moz-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n#DeanMessage > #Save {\n  -webkit-align-self: flex-start;\n      -ms-flex-item-align: start;\n          align-self: flex-start;\n  margin-top: 10px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/facilities/style.scss":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/lib/loader.js??ref--10-3!./resources/js/portal-routes/facilities/style.scss ***!
+  \*************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".no-image-found {\n  background-color: #e6e6e6;\n  padding: 10px;\n}\n\n#UploadSlider {\n  width: 100%;\n  margin: 10px 0;\n}\n\n.facility-image {\n  width: 200px;\n  height: 200px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
 
 // exports
 
@@ -79808,6 +79827,23 @@ var CurrentUserContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createCont
 
 /***/ }),
 
+/***/ "./resources/js/contexts/facilities.js":
+/*!*********************************************!*\
+  !*** ./resources/js/contexts/facilities.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var FacilitiesContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+/* harmony default export */ __webpack_exports__["default"] = (FacilitiesContext);
+
+/***/ }),
+
 /***/ "./resources/js/contexts/students.js":
 /*!*******************************************!*\
   !*** ./resources/js/contexts/students.js ***!
@@ -80501,6 +80537,9 @@ var Sidebar = function Sidebar(props) {
     to: "/portal/course-offered",
     className: "link"
   }, "Course Offered"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    to: "/portal/facilities",
+    className: "link"
+  }, "Facilities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     to: "/portal/students",
     className: "link"
   }, "Students"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -81778,6 +81817,346 @@ var DeanMessage = function DeanMessage() {
 
 
 var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/dean-message/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/facilities/facilityFormInitialFields.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/portal-routes/facilities/facilityFormInitialFields.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var inviteStudentInitialFields = {
+  facilityName: {
+    value: "",
+    error: {
+      status: false,
+      message: ""
+    },
+    required: true
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (inviteStudentInitialFields);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/facilities/form-modal.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/portal-routes/facilities/form-modal.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Components_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/modal */ "./resources/js/components/modal/index.js");
+/* harmony import */ var Components_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/button */ "./resources/js/components/button/index.js");
+/* harmony import */ var Components_input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/input */ "./resources/js/components/input/index.js");
+/* harmony import */ var Context_facilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Context/facilities */ "./resources/js/contexts/facilities.js");
+/* harmony import */ var Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Hooks/useForm */ "./resources/js/hooks/useForm.js");
+/* harmony import */ var _facilityFormInitialFields__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./facilityFormInitialFields */ "./resources/js/portal-routes/facilities/facilityFormInitialFields.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+var SliderImages = function SliderImages(_ref) {
+  var images = _ref.images;
+  var hasImages = images.length;
+
+  if (hasImages) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "facility-images"
+    }, images.map(function (file, index) {
+      var reader = new FileReader();
+      var image;
+      reader.addEventListener("loadend", function (event) {
+        image = event.target.result;
+      });
+      reader.readAsDataURL(file);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "facility-image",
+        src: image,
+        key: index
+      });
+    }));
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "no-image-found"
+  }, "No image found.");
+};
+
+var FormModal = function FormModal() {
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(Context_facilities__WEBPACK_IMPORTED_MODULE_4__["default"]),
+      state = _useContext.state,
+      dispatch = _useContext.dispatch,
+      handleUpdateModal = _useContext.handleUpdateModal;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      images = _useState2[0],
+      setImages = _useState2[1];
+
+  var submitForm = function submitForm() {
+    var id = state.selectedId;
+    handleUpdateModal(id);
+  };
+
+  var _useForm = Object(Hooks_useForm__WEBPACK_IMPORTED_MODULE_5__["default"])(_facilityFormInitialFields__WEBPACK_IMPORTED_MODULE_6__["default"], {}, submitForm),
+      _useForm2 = _slicedToArray(_useForm, 5),
+      fields = _useForm2[0],
+      setFieldValue = _useForm2[1],
+      submit = _useForm2[2],
+      setFieldValues = _useForm2[3],
+      reset = _useForm2[4];
+
+  var initCarousel = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function () {
+    $(document).ready(function () {
+      $(".facility-slider.owl-carousel").owlCarousel({
+        items: 1
+      });
+    });
+  });
+  var initSliderImageInput = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function () {
+    $("#UploadSlider").change(function (e) {
+      var input = e.target;
+
+      if (input.files) {
+        setImages(_toConsumableArray(input.files));
+      }
+    });
+  });
+  var facilityName = fields.facilityName;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    initCarousel();
+    initSliderImageInput();
+
+    if (state.selectedId) {
+      var facility_name = state.data.filter(function (d) {
+        return d.id === state.selectedId;
+      })[0].facility_name;
+      setFieldValues({
+        facilityName: facility_name
+      });
+    }
+  }, []);
+
+  var handleClose = function handleClose() {
+    reset();
+    dispatch({
+      type: "CLOSE_MODAL"
+    });
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    isActive: state.isModalActive,
+    handleClose: handleClose
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section header"
+  }, state.modalHeaderTitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    label: "Facility Name",
+    name: "facilityName",
+    onChange: setFieldValue,
+    value: facilityName.value,
+    required: true,
+    error: facilityName.error.status
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "UploadSlider",
+    type: "file",
+    multiple: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SliderImages, {
+    images: images
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "action"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "Update",
+    onClick: submit
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FormModal);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/facilities/index.js":
+/*!********************************************************!*\
+  !*** ./resources/js/portal-routes/facilities/index.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Utils */ "./resources/js/utils.js");
+/* harmony import */ var Components_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/table */ "./resources/js/components/table/index.js");
+/* harmony import */ var Components_preloader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/preloader */ "./resources/js/components/preloader/index.js");
+/* harmony import */ var Reducers_facilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Reducers/facilities */ "./resources/js/reducers/facilities.js");
+/* harmony import */ var Context_facilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Context/facilities */ "./resources/js/contexts/facilities.js");
+/* harmony import */ var _form_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./form-modal */ "./resources/js/portal-routes/facilities/form-modal.js");
+/* harmony import */ var Components_confirm_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Components/confirm-modal */ "./resources/js/components/confirm-modal/index.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.scss */ "./resources/js/portal-routes/facilities/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_8__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+var Facilities = function Facilities() {
+  var url = "/ajax/portal/facilities";
+
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(Reducers_facilities__WEBPACK_IMPORTED_MODULE_4__["default"], Reducers_facilities__WEBPACK_IMPORTED_MODULE_4__["initialState"]),
+      _useReducer2 = _slicedToArray(_useReducer, 2),
+      state = _useReducer2[0],
+      dispatch = _useReducer2[1];
+
+  var tableHeaders = ["Facility Name", "Images", "Actions"];
+
+  var handleOpenModal = function handleOpenModal() {
+    dispatch({
+      type: "OPEN_MODAL"
+    });
+  };
+
+  var handleUpdateModal = function handleUpdateModal(id) {
+    dispatch({
+      type: "OPEN_UPDATE_MODAL",
+      id: id
+    });
+  };
+
+  var confirmDelete = function confirmDelete(id) {
+    dispatch({
+      type: "SHOW_CONFIRM_DELETE",
+      id: id
+    });
+  };
+
+  var closeConfirmDelete = function closeConfirmDelete() {
+    dispatch({
+      type: "CLOSE_CONFIRM_DELETE"
+    });
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    initTable();
+  }, []);
+
+  var initTable = function initTable() {
+    dispatch({
+      type: "FETCHING"
+    });
+    Object(Utils__WEBPACK_IMPORTED_MODULE_1__["get"])(url, {}, function (res) {
+      dispatch({
+        type: "SUCCESS_FETCH",
+        data: res.data
+      });
+    }, function () {
+      dispatch({
+        type: "ERROR_FETCH"
+      });
+      alert("Something went wrong. Please try again");
+    });
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context_facilities__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
+    value: {
+      state: state,
+      dispatch: dispatch,
+      handleOpenModal: handleOpenModal,
+      handleUpdateModal: handleUpdateModal,
+      confirmDelete: confirmDelete
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "Facilities"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_preloader__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    variant: "fixed",
+    isActive: state.isLoading
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_table__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    headers: tableHeaders,
+    hasAdd: true,
+    addText: "New Facility",
+    handleAdd: handleOpenModal
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form_modal__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Components_confirm_modal__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    title: "Confirm Delete Facility",
+    close: closeConfirmDelete,
+    isActive: state.isConfirmDeleteActive,
+    confirm: function confirm() {
+      handleDelete(state.selectedId);
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Are you sure you want to delete this facility?"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Facilities);
+
+/***/ }),
+
+/***/ "./resources/js/portal-routes/facilities/style.scss":
+/*!**********************************************************!*\
+  !*** ./resources/js/portal-routes/facilities/style.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--10-2!../../../../node_modules/sass-loader/lib/loader.js??ref--10-3!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/portal-routes/facilities/style.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -83320,6 +83699,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var PortalRoutes_retention_policies__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! PortalRoutes/retention-policies */ "./resources/js/portal-routes/retention-policies/index.js");
 /* harmony import */ var PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! PortalRoutes/course-offered */ "./resources/js/portal-routes/course-offered/index.js");
 /* harmony import */ var StudentRoutes_info__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! StudentRoutes/info */ "./resources/js/student-routes/info/index.js");
+/* harmony import */ var PortalRoutes_facilities__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! PortalRoutes/facilities */ "./resources/js/portal-routes/facilities/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -83327,6 +83707,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -83393,6 +83774,10 @@ var App = function App() {
         path: "/portal/course-offered",
         exact: true,
         component: PortalRoutes_course_offered__WEBPACK_IMPORTED_MODULE_16__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        path: "/portal/facilities",
+        exact: true,
+        component: PortalRoutes_facilities__WEBPACK_IMPORTED_MODULE_18__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/portal/students",
         exact: true,
@@ -83592,6 +83977,136 @@ var reducer = function reducer(state, action) {
       return _objectSpread({}, state, {
         isModalActive: true,
         isUpdateModal: true
+      });
+
+    default:
+      return state;
+  }
+};
+
+
+/* harmony default export */ __webpack_exports__["default"] = (reducer);
+
+/***/ }),
+
+/***/ "./resources/js/reducers/facilities.js":
+/*!*********************************************!*\
+  !*** ./resources/js/reducers/facilities.js ***!
+  \*********************************************/
+/*! exports provided: initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var initialState = {
+  isLoading: true,
+  isModalActive: false,
+  modalHeaderTitle: "New Facility",
+  data: [],
+  selectedId: null,
+  isConfirmDeleteActive: false,
+  sliderImages: []
+};
+
+var reducer = function reducer(state, action) {
+  switch (action.type) {
+    case "FETCHING":
+    case "SAVING":
+    case "UPDATING":
+    case "DELETING":
+      return _objectSpread({}, state, {
+        isLoading: true
+      });
+
+    case "SUCCESS_FETCH":
+      return _objectSpread({}, state, {
+        isLoading: false,
+        isUpdateModal: false,
+        data: action.data
+      });
+
+    case "SUCCESS_DELETE":
+      return _objectSpread({}, state, {
+        isLoading: false,
+        data: action.data,
+        isConfirmDeleteActive: false,
+        selectedId: null
+      });
+
+    case "SUCCESS_UPDATE":
+      return _objectSpread({}, state, {
+        isLoading: false,
+        isModalActive: false,
+        data: action.data
+      });
+
+    case "SUCCESS_SAVE":
+      return _objectSpread({}, state, {
+        isLoading: false,
+        isModalActive: false,
+        data: action.data
+      });
+
+    case "ERROR_SAVE":
+    case "ERROR_FETCH":
+    case "ERROR_UPDATE":
+    case "ERROR_DELETE":
+      return _objectSpread({}, state, {
+        isLoading: false
+      });
+
+    case "OPEN_MODAL":
+      return _objectSpread({}, state, {
+        isModalActive: true,
+        isUpdateModal: false,
+        modalHeaderTitle: "New Facility",
+        selectedId: null
+      });
+
+    case "CLOSE_MODAL":
+      return _objectSpread({}, state, {
+        isModalActive: false,
+        isUpdateModal: false,
+        isInviteStudentModalActive: false,
+        selectedId: null
+      });
+
+    case "OPEN_UPDATE_MODAL":
+      return _objectSpread({}, state, {
+        isModalActive: true,
+        isUpdateModal: true,
+        modalHeaderTitle: "Update Facility",
+        selectedId: action.id
+      });
+
+    case "SHOW_CONFIRM_DELETE":
+      return _objectSpread({}, state, {
+        isConfirmDeleteActive: true,
+        selectedId: action.id
+      });
+
+    case "CLOSE_CONFIRM_DELETE":
+      return _objectSpread({}, state, {
+        isConfirmDeleteActive: false,
+        selectedId: null
+      });
+
+    case "ADD_SLIDER_IMAGE":
+      return _objectSpread({}, state, {
+        sliderImages: [].concat(_toConsumableArray(state.sliderImages), [action.sliderImage])
       });
 
     default:

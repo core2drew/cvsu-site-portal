@@ -453,4 +453,12 @@ class AJAXPortalController extends Controller
             $msg->to($email);
         });
     }
+
+    public function getFacilities() {
+        $response = DB::table('facilities')->select()->get();
+        if($response) {
+            return response()->json($response);
+        }
+        return abort(500);
+    }
 }

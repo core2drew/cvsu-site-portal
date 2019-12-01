@@ -282,5 +282,12 @@ Route::group([
             "uses" => "AJAXPortalController@getStudentInfo",
             "middleware" => ["check.session"]
         ]);
+
+        // Facility
+        Route::get('/facilities', [
+            "as" => "ajax.portal.facilities",
+            "uses" => "AJAXPortalController@getFacilities",
+            "middleware" => ["check.session", "check.isadmin"]
+        ]);
     });
 });

@@ -34,6 +34,9 @@ const Sidebar = props => {
                     <NavLink exact to="/portal/course-offered" className="link">
                         Course Offered
                     </NavLink>
+                    <NavLink to="/portal/facilities" className="link">
+                        Facilities
+                    </NavLink>
                     <NavLink to="/portal/students" className="link">
                         Students
                     </NavLink>

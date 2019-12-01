@@ -16,7 +16,7 @@ import Requirements from "PortalRoutes/requirements";
 import RetentionPolicies from "PortalRoutes/retention-policies";
 import CourseOffered from "PortalRoutes/course-offered";
 import StudentInfo from "StudentRoutes/info";
-
+import Facilities from "PortalRoutes/facilities";
 const App = () => {
     const [user, setUser] = useState({
         id: null,
@@ -61,6 +61,11 @@ const App = () => {
                         path="/portal/course-offered"
                         exact
                         component={CourseOffered}
+                    />
+                    <Route
+                        path="/portal/facilities"
+                        exact
+                        component={Facilities}
                     />
                     <Route path="/portal/students" exact component={Students} />
                     <Route path="/portal/users" component={Users} />
