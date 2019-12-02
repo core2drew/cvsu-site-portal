@@ -1,0 +1,10 @@
+.action {
+    .dropdown:nth-last-child(n + 2) {
+        margin-right: 10px;
+    }
+}
+
+.no-record {
+    background-color: #e2e2e2;
+    padding: 18px;
+}

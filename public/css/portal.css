@@ -25,6 +25,7 @@ body {
   max-width: 960px;
   width: 100%;
   margin: 20px auto;
+  overflow-y: initial;
 }
 
 #DeanMessage .section.header,
