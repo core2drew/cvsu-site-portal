@@ -9,7 +9,6 @@ const Info = () => {
     const [state, dispatch] = useReducer(Reducer, initialState);
     const [schoolYears, setSchoolYears] = useState([]);
     const [semesters, setSemesters] = useState([]);
-    const [grades, setGrades] = useState([]);
     const [selectedSchoolYear, setSelectedSchoolYear] = useState("");
     const [selectedSemester, setSelectedSemester] = useState("");
 

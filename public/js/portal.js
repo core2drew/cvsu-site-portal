@@ -84517,20 +84517,15 @@ var Info = function Info() {
       semesters = _useState4[0],
       setSemesters = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
       _useState6 = _slicedToArray(_useState5, 2),
-      grades = _useState6[0],
-      setGrades = _useState6[1];
+      selectedSchoolYear = _useState6[0],
+      setSelectedSchoolYear = _useState6[1];
 
   var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
       _useState8 = _slicedToArray(_useState7, 2),
-      selectedSchoolYear = _useState8[0],
-      setSelectedSchoolYear = _useState8[1];
-
-  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
-      _useState10 = _slicedToArray(_useState9, 2),
-      selectedSemester = _useState10[0],
-      setSelectedSemester = _useState10[1];
+      selectedSemester = _useState8[0],
+      setSelectedSemester = _useState8[1];
 
   var prepareSchoolYears = function prepareSchoolYears(years) {
     var schoolYears = years.map(function (d) {
