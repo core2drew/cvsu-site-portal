@@ -269,14 +269,14 @@ class AJAXPortalController extends Controller
         ]);
 
         if($response) {
-            // $user = DB::table('users')
-            // ->where('email', '=', $email)
-            // ->whereNull('users.deleted_at')
-            // ->first();
+            $user = DB::table('users')
+            ->where('email', '=', $email)
+            ->whereNull('users.deleted_at')
+            ->first();
 
-            // $userDetails['id'] = $user->id;
-            // $token = Crypt::encrypt($userDetails);
-            // $this->sendConfirmation($email, $studentNo, $token);
+            $userDetails['id'] = $user->id;
+            $token = Crypt::encrypt($userDetails);
+            $this->sendConfirmation($email, $studentNo, $token);
 
             return response()->json([
                 'status' => 200,
