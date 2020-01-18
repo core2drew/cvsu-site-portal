@@ -3,7 +3,9 @@ import "./style.scss";
 const SideLinks = ({ location }) => {
     const [pathname, setPathname] = useState("");
     useEffect(() => {
-        setPathname(location.pathname);
+        if (location) {
+            setPathname(location.pathname);
+        }
     }, []);
 
     const handleScrollTo = e => {

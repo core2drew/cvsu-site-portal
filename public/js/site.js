@@ -72883,7 +72883,7 @@ var safeInvoke = function safeInvoke(fn) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79403,7 +79403,7 @@ function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArra
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -79711,7 +79711,7 @@ function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArra
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -80034,7 +80034,7 @@ var CoreValues = function CoreValues() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "section header"
   }, "Core Values"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "values"
+    className: "values"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Truth"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Excellence"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Service")));
 };
 
@@ -80149,7 +80149,7 @@ function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArra
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -80817,7 +80817,9 @@ var SideLinks = function SideLinks(_ref) {
       setPathname = _useState2[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    setPathname(location.pathname);
+    if (location) {
+      setPathname(location.pathname);
+    }
   }, []);
 
   var handleScrollTo = function handleScrollTo(e) {
@@ -81647,11 +81649,11 @@ var fromToDate = function fromToDate(from, to, oneDayFormat, sameMonthFormat, ne
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Drew\Thesis Project\CvSU Portal\site\resources\js\site.js */"./resources/js/site.js");
-__webpack_require__(/*! D:\Drew\Thesis Project\CvSU Portal\site\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! D:\Drew\Thesis Project\CvSU Portal\site\resources\sass\site.scss */"./resources/sass/site.scss");
-__webpack_require__(/*! D:\Drew\Thesis Project\CvSU Portal\site\resources\sass\login.scss */"./resources/sass/login.scss");
-module.exports = __webpack_require__(/*! D:\Drew\Thesis Project\CvSU Portal\site\resources\sass\portal.scss */"./resources/sass/portal.scss");
+__webpack_require__(/*! /Users/sandrocalupe/Documents/cvsu-site-portal/resources/js/site.js */"./resources/js/site.js");
+__webpack_require__(/*! /Users/sandrocalupe/Documents/cvsu-site-portal/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/sandrocalupe/Documents/cvsu-site-portal/resources/sass/site.scss */"./resources/sass/site.scss");
+__webpack_require__(/*! /Users/sandrocalupe/Documents/cvsu-site-portal/resources/sass/login.scss */"./resources/sass/login.scss");
+module.exports = __webpack_require__(/*! /Users/sandrocalupe/Documents/cvsu-site-portal/resources/sass/portal.scss */"./resources/sass/portal.scss");
 
 
 /***/ })
