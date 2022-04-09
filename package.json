@@ -27,7 +27,7 @@
     "dependencies": {
         "classnames": "^2.2.6",
         "dotenv-webpack": "^1.7.0",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "querystring": "^0.2.0",
         "react-calendar": "^2.18.1",
         "react-datepicker": "^2.4.0",
